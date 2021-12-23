@@ -16,7 +16,7 @@ Stack allows insertions and deletions in one end. So, following a sequence of in
   <li>Insert a new element into an existing stack with the same element type. It may lead to overflow if the stack is already full.</li>
   <li>Remove the top element from an existing stack. It may lead to underflow if the stack is empty.</li>   
 </ul>
-
+<br>
 <code>
 // Operations on the universe of all queues of element type
 <br>
@@ -38,11 +38,12 @@ overflow -> full stack // Occurs on attempt to insert into full stack
 underflow -> empty stack // Occurs on attempt to remove from empty stack
   </code>
 <br>
-	<br>
+<br>
 After formulating ADT, the programmatic implementation of the stack becomes extremely simple. Apart from creating a space for storing elements, we need to keep track of the top. The storage may be created using an array or a linked list. The top is just the index of the last element if the stack elements are held in an array. If stack storage is a linked list, the top should be a pointer to the last incoming element. 
-
+<br>
 
 We end this blog with a C-structure of a stack using an array.  
+<br>
 <code>
 <br>
 typedef struct stack {
@@ -64,4 +65,4 @@ Now STACK can be used as a type for implementing stack operations.
 The next blog will deal with stack operations.
 
  </body>
-	 </html>
+</html>
