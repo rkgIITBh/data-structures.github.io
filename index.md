@@ -48,7 +48,7 @@ List of Blogs
          <a href="https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html">Implementation of Stacks</a></li><li>
 	 <a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues </a></li><li>
          <a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-c.html"> Circular implementation of queues</a></li><li>  
-	 <a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</a> </li><li>
+	 <a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</a> </li>
         
 		
 		
