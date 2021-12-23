@@ -20,15 +20,15 @@ Stack allows insertions and deletions in one end. So, following a sequence of in
 <code>
 // Operations on the universe of all queues of element type
 <br>
-new<element type> : → stack<element type> // Creating a stack
+new<element type> : -> stack<element type> // Creating a stack
 <br>
-empty<element type> : stack<element type> → Boolean
+empty<element type> : stack<element type> -> Boolean
 <br>
-full<element type>: stack<element type> → Boolean
+full<element type>: stack<element type> -> Boolean
 <br>
-pop<element type> : stack<element type> → <element type> × stack<element type> // Modifier
+pop<element type> : stack<element type> -> <element type> X stack<element type> // Modifier
 <br>
-push<element type> : stack<element type> × <element type> → stack<element type> // Modifier
+push<element type> : stack<element type> x <element type> -> stack<element type> // Modifier
 <br>
 <br>
 // Exception
@@ -37,24 +37,25 @@ overflow -> full stack // Occurs on attempt to insert into full stack
 <br>
 underflow -> empty stack // Occurs on attempt to remove from empty stack
   </code>
-
+<br>
 After formulating ADT, the programmatic implementation of the stack becomes extremely simple. Apart from creating a space for storing elements, we need to keep track of the top. The storage may be created using an array or a linked list. The top is just the index of the last element if the stack elements are held in an array. If stack storage is a linked list, the top should be a pointer to the last incoming element. 
 
 
 We end this blog with a C-structure of a stack using an array.  
 <code>
-
+<br>
 typedef struct stack {
-
+<br>
       int *info;
-
+<br>
       int limit; // Capacity of stack
-
+<br>
       int top; // Index of the last incoming element
-
+<br>
 } STACK;
-
+<br>
   </code>
+	<br>
 Now STACK can be used as a type for implementing stack operations. 
 
 
