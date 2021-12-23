@@ -54,5 +54,3 @@ List of Blogs
 <a href="HTML/index.html"> index </a> 
 
 <br>
- 
-
