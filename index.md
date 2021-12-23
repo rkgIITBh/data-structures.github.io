@@ -50,12 +50,7 @@ List of Blogs
 </li>
         
 		
-		
-		
-	
-		
 </ul>
 <br>
-<a href="https://rkgiitbh.github.io/Data-Structures.io/index.html"> index test </a>	
  
 
