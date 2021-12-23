@@ -19,22 +19,22 @@ Stack allows insertions and deletions in one end. So, following a sequence of in
 
 <code>
 // Operations on the universe of all queues of element type
-
+<br>
 new<element type> : → stack<element type> // Creating a stack
-
+<br>
 empty<element type> : stack<element type> → Boolean
-
+<br>
 full<element type>: stack<element type> → Boolean
-
+<br>
 pop<element type> : stack<element type> → <element type> × stack<element type> // Modifier
-
+<br>
 push<element type> : stack<element type> × <element type> → stack<element type> // Modifier
-
-
+<br>
+<br>
 // Exception
-
+<br>
 overflow -> full stack // Occurs on attempt to insert into full stack
-
+<br>
 underflow -> empty stack // Occurs on attempt to remove from empty stack
   </code>
 
