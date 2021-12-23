@@ -51,7 +51,7 @@ List of Blogs
         
 		
 </ul>
-<!--<a href="https://github.com/rkgIITBh/Data-Structures.io/Details"> index </a> -->
+<a href="https://github.com/rkgIITBh/Data-Structures.io/HTML/Stack.html"> index </a> 
 
 <br>
  
