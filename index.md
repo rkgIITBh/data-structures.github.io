@@ -50,7 +50,7 @@ List of Blogs
 </li>
         
 		
-</ul>https://rkgiitbh.github.io/Data-Structures/index.html
+</ul>https://rkgiitbh.github.io/Data-Structures.io/index.html
 
 <br>
  
