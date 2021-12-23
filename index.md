@@ -37,10 +37,9 @@ Furthermore, an introductory programming course is a requirement across discipli
 
 List of Blogs
 <ul>
-  <li>
-	  <a href="https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html">Importance of Coding</a></li>
-	 <a href="https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html"> Structures</a></li><li>
-	 <a href="https://vikramshilla.blogspot.com/2021/11/data-structures.html">Data Structures</a></li><li>
+  <li> <a href="https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html">Importance of Coding</a></li>
+  <li> <a href="https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html"> Structures</a></li><li>
+       <a href="https://vikramshilla.blogspot.com/2021/11/data-structures.html">Data Structures</a></li><li>
 	 <a href="https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html">DataTypes and ADTs</a></li><li>
 	 <a href="https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html">ADT Lists</a></li><li>
 	 <a href="https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html">Implementation of Lists</a> </li><li>
