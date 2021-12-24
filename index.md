@@ -19,9 +19,9 @@ Of late, some university depts have started using Python. Python is catching up 
 
 As far as Python is concerned, the three major advantages are:
 
-    Creating Python programs take significantly less time than programming either in Java or in C++ or C.
-    Python programs are shorter than the equivalent programs in Java or C++ because of dynamic typing and built-in types.
-    A large set of highly useful libraries are available that support easy to use in Python programs.
+    1. Creating Python programs take significantly less time than programming either in Java or in C++ or C.
+    2. Python programs are shorter than the equivalent programs in Java or C++ because of dynamic typing and built-in types.
+    3. A large set of highly useful libraries are available that support easy to use in Python programs.
 
 Most leading universities in the US, including MIT, CMU, Berkeley, UIUC teach Python as the first programming language course ( Esther Shein , Python for Beginners, CACM, vol 58, no. 3).
 
