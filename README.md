@@ -1,4 +1,4 @@
-# Data-Structures.io
+# Data-Structures
 Programming and data structure are two important elements in building a career as a software techie. India boasts of a number of software companies like TCS, Infosys, HCL Technologies, Mindtree, Tech Mahinda, L&T infotech, ITC infotech, First source, etc. I understand all of these companies have in-house training units. They induct graduate trainees and put them through rigorous coding training before induction. Many of the trainees are unable to cope-up the rigor and leave in the middle.
 
 
@@ -32,3 +32,16 @@ I believe data structure is taught to all computer science undergraduate student
 
 Furthermore, an introductory programming course is a requirement across disciplines. Apart from Computer Science and Engineering students, it includes other streams such as Electrical, Mechanical, Chemical, Material Science and Engineering, Maths, Physics, Chemistry and Biological Sciences. So the course is not designed exclusively for programming as CSE students are expected in the future. Therefore, without programming practice in the data structure course, I believe students of CSE tend to develop code phobia. The theory is required, but a right balance is needed.
 
+Blog Links
+
+[Trees] (https://vikramshilla.blogspot.com/2021/12/trees.html) 
+[Circular implementation of queues]  (https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-c.html) 
+[Queues] (a href="https://vikramshilla.blogspot.com/2021/12/queues.html)
+[Implementation of Stacks] (https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html
+[Stacks as ADTs] (https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html)
+[Implementation of Lists] (https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html) 
+[Lists as ADTs]		(https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html)
+[Data Types and ADTs] (https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html)
+[Structures] (https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html)
+[Data Structures] (https://vikramshilla.blogspot.com/2021/11/data-structures.html)
+[Importance of Coding] (https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html) 
