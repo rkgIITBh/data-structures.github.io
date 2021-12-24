@@ -34,8 +34,8 @@ Furthermore, an introductory programming course is a requirement across discipli
 Blog Links
 
 <ul> 
-    <li><a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</li>
-    <li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-C.html">Circular Queue Implementation</li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-C.html">Circular Queue Implementation</a></li>
     <li><a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues</a></li>
     <li><a href="https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html">Stacks</a></li>
     <li><a href="https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html">Stacks as ADTs</a></li>
