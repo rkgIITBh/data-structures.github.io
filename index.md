@@ -35,16 +35,16 @@ Blog Links
 
 <ul> 
     <li><a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</li>
-<li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-C.html">Circular Queue Implementation</li>
- <li><a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues</a></li>
-<li><a href="https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html">Stacks</a></li>
-<li><a href="https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html "Stacks as ADTs</a></li>
-<li><a href="https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html">Implementation of Lists</a></li>
-<li><a href="https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html> "Lists as ADTs</a></li>
-<li><a href="https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html">Data Types and ADTs </a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-C.html">Circular Queue Implementation</li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues</a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html">Stacks</a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html "Stacks as ADTs</a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html">Implementation of Lists</a></li>     
+    <li><a href="https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html> "Lists as ADTs</a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html">Data Types and ADTs </a></li>
     <li><a href="https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html">Structures</a></li>
-    <li><a href="https://vikramshilla.blogspot.com/2021/11/data-structures.html">Data Structures</a></li?
-<li><a href="https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html">Importance of Coding</a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/11/data-structures.html">Data Structures</a></li>
+    <li><a href="https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html">Importance of Coding</a></li>
 </ul>
 
 
