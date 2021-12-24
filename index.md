@@ -51,6 +51,6 @@ List of Blogs
         
 		
 </ul>
-<a href="HTML/index.html"> index </a> 
+<!--<a href="HTML/index.html"> index </a> -->
 
 <br>
