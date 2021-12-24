@@ -33,24 +33,24 @@ Furthermore, an introductory programming course is a requirement across discipli
 
 Blog Links
 
-[Trees] (https://vikramshilla.blogspot.com/2021/12/trees.html)
+[Trees]: https://vikramshilla.blogspot.com/2021/12/trees.html  "Trees"
 
-[Circular implementation of queues] (https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-c.html)
+[Circular implementation of queues]: https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-c.html "Circular Queues"
 
-[Queues] (a href="https://vikramshilla.blogspot.com/2021/12/queues.html)
+[Queues]: https://vikramshilla.blogspot.com/2021/12/queues.html "Queues"
 
-[Implementation of Stacks] (https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html
+[Implementation of Stacks]: https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html "Stacks"
 
-[Stacks as ADTs] (https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html)
+[Stacks as ADTs]: https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html "Stacks as ADTs"
 
-[Implementation of Lists] (https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html)
+[Implementation of Lists]: https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html "Implementation of Lists"
 
-[Lists as ADTs] (https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html)
+[Lists as ADTs]: https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html "Lists as ADTs"
 
-[Data Types and ADTs] (https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html)
+[Data Types and ADTs]: https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html "Data Types and ADTs"
 
-[Structures] (https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html)
+[Structures]: https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html  "Structures"
 
-[Data Structures] (https://vikramshilla.blogspot.com/2021/11/data-structures.html)
+[Data Structures]: https://vikramshilla.blogspot.com/2021/11/data-structures.html "Data Structures"
 
-[Importance of Coding] (https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html)
+[Importance of Coding]: https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html "Importance of Coding"
