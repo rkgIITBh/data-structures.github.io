@@ -36,7 +36,7 @@ Blog Links
 <ul> 
     <li><a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</li>
 
-<li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue.html">Trees</li>
+<li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-C.html">Circular Queue Implementation</li>
 
  <li><a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues</a></li>
 
