@@ -1,6 +1,6 @@
 
 ---
-layout: home
+layout:default
 ---
 
 # Data Structure
