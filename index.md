@@ -43,6 +43,6 @@ Blog Links
     <li><a href="https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html">Importance of Coding</a></li>
 </ul>
 
-[Stack](docs/stack-intro.md)
+[Stack](Data-Structure.io/docs/stack-intro.md)
 
 
