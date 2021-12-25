@@ -1,4 +1,4 @@
-
+(setq markdown-css-paths '("/mystyle.css"))
 
 # Learning Data Structure & Programming
 
