@@ -1,7 +1,6 @@
-(setq markdown-css-paths '("/mystyle.css"))
 
-# Learning Data Structure & Programming
 
+#
 Programming and data structure are two important elements in building a career as a software techie. India boasts of a number of software companies like TCS, Infosys, HCL Technologies, Mindtree, Tech Mahinda, L&T infotech, ITC infotech, First source, etc. I understand all of these companies have in-house training units. They induct graduate trainees and put them through rigorous coding training before induction. Many of the trainees are unable to cope-up the rigor and leave in the middle.
 
 The problem lies in background and preparation. There is a gap in demand and supply as far as the availability of the coders is concerned. Most placements happen based on the intrinsic capabilities of the students rather than their abilities to code. The companies would like to recruit only graduates from known institutions rather than graduates with coding capabilities. The idea is that if the students have a good attitude, they can learn quickly and become productive quite soon. Yet, the companies would still prefer the graduates who can be productive from day 1. In-job training is only possible for short durations like a week or two or at most three weeks. With this in mind, most companies will prefer undergraduates who have good aptitude and have received enough training in programming and data structures. So, in this blog, I address the issue of training in programming and data structures. Let me address these issues one at a time. The first is the choice of programming language.
