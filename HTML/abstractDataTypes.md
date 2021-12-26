@@ -66,6 +66,6 @@ typedef struct node {
 // List Operations
 #endif 
 ```
-Once we have defined the structure and tag, the list operations programs are placed in the list.h file. 
+Once we have defined the structure and tag, the list operations programs are placed in the [list.h](https://www.dropbox.com/s/s9urv9pctmiqpfe/list.h?dl=0) file. 
 
 The next blog will deal with List operation in detail.
