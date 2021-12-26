@@ -35,6 +35,9 @@ I believe data structure is taught to all computer science undergraduate student
 Furthermore, an introductory programming course is a requirement across disciplines. Apart from Computer Science and Engineering students, it includes other streams such as Electrical, Mechanical, Chemical, Material Science and Engineering, Maths, Physics, Chemistry and Biological Sciences. So the course is not designed exclusively for programming as CSE students are expected in the future. Therefore, without programming practice in the data structure course, I believe students of CSE tend to develop code phobia. The theory is required, but a right balance is needed.
 
 ### List of Blogs
+
+
+- [Importance of Coding](HTML/importanceOfcoding.md)
 <ul>
  
   <li>   <a href="https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html"> Structures</a></li><li>
@@ -51,6 +54,6 @@ Furthermore, an introductory programming course is a requirement across discipli
 		
 </ul>
 
-[test](HTML/importanceOfcoding.md)
+
 
 <br>
