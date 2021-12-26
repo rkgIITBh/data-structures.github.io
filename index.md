@@ -42,7 +42,7 @@ Furthermore, an introductory programming course is a requirement across discipli
 <ul>
  
   <li>   <a href="https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html"> Structures</a></li><li>
-	 <a href="https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html">DataTypes and ADTs</a></li><li>
+	
 	 <a href="https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html">ADT Lists</a></li><li>
 	 <a href="https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html">Implementation of Lists</a> </li><li>
 	 <a href="https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html">Stacks as ADT</a></li><li>
