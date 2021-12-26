@@ -18,11 +18,10 @@ Of late, some university depts have started using Python. Python is catching up 
 
 
 As far as Python is concerned, the three major advantages are:
-<ol>
-   <li> Creating Python programs take significantly less time than programming either in Java or in C++ or C. </li>
-    <li> Python programs are shorter than the equivalent programs in Java or C++ because of dynamic typing and built-in types.</li>
-    <li> A large set of highly useful libraries are available that support easy to use in Python programs. </li>
-</ol>
+-##Creating Python programs take significantly less time than programming either in Java or in C++ or C. </li>
+-##Python programs are shorter than the equivalent programs in Java or C++ because of dynamic typing and built-in types.</li>
+-##A large set of highly useful libraries are available that support easy to use in Python programs. </li>
+
  
 
 Most leading universities in the US, including MIT, CMU, Berkeley, UIUC teach Python as the first programming language course ( Esther Shein , Python for Beginners, CACM, vol 58, no. 3). 
@@ -35,7 +34,7 @@ I believe data structure is taught to all computer science undergraduate student
 
 Furthermore, an introductory programming course is a requirement across disciplines. Apart from Computer Science and Engineering students, it includes other streams such as Electrical, Mechanical, Chemical, Material Science and Engineering, Maths, Physics, Chemistry and Biological Sciences. So the course is not designed exclusively for programming as CSE students are expected in the future. Therefore, without programming practice in the data structure course, I believe students of CSE tend to develop code phobia. The theory is required, but a right balance is needed.
 
-List of Blogs
+### List of Blogs
 <ul>
  
   <li>   <a href="https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html"> Structures</a></li><li>
