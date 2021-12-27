@@ -36,13 +36,13 @@ Furthermore, an introductory programming course is a requirement across discipli
 
 ### List of Blogs
 
-
 - [Importance of Coding](HTML/importanceOfcoding.md)
 - [Abstract Data Types](HTML/abstractDataTypes.md)
 - [Structures](HTML/structures.md)
 - [Data Structures](HTML/dataStructures.md)
 - [ADT List](HTML/adtList.md)
 - [Implementation of List in C](HTML/listImplementation.md)
+- 
 <ul>
  
   <li><a href="https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html">Stacks as ADT</a></li>
