@@ -8,7 +8,7 @@ alphabetically. So, an element determines its position in the list. For example,
 
 An unordered list is just a collection of elements. The position of a component is not fixed, unlike that in an ordered list. 
 
-![Unordered List](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/unorderlist.jpg?raw=true "ordered list")
+![Unordered List](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/unorderedlist.jpg?raw=true "ordered list")
 
 The organization of elements in an unordered list is determined by its user. The user may place a new element anywhere in the 
 list, front, rear, or somewhere in the middle. A do-it-list, a check-list or a shopping list can be organized in an unordered 
