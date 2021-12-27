@@ -12,4 +12,4 @@ be insertion, deletion, search, and retrieval. Bit strings represent raw data. P
 types such as integer, float, characters, double, etc. So, data types are variables that are assigned values directly. As opposed to this, data structure provides a framework for 
 organizing data that facilitates efficient operations. Mutating operations modify data and also structure of data. Nonmutating operations are just retrieval.  
 
-[Back to Index](../index.md)
+[Back to Index](https://rkgIITBh.github.io/data-structures.github.io/)
