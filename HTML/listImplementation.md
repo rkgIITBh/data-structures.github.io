@@ -121,4 +121,4 @@ void removeVal(NODE *list, int x) {
 
 For the source code of the rest of the operations on list please follow this [link](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/CODES/circularQueueImplementation.md).
 
-[Back to Index](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/index.md)
+[Back to Index](https://rkgiitbh.github.io/data-structures.github.io/)
