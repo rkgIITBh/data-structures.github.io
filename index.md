@@ -74,9 +74,10 @@ phobia. The theory is required, but a right balance is needed.
 - [Implementation of List in C](HTML/listImplementation.md)
 - [Stack as an ADT](HTML/stacksADT.md)
 - [Stack Implementation](HTML/stackImplementation.md)
+- [Stack Implementation](HTML/queueADT.md)
 <ul>
  
-  <li><a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues </a></li>
+
   <li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-c.html"> Circular implementation of queues</a></li>
   <li><a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</a></li>
        		
