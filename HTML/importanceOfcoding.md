@@ -31,7 +31,6 @@ Of late, some university depts have started using Python. Python is catching up 
 correctly, perhaps PASCAL was taught until 2000 to the students in IIT Kanpur. It is pedagogically the best programming language, as it is the closest implementation of algorithms 
 into code.  
 
- 
 
 As far as Python is concerned, the three major advantages are:
 
