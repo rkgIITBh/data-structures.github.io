@@ -65,11 +65,35 @@ the case of inserting a new node into a given list before a particular node. The
 the diagram below.
 
  ![Insert Before](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listInsertBefore.jpg?raw=true)
- 
-For removing a node, we need to navigate the list until hitting the predecessor. The pointer adjustments for removal of a 
-node requires fetching the predessor and setting its next to the successor of the node to be removed as depicted in the
-diagram below.
+
+The existence of a dummy head node simplifies the modification of pointers when a new node is prepended to a list. Append to a 
+list does not create any problem. The pseudo-code for insertion is given below. 
+```
+insertBefore(list, x, y) {
+    pred = findPred(list, x);
+    if (pred == NULL) {
+         print "x does not exist, insert failed";
+         return;
+    }
+    p = newNode(x); // Create new node for insertion
+    if (p != NULL) {
+        p->info = y;
+        p->next = pred->next;
+        pred->next = p;
+    } else 
+        print "Memory allocation error;
+    return;
+}
+```
+If the first node is known, than insertBefore() can also add a new node at the beginning. The use of a dummy head node again 
+simplifies the code. It is possible to get the predecessor of any node in the list, including the first element. In the pseudo 
+code, we have used a function called findPred() to get the predecessor of a given node.
+
+The deletion of an element from the list is pretty simple. The manipulation of pointers for realizing deletion is shown in the 
+figure below. Here again, the dummy head node simplifies the pointer updates to remove a node. We navigate the list until
+hitting the predecessor of the node to be removed. The pointer adjustments for removal of a node requires fetching the 
+predessor and setting its next to the successor of the node to be removed as depicted in the diagram below.
 
 ![Insert Before](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listRemoveNode.jpg?raw=true)
  
- 
+For the source code of the rest of the operations on list please follow this link.
