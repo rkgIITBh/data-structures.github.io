@@ -119,6 +119,6 @@ void removeVal(NODE *list, int x) {
 }
 ```
 
-For the source code of the rest of the operations on list please follow this [link](https://github.com/rkgIITBh/Data-Structures.io/CODES/circularQueueImplementation.md).
+For the source code of the rest of the operations on list please follow this [link](https://github.com/rkgIITBh/Data-Structures.io/CODES/circularQueue/).
 
 [Back to Index](https://rkgiitbh.github.io/data-structures.github.io/)
