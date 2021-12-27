@@ -39,6 +39,7 @@ Furthermore, an introductory programming course is a requirement across discipli
 
 - [Importance of Coding](HTML/importanceOfcoding.md)
 - [Abstract Data Types](HTML/abstractDataTypes.md)
+- [Structures](HTML/structures.md)
 <ul>
   <li><a href="https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html"> Structures</a></li>
   <li><a href="https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html">ADT Lists</a></li>
