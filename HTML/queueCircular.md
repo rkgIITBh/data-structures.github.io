@@ -91,6 +91,6 @@ int getFront(QUEUE * q) {
          return q->info[q->front];
 }
 ```
-Click [here](https://rkgiitbh.github.io/data-structures.io/CODES/circularQueue/) for the complete source code.
+Click [here](https://rkgiitbh.github.io/data-structures.github.io/CODES/circularQueue/) for the complete source code.
 
 [Back to Index](https://rkgiitbh.github.io/data-structures.github.io/)
