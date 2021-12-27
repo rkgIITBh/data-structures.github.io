@@ -29,16 +29,17 @@ using a linked list or an array.
 Flat array implementation requires the left queue to make room for adding elements at the rear. Otherwise, it will not be 
 possible to reclaim vacant slots of the removed elements. The situation is illustrated by the figure below.
  
-![Flat Array](../images/queuePic1.jpg?raw=true "flat array")
-
+<p align="center">
+          <img src="../images/queuePic1.jpg">
+</p>
 It shows that the queue elements occupy array slots from index = f to r. Even if there are many vacant slots before front,
 no insertion is possible because insertion should occur only at the rear. Shifting elements often lead to inefficient 
 implementation. Shifting takes O(n) time if there are O(n) elements in the queue. A better implementation is to consider a
 circular array. It is easy to visualize circular array implementation as a fusion of two ends of a flat array as shown in 
 the above figure. Logically, it will look like this:  
-
-  ![Circular Array](../images/circularArray.jpg?raw=true "circular array")
-
+<p align="center">
+          <img src="../images/circularArray.jpg">
+</p>
 After each insertion, the front advances circularly, and after every deletion, the rear advances circularly. The circular 
 advance is equivalent to plus 1 mod n. Therefore, it is an implementation where the head of the queue appears to chase its 
 tail. The difficulty is to distinguish between the empty and the full queue. Leaving an unused empty slot in the array makes 
@@ -63,3 +64,5 @@ For example, assume n=15, consider the following situations:
 ```
 
 Watch out for the next blog for C implementation of a circular array-based queue.  
+
+[Back to Index](https://rkgiitbh.github.io/data-structures.github.io/)
