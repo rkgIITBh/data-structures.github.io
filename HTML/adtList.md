@@ -42,3 +42,5 @@ possible set of  operations on list are as follows:
 
 In the next blog I will discuss the implementation aspects of the list operations in some details and provide a link to the 
 source code in C. 
+
+![Back to Index](../index.md)
