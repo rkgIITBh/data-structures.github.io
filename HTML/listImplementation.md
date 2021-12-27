@@ -94,6 +94,23 @@ figure below. Here again, the dummy head node simplifies the pointer updates to 
 hitting the predecessor of the node to be removed. The pointer adjustments for removal of a node requires fetching the 
 predessor and setting its next to the successor of the node to be removed as depicted in the diagram below.
 
-![Insert Before](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listRemoveNode.jpg?raw=true)
- 
+![Remove Node](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listRemoveNode.jpg?raw=true)
+
+The code snippet for removal of node is given below:
+```
+void removeVal(NODE *list, int x) {
+    NODE *pred = findPred(list,x);
+
+    pred = findPred(list, x);
+    if (pred == NULL) {
+        printf("%d is not present, remove failed\n", x);
+        return;
+    }
+
+    NODE * succ = findSucc(list, x);
+   
+    pred->next = succ; 
+    return;
+}
+```
 For the source code of the rest of the operations on list please follow this [link](../CODES/listHeader.md)
