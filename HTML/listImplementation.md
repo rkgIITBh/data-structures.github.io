@@ -21,6 +21,7 @@ A new list is sometimes defined by a specially designated node called the header
 store information, but its use simplifies the coding of other operations. It is possible to operate on a list without allocating 
 a separate header node. However, an implementor has to be careful in isolating the case of applying list operation when the list 
 is empty.
+
 ```
 NODE ∗ newList() {
      NODE ∗p ;
@@ -35,6 +36,7 @@ NODE ∗ newList() {
 ``` 
 Operating with a long list may become simpler if we can identify the first and the  last node. The code for these two operations 
 are simple and given below.
+
 ```
 NODE * firstNode(NODE *list) {
      return (list->next); // Returns NULL if list is empty
@@ -69,6 +71,7 @@ the diagram below.
 </p>
 The existence of a dummy head node simplifies the modification of pointers when a new node is prepended to a list. Append to a 
 list does not create any problem. The pseudo-code for insertion is given below. 
+
 ```
 insertBefore(list, x, y) {
     pred = findPred(list, x);
@@ -98,6 +101,7 @@ predessor and setting its next to the successor of the node to be removed as dep
   <img width="260" height="150" src="https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listRemoveNode.jpg">
 </p>
 The code snippet for removal of node is given below:
+
 ```
 void removeVal(NODE *list, int x) {
     NODE *pred = findPred(list,x);
@@ -115,4 +119,4 @@ void removeVal(NODE *list, int x) {
 }
 ```
 
-For the source code of the rest of the operations on list please follow this [link](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/CODES/circularQueueImplementation.md)
+For the source code of the rest of the operations on list please follow this [link](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/CODES/circularQueueImplementation.md).
