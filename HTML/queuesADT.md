@@ -29,7 +29,7 @@ using a linked list or an array.
 Flat array implementation requires the left queue to make room for adding elements at the rear. Otherwise, it will not be 
 possible to reclaim vacant slots of the removed elements. The situation is illustrated by the figure below.
  
-![Flat Array](../images/queuePic.jpg? raw=true)
+![Flat Array](../images/queuePic.jpg?raw=true "flat array")
 
 It shows that the queue elements occupy array slots from index = 4 to r. Even if there are four vacant slots, no insertion is 
 possible because insertion should occur at the rear. Shifting elements often lead to inefficient implementation. Shifting takes 
@@ -37,7 +37,7 @@ O(n) time if there are O(n) elements in the queue. A better implementation is to
 visualize circular array implementation as a fusion of two ends of a flat array as shown in the above figure. Logically, it 
 will look like this:  
 
-  ![Circular Array](../images/circularArray.jpg? raw=true)
+  ![Circular Array](../images/circularArray.jpg?raw=true "circular array")
 
 After each insertion, the front advances circularly, and after every deletion, the rear advances circularly. The circular 
 advance is equivalent to plus 1 mod n. Therefore, it is an implementation where the head of the queue appears to chase its 
