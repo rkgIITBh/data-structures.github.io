@@ -43,10 +43,11 @@ Furthermore, an introductory programming course is a requirement across discipli
 - [ADT List](HTML/adtList.md)
 - [Implementation of List in C](HTML/listImplementation.md)
 - [Stack as an ADT](HTML/stacksADT.md)
+- [Stack Implementation](HTML/stackImplementation.md)
 <ul>
  
 
-  <li><a href="https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html">Implementation of Stacks</a></li>
+
   <li><a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues </a></li>
   <li><a href="https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-c.html"> Circular implementation of queues</a></li>
   <li><a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</a></li>
