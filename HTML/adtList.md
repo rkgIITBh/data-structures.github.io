@@ -1,6 +1,6 @@
-The abstract concept of a list is just a sequence element. There are two types of list: (i) order lists and (ii) unordered lists. 
-An ordered list an order sequence in which every element has a position. In other words, the elements of a list are arranged 
-based on some inherent characteristic. For example, roll list of students in class is arranged in ascending order or 
+The abstract concept of a list is just a sequence element. There are two types of list: (i) order lists and (ii) unordered 
+lists. An ordered list an order sequence in which every element has a position. In other words, the elements of a list are 
+arranged based on some inherent characteristic. For example, roll list of students in class is arranged in ascending order or 
 alphabetically. So, an element determines its position in the list. For example, if we have a list of ascending values: 98, 83, 
 75, 67, 51, 46, 34, 24, then the new element 92 can be placed only between 98 and 83.
 
