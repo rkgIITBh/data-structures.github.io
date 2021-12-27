@@ -82,3 +82,5 @@ void printStack(STACK *s) {
 }
 ```
 To get the full source code ![click here](../CODES/stackInC.md)
+
+[Back to Index](../index.md)
