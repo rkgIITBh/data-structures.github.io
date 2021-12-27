@@ -1,4 +1,4 @@
- Data Types and ADTs
+ ### Data Types and ADTs
 
 Where to begin learning about data structure? Though the meaning of a structure is known to us, it is not clear what data means except being a collection of bit strings. Bit strings 
 are uninteresting unless these are related to the values. The values give some measurements or assessments of the physical characteristics of our interests. For example, values may 
