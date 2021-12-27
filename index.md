@@ -74,7 +74,7 @@ phobia. The theory is required, but a right balance is needed.
 - [Implementation of List in C](HTML/listImplementation.md)
 - [Stacks as ADT](HTML/stacksADT.md)
 - [Stack Implementation](HTML/stackImplementation.md)
-- [Queues as ADT](HTML/queueADT.md)
+- [Queues as ADT](HTML/queuesADT.md)
 <ul>
  
 
