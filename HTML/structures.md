@@ -1,4 +1,4 @@
- Meaning of Structure
+## Meaning of Structure
 
 A structure defines an arrangement of the components or parts organized in a pattern to form something complex. The Cambridge dictionary says that a structure's meaning is to organize a 
 system's elements or an object. For example, the grammatical structure of a sentence consists of a noun phrase and a verb phrase.  A noun phrase comprises of a group of words that 
