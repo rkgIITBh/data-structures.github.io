@@ -42,8 +42,9 @@ Furthermore, an introductory programming course is a requirement across discipli
 - [Structures](HTML/structures.md)
 - [Data Structures](HTML/dataStructures.md)
 - [ADT List](HTML/adtList.md)
+- [Implementation of List in C](HTML/listImplementation.md)
 <ul>
-  <li><a href="https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html">Implementation of Lists</a></li>
+ 
   <li><a href="https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html">Stacks as ADT</a></li>
   <li><a href="https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html">Implementation of Stacks</a></li>
   <li><a href="https://vikramshilla.blogspot.com/2021/12/queues.html">Queues </a></li>
