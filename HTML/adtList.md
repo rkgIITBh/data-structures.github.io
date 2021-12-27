@@ -6,13 +6,13 @@ lists. An ordered list an order sequence in which every element has a position. 
 arranged based on some inherent characteristic. For example, roll list of students in class is arranged in ascending order or 
 alphabetically. So, an element determines its position in the list. For example, if we have a list of ascending values: 98, 83, 
 75, 67, 51, 46, 34, 24, then the new element 92 can be placed only between 98 and 83.
-
-![Ordered List](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/orderlist.jpg?raw=true "ordered list")
-
+<p align="center">
+  <img width="460" height="300" src="https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/orderlist.jpg">
+</p>
 An unordered list is just a collection of elements. The position of a component is not fixed, unlike that in an ordered list. 
-
-![Unordered List](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/unorderedlist.jpg?raw=true "ordered list")
-
+<p align="center">
+  <img width="460" height="300" src="https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/unorderedlist.jpg?">
+</p>
 The organization of elements in an unordered list is determined by its user. The user may place a new element anywhere in the 
 list, front, rear, or somewhere in the middle. A do-it-list, a check-list or a shopping list can be organized in an unordered 
 fashion as no inherent element characteristic determines its position.
