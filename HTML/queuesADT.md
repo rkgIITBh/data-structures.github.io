@@ -31,11 +31,11 @@ possible to reclaim vacant slots of the removed elements. The situation is illus
  
 ![Flat Array](../images/queuePic1.jpg?raw=true "flat array")
 
-It shows that the queue elements occupy array slots from index = 4 to r. Even if there are four vacant slots, no insertion is 
-possible because insertion should occur at the rear. Shifting elements often lead to inefficient implementation. Shifting takes 
-O(n) time if there are O(n) elements in the queue. A better implementation is to consider a circular array. It is easy to 
-visualize circular array implementation as a fusion of two ends of a flat array as shown in the above figure. Logically, it 
-will look like this:  
+It shows that the queue elements occupy array slots from index = f to r. Even if there are many vacant slots before front,
+no insertion is possible because insertion should occur only at the rear. Shifting elements often lead to inefficient 
+implementation. Shifting takes O(n) time if there are O(n) elements in the queue. A better implementation is to consider a
+circular array. It is easy to visualize circular array implementation as a fusion of two ends of a flat array as shown in 
+the above figure. Logically, it will look like this:  
 
   ![Circular Array](../images/circularArray.jpg?raw=true "circular array")
 
@@ -45,13 +45,13 @@ tail. The difficulty is to distinguish between the empty and the full queue. Lea
 the implementation faster and easier. 
 
 Initially an empty queue is defined by Q.front=0, Q.rear=n-1. The queue empty condition will occur when 
-
+```
 (Q.rear+1) mod n == Q.front 
-
+```
 Since a full queue can have only n-1 elements, the full queue condition can be determined by 
-
+```
 Q.front = ((Q.rear+1) mod n+1) mod n == Q.front. 
-
+```
 For example, assume n=15, consider the following situations:
 ```
   Q.front =12, and Q.rear = 14, it means positions 12, 13, 14 are occupied. 
