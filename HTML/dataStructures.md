@@ -1,4 +1,4 @@
- Data structures
+## Data structures
 This blog is a continuation of the latest blog on programming and data structures.
 I believe data structure is taught to all computer science undergraduate students. Though there is much variation in the way, it is taught. Some view the course as a gentle introduction 
 to algorithms, and theoretical underpinning is more important than implementation issues. Perhaps, the thinking behind it is that the introductory programming course has already been 
