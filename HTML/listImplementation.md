@@ -64,7 +64,7 @@ picture to ensure that code does not attempt to access undefined pointers, espec
 the case of inserting a new node into a given list before a particular node. The exact manipulation of the pointers is given in 
 the diagram below.
 
- ![Insert Before](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/insertBefore.jpg?raw=true)
+ ![Insert Before](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listInsertBefore.jpg?raw=true)
  
 For removing a node, we need to navigate the list until hitting the predecessor. The pointer adjustments for removal of a 
 node requires fetching the predessor and setting its next to the successor of the node to be removed as depicted in the
