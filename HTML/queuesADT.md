@@ -29,7 +29,7 @@ using a linked list or an array.
 Flat array implementation requires the left queue to make room for adding elements at the rear. Otherwise, it will not be 
 possible to reclaim vacant slots of the removed elements. The situation is illustrated by the figure below.
  
-![Flat Array](../images/queuePic.jpg?raw=true "flat array")
+![Flat Array](../images/queuePic1.jpg?raw=true "flat array")
 
 It shows that the queue elements occupy array slots from index = 4 to r. Even if there are four vacant slots, no insertion is 
 possible because insertion should occur at the rear. Shifting elements often lead to inefficient implementation. Shifting takes 
