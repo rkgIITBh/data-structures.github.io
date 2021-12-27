@@ -5,9 +5,9 @@
   older generation in the tree. Two successive generations are related by parent-child. Children and their parent are connected 
   by links or  branches. The picture of a family tree appears in the diagram below. The point from where family genealogy begins 
   is called the root. For example, in the diagram above, you is the root. 
-
-![Family Tree](../images/familyTree.jpg?raw=true "family tree")
- 
+<p align="center">
+  <img width="260" height="150" src="https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/familyTree.jpg">
+</p>
 A tree represents a hierarchic relationship among elements of data. Conventionally, unlike a family tree, a tree data 
 structure is drawn bottom-up with the root at the top, and ancestor-descendants relationships are considered reversed. An   
 element of a tree is referred to as a node. It comprises of non-divisible data items to be processed as a unit with the link 
@@ -29,9 +29,9 @@ A hierarchy of chapters, sections, subsections and paragraphs of texts represent
 root of the tree. Each chapter is a sub tree of the root. A chapter, in turn, represents a tree consisting of several sections, 
 each of which is a sub tree of the chapter. The picture below provides the hierarchic relationships of a book, its chapters, 
 sections, and subsections.
-
- ![A Tree](../images/tree_picture.jpg?raw=true "Tree pic")
-
+<p align="center">
+  <img width="260" height="150" src="https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/tree_picture.jpg">
+</p>
 A tree is accessible through its root. Any processing of a tree requires a systematic traversal of the tree in which each node 
 is accessed at least once. Storing a tree in a computer's memory creates an automatic ordering of the siblings from the left to 
 the right.  In the relative ordering of a pair of siblings, one sibling appears to the other sibling. A node having no child is 
@@ -40,3 +40,5 @@ known as a leaf node while other nodes are called internal nodes.
 If each node in a tree may have at most one sibling, then we call it a binary tree. Equivalently, in a binary tree, each node 
 may have 0, 1 or two children. The two siblings of a parent p are known respectively as  left child and right child of p. We 
 will begin with binary tree in the next blog. 
+
+[Back to Index](../index.md)
