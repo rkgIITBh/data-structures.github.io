@@ -1,3 +1,5 @@
+## Stack Implementation
+
 The creation of a stack is simple. It requires allocating heap memory for storing stack elements, and two extra scalar 
 variables. One for keeping track of the number of elements in the stack works as a cursor to the last item—the other for keeping 
 track of the stack capacity. The function createStack appears below.
