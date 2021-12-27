@@ -67,7 +67,7 @@ picture to ensure that code does not attempt to access undefined pointers, espec
 the case of inserting a new node into a given list before a particular node. The exact manipulation of the pointers is given in 
 the diagram below.
 <p align="center">
-  <img width="260" height="150" src="https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listInsertBefore.jpg">
+  <img width="260" height="150" src="https://github.com/rkgIITBh/Data-Structures.io/images/listInsertBefore.jpg">
 </p>
 The existence of a dummy head node simplifies the modification of pointers when a new node is prepended to a list. Append to a 
 list does not create any problem. The pseudo-code for insertion is given below. 
@@ -98,7 +98,7 @@ figure below. Here again, the dummy head node simplifies the pointer updates to 
 hitting the predecessor of the node to be removed. The pointer adjustments for removal of a node requires fetching the 
 predessor and setting its next to the successor of the node to be removed as depicted in the diagram below.
 <p align="center">
-  <img width="260" height="150" src="https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listRemoveNode.jpg">
+  <img width="260" height="150" src="https://github.com/rkgIITBh/Data-Structures.io/images/listRemoveNode.jpg">
 </p>
 The code snippet for removal of node is given below:
 
