@@ -20,8 +20,6 @@ An element of a list represents a composite item consisting of an information pa
 commonly referred to as a node. In terms of C each node of a list is a record that may store one or more values and the next
 field. For implementation, we use struct construct. However, it is important to understand the list as an ADT.
 
- 
-
 Every item except the last has a next or a successor item. Similarly, every item except the first one has a predecessor. The 
 possible set of  operations on list are as follows:
 
