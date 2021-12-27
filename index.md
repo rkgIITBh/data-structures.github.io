@@ -72,9 +72,9 @@ phobia. The theory is required, but a right balance is needed.
 - [Data Structures](HTML/dataStructures.md)
 - [ADT List](HTML/adtList.md)
 - [Implementation of List in C](HTML/listImplementation.md)
-- [Stack as an ADT](HTML/stacksADT.md)
+- [Stacks as ADT](HTML/stacksADT.md)
 - [Stack Implementation](HTML/stackImplementation.md)
-- [Stack Implementation](HTML/queueADT.md)
+- [Queues as ADT](HTML/queueADT.md)
 <ul>
  
 
