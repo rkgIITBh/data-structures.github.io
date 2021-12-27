@@ -4,7 +4,7 @@ based on some inherent characteristic. For example, roll list of students in cla
 alphabetically. So, an element determines its position in the list. For example, if we have a list of ascending values: 98, 83, 
 75, 67, 51, 46, 34, 24, then the new element 92 can be placed only between 98 and 83.
 
-![Ordered List] (https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/orderedlist.jpg?raw=true)
+![Ordered List] (https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/orderlist.jpg?raw=true)
 
 An unordered list is just a collection of elements. The position of a component is not fixed, unlike that in an ordered list. 
 
