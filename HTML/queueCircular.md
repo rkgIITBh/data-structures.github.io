@@ -93,4 +93,4 @@ int getFront(QUEUE * q) {
 ```
 Click [here](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/CODES/circularQueueImplementation.md) for the complete source code.
 
-[Back to Index](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/index.md)
+[Back to Index](https://rkgiitbh.github.io/data-structures.github.io/)
