@@ -41,4 +41,4 @@ If each node in a tree may have at most one sibling, then we call it a binary tr
 may have 0, 1 or two children. The two siblings of a parent p are known respectively as  left child and right child of p. We 
 will begin with binary tree in the next blog. 
 
-[Back to Index](../index.md)
+[Back to Index](https://rkgIITBh.github.io/data-structures.github.io/)
