@@ -39,9 +39,9 @@ of data with interfaces to operating on the data. It is much like an algebraic s
 Abstractions are always very useful. Since the implementation is separate from the interface, a client can operate on a data structure using the interface. The client need not bother 
 about the operation or data modification if a mutating operation is applied to data. It simplifies the coding. We can view the ADT as providing a small window or counter through 
 which the client gets services (applying operations) but does not have to bother about the kind of activities behind the walls and beyond the window. 
-
-![Wall of abstraction](../images/wallOfAbstraction.jpg?raw=true "Wall of abstraction")
-
+<p align="center">
+  <img width="300" height="150" src="../images/wallOfAbstraction.jpg">
+</p>
 The wall of abstraction between client and implementation lets the client use data structure only through the interface. Implementation protects internal details from accidental or 
 deliberate modification by the client programs. 
 
