@@ -1,5 +1,6 @@
-The first thing about implementation is to declare the memory requirement for the data structure. In the case of a list, we need 
-at least two fields to define a node, namely, 
+## Implementation of List in C
+The first thing about implementation is to declare the memory requirement for the data structure. In the case of a list, we 
+need at least two fields to define a node, namely, 
 
 - ### Information content: to store an item of information in an element of the list.
 - ### Successor element: to be able to fetch the successor from a given element of the list.  
