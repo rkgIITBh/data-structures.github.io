@@ -8,20 +8,19 @@
 
 ![Family Tree](../images/familyTree.jpg?raw=true "family tree")
  
- A tree represents a hierarchic relationship among elements of data. Conventionally, unlike a family tree, a tree data 
-  structure is drawn bottom-up with the root at the top, and ancestor-descendants relationships are considered reversed. An 
-  element of a tree is referred to as a node. It comprises of non-divisible data items to be processed as a unit with the link 
-  information to reach all the children and possibly the parent. We begin with the definition of a tree.
+A tree represents a hierarchic relationship among elements of data. Conventionally, unlike a family tree, a tree data 
+structure is drawn bottom-up with the root at the top, and ancestor-descendants relationships are considered reversed. An   
+element of a tree is referred to as a node. It comprises of non-divisible data items to be processed as a unit with the link 
+information to reach all the children and possibly the parent. We begin with the definition of a tree.
 
-Definition:
+<b>Definition:</b> A tree T may be empty (null tree with no node), or may consist of
 
-A tree T may be empty (null tree with no node), or may consist of
+A special node, designated as r, called the root.
+A set of k trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> (some could possibly empty) with roots 
+r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub>respectively.
 
-    A special node, designated as r, called the root.
-    A set of k trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> (some could possibly empty) with roots 
-    r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub>respectively.
-
-T is constructed by making r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> as children of r. Trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> are called sub trees of T.
+T is constructed by making r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> as children of r. Trees T<sub>1</sub>, 
+T<sub>2</sub>, . . . , T<sub>k</sub> are called sub trees of T.
 
 The above definition is recursive, as it defines a tree in terms of other trees. 
 
