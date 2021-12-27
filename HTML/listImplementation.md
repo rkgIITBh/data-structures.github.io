@@ -96,4 +96,4 @@ predessor and setting its next to the successor of the node to be removed as dep
 
 ![Insert Before](https://github.com/rkgIITBh/Data-Structures.io/blob/gh-pages/images/listRemoveNode.jpg?raw=true)
  
-For the source code of the rest of the operations on list please follow this [link](gh-pages/CODES/listHeader.md)
+For the source code of the rest of the operations on list please follow this [link](../../CODES/listHeader.md)
