@@ -5,8 +5,10 @@
   older generation in the tree. Two successive generations are related by parent-child. Children and their parent are connected 
   by links or  branches. The picture of a family tree appears in the diagram below. The point from where family genealogy begins 
   is called the root. For example, in the diagram above, you is the root. 
-  ![Family Tree](../images/familyTree.jpg?raw=true "family tree")
-  A tree represents a hierarchic relationship among elements of data. Conventionally, unlike a family tree, a tree data 
+
+![Family Tree](../images/familyTree.jpg?raw=true "family tree")
+ 
+ A tree represents a hierarchic relationship among elements of data. Conventionally, unlike a family tree, a tree data 
   structure is drawn bottom-up with the root at the top, and ancestor-descendants relationships are considered reversed. An 
   element of a tree is referred to as a node. It comprises of non-divisible data items to be processed as a unit with the link 
   information to reach all the children and possibly the parent. We begin with the definition of a tree.
