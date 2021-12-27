@@ -17,7 +17,7 @@ information to reach all the children and possibly the parent. We begin with the
 
 A special node, designated as r, called the root.
 A set of k trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> (some could possibly empty) with roots 
-r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub>respectively.
+r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> respectively.
 
 T is constructed by making r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> as children of r. Trees T<sub>1</sub>, 
 T<sub>2</sub>, . . . , T<sub>k</sub> are called sub trees of T.
