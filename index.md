@@ -76,13 +76,6 @@ phobia. The theory is required, but a right balance is needed.
 - [Stack Implementation](HTML/stackImplementation.md)
 - [Queues as ADT](HTML/queuesADT.md)
 - [Circular Queue Implementation](HTML/queueCircular.md)
-<ul>
- 
-
-  <li><a href="https://vikramshilla.blogspot.com/2021/12/trees.html">Trees</a></li>
-       		
-</ul>
-
-
+- [Introduction to Trees](HTML/treeIntro.md)
 
 <br>
