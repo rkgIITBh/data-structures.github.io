@@ -6,7 +6,7 @@
   by links or  branches. The picture of a family tree appears in the diagram below. The point from where family genealogy begins 
   is called the root. For example, in the diagram above, you is the root. 
 <p align="center">
-  <img width="260" height="150" src="https://rkgiitbh.github.io/data-structures.github.io/images/familyTree.jpg">
+  <img width="330" height="200" src="https://rkgiitbh.github.io/data-structures.github.io/images/familyTree.jpg">
 </p>
 A tree represents a hierarchic relationship among elements of data. Conventionally, unlike a family tree, a tree data 
 structure is drawn bottom-up with the root at the top, and ancestor-descendants relationships are considered reversed. An   
@@ -30,7 +30,7 @@ root of the tree. Each chapter is a sub tree of the root. A chapter, in turn, re
 each of which is a sub tree of the chapter. The picture below provides the hierarchic relationships of a book, its chapters, 
 sections, and subsections.
 <p align="center">
-  <img width="260" height="150" src="https://rkgiitbh.github.io/data-structures.github.io/images/tree_picture.jpg">
+  <img width="330" height="200" src="https://rkgiitbh.github.io/data-structures.github.io/images/tree_picture.jpg">
 </p>
 A tree is accessible through its root. Any processing of a tree requires a systematic traversal of the tree in which each node 
 is accessed at least once. Storing a tree in a computer's memory creates an automatic ordering of the siblings from the left to 
