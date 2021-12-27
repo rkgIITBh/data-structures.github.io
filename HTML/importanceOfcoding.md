@@ -49,4 +49,4 @@ have greater acceptance among the students. Pedagogically, it will not be a majo
 with Python. Teaching Python through web programming approach came from Rajat Moona, the incumbent director of IIT Bhilai. Since 
 the faculty at IIT Bhilai is young, they enthusiastically supported it.  
 
-![Back to Index](../index.md)
+[Back to Index](https://rkgiitbh.github.io/data-structures.github.io/)
