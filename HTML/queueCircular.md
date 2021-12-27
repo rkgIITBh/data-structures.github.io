@@ -1,4 +1,6 @@
-In the last blog, w discussed operations on queues and circular array implementation of a queue. In this blog, we look at the 
+## CircularArray Implementation of Queues
+
+In the last blog, we discussed operations on queues and circular array implementation of a queue. In this blog, we look at the 
 functions for implementing the queue operations in C. Let us begin with the definition of a queue for storing elements using a 
 C-struct. 
 ```
