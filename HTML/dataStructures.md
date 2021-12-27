@@ -14,4 +14,4 @@ balance is needed.
 
 I plan to create a set of posts on various data structures in future blogs.   
 
-![Back to Index](../index.md)
+[Back to Index](https://rkgiitbh.github.io/data-structures.github.io/)
