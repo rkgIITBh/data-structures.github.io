@@ -11,3 +11,5 @@ Having understood the function of structure, we may think of data structure as a
 be insertion, deletion, search, and retrieval. Bit strings represent raw data. Programming languages offer some form of basic organization over bit strings represented by native data 
 types such as integer, float, characters, double, etc. So, data types are variables that are assigned values directly. As opposed to this, data structure provides a framework for 
 organizing data that facilitates efficient operations. Mutating operations modify data and also structure of data. Nonmutating operations are just retrieval.  
+
+[Back to Index](../index.md)
