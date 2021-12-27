@@ -39,4 +39,5 @@ Now STACK can be used as a type for implementing stack operations.
 
 The next blog will deal with stack operations.
 
+[Back to Index](../index.md)
   
