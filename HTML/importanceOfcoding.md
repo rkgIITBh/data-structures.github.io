@@ -1,4 +1,4 @@
- ## Why coding and learning data structure is a big deal
+ ## Why coding and learning data structure is a big deal?
 
 Programming and data structure are two important elements in building a career as a software techie. India boasts of a number of software companies like TCS, Infosys, HCL
 Technologies, Mindtree, Tech Mahinda, L&T infotech, ITC infotech, First source, etc. I understand all of these companies have in-house training units. They induct graduate 
