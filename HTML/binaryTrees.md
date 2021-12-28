@@ -12,7 +12,7 @@ every node in a binary tree may have 0, or 1, or two children. We distinguish be
 orientation of children of an internal node in a binary tree. Formally, the definition of a binary tree is 
 as follows:
 <div class="alert alert-success">
-   <strong>Definition</strong>A binary tree may be an empty tree or a tree in which each node may have 
+   <strong>Definition</strong> A binary tree may be an empty tree or a tree in which each node may have 
   no child, a left child, a right child or both a left and a right child.  
 </div>
 When drawing a binary tree, the left child is drawn to the left of the vertical passing through its
