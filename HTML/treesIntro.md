@@ -22,7 +22,6 @@ information to reach all the children and possibly the parent. We begin with the
 T is constructed by making r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> as children of r. 
 Trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> are called sub trees of T.
 </div>
-
 The above definition is recursive, as it defines a tree in terms of other trees. 
 
 A hierarchy of chapters, sections, subsections and paragraphs of texts represents a book. We can denote the whole book as the 
