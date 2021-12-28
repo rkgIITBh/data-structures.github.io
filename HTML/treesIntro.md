@@ -14,15 +14,15 @@ element of a tree is referred to as a node. It comprises of non-divisible data i
 information to reach all the children and possibly the parent. We begin with the definition of a tree.
 
 <div class="alert alert-success"><strong>Definition:</strong> A tree T may be empty (null tree with no node), or may consist of
-
-A special node, designated as r, called the root.
-A set of k trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> (some could possibly empty) with roots 
-r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> respectively.
-
+<ul>
+ <li>A special node, designated as r, called the root.</li>
+<li>A set of k trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> (some could possibly empty) with 
+ roots r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> respectively.</li>
+ </ul>
 T is constructed by making r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> as children of r. 
-
 Trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> are called sub trees of T.
 </div>
+
 The above definition is recursive, as it defines a tree in terms of other trees. 
 
 A hierarchy of chapters, sections, subsections and paragraphs of texts represents a book. We can denote the whole book as the 
