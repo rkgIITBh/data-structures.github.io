@@ -1,4 +1,4 @@
- ## Introduction to Trees
+## Introduction to Trees
  
  The terminology to describe trees is borrowed from the notion of a family tree. Ancestor-descendant relationships exist among 
   the elements of a family tree. The oldest generation appears at the top of a family tree. Younger generations appear below 
@@ -13,7 +13,7 @@ structure is drawn bottom-up with the root at the top, and ancestor-descendants 
 element of a tree is referred to as a node. It comprises of non-divisible data items to be processed as a unit with the link 
 information to reach all the children and possibly the parent. We begin with the definition of a tree.
 
-<b>Definition:</b> A tree T may be empty (null tree with no node), or may consist of
+<div class="alert alert-success"><strong>Definition:</strong> A tree T may be empty (null tree with no node), or may consist of
 
 A special node, designated as r, called the root.
 A set of k trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> (some could possibly empty) with roots 
@@ -22,7 +22,7 @@ r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> respectively.
 T is constructed by making r<sub>1</sub>, r<sub>2</sub>, . . . , r<sub>k</sub> as children of r. 
 
 Trees T<sub>1</sub>, T<sub>2</sub>, . . . , T<sub>k</sub> are called sub trees of T.
-
+</div>
 The above definition is recursive, as it defines a tree in terms of other trees. 
 
 A hierarchy of chapters, sections, subsections and paragraphs of texts represents a book. We can denote the whole book as the 
