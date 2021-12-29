@@ -12,7 +12,7 @@ relationships among the nodes in a tree. However, we still require a few other
 associated terminology before going deeper into tree data structure. We discuss these with reference to the
 diagram appearing below.
 <p align="center">
-<img src="https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/tree_terminology.jpg" width="250" height="200">
+<img src="https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/tree_terminology.jpg" width="450" height="350">
  </p>
 The root of the tree <i>a</i> is an <i>ancestor</i> of all nodes including itself. Similarly, all nodes including
 <i>a</i> are descendants of <i>a</i>. However, the set of proper ancestors of a node excludes the node. Likewise, the
@@ -27,9 +27,8 @@ general, if the level of a node is <i>i</i> then all its children at level <i>i+
 Alternatively, the level of a node is  known as the depth of the node, as it represents the number of links from 
 the root to the concerned node. The depth of the farthest leaf node down from the root is equal to height of the
 tree. In above example, the nodes at level 3 are farthest from the root. Therefore, the height of the tree is 3. 
-<p align="center">
-<img src="https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/binary_tree.jpg" width="250" height="200">
- </p>
+<br>
+<br>
 
 Now let us deal with binary trees. If the arity of a tree T is two, then we call T as a binary tree. As explained in 
 the previous blog
