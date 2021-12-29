@@ -15,6 +15,6 @@ as follows:
    <strong>Definition</strong> A binary tree may be an empty tree or a tree in which each node may have 
   no child, a left child, a right child or both a left and a right child.  
 </div>
-When drawing a binary tree, the left child is drawn to the left of the vertical passing through its
-parent, and the right child is drawn to the right of the vertical. The figure below illustrates a binary tree
-with 7 nodes. The root is labeled as R 
+For the purpose of illustration, we draw the left child o node to the left of the vertical passing through 
+it, and the right child to the right of the vertical. The figure below illustrates a binary tree with 7 nodes. The 
+root is labeled as R 
