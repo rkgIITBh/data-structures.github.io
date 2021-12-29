@@ -6,8 +6,33 @@ tree. Typically, storage order children is known as left to right order:
 <ul>
   <li> The immediate predecessor sibling of a node is called its left sibling,</li>
   <li> and the immediate successor sibling is called the right sibling.</li>
-</ul>    
-If the arity of a tree T is two, then we call T as a binary tree. As explained in the previous blog
+</ul>  
+We have learned that the terminology associated with trees is derived from family trees, especially, the
+relationships among the nodes in a tree. However, we still require a few other 
+associated terminology before going deeper into tree data structure. We discuss these with reference to the
+diagram appearing below.
+<p align="center">
+<img src="https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/tree_terminology.jpg" width="250" height="200">
+ </p>
+The root of the tree <i>a</i> is an <i>ancestor</i> of all nodes including itself. Similarly, all nodes including
+<i>a</i> are descendants of <i>a</i>. However, the set of proper ancestors of a node excludes the node. Likewise, the
+set of proper descendant of a node exclude itself. The level of the root is 0 and the children of root at level 1. In
+general, if the level of a node is <i>i</i> then all its children at level <i>i+1</i>. For example,
+<ul>
+  <li> level of <i>a</i> in above tree is 0,</li>
+  <li> nodes <i>b</i>, <i>c</i>, and <i>d</i> are at level 1,</li>
+  <li> nodes <i>e</i>, <i>g</i>, and <i>h</i> are at level 2,</li> 
+    <li> nodes <i>i</i>, <i>j</i>, and <i>k</i> are at level 3.</li> 
+  </ul>
+Alternatively, the level of a node is  known as the depth of the node, as it represents the number of links from 
+the root to the concerned node. The depth of the farthest leaf node down from the root is equal to height of the
+tree. In above example, the nodes at level 3 are farthest from the root. Therefore, the height of the tree is 3. 
+<p align="center">
+<img src="https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/binary_tree.jpg" width="250" height="200">
+ </p>
+
+Now let us deal with binary trees. If the arity of a tree T is two, then we call T as a binary tree. As explained in 
+the previous blog
 every node in a binary tree may have 0, or 1, or two children. We distinguish between the twp possible 
 orientation of children of an internal node in a binary tree. Formally, the definition of a binary tree is 
 as follows:
