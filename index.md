@@ -77,5 +77,5 @@ phobia. The theory is required, but a right balance is needed.
 - [Queues as ADT](HTML/queuesADT.md)
 - [Circular Queue Implementation](HTML/queueCircular.md)
 - [Introduction to Trees](HTML/treesIntro.md)
-
+- [Introduction to Trees](HTML/binarytrees.md)
 <br>
