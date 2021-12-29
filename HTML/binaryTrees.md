@@ -19,5 +19,5 @@ For the purpose of illustration, we draw the left child o node to the left of th
 it, and the right child to the right of the vertical. The figure below illustrates a binary tree with 7 nodes. The 
 root is labeled as R 
 <p align="center">
-![Binary Tree](https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/queuePic1.jpg)
+<img src="https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/binary_tree.jpg">
  </p>
