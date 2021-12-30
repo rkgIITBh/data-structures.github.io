@@ -6,7 +6,7 @@ we repeatedly follow chwe focus only binary tree. The three possible way of trav
 <ul>
   <li> Preorder traversal</li>
   <li> Postorder traversal</li>
-  <;i> Inorder traversal</li>
+  <li> Inorder traversal</li>
   </ul>
   
 We visualize the traversals recursively as follows:
