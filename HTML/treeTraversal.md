@@ -26,6 +26,7 @@ procedure:
     </ul>
 Consider an example tree shown below to understand how the tree traversal procedures work.
 <p>
-  <img src="../images/
+  <img src="../images/ordered_tree.jpg">
+  </p>
 
 In case of binary trees <i>k=2</i>. We distinguish between two the subtrees The subtrees as  the left subtree and the right subtree.  
