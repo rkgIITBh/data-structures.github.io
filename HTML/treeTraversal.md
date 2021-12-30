@@ -1,15 +1,14 @@
 ## Traversal of Binary Trees
 
-The processing of information in a tree data structure requires each node of the tree to be accessed at least once. However, a program can access the nodes 
-only from the root of a tree. Since every node keeps pointer to its children, we can access  the children of a given node. Therefore, starting with the root
-we repeatedly follow chwe focus only binary tree. The three possible way of traversing a tree are: 
+The processing of information in a tree data structure requires each node of the tree to be accessed at least once. A tree is accessible from its root node. 
+As every node stores a pointer to its children, we can access  the children of a given node. Therefore, starting with the root, it is possible to access all
+nodes by repeatedly following the children pointers from the node which has been visited. The three possible way of traversing a tree are: 
 <ul>
   <li> Preorder traversal</li>
   <li> Postorder traversal</li>
   <li> Inorder traversal</li>
   </ul>
-  
-We visualize the traversals recursively as follows:
+The output of a traversal procedure is a list of nodes ordered by their visit sequence.  It is convenient to visualize the each traversals as a recursive procedure: 
 <ol>
   <li> If the tree is empty then the empty sequence represents the preorder/postorder/inorder traversal list for the given tree <\li>
   <li> If the tree consists of oonly the root node then root is also the sequence of preorder/postorder/inorder traveral list of the tree.</li>
