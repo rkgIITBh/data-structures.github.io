@@ -16,9 +16,9 @@ The output of a traversal procedure is a list of nodes ordered by their visit se
       <ul>
         <li> Preorder traversal of T is sequence obtained by the root concatenated with preorder traversal sequences of T<sub>1</sub>, T<sub>2</sub>, ...,
           T<sub>k</sub>. </li>
-        li> Postorder traversal of T is sequence obtained by the concatenation of postorder traversal sequences of T<sub>1</sub>, T<sub>2</sub>, ...,
+        <li> Postorder traversal of T is sequence obtained by the concatenation of postorder traversal sequences of T<sub>1</sub>, T<sub>2</sub>, ...,
           T<sub>k</sub>. </li> then the root.
-      li> Inorder traversal of T is sequence obtained by the concatenation of inorder traversal sequences of T<sub>1</sub>, then root then 
+      <li> Inorder traversal of T is sequence obtained by the concatenation of inorder traversal sequences of T<sub>1</sub>, then root then 
       inorder sequences of T<sub>2</sub>, ..., and T<sub>k</sub>. </li>
     </ol>
     </ul>
