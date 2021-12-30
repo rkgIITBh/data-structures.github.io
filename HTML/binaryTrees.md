@@ -1,8 +1,8 @@
 An internal node of a tree may have up to k > 0 children, where k is a finite number. That is the number of 
 children of an internal node in tree may vary between 1 to k. The value k is known as the arity of the tree. 
-If the children of a nod are always programmatically accessed in the order they appear in storage, then the 
-tree is an ordered tree. If the prgoram ignores the storage order of the children, then we have an unordered
-tree. Typically, storage order children is known as left to right order:
+If the children of a node in a tree are always programmatically accessed in the order they appear in the storage, then
+it  is an ordered tree. If a program ignores the storage order of the children, then it treats the tree as unordered
+Typically, the storage order children is assumed to be left to right order:
 <ul>
   <li> The immediate predecessor sibling of a node is called its left sibling,</li>
   <li> and the immediate successor sibling is called the right sibling.</li>
