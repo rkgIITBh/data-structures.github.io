@@ -25,7 +25,7 @@ procedure:
     </ol>
     </ul>
 Consider an example tree shown below to understand how the tree traversal procedures work.
-<p>
+<p align="center">
   <img src="../images/ordered_tree.jpg">
   </p>
 
