@@ -10,7 +10,7 @@ nodes by repeatedly following the children pointers from the node which has been
   </ul>
 The output of a traversal procedure is a list of nodes ordered by their visit sequence.  It is convenient to visualize the each traversals as a recursive procedure: 
 <ol>
-  <li> If the tree is empty then the empty sequence represents the preorder/postorder/inorder traversal list for the given tree <\li>
+  <li> If the tree is empty then the empty sequence represents the preorder/postorder/inorder traversal list for the given tree </li>
   <li> If the tree consists of oonly the root node then root is also the sequence of preorder/postorder/inorder traveral list of the tree.</li>
     <li> If tree consists of root <i>r</i>, and <i>k</i> subtrees T<sub>1</sub>, T<sub>2</sub>, ..., T<sub>k</sub>.
       <ul>
