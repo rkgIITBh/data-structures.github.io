@@ -63,12 +63,15 @@ The reader can find that the sequence we get from the walk around the tree is gi
 where subscript represent the instance of visiting a correspnding node. For example, node 1 is visited for the third instance when we walk up from node 3 and
 come down to node 4. We can now link the walk around the tree with the three traversal lists as follows. 
 <ul>
-  <li>For preorder sequence: list out the node when it is visited for the first time.</li>
-  <li>For postorder sequence: list out the node when it is visited for the last time.</li>  
-  <li>For inorder sequence: list out the node when it is visited for the second time.</li>  
+  <li>For preorder sequence: list out the node when it is visited for the first instance.</li>
+  <li>For postorder sequence: list out the node when it is visited for the last instance.</li>  
+  <li>For inorder sequence: list out the node when it is visited for the second instance.</li>  
 </ul>
-
-
+The list of node visits for last instance is:
+<p align="center">
+2<sub>(1)</sub>&nbsp8<sub>(1)</sub>&nbsp9<sub>(1)</sub>&nbsp5<sub>(3)</sub>&nbsp10<sub>(1)</sub>&nbsp6<sub>(2)</sub>&nbsp3<sub>(3)</sub>&nbsp7<sub>
+  (1)</sub>&nbsp4<sub>(2)</sub>&nbsp1<sub>(4)</sub>
+</p>
 For  binary trees <i>k=2</i>, we distinguish between two subtrees, the subtrees are referred to as the left subtree and the right subtree. 
 The preorder, postorder and inorder traversals procedures are same as dicussed above but we can put them more compactly as follows:
 <ul>
