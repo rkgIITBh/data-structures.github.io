@@ -72,6 +72,7 @@ The list of node visits for last instance is:
 2<sub>(1)</sub>&nbsp8<sub>(1)</sub>&nbsp9<sub>(1)</sub>&nbsp5<sub>(3)</sub>&nbsp10<sub>(1)</sub>&nbsp6<sub>(2)</sub>&nbsp3<sub>(3)</sub>&nbsp7<sub>
   (1)</sub>&nbsp4<sub>(2)</sub>&nbsp1<sub>(4)</sub>
 </p>
+Therefore, the postorder traversal sequence should be: 2 8 9 10 6 3 7 4 1 
 For  binary trees <i>k=2</i>, we distinguish between two subtrees, the subtrees are referred to as the left subtree and the right subtree. 
 The preorder, postorder and inorder traversals procedures are same as dicussed above but we can put them more compactly as follows:
 <ul>
