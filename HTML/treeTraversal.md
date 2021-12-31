@@ -46,13 +46,24 @@ Traversal is essentially a walk around the tree as shown in the figure below:
 <p align="center">
   <img src="../images/traversal_tree.jpg">
   </p>
-The walk starts from the root. Stying close to branches, we walk down in the direction shown in the figure. During the walk each node is visited one more 
-time than the number children it has. A leaf node has no child, so it is visited only once. Whereas the root node which has three children is visited four times. 
-The interesting part is the fact that linking the walk with the traversal list. 
+The walk starts from the root. Stying close to branches, we walk down in the direction shown in the figure. During the walk, each node is visited one more 
+time than the number children it has. For example, we encounter a leaf node only once during a walk. However, the root node in the tree above, is encountered
+four times. Similarly, node 3 is visited four times:
 <ul>
-  <li>For preorder sequence, list the node when it is visited for the first time.</li>
-  <li>For postorder sequence, list the node when it is visited for the last time.</li>  
-  <li>For inorder sequence, list the node when it is visited for the second time.</li>  
+  <li>Once from the root when we walk down,</li>
+  <li>Once when walking up from node 5</li>
+  <li>Once when walking up from node 6</li>
+</ul>
+The reader can find that the sequence we get from the walk around the tree is given by:
+</p align="center">
+   1<sub>1</sub>2<sub>1</sub>1<sub>2</sub>3<sub>1</sub>5<sub>1</sub>8<sub>1</sub>5<sub>2</sub>9<sub>1</sub>5<sub>3</sub>3<sub>2</sub>6<sub>1</sub>10<sub>1</sub>
+   6<sub>2</sub>3<sub>3</sub>1<sub>2</sub>3<sub>3</sub>1<sub>3</sub>4<sub>1</sub>7<sub>1</sub>4<sub>2</sub>1<sub>4</sub>
+</p>
+We can link the walk around the tree with the three traversal lists as follows. 
+<ul>
+  <li>For preorder sequence: list out the node when it is visited for the first time.</li>
+  <li>For postorder sequence: list out the node when it is visited for the last time.</li>  
+  <li>For inorder sequence: list out the node when it is visited for the second time.</li>  
 </ul>
 
 
