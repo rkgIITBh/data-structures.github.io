@@ -28,8 +28,9 @@ Consider an example tree shown below to understand how the tree traversal proced
 <p align="center">
   <img src="../images/ordered_tree.jpg">
   </p>
-  
-The preorder traversal list of the above tree is obtained by concatenating four lists, namely, {1} with the preorder traversal lists of three subtrees T<sub>2</sub>,T<sub>3</sub>, and T<sub>4</sub>. Using the recursive extension of preorder traversal to the three subtrees of the root, we obtain:
+
+The preorder traversal list of the above tree is obtained by concatenating four lists, namely, {1} with the preorder traversal lists of three subtrees 
+T<sub>2</sub>,T<sub>3</sub>, and T<sub>4</sub>. Using the recursive extension of preorder traversal to the three subtrees of the root, we obtain:
 <ul>
     <li> Preorder list of T<sub>2</sub>: {2},</li>
     <li> Preorder list of T<sub>3</sub>: {3,5,8,9,6,10},</li>
@@ -45,7 +46,16 @@ Traversal is essentially a walk around the tree as shown in the figure below:
 <p align="center">
   <img src="../images/traversal_tree.jpg">
   </p>
-  
+The walk starts from the root. Stying close to branches, we walk down in the direction shown in the figure. During the walk each node is visited one more 
+time than the number children it has. A leaf node has no child, so it is visited only once. Whereas the root node which has three children is visited four times. 
+The interesting part is the fact that linking the walk with the traversal list. 
+<ul>
+  <li>For preorder sequence, list the node when it is visited for the first time.</li>
+  <li>For postorder sequence, list the node when it is visited for the last time.</li>  
+  <li>For inorder sequence, list the node when it is visited for the second time.</li>  
+</ul>
+
+
 For  binary trees <i>k=2</i>, we distinguish between two subtrees, the subtrees are referred to as the left subtree and the right subtree. 
 The preorder, postorder and inorder traversals procedures are same as dicussed above but we can put them more compactly as follows:
 <ul>
