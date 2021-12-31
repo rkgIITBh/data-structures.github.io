@@ -84,7 +84,7 @@ The preorder, postorder and inorder traversals procedures are same as dicussed a
   <li> Inorder: traverse left subtree in inorder, visit the root, traverse the right subtree in inorder.</li>
 </ul>
 <br />
-<br />
+
 For brevity, we denote the root as <i>r</i>, left subtree as <i>L</i> and right subtree as <i>R</i>. Using the notations, the preorder, postorder and inorder
 traversals procedures can be represented symbolically as <i>rLR</i>, <i>LrR</i> and <i>LRr</i>. 
 
