@@ -56,7 +56,7 @@ four times. Similarly, node 3 is visited four times:
 </ul>
 The reader can find that the sequence we get from the walk around the tree is given by:
 <p align="center">
-   1<sub>(1)</sub>;&nbsp2<sub>(1)</sub>1<sub>(2)</sub>3<sub>(1)</sub>5<sub>(1)</sub>8<sub>(1)</sub>5<sub>(2)</sub>9<sub>(1)</sub>5<sub>(3)</sub>3<sub>(2)</sub>
+   1<sub>(1)</sub>&nbsp2<sub>(1)</sub>1<sub>(2)</sub>3<sub>(1)</sub>5<sub>(1)</sub>8<sub>(1)</sub>5<sub>(2)</sub>9<sub>(1)</sub>5<sub>(3)</sub>3<sub>(2)</sub>
    6<sub>(1)</sub>10<sub>(1)</sub>)
    6<sub>(2)</sub>3<sub>(3)</sub>1<sub>(2)</sub>3<sub>(3)</sub>1<sub>(3)</sub>4<sub>(1)</sub>7<sub>(1)</sub>4<sub>(2)</sub>1<sub>(4)</sub>
 </p>
