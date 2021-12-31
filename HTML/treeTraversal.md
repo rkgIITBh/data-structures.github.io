@@ -84,6 +84,6 @@ The preorder, postorder and inorder traversals procedures are same as dicussed a
   </ul>
 For brevity, we denote the root as <i>r</i>, left subtree as <i>L</i> and right subtree as <i>R</i>. Using the notations, the preorder, postorder and inorder
 traversals procedures can be represented symbolically as <i>rLR</i>, <i>LrR</i> and <i>LRr</i>. 
-<br />
-<br />
+
+
 [Back to Index](../index.md)
