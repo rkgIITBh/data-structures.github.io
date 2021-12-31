@@ -59,7 +59,8 @@ The reader can find that the sequence we get from the walk around the tree is gi
    1<sub>1</sub>2<sub>1</sub>1<sub>2</sub>3<sub>1</sub>5<sub>1</sub>8<sub>1</sub>5<sub>2</sub>9<sub>1</sub>5<sub>3</sub>3<sub>2</sub>6<sub>1</sub>10<sub>1</sub>
    6<sub>2</sub>3<sub>3</sub>1<sub>2</sub>3<sub>3</sub>1<sub>3</sub>4<sub>1</sub>7<sub>1</sub>4<sub>2</sub>1<sub>4</sub>
 </p>
-We can link the walk around the tree with the three traversal lists as follows. 
+where subscript represent the instance of visiting a correspnding node. For example, node 1 is visited for the third instance when we walk up from node 3 and
+come down to node 4. We can now link the walk around the tree with the three traversal lists as follows. 
 <ul>
   <li>For preorder sequence: list out the node when it is visited for the first time.</li>
   <li>For postorder sequence: list out the node when it is visited for the last time.</li>  
