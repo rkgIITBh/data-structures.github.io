@@ -14,16 +14,17 @@ procedure:
 <ol>
   <li> For an empty tree, the empty sequence represents the preorder/postorder/inorder traversal list. </li>
   <li> If a tree consists of oonly the root node, then the root node represents the preorder/postorder/inorder traveral list.</li>
-    <li> In general a tree T may be assumed to consist of a root <i>r</i>, and <i>k</i> subtrees T<sub>1</sub>, T<sub>2</sub>, ..., T<sub>k</sub>. 
+  <li> In general a tree T may be assumed to consist of a root <i>r</i>, and <i>k</i> subtrees T<sub>1</sub>, T<sub>2</sub>, ..., T<sub>k</sub>. 
       <ul>
         <li> Preorder traversal of T is the list obtained by the root concatenated with preorder traversal lists of T<sub>1</sub>, T<sub>2</sub>, ...,
           T<sub>k</sub>. </li>
         <li> Postorder traversal of T is the list obtained by the concatenation of postorder traversal lists of T<sub>1</sub>, T<sub>2</sub>, ...,
           T<sub>k</sub>. </li> followed by the root.
       <li> Inorder traversal of T is the list obtained by the concatenation of inorder traversal list of T<sub>1</sub> followed by the root then 
-      the inorder lists of subtrees T<sub>2</sub>, ..., and T<sub>k</sub>. </li>
+        the inorder lists of subtrees T<sub>2</sub>, ..., and T<sub>k</sub>. </li>
     </ul>
-    </ol>
+  </li>
+ </ol>
 Consider an example tree shown below to understand how the tree traversal procedures work.
 <p align="center">
   <img src="../images/ordered_tree.jpg">
