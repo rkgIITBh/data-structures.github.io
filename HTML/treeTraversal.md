@@ -34,10 +34,10 @@ The preorder traversal list of the above tree is obtained by concatenating four 
     <li> Preorder list of T<sub>3</sub>: {3,5,8,9,6,10},</li>
     <li> Preorder list of T<sub>4</sub>: {4,7},</li>
 </ul>
-Therefore, the concatenation of the four lists {1} {3,5,8,9,6} {4,7} gives preorder traversal list of T as: 1,3,5,8,9,6,10,4,7. In the same manner we 
+Therefore, the concatenating four lists {1} {3,5,8,9,6} {4,7} gives preorder traversal list of T as: 1,3,5,8,9,6,10,4,7. In the same manner we 
 can obtain the postorder and the inorder traversal lists as:
 <ul>
-  <li>Postorder: concatenate postorder list of T<sub>1</sub>, T<sub>2</sub>, T<sub>3</sub> and {1}: {2}, {8,9.5,10,6,3}, {7,4} </li>
-  <li>Inorder: concatenate inorder list of T<sub>1</sub>, {1}, T<sub>2</sub>, T<sub>3</sub>: {2}, {1}, {8,5,9,3,10,6}, {7,4} </li>
+  <li>Postorder: concatenate postorder lists of T<sub>1</sub>, T<sub>2</sub>, T<sub>3</sub> and {1}: {2}, {8,9.5,10,6,3}, {7,4} </li>
+  <li>Inorder: concatenate inorder lists of T<sub>1</sub>, {1}, T<sub>2</sub>, T<sub>3</sub>: {2}, {1}, {8,5,9,3,10,6}, {7,4} </li>
 </ul>  
 In case of binary trees <i>k=2</i>. We distinguish between two the subtrees The subtrees as  the left subtree and the right subtree.  
