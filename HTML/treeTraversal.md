@@ -40,4 +40,11 @@ can obtain the postorder and the inorder traversal lists as:
   <li>Postorder: concatenate postorder lists of T<sub>1</sub>, T<sub>2</sub>, T<sub>3</sub> and {1}: {2}, {8,9.5,10,6,3}, {7,4} </li>
   <li>Inorder: concatenate inorder lists of T<sub>1</sub>, {1}, T<sub>2</sub>, T<sub>3</sub>: {2}, {1}, {8,5,9,3,10,6}, {7,4} </li>
 </ul>  
-In case of binary trees <i>k=2</i>. We distinguish between two the subtrees The subtrees as  the left subtree and the right subtree.  
+For  binary trees <i>k=2</i>, we distinguish between two subtrees, the subtrees are referred to as the left subtree and the right subtree. 
+The preorder, postorder and inorder traversals procedures are same as dicussed above but we can put them more compactly as follows:
+<ul>
+  <li> Preorder: visit the root, traverse left subtree in preorder, traverse the right subtree in preorder.</li>
+  <li> Postorder: traverse left subtree in postorder, traverse the right subtree in postorder, visit the root.</li>
+  <li> Inorder: traverse left subtree in inorder, visit the root, traverse the right subtree in inorder.</li>
+  </ul>
+
