@@ -1,4 +1,4 @@
-## Traversal of Binary Trees
+## Traversal of Trees
 
 The processing of information stored in a tree data structure requires each node of the tree to be accessed at least once. A tree is accessible only by
 its root node. However, as every node stores a pointer to its children, it is possible to access the children of a node when the latter is visited. 
@@ -41,6 +41,11 @@ can obtain the postorder and the inorder traversal lists as:
   <li>Postorder: concatenate postorder lists of T<sub>1</sub>, T<sub>2</sub>, T<sub>3</sub> and {1}: {2}, {8,9.5,10,6,3}, {7,4} </li>
   <li>Inorder: concatenate inorder lists of T<sub>1</sub>, {1}, T<sub>2</sub>, T<sub>3</sub>: {2}, {1}, {8,5,9,3,10,6}, {7,4} </li>
 </ul>  
+Traversal is essentially a walk around the tree as shown in the figure below:
+<p align="center">
+  <img src="../images/traversal_tree.jpg">
+  </p>
+  
 For  binary trees <i>k=2</i>, we distinguish between two subtrees, the subtrees are referred to as the left subtree and the right subtree. 
 The preorder, postorder and inorder traversals procedures are same as dicussed above but we can put them more compactly as follows:
 <ul>
@@ -49,4 +54,5 @@ The preorder, postorder and inorder traversals procedures are same as dicussed a
   <li> Inorder: traverse left subtree in inorder, visit the root, traverse the right subtree in inorder.</li>
   </ul>
 For brevity, we denote the root as <i>r</i>, left subtree as <i>L</i> and right subtree as <i>R</i>. Using the notations, the preorder, postorder and inorder
-traversals procedures can be represented symbolically as <i>rLR</i>, <i>LrR</i> and <i>LRr</i>. Following example provides a 
+traversals procedures can be represented symbolically as <i>rLR</i>, <i>LrR</i> and <i>LRr</i>. 
+
