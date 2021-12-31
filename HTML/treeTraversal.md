@@ -69,8 +69,8 @@ node 3 to node 4. We can now connect the walk around the tree in the context of 
 </ul>
 The list of node visits for last instance is:
 <p align="center">
-2<sub>(1)</sub>&nbsp8<sub>(1)</sub>&nbsp9<sub>(1)</sub>&nbsp5<sub>(3)</sub>&nbsp10<sub>(1)</sub>&nbsp6<sub>(2)</sub>&nbsp3<sub>(3)</sub>&nbsp7<sub>
-  (1)</sub>&nbsp4<sub>(2)</sub>&nbsp1<sub>(4)</sub>
+2<sub>(1)</sub>&nbsp;8<sub>(1)</sub>&nbsp;9<sub>(1)</sub>&nbsp;5<sub>(3)</sub>&nbsp;10<sub>(1)</sub>&nbsp;6<sub>(2)</sub>&nbsp;3<sub>(3)</sub>&nbsp;7<sub>
+  (1)</sub>&nbsp;4<sub>(2)</sub>&nbsp;1<sub>(4)</sub>
 </p>
 Therefore, the postorder traversal sequence should be: 2 8 9 5 10 6 3 7 4 1 
 <br />
