@@ -56,9 +56,9 @@ four times. Similarly, node 3 is visited four times:
 </ul>
 The reader can find that the sequence we get from the walk around the tree is given by:
 <p align="center">
-   1<sub>(1)</sub>&nbsp2<sub>(1)</sub>&nbsp1<sub>(2)</sub>&nbsp3<sub>(1)</sub>&nbsp5<sub>(1)</sub>&nbsp8<sub>(1)</sub>&nbsp5<sub>(2)</sub>&nbsp9<sub>
-  (1)</sub>&nbsp5<sub>(3)</sub>&nbsp3<sub>(2)</sub>&nbsp6<sub>(1)</sub>&nbsp10<sub>(1)</sub>)&nbsp6<sub>(2)</sub>
-  &nbsp3<sub>(3)</sub>&nbsp1<sub>(3)</sub>&nbsp4<sub>(1)</sub>7<sub>(1)</sub>&nbsp4<sub>(2)</sub>&nbsp1<sub>(4)</sub>
+   1<sub>(1)</sub>&nbsp;2<sub>(1)</sub>&nbsp;1<sub>(2)</sub>&nbsp;3<sub>(1)</sub>&nbsp;5<sub>(1)</sub>&nbsp;8<sub>(1)</sub>&nbsp;5<sub>(2)</sub>&nbsp;9<sub>
+  (1)</sub>&nbsp;5<sub>(3)</sub>&nbsp;3<sub>(2)</sub>&nbsp;6<sub>(1)</sub>&nbsp;10<sub>(1)</sub>)&nbsp;6<sub>(2)</sub>
+  &nbsp;3<sub>(3)</sub>&nbsp;1<sub>(3)</sub>&nbsp;4<sub>(1)</sub>7<sub>(1)</sub>&nbsp;4<sub>(2)</sub>&nbsp;1<sub>(4)</sub>
 </p>
 where subscript represent the instance of visiting a correspnding node. For example, node 1 is visited for the third instance when we walk along the tree from
 node 3 to node 4. We can now connect the walk around the tree in the context of three different traversals as follows. 
