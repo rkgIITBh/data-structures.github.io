@@ -78,4 +78,5 @@ phobia. The theory is required, but a right balance is needed.
 - [Circular Queue Implementation](HTML/queueCircular.md)
 - [Introduction to Trees](HTML/treesIntro.md)
 - [Introduction to Binary Trees](HTML/binaryTrees.md)
+- [Traversal of Trees](HTML/treeTraversal.md)
 <br>
