@@ -22,8 +22,8 @@ procedure:
           T<sub>k</sub>. </li> followed by the root.
       <li> Inorder traversal of T is the list obtained by the concatenation of inorder traversal list of T<sub>1</sub> followed by the root then 
       the inorder lists of subtrees T<sub>2</sub>, ..., and T<sub>k</sub>. </li>
-    </ol>
     </ul>
+    </ol>
 Consider an example tree shown below to understand how the tree traversal procedures work.
 <p align="center">
   <img src="../images/ordered_tree.jpg">
