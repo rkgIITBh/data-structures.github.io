@@ -28,6 +28,7 @@ Consider an example tree shown below to understand how the tree traversal proced
 <p align="center">
   <img src="../images/ordered_tree.jpg">
   </p>
+  
 The preorder traversal list of the above tree is obtained by concatenating four lists, namely, {1} with the preorder traversal lists of three subtrees T<sub>2</sub>,T<sub>3</sub>, and T<sub>4</sub>. Using the recursive extension of preorder traversal to the three subtrees of the root, we obtain:
 <ul>
     <li> Preorder list of T<sub>2</sub>: {2},</li>
@@ -47,4 +48,5 @@ The preorder, postorder and inorder traversals procedures are same as dicussed a
   <li> Postorder: traverse left subtree in postorder, traverse the right subtree in postorder, visit the root.</li>
   <li> Inorder: traverse left subtree in inorder, visit the root, traverse the right subtree in inorder.</li>
   </ul>
-
+For brevity, we denote the root as <i>r</i>, left subtree as <i>L</i> and right subtree as <i>R</i>. Using the notations, the preorder, postorder and inorder
+traversals procedures can be represented symbolically as <i>rLR</i>, <i>LrR</i> and <i>LRr</i>. Following example provides a 
