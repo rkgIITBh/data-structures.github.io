@@ -109,6 +109,5 @@ newly node created node until a node has no left child. Then it creates
 the right child of the current node and proceeds as above. 
 
 <br />
-<br />
 We will continue the rest of the implementation in the next blog. 
 
