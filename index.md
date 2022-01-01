@@ -79,4 +79,5 @@ phobia. The theory is required, but a right balance is needed.
 - [Introduction to Trees](HTML/treesIntro.md)
 - [Introduction to Binary Trees](HTML/binaryTrees.md)
 - [Traversal of Trees](HTML/treeTraversal.md)
+- [Implementation of Binary Trees](HTML/treeImplementation.md)
 <br>
