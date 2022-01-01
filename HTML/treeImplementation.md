@@ -107,6 +107,7 @@ After creation of left subtree is complete, the right subtree is created. Finall
 the tree starting from the root going down using left child pointers of every
 newly node created node until a node has no left child. Then it creates 
 the right child of the current node and proceeds as above. 
+
 <br />
 We will continue the rest of the implementation in the next blog. 
 
