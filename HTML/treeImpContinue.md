@@ -71,7 +71,7 @@ int treeHeight(TREENODE *t) {
     }
 }
 ```
-We define the tree with one node as having 0 height. Therefore, <i>masHeight</i>
+We define the tree with one node as having 0 height. Therefore, <i>maxHeight</i>
 is initialized to -1. Adding 1 to -1 will give 0 if the tree consists of 
 just the root node. 
 
