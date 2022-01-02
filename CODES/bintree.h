@@ -1,7 +1,5 @@
---
 ## Source code for Binary Trees
---
-    
+
 ```
 #ifndef B_TREE_H
 #define B_TREE_H
