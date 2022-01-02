@@ -46,8 +46,8 @@ int treeSize(TREENODE *t) {
     }
 }
 ```
-Likewise, the height can also be computed by adding one to the maximum of heights 
-of the right and left subtree. 
+
+Likewise, the height can also be computed by adding one to the maximum of heights of the right and left subtree. 
 ```
 int treeHeight(TREENODE *t) {
    int rHeight, lHeight;
