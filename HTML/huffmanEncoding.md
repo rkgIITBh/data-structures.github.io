@@ -18,6 +18,7 @@ of each symbol in the text is fixed. For example, consider a text consisting
 of eight symbols <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>, <i>e</i>, <i>f</i>
 as shown in the table below. The freqeuncies of each symbols in the input 
 text is provided in the first row of the table.  
+
 <center>
 |                     | a  | b  | c  | d  | e  | f  |
 | ------------------- |----|----|----|----|----|----|
