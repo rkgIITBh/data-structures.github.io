@@ -48,3 +48,5 @@ root is labeled as R
 <img src="https://github.com/rkgIITBh/data-structures.github.io/raw/gh-pages/images/binary_tree.jpg" width="250" height="200">
  </p>
 The next blog will focus on traversals of binary trees.
+
+[Back to Index](../index.md)
