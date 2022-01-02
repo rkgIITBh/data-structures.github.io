@@ -75,4 +75,4 @@ just the root node.
 The full source code for different operations on binary trees as discussed in
 the blog is available [here](../CODES/BinaryTree/index.md). 
 
-We plan to introduce Binary Search Tree (BST) in the next blog.
+We plan to discuss a few applications of binary trees in the next blog.
