@@ -15,11 +15,21 @@ to calculate the frequency of every symbol (alphabet) appearing in the input.
 
 It is possible encode a text using a fixed length code. In fixed code length
 of each symbol in the text is fixed. For example, consider a text consisting
-of eight symbols as shown in the figure below. 
-<p align="center">
-  <img src="../images/fixedLengthCode.jpg">
-</p>
-Three-bit encoding will suffice for such a text. Decryption is fast and 
+of eight symbols <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>, <i>e</i>, <i>f</i>
+as shown in the table below. The freqeuncies of each symbols in the input 
+text is provided in the first row of the table.  
+
+|                     | a  | b  | c  | d  | e  | f  |
+| ------------------- |----|----|----|----|----|----|
+| Freq. (in thousands)| 45 | 13 | 12 | 16 | 9  | 5  |
+|---------------------|----|----|----|----|----|----|  
+| Fixed length code   | 000| 001| 010| 011|100 |101 |
+|---------------------|----|----|----|----|----|----|
+| Variable lengh code | 0  |101 |100 |111 |1101|1100|
+|---------------------|----|----|----|----|----|----|
+
+Three-bit fixed length code for each symbol is given in the second row of
+the table. Decryption is fast and 
 simple. We can repeatedly take out three bits from the prefix of encrypted
 text, and retrieve the symbol that a 3-bit string represents by consulting 
 the encoding table. 
@@ -35,7 +45,12 @@ So, the decryption process stated earlier should work. The fixed length
 code as illustrate in the figure above satisfies prefix property. 
 
 Now, we explore the question whether a variable length code can be found 
-with prefix property.  
+with prefix property. A variable length code for the symbols is provided in
+the third row of the above table. As we can observer, the variable length 
+code also satisfies the prefix property. So, it is also a prefix encoding.
 
+Let us find out which of two encoding is efficient. Since the text consist of
+10<sup>5</sup> symbols, the fixed length coding will require 3x10<sup>5</sup>
+bits. However, the variable length code will require 224000 bits. Obviously,
+the compression with variable length code is more efficient.
 
- 
