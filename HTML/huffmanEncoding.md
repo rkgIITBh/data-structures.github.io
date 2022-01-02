@@ -18,14 +18,14 @@ of each symbol in the text is fixed. For example, consider a text consisting
 of eight symbols <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>, <i>e</i>, <i>f</i>
 as shown in the table below. The freqeuncies of each symbols in the input 
 text is provided in the first row of the table.  
-
+<center>
 |                     | a  | b  | c  | d  | e  | f  |
 | ------------------- |----|----|----|----|----|----|
 | Freq. (in thousands)| 45 | 13 | 12 | 16 | 9  | 5  |
 | Fixed length code   | 000| 001| 010| 011|100 |101 |
 | Variable lengh code | 0  |101 |100 |111 |1101|1100|
 
-
+</center>
 Three-bit fixed length code for each symbol is given in the second row of
 the table. Decryption is fast and 
 simple. We can repeatedly take out three bits from the prefix of encrypted
