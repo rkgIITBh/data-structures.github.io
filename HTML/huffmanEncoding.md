@@ -22,11 +22,9 @@ text is provided in the first row of the table.
 |                     | a  | b  | c  | d  | e  | f  |
 | ------------------- |----|----|----|----|----|----|
 | Freq. (in thousands)| 45 | 13 | 12 | 16 | 9  | 5  |
-|---------------------|----|----|----|----|----|----|  
 | Fixed length code   | 000| 001| 010| 011|100 |101 |
-|---------------------|----|----|----|----|----|----|
 | Variable lengh code | 0  |101 |100 |111 |1101|1100|
-|---------------------|----|----|----|----|----|----|
+
 
 Three-bit fixed length code for each symbol is given in the second row of
 the table. Decryption is fast and 
