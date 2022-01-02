@@ -76,6 +76,6 @@ is initialized to -1. Adding 1 to -1 will give 0 if the tree consists of
 just the root node. 
 
 The full source code for different operations on binary trees as discussed in
-the blog is available [here](../CODES/binaryTree.c). 
+the blog is available [here](../CODES/BinaryTree/index.md). 
 
 We plan to introduce Binary Search Tree (BST) in the next blog.
