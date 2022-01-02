@@ -12,7 +12,7 @@ The search function also works recursively. It starts with the root node and
 recursively explores left and right subtrees. If the element is found in 
 the left subtree, we do not need to continue the search in the right subtree. 
 It means if the tree is more or less balanced, then the search operation can be 
-completed in O(<i>log n<\i>) time, where <i>n</i> is the number of nodes in 
+completed in O(<i>log n</i>) time, where <i>n</i> is the number of nodes in 
 the tree. The search function returns a pointer to the node if the element
 is found; otherwise, it returns NULL. 
 ```
