@@ -1,11 +1,8 @@
 ## Implementation of Binary Tree (contd)
 
-The readers may be curious to know the reasons for continuing  
-an extended discussion on binary trees. From the perspective of 
-implementation, plain binary trees are pretty helpful in understanding the power
-of recursion. However, different types of binary trees are used in 
-building database indexes for efficient search and retrieval. 
-We plan to deal with binary search trees and balanced binary
+The readers may be curious to know the reasons for continuing  an extended discussion on binary trees. From the perspective of 
+implementation, plain binary trees are pretty helpful in understanding the power of recursion. However, different types of binary trees are used in 
+building database indexes for efficient search and retrieval. We plan to deal with binary search trees and balanced binary
 search trees in the future. Therefore, we start with the search for an element in a binary tree. 
 
 The search function also works recursively. It starts with the root node and
