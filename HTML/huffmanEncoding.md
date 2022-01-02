@@ -20,6 +20,7 @@ as shown in the table below. The freqeuncies of each symbols in the input
 text is provided in the first row of the table.  
 
 <div align="center">
+  
 |                     | a  | b  | c  | d  | e  | f  |
 | ------------------- |----|----|----|----|----|----|
 | Freq. (in thousands)| 45 | 13 | 12 | 16 | 9  | 5  |
