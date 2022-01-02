@@ -34,7 +34,9 @@ semesters, we reverted to C. C with all its peculiarities still the most preferr
 carefully avoid the tricks.
 
 
-Of late, some university depts have started using Python. Python is catching up quickly as the preferred choice for teaching programming courses. However, if my memory serves me correctly, perhaps PASCAL was taught until 2000 to the students in IIT Kanpur. It is pedagogically the best programming language, as it is the closest implementation of algorithms into code.  
+Of late, some university depts have started using Python. Python is catching up quickly as the preferred choice for teaching programming 
+courses. However, if my memory serves me correctly, perhaps PASCAL was taught until 2000 to the students in IIT Kanpur. It is pedagogically t
+he best programming language, as it is the closest implementation of algorithms into code.  
 
 
 As far as Python is concerned, the three major advantages are:
@@ -56,7 +58,13 @@ programming approach came from Rajat Moona, the incumbent director of IIT Bhilai
 enthusiastically supported it.  
 
 
-I believe data structure is taught to all computer science undergraduate students. Though there is much variation in the way, it is taught. Some view the course as a gentle introduction to algorithms, and theoretical underpinning is more important than implementation issues. Perhaps, the thinking behind it is that the introductory programming course has already been taught to the students. So, students know how to code. They can manage to write programs without being told to implement data structures. The theory is more important as knowing how to analyze code would make them realize efficient coding is more important than just coding. The argument seems to be very strong and elementary to understand. However, the important point it misses is that the introductory programming course emphasizes learning syntax and the meaning of the programming constructs. Though efficiency issues are touched, they are not discussed in depth. Building and learning clean programming skills are more important than understanding programmatic manipulation of complex data structures.
+I believe data structure is taught to all computer science undergraduate students. Though there is much variation in the way, it is taught. Some view the course 
+as a gentle introduction to algorithms, and theoretical underpinning is more important than implementation issues. Perhaps, the thinking behind it is that the 
+introductory programming course has already been taught to the students. So, students know how to code. They can manage to write programs without being told to 
+implement data structures. The theory is more important as knowing how to analyze code would make them realize efficient coding is more important than just 
+coding. The argument seems to be very strong and elementary to understand. However, the important point it misses is that the introductory programming course 
+emphasizes learning syntax and the meaning of the programming constructs. Though efficiency issues are touched, they are not discussed in depth. Building and 
+learning clean programming skills are more important than understanding programmatic manipulation of complex data structures.
 
 Furthermore, an introductory programming course is a requirement across disciplines. Apart from Computer Science and Engineering 
 students, it includes other streams such as Electrical, Mechanical, Chemical, Material Science and Engineering, Maths, Physics, 
@@ -66,18 +74,18 @@ phobia. The theory is required, but a right balance is needed.
 
 ### List of Blogs
 
-- [Importance of Coding](HTML/importanceOfcoding.md)
-- [Abstract Data Types](HTML/abstractDataTypes.md)
-- [Structures](HTML/structures.md)
-- [Data Structures](HTML/dataStructures.md)
-- [ADT List](HTML/adtList.md)
-- [Implementation of List in C](HTML/listImplementation.md)
-- [Stacks as ADT](HTML/stacksADT.md)
-- [Stack Implementation](HTML/stackImplementation.md)
-- [Queues as ADT](HTML/queuesADT.md)
-- [Circular Queue Implementation](HTML/queueCircular.md)
-- [Introduction to Trees](HTML/treesIntro.md)
-- [Introduction to Binary Trees](HTML/binaryTrees.md)
-- [Traversal of Trees](HTML/treeTraversal.md)
 - [Implementation of Binary Trees](HTML/treeImplementation.md)
+- [Traversal of Trees](HTML/treeTraversal.md)
+- [Introduction to Binary Trees](HTML/binaryTrees.md)
+- [Data Structures](HTML/dataStructures.md)
+- [Circular Queue Implementation](HTML/queueCircular.md)
+- [Queues as ADT](HTML/queuesADT.md)
+- [Stack Implementation](HTML/stackImplementation.md)
+- [Stacks as ADT](HTML/stacksADT.md)
+- [Implementation of List in C](HTML/listImplementation.md)
+- [Introduction to Trees](HTML/treesIntro.md)
+- [ADT List](HTML/adtList.md)
+- [Structures](HTML/structures.md)
+- [Abstract Data Types](HTML/abstractDataTypes.md)
+- [Importance of Coding](HTML/importanceOfcoding.md)
 <br>
