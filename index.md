@@ -74,6 +74,7 @@ phobia. The theory is required, but a right balance is needed.
 
 ### List of Blogs
 
+- [Implementation of Binary Trees (contd)](HTML/treeImpContinue.md)
 - [Implementation of Binary Trees](HTML/treeImplementation.md)
 - [Traversal of Trees](HTML/treeTraversal.md)
 - [Introduction to Binary Trees](HTML/binaryTrees.md)
