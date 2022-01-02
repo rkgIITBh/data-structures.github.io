@@ -1,3 +1,5 @@
+## More on Trees and Binary Trees
+
 An internal node of a tree may have up to k > 0 children, where k is a finite number. That is the number of 
 children of an internal node in tree may vary between 1 to k. The value k is known as the arity of the tree. 
 If the children of a node in a tree are always programmatically accessed in the order they appear in the storage, then
