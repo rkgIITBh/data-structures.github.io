@@ -30,7 +30,6 @@ Alternatively, the level of a node is  known as the depth of the node, as it rep
 the root to the concerned node. The depth of the farthest leaf node down from the root is equal to height of the
 tree. In above example, the nodes at level 3 are farthest from the root. Therefore, the height of the tree is 3. 
 <br>
-<br>
 
 Now let us deal with binary trees. If the arity of a tree T is two, then we call T as a binary tree. As explained in 
 the previous blog
