@@ -1,3 +1,8 @@
+--
+## Source code for Binary Trees
+--
+    
+```
 #ifndef B_TREE_H
 #define B_TREE_H
 typedef struct treenode {
@@ -105,3 +110,4 @@ int treeSize(TREENODE *t) {
     }
 }
 #endif
+```
