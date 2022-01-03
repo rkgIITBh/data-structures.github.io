@@ -43,7 +43,7 @@ of the subtrees. So,
 </ul>
 The number of leaf and internal nodes in the orignal tree are:
 <ul>
-<li><i>L(T) = L(T<sub>L</sub>) + L(T<sub>R</sub>), and</i></li>
+<li><i>L(T) = L(T<sub>L</sub>) + L(T<sub>R</sub>)</i>, and</li>
 <li><i>I(T) = I(T<sub>L</sub>) + I(T<sub>R</sub>) + 1</i></li>
  </ul>
 Now, we just combine the earlier two equations to conclude the fact that 
