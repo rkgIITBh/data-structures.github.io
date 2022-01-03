@@ -24,17 +24,24 @@ TREENODE * search(TREENODE * t, int x) {
 }
 ```
 
-Any computation involving a binary tree is easy to implement in recursively. 
-As we have observed in the implementations discussed, a tree structure naturally yields to a divide and conquer process. We deal with two
-more instances. One computes the size of the tree, and the other computes 
-the height of the tree. 
+Any computation involving a binary tree is easy to implement in recursively. As we have observed in the implementations discussed, a tree structure naturally 
+yields to a divide and conquer process. We deal with two more instances. One computes the size of the tree, and the other computes the height of the tree. 
 We can recursively find:
 <ol>
    <li>The number of nodes in the left subtree</li>
    <li>The number of nodes in the right subtree</li>
 </ol>
-The size of the tree is equal to one more than the sum of the two numbers
-stated above. C-function for computing sum is given below:
+The computation process works as indicated in the diagrams below:
+
+<div align="center">
+   
+    |-------------------------------------|------------------------|
+    |        :-:                          |     :-:                |
+    | <img src="../images/sizeComp.jpg">  | <img src="../images/heightComp.jpg"|
+                                                 
+                                                 </div>
+    
+The size of the tree is equal to one more than the sum of the two numbersstated above. C-function for computing sum is given below:
 ```
 int treeSize(TREENODE *t) {
     int size;
