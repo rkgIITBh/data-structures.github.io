@@ -8,7 +8,7 @@ If all the leaf nodes of a strictly binary tree is at the same level then
 we call such a binary tree as <i>full binary tree</i>. Figures below shows a strictly binary tree and a full binary tree.
 
 <figure>
-  <img src="../images/strictlyBinary.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/fullBinary.jpg">
+  <div align="center"><img src="../images/strictlyBinary.jpg">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/fullBinary.jpg"></div>
   <figcaption>Strictly Binary and a Full Binary Tree</figcaption>
 </figure> 
 
