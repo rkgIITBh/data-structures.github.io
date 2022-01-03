@@ -32,10 +32,8 @@ We can recursively find:
    <li>The number of nodes in the right subtree</li>
 </ol>
 The computation process works as indicated in the diagrams below:
-
-    <p align="center">
-    <img src="../images/sizeComp.jpg">      
-    <img src="../images/heightComp.jpg">  
+<p align="center">
+          <img src="../images/sizeComp.jpg">
 </p>
     
 The size of the tree is equal to one more than the sum of the two numbersstated above. C-function for computing sum is given below:
