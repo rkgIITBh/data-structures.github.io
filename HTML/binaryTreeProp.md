@@ -24,7 +24,7 @@ nodes and leaf nodes in a binary tree. Let:
 
 <ul>
 <li>The number of leaf nodes be:<i>L</i>,</li>
-<li>The number of internal nodes be: <i>I</i>.
+  <li>The number of internal nodes be: <i>I</i>.</li>
 </ul>
 
 In a strictly binary tree the number of leaf nodes is equal to the number of
