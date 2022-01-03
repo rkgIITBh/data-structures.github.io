@@ -45,20 +45,18 @@ The number of leaf and internal nodes in the orignal tree are:
 <ul>
 <li><i>L(T) = L(T<sub>L</sub>) + L(T<sub>R</sub>)</i></li>, and 
 <li><i>I(T) = I(T<sub>L</sub>) + I(T<sub>R</sub>) + 1</i></li>
-  </ul>
+ </ul>
 Now, we just combine the earlier two equations to conclude the fact that 
 <p align="center"><i>L(T) = I(T) + 1</i></p>
 
-<p align="center">
-<i>L(T)</i> is equal to one more than the number of nodes with two children 
-</p>
-
-The minimum height of a binary tree with <i>N</i> nodes is <i>N = &lceil;log (n+1)&rceil; - 1</i>. 
-
 It is simple to observe that any chain of internal nodes can be collapsed to
 a single link. It implies, we can convert any binary tree into a strictly
-binary tree. Therefore, the relationship between leaf nodes and internal
-nodes in any binary tree <i>T</i> can be stated as 
+binary tree. Therefore, the relationship between leaf no
+<i>L(T)</i> is equal to one more than the number of nodes with two children 
+
+
+The minimum height of a binary tree with <i>N</i> nodes is <i>N = &lceil;log (n+1)&rceil; - 1</i>. 
+des and internal nodes in any binary tree <i>T</i> can be stated as 
   
 
 [Back to Index](../index.md)
