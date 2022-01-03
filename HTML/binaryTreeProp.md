@@ -61,5 +61,6 @@ nodes in any binary tree <i>T</i> can be stated as
 The minimum height of a binary tree with <i>N</i> nodes is <i>N = &lceil;log (n+1)&rceil; - 1</i>. 
 
 
+
 [Back to Index](../index.md)
 
