@@ -38,14 +38,17 @@ falls apart as two strictly binary trees. Each of these subtrees
 <i>h</i>. Therefore, by induction the property must hold separately in each 
 of the subtrees. So,
 <ul>
-<li><i>I(T<sub>L</sub>)+1 = L(T<sub>L</sub>)</i> </li>
-<li><i>I(T<sub>R</sub>)+1 = L(T<sub>R</sub>)</i> </li>
+    <li><i>I(T<sub>L</sub>)+1 = L(T<sub>L</sub>)</i> </li>
+    <li><i>I(T<sub>R</sub>)+1 = L(T<sub>R</sub>)</i> </li>
 </ul>
+
 The number of leaf and internal nodes in the orignal tree are:
+
 <ul>
-<li><i>L(T) = L(T<sub>L</sub>) + L(T<sub>R</sub>)</i>, and</li>
-<li><i>I(T) = I(T<sub>L</sub>) + I(T<sub>R</sub>) + 1</i></li>
+    <li><i>L(T) = L(T<sub>L</sub>) + L(T<sub>R</sub>)</i>, and</li>
+    <li><i>I(T) = I(T<sub>L</sub>) + I(T<sub>R</sub>) + 1</i></li>
  </ul>
+
 Now, we just combine the earlier two equations to conclude the fact that 
 <p align="center"><i>L(T) = I(T) + 1</i></p>
 
