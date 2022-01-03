@@ -15,7 +15,7 @@ we call such a binary tree as <i>full binary tree</i>. Figures below shows a str
 <br />
 Since each internal node may have two children, the maximum number of nodes
 at level <i>i</i> is $2^i$. It implies that maximum number nodes in
-a binary tree of height <i>h</i> is <img src="https://latex.codecogs.com/svg.image?\sum_{i=0}^h&space;2^i" title="\sum_{i=0}^h 2^i=2^{h+1}-1" />.
+a binary tree of height <i>h</i> is <img src="https://latex.codecogs.com/svg.image?\sum_{i=0}^h&space;2^i = 2^{h+1}-1" title="\sum_{i=0}^h 2^i=2^{h+1}-1" />.
 
 
 Sometimes, we may be interested to know the relationship between internal
