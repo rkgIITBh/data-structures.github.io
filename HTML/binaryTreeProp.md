@@ -12,6 +12,7 @@ we call such a binary tree as <i>full binary tree</i>. Figures below shows a str
   <figcaption><b>Strictly Binary and a Full Binary Tree</b></figcaption>
 </figure> 
 <br />
+
 Since each internal node may have two children, the maximum number of nodes
 at level <i>i</i> is 2<sup>i</sup>. It implies that maximum number nodes in
 a binary tree of height <i>h</i> is &sum;<sub>i</sub>2<sup>i</sup>.
