@@ -5,12 +5,11 @@ internal nodes in a binary tree may have either one child or two children.
 A binary tree where each internal node has exactly two children is known as a
 <i>strictly binary tree</i>. 
 If all the leaf nodes of a strictly binary tree is at the same level then
-we call such a binary tree as <i>full binary tree</i>. Figure below shows a strictly binary tree and a full binary tree.
+we call such a binary tree as <i>full binary tree</i>. Figures below shows a strictly binary tree and a full binary tree.
  <figure align="center">
   <img src="../images/strictlyBinary.jpg">
   <figcaption>Strictly Binary Tree</figcaption>
 </figure> 
-
  <figure align='center">
   <img src="../images/fullBinary.jpg">
   <figcaption>Full Binary Tree</figcaption>
