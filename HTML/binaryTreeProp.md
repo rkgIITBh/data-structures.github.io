@@ -55,8 +55,8 @@ binary tree. Therefore, the relationship between leaf no
 <i>L(T)</i> is equal to one more than the number of nodes with two children 
 
 The minimum height of a binary tree with <i>N</i> nodes is <i>N = &lceil;log (n+1)&rceil; - 1</i>. 
-The formula can be easily checked 
-
+The formula can be easily proved using induction.
+<br>
 
 [Back to Index](../index.md)
 
