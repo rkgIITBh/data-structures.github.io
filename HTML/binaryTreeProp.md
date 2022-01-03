@@ -15,7 +15,7 @@ we call such a binary tree as <i>full binary tree</i>. Figures below shows a str
 <br />
 Since each internal node may have two children, the maximum number of nodes
 at level <i>i</i> is $2^i$. It implies that maximum number nodes in
-a binary tree of height <i>h</i> is <i>&sum;<sub>i=0</sub><sup>h</sup> 2<sup>i</sup></i>.
+a binary tree of height <i>h</i> is <i>&sum;<sub>i=0:h</sub> 2<sup>i</sup></i>.
 Therefore, the the number of nodes in a full binary tree of height 
 <i>h</i> is 2<sup>h+1</sup>-1.
 
