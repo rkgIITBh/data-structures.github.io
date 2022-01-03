@@ -56,8 +56,7 @@ binary tree. Therefore, the relationship between leaf no
 
 
 The minimum height of a binary tree with <i>N</i> nodes is <i>N = &lceil;log (n+1)&rceil; - 1</i>. 
-des and internal nodes in any binary tree <i>T</i> can be stated as 
-  
+
 
 [Back to Index](../index.md)
 
