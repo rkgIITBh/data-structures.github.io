@@ -9,7 +9,7 @@ we call such a binary tree as <i>full binary tree</i>. Figures below shows a str
 
 <figure>
   <div align="center"><img src="../images/strictlyBinary.jpg">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/fullBinary.jpg"></div>
-  <figcaption><b>Strictly Binary and a Full Binary Tree</b></figcaption>
+  <figcaption><b>A strictly  binary tree and a full binary tree</b></figcaption>
 </figure> 
 <br>
 <br />
