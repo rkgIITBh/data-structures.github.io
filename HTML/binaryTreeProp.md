@@ -7,8 +7,7 @@ A binary tree where each internal node has exactly two children is known as a
 If all the leaf nodes of a strictly binary tree is at the same level then
 we call such a binary tree as <i>full binary tree</i>. Figure below shows a strictly binary tree and a full binary tree.
 <p>
-<img src="../images/strictlyBinary.jpg"> &npsb;&npsb;&npsb;&npsb;&npsb;
-<img src="../images/fullBinary.jpg"> 
+<img src="../images/strictlyBinary.jpg"> &npsb;&npsb;&npsb;&npsb;&npsb;:<img src="../images/fullBinary.jpg"> 
 </p>
 Since each internal node may have two children, the maximum number of nodes
 at level <i>i</i> is 2<sup>i</sup>. It implies that maximum number nodes in
