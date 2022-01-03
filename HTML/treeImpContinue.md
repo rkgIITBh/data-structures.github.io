@@ -34,12 +34,8 @@ We can recursively find:
 The computation process works as indicated in the diagrams below:
 
 <div align="center">
-   
-    |-------------------------------------|------------------------|
-    |        :-:                          |     :-:                |
-    | <img src="../images/sizeComp.jpg">  | <img src="../images/heightComp.jpg">|
-                                                 
-                                                 </div>
+    ![Size Computation](../images/sizeComp.jpge "Sizecomp") ![Height Computation](../images/heightComp.jpg "HeightComp") 
+</div>
     
 The size of the tree is equal to one more than the sum of the two numbersstated above. C-function for computing sum is given below:
 ```
