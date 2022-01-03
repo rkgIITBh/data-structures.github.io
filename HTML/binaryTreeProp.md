@@ -57,8 +57,7 @@ nodes in any binary tree <i>T</i> can be stated as
 <i>L(T)</i> is equal to one more than the number of nodes with two children 
 </p>
 
-The minimum height of a binary tree with <i>N</i> nodes is 
-<i>N = &lceil;log (n+1)&rceil; - 1</i>. 
+The minimum height of a binary tree with <i>N</i> nodes is <i>N = &lceil;log (n+1)&rceil; - 1</i>. 
 <br />
 
 [Back to Index](../index.md)
