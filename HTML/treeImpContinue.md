@@ -34,7 +34,9 @@ We can recursively find:
 The computation process works as indicated in the diagrams below:
 
     
-    <img src="../images/sizeComp.jpg">  <img src="../images/heightComp.jpg"> 
+    <img src="../images/sizeComp.jpg">  
+    
+    <img src="../images/heightComp.jpg"> 
     
 
     
