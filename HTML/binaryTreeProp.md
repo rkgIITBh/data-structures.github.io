@@ -11,8 +11,8 @@ we call such a binary tree as <i>full binary tree</i>. Figures below shows a str
   <div align="center"><img src="../images/strictlyBinary.jpg">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/fullBinary.jpg"></div>
   <figcaption><b>Strictly Binary and a Full Binary Tree</b></figcaption>
 </figure> 
+<br>
 <br />
-
 Since each internal node may have two children, the maximum number of nodes
 at level <i>i</i> is 2<sup>i</sup>. It implies that maximum number nodes in
 a binary tree of height <i>h</i> is &sum;<sub>i</sub>2<sup>i</sup>.
@@ -52,6 +52,7 @@ It is simple to observe that any chain of internal nodes can be collapsed to
 a single link. It implies, we can convert any binary tree into a strictly
 binary tree. Therefore, the relationship between leaf nodes and internal
 nodes in any binary tree <i>T</i> can be stated as 
+  
 <p align="center">
 <i>L(T)</i> is equal to one more than the number of nodes with two children 
 </p>
