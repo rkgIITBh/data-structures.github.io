@@ -21,10 +21,12 @@ a binary tree of height <i>h</i> is
 
 Sometimes, we may be interested to know the relationship between internal
 nodes and leaf nodes in a binary tree. Let:
+
 <ul>
 <li>The number of leaf nodes be:<i>L</i>,</li>
 <li>The number of internal nodes be: <i>I</i>.
 </ul>
+
 In a strictly binary tree the number of leaf nodes is equal to the number of
 its internal nodes plus 1, i.e., <i>L = I+1</i>. We can prove it by induction.
 Let the total number of nodes be <i>N</i>, for <i>N=3</i>, the only possible
