@@ -35,7 +35,7 @@ The computation process works as indicated in the diagrams below:
 
 
     
-    ![Size Computation](../images/sizeComp.jpg "Sizecomp") ![Height Computation](../images/heightComp.jpg "HeightComp") 
+    ![Size Computation](../images/sizeComp.jpg) ![Height Computation](../images/heightComp.jpg) 
     
 
     
