@@ -19,15 +19,18 @@ of eight symbols <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>, <i>e</i>, <i>f</i>
 as shown in the table below. The freqeuncies of each symbols in the input 
 text is provided in the first row of the table.  
 
-<div align="center">
-  
-|                     | a  | b  | c  | d  | e  | f  |
-| ------------------- |----|----|----|----|----|----|
-| Freq. (in thousands)| 45 | 13 | 12 | 16 | 9  | 5  |
-| Fixed length code   | 000| 001| 010| 011|100 |101 |
-| Variable lengh code | 0  |101 |100 |111 |1101|1100|
+  <table clas="center">
+  <tr>
+    <td></td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td>
+    </tr>
+    <tr><td> Freq. (in thousands)</td><td> 45 </td><td> 13 </td><td> 12</td><td>  16 </td><td>9  </td><td> 5 </td>
+    </tr>
+    <tr><td> Fixed length code </td><td> 000|</td><td> 001</td><td> 010</td><td> 011</td><td>100 </td><td>101</td>
+    </tr><tr>
+<td>Variable lengh code </td><td> 0 </td><td> 101</td><td> 100 </td><td>111 </td><td>1101  </td><td>  1100</td>
+  </tr>
+<?table>
 
-</div>
 Three-bit fixed-length code for each symbol is given in the second row of
 the table. Decryption is fast and 
 straightforward. We can repeatedly take out three bits from the encrypted
