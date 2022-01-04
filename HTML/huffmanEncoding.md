@@ -41,7 +41,9 @@ encoding system satisfies <i>prefix property</i>. Formally,
 
 Prefix property ensures no ambiguity in recovering a symbol 
 from an encoded text by decoding the prefix that represents a valid symbol. 
-So, the decryption process stated earlier should work. The figure above illustrates that the fixed-length code satisfies the prefix property. 
+So, the decryption process stated earlier should work. A fixed-length encoding uses <img src="https://latex.codecogs.com/svg.image?\log&space;\Sigma" title="\log \Sigma" /> bits for
+each symbol, where <img src="https://latex.codecogs.com/svg.image?\Sigma" title="\Sigma" /> is the cardinality of the alphabet set. Therefore, no codeword
+can be a prefix of any other codeword.
 
 We explore whether a variable-length code can be found 
 with prefix property. A variable-length code for the symbols is provided in
