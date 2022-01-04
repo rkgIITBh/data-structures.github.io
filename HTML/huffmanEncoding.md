@@ -27,7 +27,7 @@ text is provided in the first row of the table.
     </tr>
     <tr><td> Freq. (in thousands)</td><td> 45 </td><td> 13 </td><td> 12</td><td>  16 </td><td>9  </td><td> 5 </td>
     </tr>
-    <tr><td> Fixed length code </td><td> 000|</td><td> 001</td><td> 010</td><td> 011</td><td>100 </td><td>101</td>
+    <tr><td> Fixed length code </td><td> 000 </td><td> 001</td><td> 010</td><td> 011</td><td>100 </td><td>101</td>
     </tr><tr>
 <td>Variable lengh code </td><td> 0 </td><td> 101</td><td> 100 </td><td>111 </td><td>1101  </td><td>  1100</td>
   </tr>
