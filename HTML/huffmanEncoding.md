@@ -1,15 +1,15 @@
 ## Application of Binary Trees
 
-We learned in the last blog that binary tree is a convenient data structures
-for computing problems searching as elements ared stored according to some 
+We learned in the last blog that a binary tree is a convenient data structure
+for computing problems searching as elements are stored according to some 
 sort of hierarchic relations. We will examine two specific examples where 
-use of binary tree as an underlying data structure eases the task of 
+use of a binary tree as an underlying data structure eases the task of 
 programming. 
 
-The first example we deal with is Huffman method of text compression. There
+The first example we deal with is the Huffman method of text compression. There
 are more efficient methods for text compression, e.g., Lempel-Ziv (LZ)
-algorithm. However, Huffman encoding simple, lossless and optimal for 
-static texts. Static text means that the text is known in advance. It also
+algorithm. However, Huffman encoding simple, lossless, and optimal for 
+static texts. The static text means that the text is known in advance. It also
 implies that the alphabet set for the text is fixed. We can scan the text
 to calculate the frequency of every symbol (alphabet) appearing in the input. 
 
@@ -28,10 +28,10 @@ text is provided in the first row of the table.
 | Variable lengh code | 0  |101 |100 |111 |1101|1100|
 
 </div>
-Three-bit fixed length code for each symbol is given in the second row of
+Three-bit fixed-length code for each symbol is given in the second row of
 the table. Decryption is fast and 
-simple. We can repeatedly take out three bits from the prefix of encrypted
-text, and retrieve the symbol that a 3-bit string represents by consulting 
+straightforward. We can repeatedly take out three bits from the encrypted
+text prefix and retrieve the symbol that a 3-bit string represents by consulting 
 the encoding table. 
 
 Decryption process as stated above is characterized by the fact that 
@@ -39,18 +39,19 @@ encoding system satisfies <i>prefix property</i>. Formally,
 
 <strong >Prefix property</strong>: No code word is a prefix of any other codeword.  
 
-Prefix property ensures that there is no ambiguity in recovering a symbol 
-from encoded text by decoding the prefix that represents a valid symbol. 
-So, the decryption process stated earlier should work. The fixed length 
-code as illustrate in the figure above satisfies prefix property. 
+Prefix property ensures no ambiguity in recovering a symbol 
+from an encoded text by decoding the prefix that represents a valid symbol. 
+So, the decryption process stated earlier should work. The figure above illustrates that the fixed-length code satisfies the prefix property. 
 
-Now, we explore the question whether a variable length code can be found 
-with prefix property. A variable length code for the symbols is provided in
-the third row of the above table. As we can observer, the variable length 
+We explore whether a variable-length code can be found 
+with prefix property. A variable-length code for the symbols is provided in
+the third row of the above table. As we can observe, the variable-length 
 code also satisfies the prefix property. So, it is also a prefix encoding.
 
-Let us find out which of two encoding is efficient. Since the text consist of
-10<sup>5</sup> symbols, the fixed length coding will require 3x10<sup>5</sup>
-bits. However, the variable length code will require 224000 bits. Obviously,
-the compression with variable length code is more efficient.
+Let us find out which of the two encodings is efficient. Since the text consist of
+10<sup>5</sup> symbols, the fixed-length coding will require 3x10<sup>5</sup>
+bits. However, the variable-length code will require 224000 bits. Therefore, the example indicates that
+compressing a text with variable length code is more efficient than a fixed-length code. In the next blog, we plan to discuss the Huffman
+encoding scheme and prove that it gives an optimal variable-length code.
 
+[Back to Index](../index.md)
