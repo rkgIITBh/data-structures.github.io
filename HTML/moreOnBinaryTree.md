@@ -23,7 +23,7 @@ recursively. The construction leads to a unique tree.
 
 However, it is not always possible to create a unique tree when preorder 
 and postorder lists are available. Following example shows that two
-different tree may have the same pair of lists for preorder and postorder 
+different trees may have the same pair of lists for preorder and postorder 
 traversals. We need an additional condition for constructing a unique tree
 from preorder and postorder list. If the tree is known to be a strictly 
 binary tree, then a unique tree can be found. Figures below illustrate the
@@ -32,9 +32,10 @@ the two cases.
 <img src="../images/examplePrePost.jpg">
 </p>
 The preorder and postorder cannot uniquely fix the left and right child if
-a node has only one child. In the case of strictly binary trees, every internal 
-node has two children; it automatically fixes the topological postions of 
-the nodes with respect to the whole tree. 
+a node has only one child. For example, both the trees shown in above figure have same preorder and postorder traverals lists.
+It is not possible to determine whether D is left child or the right child of B. However, if the tree is a strictly binary trees, every internal 
+node has two children; so it automatically fixes the topological postions of 
+a node with respect to its parent. Figure below illustrates an example for recovering a strictly from its preorder and postorder traversal lists. 
 <p align="center">
 <img src="../images/examplePrePost2.jpg">
 </p>
