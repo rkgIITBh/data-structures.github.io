@@ -21,7 +21,7 @@ text is provided in the first row of the table.
 
 <div align="center> 
             
-  <table clas="center">
+  <table>
   <tr>
     <td></td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td>
     </tr>
