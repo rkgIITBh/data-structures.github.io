@@ -41,7 +41,7 @@ encoding system satisfies <i>prefix property</i>. Formally,
 
 Prefix property ensures no ambiguity in recovering a symbol 
 from an encoded text by decoding the prefix that represents a valid symbol. 
-So, the decryption process stated earlier should work. A fixed-length encoding uses <img src="https://latex.codecogs.com/svg.image?\log&space;\Sigma" title="\log \Sigma" /> bits for
+So, the decryption process stated earlier should work. A fixed-length encoding uses <img src="https://latex.codecogs.com/svg.image?\lceil\log&space;\Sigma\rceil" title="\lceil\log \Sigma\rceil" /> bits for
 each symbol, where <img src="https://latex.codecogs.com/svg.image?\Sigma" title="\Sigma" /> is the cardinality of the alphabet set. Therefore, no codeword
 can be a prefix of any other codeword.
 
