@@ -19,6 +19,8 @@ of eight symbols <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>, <i>e</i>, <i>f</i>
 as shown in the table below. The freqeuncies of each symbols in the input 
 text is provided in the first row of the table.  
 
+<div align="center> 
+            
   <table clas="center">
   <tr>
     <td></td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td>
@@ -29,7 +31,9 @@ text is provided in the first row of the table.
     </tr><tr>
 <td>Variable lengh code </td><td> 0 </td><td> 101</td><td> 100 </td><td>111 </td><td>1101  </td><td>  1100</td>
   </tr>
-<?table>
+</table>
+                      
+</div>
 
 Three-bit fixed-length code for each symbol is given in the second row of
 the table. Decryption is fast and 
