@@ -59,7 +59,7 @@ a single link. It implies, we can convert any binary tree into a strictly
 binary tree. Therefore, the relationship between leaf no
 <i>L(T)</i> is equal to one more than the number of nodes with two children. 
 
-The minimum height of a binary tree with <i>N</i> nodes is <img src="https://latex.codecogs.com/svg.image?h&space;=&space;\lceil&space;2^{\log&space;(N&plus;1)}\rceil-1." title="h = \lceil 2^{\log N+1}\rceil-1." /> 
+The minimum height of a binary tree with <i>N</i> nodes is <img src="https://latex.codecogs.com/svg.image?h&space;=&space;\lceil&space;{\log&space;(N&plus;1)}\rceil-1." title="h = \lceil 2^{\log N+1}\rceil-1." /> 
 The formula can be easily proved using induction.
 
 [Back to Index](../index.md)
