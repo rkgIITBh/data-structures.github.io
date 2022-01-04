@@ -72,7 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
-- [Basic Properties of Binary Trees](HTML/moreOnBinaryTree.md)
+- [Basic Properties of Binary Trees (Contd)](HTML/moreOnBinaryTree.md)
 - [Basic Properties of Binary Trees](HTML/binaryTreeProp.md)
 - [Implementation of Binary Trees (contd)](HTML/treeImpContinue.md)
 - [Implementation of Binary Trees](HTML/treeImplementation.md)
