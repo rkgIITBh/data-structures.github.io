@@ -1,4 +1,4 @@
-## Application of Binary Trees
+## Text Compression using Huffman Tree
 
 We learned in the last blog that a binary tree is a convenient data structure
 for computing problems searching as elements are stored according to some 
