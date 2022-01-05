@@ -37,7 +37,7 @@ merged. To prove correctness we use the following recursive formulation
 <li>Let <i>A<sup>'</sup></i> =<img src="https://latex.codecogs.com/svg.image?(A&space;-&space;\{a,b\})\cup&space;\{c\}" title="(A - \{a,b\})\cup \{c\}" />  where <i>c</i> is the new symbol that replaces both <i>a</i> and <i>b</i> </li>
 <li>Recursively use the Huffman algorithm to computer prefix code for <i>A<sup>'</sup></i>. </li> 
 <li>After getting optimal code for <i>A<sup>'</sup></i> put back <i>a</i> 
-and <i>b</i> as children of <i>c</i> in the Huffman tree of 
+and <i>b</i> as the children of <i>c</i> in the Huffman tree of 
 <i>A<sup>'</sup></i></li> 
 </ul>
 
