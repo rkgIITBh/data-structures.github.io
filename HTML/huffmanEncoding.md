@@ -1,4 +1,4 @@
-## Application of Binary Trees
+## Text Compression and Prefix Code
 
 We learned in the last blog that binary tree is a convenient data structures
 for computing problems searching as elements ared stored according to some 
