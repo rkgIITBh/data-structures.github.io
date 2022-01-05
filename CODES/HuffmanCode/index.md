@@ -1,6 +1,6 @@
 ## C Source Code for Huffman Encoding Scheme
 
-'''
+```
 #ifndef HUFFMAN_H
 #define HUFFMAN_H
 #define MAXHEIGHT 50
