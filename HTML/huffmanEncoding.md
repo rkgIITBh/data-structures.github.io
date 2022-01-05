@@ -1,4 +1,4 @@
-## Text Compression using Huffman Tree
+## Prefix Code and Text Compression using Huffman Algorithm
 
 We learned in the last blog that a binary tree is a convenient data structure
 for computing problems searching as elements are stored according to some 
