@@ -190,3 +190,5 @@ void HuffmanCodes(char symbol[], int freq[], int size) {
 }
 #endif
 ```
+
+[Back to Index](../../index.md)
