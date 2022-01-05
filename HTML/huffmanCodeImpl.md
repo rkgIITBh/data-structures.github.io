@@ -42,7 +42,13 @@ and <i>b</i> as the children of <i>c</i> in the Huffman tree of
 </ul>
 
 The critical part of the proof is to show that there exists an optimal prefix
-code where <i>a</i> and <i>b</i> are siblings. We will continue the proof
-in the next blog. Click the [link here](../CODES/HuffmanCode/index.md) for the source code implementing the Huffman encoding scheme. 
+code where <i>a</i> and <i>b</i> are siblings.
+
+Let us now analayze the Huffman encoding algorithm. We maintain a heap of symbols alongwith their associated frequencies. So, two deleteMin operations on the
+heap gives us the pair of least frequent symbols in the text. After deleting the least frequently occurring symbol pair we insert a new symbol with frequency
+equal to sum of the frequencies of the deleted symbols. It effectively implements the merge operation. Every time one symbol is reduced from the current set of
+symbols. So, <img src="https://latex.codecogs.com/svg.image?|A|-1" title="|A|-1" /> iterations are required. Building heap requires <img src="https://latex.codecogs.com/svg.image?\log&space;|A|" title="\log |A|" /> time. Heap operations require <img src="https://latex.codecogs.com/svg.image?O(|A|\log&space;|A|)" title="O(|A|\log |A|)" /> time. 
+
+ We will continue the proof in the next blog. Click the [link here](../CODES/HuffmanCode/index.md) for the source code implementing the Huffman encoding scheme. 
 
 [Back to Index](../index.md)
