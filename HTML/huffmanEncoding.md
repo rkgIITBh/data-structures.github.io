@@ -55,5 +55,5 @@ bits. However, the variable length code will require 224000 bits. Obviously,
 the compression with variable length code is more efficient.
 
 
-
+[Back to Index](../index.md)
  
