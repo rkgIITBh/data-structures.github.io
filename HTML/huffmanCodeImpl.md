@@ -21,13 +21,15 @@ The final Huffman tree is obtained by merging the 2nd and the 4th tree.
 </p>
 The codewords for the symbols are shown in the table alongside. 
 
-Now optimality of encoding scheme can be evaluated by computing the number 
+Now optimality of the Huffman encoding scheme can be evaluated by computing the number 
 of bits used for an input text. Let <i>c</i> and <i>f(c)</i> respectively
-denote a character and its frequency in the input. Then the number of bits
+denote a character and its frequency in the input. Then the number of bits <i>B(T)</i> required for the input 
 is given by the following expression:
 <p align="center">
-
+<img src="https://latex.codecogs.com/svg.image?B(T)&space;=&space;\sum_{c\in\Sigma}&space;f(c).d(c)," title="B(T) = \sum_{c\in\Sigma} f(c).d(c)" />
 </p>
+where <i>T</i> is the Huffman tree for the alphabet set <img src="https://latex.codecogs.com/svg.image?\Sigma" title="\Sigma" />.
+
 Starting with a forest of tree consisting of single nodes representing 
 each character, in each iteration a pair of trees with two least frequencies are merged. To prove correctness we use the following recursive formulation  
 <ul>
