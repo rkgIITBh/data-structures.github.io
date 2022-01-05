@@ -9,7 +9,7 @@ successive merging of trees in the forest reduces the complexity of problem
 by 1. Finally, one tree is constructed. The successive iterations for
 merging operations are illustrated in the figure below.
 <p align="center">
-<img src=../images/huffmanEx1a.jpg"> 
+<img src="../images/huffmanEx1a.jpg"> 
 </p>
 
 The method assigns the shortest code to the most frequently occuring 
@@ -21,7 +21,7 @@ right branch (pointing to the right child) is assigned an 1. Starting from
 the root of the Huffman tree, the codeword for a symbol is produced. 
 The final Huffman tree is obtained by merging 2nd and the 4th tree. 
 <p align="center">
-<img src=../images/huffmanEx2.jpg"> 
+<img src="../images/huffmanEx2.jpg"> 
 </p>
 The codewords for the symbols are shown in the table alongside. 
 
