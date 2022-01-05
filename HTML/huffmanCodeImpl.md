@@ -26,8 +26,8 @@ of bits used for an input text. Let <i>c</i> and <i>f(c)</i> respectively
 denote a character and its frequency in the input. Then the number of bits <i>B(T)</i> required for the input 
 is given by the following expression:
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?B(T)&space;=&space;\sum_{c\in A}&space;f(c).d(c)," title="B(T) = \sum_{c\in\Sigma} f(c).d(c)" />
-</p>
+<img src="https://latex.codecogs.com/svg.image?B(T)&space;=&space;\sum_{c\in A}&space;f(c).d(c)," title="B(T) = \sum_{c\in A} f(c).d(c)" />
+</p
 where <i>T</i> is the Huffman tree for the alphabet set <i>A</i>.
 
 Starting with a forest of tree consisting of single nodes representing 
