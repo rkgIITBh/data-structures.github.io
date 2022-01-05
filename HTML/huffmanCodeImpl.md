@@ -43,6 +43,6 @@ and <i>b</i> as children of <i>c</i> in the Huffman tree of
 
 The critical part of the proof is to show that there exists an optimal prefix
 code where <i>a</i> and <i>b</i> are siblings. We will continue the proof
-in the next blog. Click the [link here](../CODES/HuffmanCode/index.MD) for the source code implementing the Huffman encoding scheme. 
+in the next blog. Click the [link here](../CODES/HuffmanCode/index.md) for the source code implementing the Huffman encoding scheme. 
 
 [Back to Index](../index.md)
