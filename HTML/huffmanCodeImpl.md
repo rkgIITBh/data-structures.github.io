@@ -34,8 +34,7 @@ Starting with a forest of tree consisting of single nodes representing each char
 merged. To prove correctness we use the following recursive formulation  
 <ul>
 <li>Let initial set of symbols be <i>A</i> in which <i>a</i> and <i>b</i> are two symbols of least frequencies.</li>
-<li>Let <i>A<sup>'</sup></i> =<img src="https://latex.codecogs.com/svg.image?(A&space;-&space;\{a,b\})\cup&space;\{c\}" title="(A - \{a,b\})\cup \{c\}" />  where <i>c</i> is the new symbol replacing
-<i>a</i> and <i>b</i> </li>
+<li>Let <i>A<sup>'</sup></i> =<img src="https://latex.codecogs.com/svg.image?(A&space;-&space;\{a,b\})\cup&space;\{c\}" title="(A - \{a,b\})\cup \{c\}" />  where <i>c</i> is the new symbol that replaces both <i>a</i> and <i>b</i> </li>
 <li>Recursively use the Huffman algorithm to computer prefix code for <i>A<sup>'</sup></i>. </li> 
 <li>After getting optimal code for <i>A<sup>'</sup></i> put back <i>a</i> 
 and <i>b</i> as children of <i>c</i> in the Huffman tree of 
