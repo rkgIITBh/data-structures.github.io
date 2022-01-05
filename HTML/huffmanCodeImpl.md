@@ -21,7 +21,7 @@ The final Huffman tree is obtained by merging the 2nd and the 4th tree.
 </p>
 The codewords for the symbols are shown in the table alongside. 
 
-Now optimality of the Huffman encoding scheme can be evaluated by computing the number 
+The optimality of the Huffman encoding scheme can be evaluated by computing the number 
 of bits used for an input text. Let <i>c</i> and <i>f(c)</i> respectively
 denote a character and its frequency in the input. Then the number of bits <i>B(T)</i> required for the input 
 is given by the following expression:
@@ -30,12 +30,11 @@ is given by the following expression:
 </p>
 where <i>T</i> is the Huffman tree for the alphabet set <i>A</i>.
 
-Starting with a forest of tree consisting of single nodes representing 
-each character, in each iteration a pair of trees with two least frequencies are merged. To prove correctness we use the following recursive formulation  
+Starting with a forest of tree consisting of single nodes representing each character, in each iteration a pair of trees with two least frequencies are 
+merged. To prove correctness we use the following recursive formulation  
 <ul>
-<li>Let initial set of symbols be <i>A</i> in which <i>a</i> and <i>b</i>
-are two symbols of least frequencies.</li>
-<li>Let <i>A<sup>'</sup></i> =  where <i>c</i> is the new symbol replacing
+<li>Let initial set of symbols be <i>A</i> in which <i>a</i> and <i>b</i> are two symbols of least frequencies.</li>
+<li>Let <i>A<sup>'</sup></i> =<img src="https://latex.codecogs.com/svg.image?(A&space;-&space;\{a,b\})\cup&space;\{c\}" title="(A - \{a,b\})\cup \{c\}" />  where <i>c</i> is the new symbol replacing
 <i>a</i> and <i>b</i> </li>
 <li>Recursively use the Huffman algorithm to computer prefix code for <i>A<sup>'</sup></i>. </li> 
 <li>After getting optimal code for <i>A<sup>'</sup></i> put back <i>a</i> 
