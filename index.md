@@ -72,7 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
-
+- [Huffman Encoding Algorithm and its Implementation](HTML/huffmanCodeImpl.md)
 - [Prefix code and text compression](HTML/huffmanEncoding.md)
 - [Basic Properties of Binary Trees (Contd)](HTML/moreOnBinaryTree.md)
 - [Basic Properties of Binary Trees](HTML/binaryTreeProp.md)
