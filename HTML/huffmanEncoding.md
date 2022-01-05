@@ -60,7 +60,7 @@ code also satisfies the prefix property. So, it is also a prefix encoding.
 Let us find out which of the two encodings is efficient. Since the text consist of
 10<sup>5</sup> symbols, the fixed-length coding will require 3x10<sup>5</sup>
 bits. However, the variable-length code will require 224000 bits. Therefore, the example indicates that
-compressing a text with variable length code is more efficient than a fixed-length code. In the next blog, we plan to discuss the Huffman
-encoding scheme and prove that it gives an optimal variable-length code.
+compressing a text with variable length code is more efficient than a fixed-length code. In the next couple of blogs, we plan to discuss the implementation
+of Huffman encoding scheme and prove that it gives an optimal variable-length code.
 
 [Back to Index](../index.md)
