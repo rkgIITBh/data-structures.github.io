@@ -23,7 +23,6 @@ typedef struct stack{
     ITEMS * element;
 } STACK;
 
-
 STACK * createStack(){
     STACK *p;
 
@@ -38,15 +37,23 @@ STACK * createStack(){
     return NULL;
 }
 
+int isEmpty(STACK *s) {
+    return s->top == -1;
+}
+
+int isFull(STACK *s) {
+    return s->top == MAX-1;
+}
+
 void push(STACK *s, ITEMS * item) {
-    if(s->top == MAX-1)
+    if(isFull(s))
         printf("Stack Overflow\n");
     else
         s->element[++s->top] = *item;
 }
 
 ITEMS  pop(STACK *s) {
-    if(s->top == -1)
+    if(isEmpty(s))
         printf("Stack Underflow\n");
     else
         return s->element[s->top--];
@@ -57,12 +64,12 @@ void printStack(STACK *s) {
      for(int i = 0; i <= s->top; i++) {
          printf("The index %d has type = ", i);
          switch(s->element[i].itemtype) {
-             case INT : printf("INT and value = %d\n", s->element[i].itemval.ival); // Tag INT print int formatting string
+             case INT : printf("INT and value = %d\n", s->element[i].itemval.ival);
                         break;
-             case FLOAT: printf("FLOAT and value = %f\n", s->element[i].itemval.fval); // Tag FLOAT print float formatting string
+             case CHAR: printf("CHAR and value = %c\n", s->element[i].itemval.cval);
                         break;
-             case CHAR: printf("CHAR and value = %c\n", s->element[i].itemval.cval); // Tag CHAR print char formatting string
-                        break;                        
+             case FLOAT: printf("FLOAT and value = %f\n", s->element[i].itemval.fval);
+                        break;
              default : printf("Invalid data type\n");
          }
      }
@@ -70,4 +77,5 @@ void printStack(STACK *s) {
 }
 #endif
 ```
+
 [Back to Index](../../index.md)
