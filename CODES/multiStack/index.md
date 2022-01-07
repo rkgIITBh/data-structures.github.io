@@ -7,7 +7,7 @@
 
 enum {
     INT, CHAR, FLOAT 
-};
+}; // Tag types 
 
 typedef struct items{
     int itemtype;
