@@ -110,4 +110,4 @@ void printStack(STACK *s) {
 ```
 Since <i>itemtype</i> is associated with each item, <i>printStack</i> examines
 the type and uses the correct formatting string for displaying the item. Please
-using the [link here](../CODES/multiStack.h) for the full source code.
+using the [link here](../CODES/multiStack/index.md) for the full source code.
