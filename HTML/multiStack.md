@@ -81,9 +81,9 @@ void printStack(STACK *s) {
          switch(s->element[i].itemtype) {
              case INT : printf("INT and value = %d\n", s->element[i].itemval.ival);
                         break;
-             case CHAR: printf("CHAR and value = %c\n", s->element[i].itemval.cval);
-                        break;
              case FLOAT: printf("FLOAT and value = %f\n", s->element[i].itemval.fval);
+                        break;
+             case CHAR: printf("CHAR and value = %c\n", s->element[i].itemval.cval);
                         break;
              default : printf("Invalid data type\n");
          }
