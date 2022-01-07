@@ -92,6 +92,6 @@ void printStack(STACK *s) {
 }
 ```
 Since <i>itemtype</i> is associated with each item, <i>printStack</i> examines the type and uses the correct formatting string for displaying the item. Please
-using the [link here](../CODES/multiStack/index.md) for the full source code.
+use the [link here](../CODES/multiStack/index.md) for the full source code.
 
 [Back to Index](../index.md)
