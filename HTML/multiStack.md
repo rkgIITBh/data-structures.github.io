@@ -79,11 +79,11 @@ void printStack(STACK *s) {
      for(int i = 0; i <= s->top; i++) {
          printf("The index %d has type = ", i);
          switch(s->element[i].itemtype) {
-             case INT : printf("INT and value = %d\n", s->element[i].itemval.ival);
+             case INT : printf("INT and value = %d\n", s->element[i].itemval.ival); // Tag INT: print int formatting string
                         break;
-             case FLOAT: printf("FLOAT and value = %f\n", s->element[i].itemval.fval);
+             case FLOAT: printf("FLOAT and value = %f\n", s->element[i].itemval.fval); // Tag FLOAT: print float formatting string
                         break;
-             case CHAR: printf("CHAR and value = %c\n", s->element[i].itemval.cval);
+             case CHAR: printf("CHAR and value = %c\n", s->element[i].itemval.cval); // Tag CHAR: print char formatting string
                         break;
              default : printf("Invalid data type\n");
          }
