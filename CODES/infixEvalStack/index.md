@@ -170,7 +170,7 @@ reader's reference.
 
 int main(){
 	char str[] = "((3^2+14)*(15*(4+1))-24/(2+10))";
-    int result = evalInfixExpr(str);
+        int result = evalInfixExpr(str);
 	printf("\nResult: %d\n", result);
 }
 ```
