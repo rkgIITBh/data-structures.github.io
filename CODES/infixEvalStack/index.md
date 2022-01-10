@@ -158,7 +158,7 @@ int evalInfixExpr(char *tokens) {
 }
 #endif
 ```
-The driver program or the main() function will require "multistack.h" apart from "infix.h" file. A small sample code for main() function is given below for the
+The driver program or the main() function will require "multiStack.h" apart from "infix.h" file. A small sample code for main() function is given below for the
 reader's reference.
 ```
 #include<stdio.h>
