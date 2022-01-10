@@ -49,7 +49,7 @@ Starting with an stack, the evaluation process is illustrated by the figure belo
 After each evaluation, the result is pushed back to the stack. So the temporary results of the evaluation can be reused with appropriate priority rules as 
 explained earlier. Program for evaluation of expression with one stack is hard. It is left as an exercise for the reader. However, we provide the source
 code of a C program for evaluation of an infix expression with two stack. One stack is used for storing operands and the other stack is for storing the 
-operators. Click the [link here](https://github.com/rkgIITBh/data-structures.github.io/blob/gh-pages/CODES/infixEvalStack/index.md) for the header file. Going through the program, the reader may get a fairly decent idea about implementation with one stack. 
+operators. Click the [link here](../CODES/infixEvalStack/index.md) for the header file. Going through the program, the reader may get a fairly decent idea about implementation with one stack. 
 
 We will return to evaluation of arithmetic expression when we deal with binary trees.
 
