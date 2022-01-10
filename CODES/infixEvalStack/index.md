@@ -83,13 +83,14 @@ int isOperator(char c) {
 
 int evalInfixExpr(char *tokens) {
     STACK * s1; // Operand stack
-	STACK * s2; // Operator stack
+    STACK * s2; // Operator stack
 
     ITEMS item, p, q, op; // Local variables 
     int i, ICP, num; // Local variables
 
     s1 = createStack(30); // Create operands stack
     s2 = createStack(30); // Create operator stack
+    
     i=0; // Initialize the index of expression string
 
 	printf("InFix Expression: %s\n", tokens);
