@@ -158,4 +158,21 @@ int evalInfixExpr(char *tokens) {
 }
 #endif
 ```
+The driver program or the main() function will require "multistack.h" apart from "infix.h" file. A small sample code for main() function is given below for the
+reader's reference.
+```
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+#include<string.h>
+#include "multiStack.h"
+#include "infixExpression.h"
+
+int main(){
+	char str[] = "((3^2+14)*(15*(4+1))-24/(2+10))";
+    int result = evalInfixExpr(str);
+	printf("\nResult: %d\n", result);
+}
+```
+
 [Back to Index](../index.md)
