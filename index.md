@@ -83,6 +83,7 @@ phobia. The theory is required, but a proper balance is needed.
 - [Introduction to Trees](HTML/treesIntro.md)
 - [Circular Queue Implementation](HTML/queueCircular.md)
 - [Queues as ADT](HTML/queuesADT.md)
+- [Infix Expression Evaluation Using Stacks](HTML/inFixExpressionEvaluation.md)
 - [Stack of Multiple Data Types](HTML/multiStack.md)
 - [Stack Implementation](HTML/stackImplementation.md)
 - [Stacks as ADT](HTML/stacksADT.md)
