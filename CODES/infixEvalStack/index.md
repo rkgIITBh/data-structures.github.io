@@ -166,7 +166,7 @@ reader's reference.
 #include<ctype.h>
 #include<string.h>
 #include "multiStack.h"
-#include "infixExpression.h"
+#include "infix.h"
 
 int main(){
 	char str[] = "((3^2+14)*(15*(4+1))-24/(2+10))";
