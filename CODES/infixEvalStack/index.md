@@ -174,5 +174,6 @@ int main(){
 	printf("\nResult: %d\n", result);
 }
 ```
+It may be a good exercise to modify the source code so that the program requires one common stack for storing both operands and operators. 
 
 [Back to Index](../../index.md)
