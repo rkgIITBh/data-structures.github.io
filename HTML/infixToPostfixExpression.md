@@ -1,4 +1,4 @@
-## Evaluation of Arithmetic Expression
+## Converting an Infix Expression to a Equivalent Postfix form
 
 Evaluation of arithmetic expressions was introduced in an earlier blog on 
 the stack. The operators we are familiar with are binary, i.e., each requires two operands. It is, therefore, natural to represent arithmetic expressions 
