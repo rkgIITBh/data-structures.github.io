@@ -5,7 +5,7 @@ the stack. The operators we are familiar with are binary, i.e., each requires tw
 using binary trees. In a binary expression tree, the leaf nodes store
 operands, and internal nodes store operators. A binary expression tree appears in the figure below. 
 <p align="center">
-<img src="../images/treeExpression1.jpg">
+<img src="../../images/expressionTree.jpg">
 </p>
 Traversals of the tree may give different forms of the expression:
 <ol>
@@ -29,7 +29,7 @@ The postfix form of an arithmetic expression satisfies the properties stated abo
 the prefix form of an arithmetic expression can meet the state properties. In prefix form, an operator appears before its operands. 
 Consider the following expression given in conventional infix form. 
 <p align="center">
-<img src="../images/infixExprn1.jpg">
+<img src="../../images/infixExprn1.jpg">
 </p>
 We can get the prefix form from the preorder list of the corresponding expression tree. However, we can also transform the infix form of an 
 expression into its prefix form in the following way.
