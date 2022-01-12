@@ -91,6 +91,11 @@ int evalInfixExpr(char *tokens) {
     s1 = createStack(30); // Create operands stack
     s2 = createStack(30); // Create operator stack
     
+    if (s1 == NULL || s2 == NULL) {
+        printf("Error exit: failure in stack creation\n");
+        exit(1); // Premature exit
+    }
+
     i=0; // Initialize the index of expression string
 
 	printf("InFix Expression: %s\n", tokens);
