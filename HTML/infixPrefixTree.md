@@ -5,7 +5,7 @@ the stack. The operators we are familiar with are binary, i.e., each requires tw
 using binary trees. In a binary expression tree, the leaf nodes store
 operands, and internal nodes store operators. A binary expression tree appears in the figure below. 
 <p align="center">
-<img src="../../images/expressionTree.jpg">
+<img src="../images/expressionTree.jpg">
 </p>
 Traversals of the tree may give different forms of the expression:
 <ol>
