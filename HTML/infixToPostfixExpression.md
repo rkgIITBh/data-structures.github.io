@@ -66,10 +66,10 @@ The procedure for creating prefix and postfix expressions from an infix expressi
 </p>
 Evaluation of the postfix form of expression using a stack is quite simple. The stack holds the operands until an operator is encountered. Then repeatedly
 perform the following steps.
-<ol>
+<ul>
 <li>Pop two operand from the stack</li>
 <li>two operand from the stack</li>
-</ol>
+</ul>
 Once an operator is found, pop the required pair of operands on the top of the stack. Compute the result and push the result back to the stack. 
 Repeatedly perform computations until reaching the end of the input. So, the evaluation process is simple.
 However, the important initial step is to transform the infix form of an expression to postfix form. If a tree form of the expression is available, 
