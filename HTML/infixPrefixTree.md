@@ -29,7 +29,7 @@ The postfix form of an arithmetic expression satisfies the properties stated abo
 the prefix form of an arithmetic expression can meet the state properties. In prefix form, an operator appears before its operands. 
 Consider the following expression given in conventional infix form. 
 <p align="center">
-<img src="../../images/infixExprn1.jpg">
+  <img src="https://latex.codecogs.com/svg.image?(a&plus;b)*c-d/b&plus;(a&plus;b)^{b}" title="(a+b)*c-d/b+(a+b)^{b}" />
 </p>
 We can get the prefix form from the preorder list of the corresponding expression tree. However, we can also transform the infix form of an 
 expression into its prefix form in the following way.
