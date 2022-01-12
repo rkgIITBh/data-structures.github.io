@@ -88,8 +88,8 @@ int evalInfixExpr(char *tokens) {
     ITEMS item, p, q, op; // Local variables 
     int i, ICP, num; // Local variables
 
-    s1 = createStack(30); // Create operands stack
-    s2 = createStack(30); // Create operator stack
+    s1 = createStack(strlen(tokens)); // Create operands stack
+    s2 = createStack(strlen(tokens)); // Create operator stack
     
     if (s1 == NULL || s2 == NULL) {
         printf("Error exit: failure in stack creation\n");
