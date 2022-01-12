@@ -63,7 +63,7 @@ We can create an equivalent postorder expression from a fully parenthesized expr
 </ul>
 The procedure for creating prefix and postfix expressions from an infix expression is illustrated in the figure below.
 <p align="center">
-<img src="../../images/infixPostfixExpression.jpg">
+<img src="../images/infixPostfixExpression.jpg">
 </p>
 Evaluation of postfix form of expression using a stack is quite simple. The stack holds the operands until an operator is encountered. Then repeatedly
 perform the following steps.
