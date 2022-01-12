@@ -1,14 +1,15 @@
 ## Infix to Postfix Converter Using Stack
 
 ```
-
 #ifndef CONVPOST_H
 #define CONVPOST_H
+
+// Returns true if the character is an operand
 int isOperand(char ch) {
     return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
 }
 
-// Computes precedence or the operators
+// Computes precedence of the operators
 int pri(char ch) {
     switch (ch) {
     	case '(':
@@ -31,18 +32,17 @@ int postfixConverter(char* tokens) {
     int i, k;
     ITEMS item;
     
-    // Create a stack of capacity equal to the expression size 
+    // Create a stack of capacity equal to expression size 
     STACK* s = createStack(strlen(tokens));
     
-    // Check if the stack is created successfully
+    // Exists prematurely if creation of stack is unsuccessful
     if (s == NULL) {
-        printf("Error exit: failure in stack creation\n");
-        return 0; // Returns prematurely 
-    }
-   
+        printf("Error exit: stack creation failed\n");
+        exit(1); // Returns prematurely 
+    } 
     for (i = 0, k = -1; tokens[i]; ++i) {
         
-        // If the scanned character is an operand, add it to output.
+        // Send operands directly to the output 
         if (isOperand(tokens[i]))
             tokens[++k] = tokens[i];
         
@@ -51,7 +51,8 @@ int postfixConverter(char* tokens) {
             item.itemval.cval = '(';
             push(s, &item);
         } 
-        // If the scanned character is an ‘)’, pop and output from the stack until an ‘(‘.
+        // If current scanned symbol is an ‘)’, continue popping 
+        // characters from the stack to output until encountering ‘(‘. 
         else if (tokens[i] == ')') {
             while (!isEmpty(s) && peek(s).itemval.cval != '(')
                 tokens[++k] = pop(s).itemval.cval;
@@ -61,7 +62,7 @@ int postfixConverter(char* tokens) {
                 pop(s);
         }
         else { 
-           // An operator is encountered 
+            // An operator is encountered 
             while (!isEmpty(s) && pri(tokens[i]) <= pri(peek(s).itemval.cval))
                 tokens[++k] = pop(s).itemval.cval;
             item.type = CHAR;
@@ -71,11 +72,13 @@ int postfixConverter(char* tokens) {
 
     }
 
-    // Pop all operators from the stack
+    // Pop and send all the operators from the stack to output
     while (!isEmpty(s)) 
         tokens[++k] = pop(s).itemval.cval;
 
     tokens[++k] = '\0';
     return 1;
 }
+#endif
+
 ```
