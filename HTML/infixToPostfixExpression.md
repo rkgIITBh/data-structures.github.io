@@ -75,7 +75,9 @@ Repeatedly perform computations until reaching the end of the input. So, the eva
 However, the important initial step is to transform the infix form of an expression to postfix form. If a tree form of the expression is available, 
 then the postorder traversal list gives the desired postorder form.  
 
-A C [program](../CODES/infixToPostfixConverter/index.md) for coverting the infix form of an expression to its equivalent postfix form.
+A C program for coverting the infix form of an expression to its equivalent postfix form.
 is provided for the reader's reference.
+
+[program](../CODES/infixToPostfixConverter/index.md)
 
 [Back to Index](../index.md)
