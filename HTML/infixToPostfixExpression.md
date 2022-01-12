@@ -77,7 +77,8 @@ then the postorder traversal list gives the desired postorder form.
 
 A C program for coverting the infix form of an expression to its equivalent postfix form.
 is provided for the reader's reference.
-
-[program](../CODES/infixToPostfixConverter/index.md)
+<ul>
+  <li>[program](../CODES/infixToPostfixConverter/index.md)</li>
+  </ul>
 
 [Back to Index](../index.md)
