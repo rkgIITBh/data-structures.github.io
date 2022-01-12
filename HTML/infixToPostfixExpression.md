@@ -2,8 +2,7 @@
 
 Evaluation of arithmetic expressions was introduced in an earlier blog on 
 the stack. The operators we are familiar with are binary, i.e., each requires two operands. It is, therefore, natural to represent arithmetic expressions 
-using binary trees. In a binary expression tree, the leaf nodes store
-operands, and internal nodes store operators. A binary expression tree appears in the figure below. 
+using binary trees. The leaf nodes store operands in a binary expression tree, and internal nodes store operators. A binary expression tree appears in the figure below. 
 <p align="center">
 <img src="../images/expressionTree.jpg">
 </p>
