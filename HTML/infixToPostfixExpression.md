@@ -74,10 +74,9 @@ Once an operator is found, pop the required pair of operands on the top of the s
 Repeatedly perform computations until reaching the end of the input. So, the evaluation process is simple.
 However, the important initial step is to transform the infix form of an expression to postfix form. If a tree form of the expression is available, 
 then the postorder traversal list gives the desired postorder form.  
-<br>
+
 A C [program](../CODES/infixToPostfixConverter/index.md) for coverting the infix form of an expression to its equivalent postfix form]
 is provided for the reader's reference.
-
 
 
 [Back to Index](../index.md)
