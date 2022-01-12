@@ -82,4 +82,6 @@ int postfixConverter(char* tokens) {
 #endif
 
 ```
+The main function is quite simple to write. We leave to the reader. 
+
 [Back to Index](../../index.md)
