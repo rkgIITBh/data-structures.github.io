@@ -1,6 +1,10 @@
 ## Evaluation of a Postfix Expression
 
 ```
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 #include "stack.h"
 
 int isOperator(char c) {
