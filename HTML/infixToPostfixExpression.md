@@ -56,9 +56,9 @@ The prefix expression can be evaluated by scanning from right end. In the follow
  
 - Set <img src="https://latex.codecogs.com/svg.image?t_4=a+b" title="t_4=a+b" /> modified expression is: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;t_4&space;c&space;t_3&space;t_2." title="+ - * t_4 c t_3 t_2." />
  
-- Set <img src="https://latex.codecogs.com/svg.image?t_5=t_4 * c" title="t_4=t_3*c" /> modified expression is: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;t_5&space;t_3&space;t_2." title="+ - t_5 t_3 t_2." />
+- Set <img src="https://latex.codecogs.com/svg.image?t_5=t_4*c" title="t_5=t_4*c" /> modified expression is: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;t_5&space;t_3&space;t_2." title="+ - t_5 t_3 t_2." />
  
-- Set <img src="https://latex.codecogs.com/svg.image?t_6=t_5 - t_3" title="t_6=t_5-t_3" />  modified expression is <img src="https://latex.codecogs.com/svg.image?&plus;&space;t_6&space;t_2." title="+ t_6 t_2." />
+- Set <img src="https://latex.codecogs.com/svg.image?t_6=t_5-t_3" title="t_6=t_5-t_3" />  modified expression is <img src="https://latex.codecogs.com/svg.image?&plus;&space;t_6&space;t_2." title="+ t_6 t_2." />
  
 
 - The final result is: <img src="https://latex.codecogs.com/svg.image?t_7=t_6 + t_2" title="t_7=t_6+t_2" />    
