@@ -94,5 +94,7 @@ int main() {
     printf("Value of expression = %d\n",evalPostfix(expression));
 }
 ```
+The code works for any expression given in postfix form. However, it requires the operand value to given several times. The readers are encouraged to 
+modify the code to seek input only once for each operand.  
 
 [Back to Index](../../index.md)
