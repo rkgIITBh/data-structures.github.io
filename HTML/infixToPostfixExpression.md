@@ -50,7 +50,7 @@ The prefix expression can be evaluated by scanning from right end. In the follow
 
 - Set <img src="https://latex.codecogs.com/svg.image?t_1&space;=&space;(a&plus;b)" title="t_1 = (a+b)" /> the modified expression becomes: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e\&space;\&space;\widehat{}&space;t_1&space;b." title="+ - * + a b c / d e \widehat{} t_1 b." />
 
-- Set <img src="https://latex.codecogs.com/svg.image?t_2=t_1^b" title="t_2=t_1^b" /> modified expression become: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e&space;t_1&space;t_2." title="+ - * + a b c / d e t_2." />
+- Set <img src="https://latex.codecogs.com/svg.image?t_2=t_1^b" title="t_2=t_1^b" /> modified expression become: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e&space;t_2." title="+ - * + a b c / d e t_2." />
 
 
 - Set <img src="https://latex.codecogs.com/svg.image?t_3=d/e" title="t_3=d/e" /> , modified expression is: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;t_3&space;t_2." title="+ - * + a b c t_3 t_2." />
