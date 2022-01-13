@@ -48,7 +48,7 @@ After replacing each opening parenthesis by its closest operator to right, we ge
   </p>
 The prefix expression can be evaluated by scanning from right end. In the following evaluation procedure, we denote the intermediate values by the temporaries <img src="https://latex.codecogs.com/svg.image?t_i,&space;i=1.2.\ldots" title="t_i, i=1.2.\ldots" />
 
-- Set <img src="https://latex.codecogs.com/svg.image?t_1&space;=&space;(a&plus;b)" title="t_1 = (a+b)" /> the modified expression becomes: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e\&space;\&space;\widehat{}&space;t_1&space;t_1&space;b." title="+ - * + a b c / d e\ \ \widehat{} t_1 b." />
+- Set <img src="https://latex.codecogs.com/svg.image?t_1&space;=&space;(a&plus;b)" title="t_1 = (a+b)" /> the modified expression becomes: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e\&space;\&space;\widehat{}&space;t_1&space;b." title="+ - * + a b c / d e \widehat{} t_1 b." />
 
 - Set <img src="https://latex.codecogs.com/svg.image?t_2=t_1^b" title="t_2=t_1^b" /> modified expression become: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e&space;t_1&space;t_2." title="+ - * + a b c / d e t_2." />
 
