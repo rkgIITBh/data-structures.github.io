@@ -38,7 +38,9 @@ expression into its prefix form in the following way.
 For example, the fully parenthesized form of  expression 
 <img src="https://latex.codecogs.com/svg.image?(a&plus;b)*c&space;-&space;d/e&space;&plus;&space;(a&plus;b)^b" title="(a+b)*c - d/e + (a+b)^b" /> is given by <img src="https://latex.codecogs.com/svg.image?((((a&plus;b)*c)&space;-&space;(d/b))&space;&plus;&space;(a&plus;b)^b)" title="((((a+b)*c) - (d/b)) + (a+b)^b)" />.
 After replacing each opening parenthesis by its closest operator to right, we get
-<img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e\&space;\widehat{}&space;&plus;&space;a&space;b&space;b." title="+ - * + a b c / d e\ \widehat{} + a b b." />
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;&plus;&space;a&space;b&space;c&space;/&space;d&space;e\&space;\&space;\widehat{}&space;&plus;&space;a&space;b&space;b." title="+ - * + a b c / d e\ \ \widehat{} + a b b." />
+  </p>
 A prefix expression can be evaluated starting from right end. In the following evaluation procedure, we denote the intermediate values by the temporaries 
 <img src="https://latex.codecogs.com/svg.image?t_i,&space;i=1.2.\ldots" title="t_i, i=1.2.\ldots" />
 
