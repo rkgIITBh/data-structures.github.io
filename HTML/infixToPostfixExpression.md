@@ -38,11 +38,11 @@ expression into its prefix form in the following way.
 For example, the fully parenthesized form of  expression 
 <img src="https://latex.codecogs.com/svg.image?(a&plus;b)*c&space;-&space;d/e&space;&plus;&space;(a&plus;b)^b" title="(a+b)*c - d/e + (a+b)^b" /> is given by <img src="https://latex.codecogs.com/svg.image?((((a&plus;b)*c)&space;-&space;(d/b))&space;&plus;&space;(a&plus;b)^b)" title="((((a+b)*c) - (d/b)) + (a+b)^b)" />.
 After replacing each opening parenthesis by its closest operator to right, we get
-<img src="https://latex.codecogs.com/svg.image?&plus;-*&plus;abc/de^&plus;abb" title="+-*+abc/de^+abb" />
+<img src="https://latex.codecogs.com/svg.image?&plus;-*&plus;abc/de\&plus;abb" title="+-*+abc/de^+abb" />
 A prefix expression can be evaluated starting from right end. In the following evaluation procedure, we denote the intermediate values by the temporaries 
 <img src="https://latex.codecogs.com/svg.image?t_i,&space;i=1.2.\ldots" title="t_i, i=1.2.\ldots" />
 
-- Set <img src="https://latex.codecogs.com/svg.image?t_1&space;=&space;(a&plus;b)" title="t_1 = (a+b)" /> the modified expression becomes:<img src="https://latex.codecogs.com/svg.image?&plus;-*t_1c/de^&plus;abb" title="+-*t_1c/de^+abb" /> 
+- Set <img src="https://latex.codecogs.com/svg.image?t_1&space;=&space;(a&plus;b)" title="t_1 = (a+b)" /> the modified expression becomes:<img src="https://latex.codecogs.com/svg.image?&plus;-*t_1c/de\hat{}&plus;abb" title="+-*t_1c/de\hat{}+abb" /> 
 - Set <img src="https://latex.codecogs.com/svg.image?t_2=t_1*c" title="t_2=t_1*c" />modified expression become: <img src="https://latex.codecogs.com/svg.image?&plus;-t_2/de^&plus;abb" title="+-t_2/de^+abb" />
 - Set t<sub>3</sub>=d/e, modified expression is: +-*+abct<sub>3</sub>t<sub>2</sub>
 - Set t<sub>4</sub>=a+b, modified expression is: +-*t<sub>4</sub>ct<sub>3</sub>Set t<sub>2</sub>
