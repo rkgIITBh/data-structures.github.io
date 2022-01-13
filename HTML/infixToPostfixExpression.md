@@ -46,9 +46,7 @@ A prefix expression can be evaluated starting from right end. In the following e
 
 - Set <img src="https://latex.codecogs.com/svg.image?t_1&space;=&space;(a&plus;b)" title="t_1 = (a+b)" /> the modified expression becomes: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;*&space;t_1&space;c&space;/&space;d&space;e\&space;\&space;\widehat{}&space;&plus;&space;a&space;b&space;b." title="+ - * + t_1 c / d e\ \ \widehat{} + a b b." />
 - Set <img src="https://latex.codecogs.com/svg.image?t_2=t_1*c" title="t_2=t_1*c" /> modified expression become:  <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;t_2&space;/&space;d&space;e\&space;\&space;\widehat{}&space;&plus;&space;a&space;b&space;b." title="+ - t_2 / d e\ \ \widehat{} + a b b." />
-
-
-- Set <img src="https://latex.codecogs.com/svg.image?t_3=d/e" title="t_3=d/e" /> , modified expression is: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;t_2&space;/&space;t_3&space;\&space;\widehat{}&space;&plus;&space;a&space;b&space;b." title="+ - t_2 t_3 \ \ \widehat{} + a b b." />
+- Set <img src="https://latex.codecogs.com/svg.image?t_3=d/e" title="t_3=d/e" /> , modified expression is: <img src="https://latex.codecogs.com/svg.image?&plus;&space;-&space;t_2&space;t_3&space;\&space;\widehat{}&space;&plus;&space;a&space;b&space;b." title="+ - t_2 t_3 \ \ \widehat{} + a b b." />
 - Set t<sub>4</sub>=a+b, modified expression is: +-*t<sub>4</sub>ct<sub>3</sub>Set t<sub>2</sub>
 - Set t<sub>5</sub>=(a+b)*c, modified expression is: +-t<sub>5</sub>t<sub>3</sub>t<sub>2</sub>
 - Set t<sub>6</sub>=(a+b)-(d/e), modified expression is +t<sub>6t<sub>2
