@@ -60,3 +60,15 @@ THD_TNODE * inorderPredecessor(TH_TNODE * n) {
     return p;
 }
 ```
+The advantage of having a threaded binary tree is that we can get an interative algorithm for inorder traveral simply by starting from the root and repeatedly
+listing out inorder successor of each node. The algorithm appear below:
+```
+procedure inOrderTraversal(TH_NODE * header) {
+     TH_NODE p = inorderSuccessor(header);
+     while (p != header) {
+          print p->info; // not exact syntax
+          p = inorderSuccessor(p);
+          
+     }
+}
+```
