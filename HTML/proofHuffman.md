@@ -16,7 +16,11 @@ In the next step, the character set becomes:
 </p>
 Huffman algorithm recursively constructs Huffman tree for the above alphabet until the alphabet set reduces to 
 a single alphabet. The recursive step essentially, means <i>a</i> and <i>b</i> are replaced by a new alphabet <i>c</i> such that <i>f(c) = f(a) + f(b)</i>.
-The combined symbol at each step defines an internal node of the Huffman tree. The leaf nodes denote the initial set of alphabets of the text.
+Figure below demonstates the recursive nature of the algorithm:
+<p align="center">
+  <img src="../images/recursiveHuffman.jpg">
+</p>
+The combined symbol at each recursive step defines an internal node of the Huffman tree. The leaf nodes denote the initial set of alphabets of the text.
 
 A Huffman tree provides a prefix code. The code uses a 0 for a left branch in the tree, and a 1 for the right branch. Furthermore, beginning with a prefix code, 
 it is possible to construct the underlying tree. Starting from the root, a 0 a left branch is taken for a 0, and
