@@ -26,7 +26,6 @@ Let <i>X</i> consists of set of all trees that define prefix codes for alphabet 
 where <i>a</i> and <i>b</i> are siblings. Let <i>Y</i> be the set of all trees that define prefix codes for alphabet set <i>A'</i>.  For every tree in <i>X</i> 
 there is a corresponding tree in <i>Y</i>. Equivalently there exists an <img src="https://latex.codecogs.com/svg.image?1\leftrightarrow&space;1" title="1\leftrightarrow 1" /> correspondence between <i>X</i> and <i>Y</i>.
 
-We define a base case for an alphabet set consisting of two alphabets. For the base case Huffman encoding creates an optimal code. Assume that it creates
-optimal code for   . Therefore, using Huffman we can find an optimal code for
-<i>A'</i>. From the above optimal code we replace the leaf node representing the combined alphabet    by  hanging <i>a</i> and <i>b</i> as children. 
-Then the tree is a optimal tree in <i>X</i> with weight of an optimal tree in <i>Y</i> plus <i>f(a) + f(b)</i>
+We define a base case for an alphabet set consisting of two alphabets. It is obvious that Huffman encoding creates an optimal code base case. Now assume that
+it creates optimal code for <img src="https://latex.codecogs.com/svg.image?|A|-1|" title="|A|-1|" />. From the optimal code for <img src="https://latex.codecogs.com/svg.image?|A|-1|" title="|A|-1|" /> we can create optimal code of <img src="https://latex.codecogs.com/svg.image?|A|" title="|A|" />  by  hanging <i>a</i> and <i>b</i> as children of <i>c</i>. 
+Then the tree is a optimal tree in <i>X</i> with weight of an optimal tree in <i>Y</i> plus <i>f(a) + f(b)</i>.
