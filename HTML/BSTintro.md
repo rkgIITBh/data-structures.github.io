@@ -74,7 +74,7 @@ Deletion operation is a bit involved. We need to handle three cases:
 - If the element to be deleted is at an internal node that has only one child. 
 - If the element to be deleted is at an internal node that has two children. 
 
-Case 1 can be handled by deleting the concerned leaf node. It does not affect the rest of the tree. Figure below illustrates this case.
+Case 1 can be handled by deleting the concerned leaf node. It does not affect the rest of the tree. Figure below illustrates this case. The leaf nodes are indicated by double circles. 
 <p align="center">
 <img src="../images/bstCase1delete.jpg">
 </p>
@@ -99,4 +99,6 @@ which illustrates case 3.
 <img src="../images/bstCase3delete.jpg">
 </p>
 
-The inorder successor of a node is the leftmost node in the right subtree of the
+The inorder successor of a node is the leftmost node in the right subtree of the node to be deleted. If successor is not a leaf node then it can only have a 
+right child, because the presence of a left child would mean the node identified as the inorder successor is not correct. It cannot be the leftmost node in the 
+right subtree of the node to be deleted. 
