@@ -16,7 +16,7 @@ The average time complexity of any operation is
 
 The figure below provides an example of a binary search tree.
 <p align="center">
-<img src="../images/bst_tree.jpg"
+<img src="../images/bst_tree.jpg">
 </p>
 The branches between pair of nodes are labeled by relationships specified above. All elements in the right subtree of 50 are greater than 50. 
 Likewise all element in the left subtree of 50 are smaller than 50. 
