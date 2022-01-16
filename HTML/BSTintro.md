@@ -92,11 +92,11 @@ the node is deleted from the new position. Either case 1 or case 2 would apply t
 inorder successor is actually either a leaf node or a node with one child.  Before we proceed with the proof, examine the figure below 
 which illustrates case 3.  
 <p align="center">
-<img src="../images/bstCase3delete.jpg">
+<img src="../images/bstCase3deleteB.jpg">
 </p>
 
 <p align="center">
-<img src="../images/bstCase3deleteB.jpg">
+<img src="../images/bstCase3delete.jpg">
 </p>
 
 The inorder successor of a node is the leftmost node in the right subtree of the
