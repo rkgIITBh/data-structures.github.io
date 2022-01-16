@@ -100,7 +100,7 @@ inorder successor is either a leaf node or a node with one child. Before proceed
 
 The inorder successor of a node is the leftmost node in the node's right subtree to be deleted. If the successor is not a leaf node, then it can only have a 
 right child because the presence of a left child would mean the node identified as the inorder successor is not correct. It cannot be the leftmost node in the 
-node's right subtree to be deleted. 
+node's right subtree to be deleted. The deletion function is given below.
 ```
 TNODE * deleteNode(TNODE * root, int x) {
     TNODE * temp;
@@ -108,14 +108,18 @@ TNODE * deleteNode(TNODE * root, int x) {
         printf("Error: empty tree or element not present\n");
         return root;
     }
-    // Delete from the left subtree
+ 
+    // If element is smaller than that at the root delete from the left subtree
     if (x < root->info)
         root->left = deleteNode(root->left, x);
-    // Delete from the right subtree
+ 
+    // If element is bigger than the element at the root delete from the right subtree
     else if (x > root->info)
         root->right = deleteNode(root->right, x);
-    // Otherwise reached the node to be deleted 
+ 
+    // If element at the root equal to element to be deleted, delete the root. 
     else {
+        // Node has only one child or no child
         if (root->left == NULL) {
             temp = root->right;
             printf("Delete %d success\n",root->info);
@@ -128,14 +132,21 @@ TNODE * deleteNode(TNODE * root, int x) {
             free(root);
             return temp;
         }
-        // Node with two children: get the inorder successor
-        printf("%d has two children\n",root->info);
+ 
+        // For a node with two children get the inorder successor
+        // Inorder successor is the smallest node in the right subtree
+        
         temp = smallestNode(root->right);
+ 
+        // Copy the inorder successor's content to this node
         root->info = temp->info;
+ 
+        // Delete the inorder successor, recursive call will take care of the applicable case
         root->right = deleteNode(root->right, temp->info);
     }
     return root;
 } 
+
 ```
 
 [Back to Index](../index.md)
