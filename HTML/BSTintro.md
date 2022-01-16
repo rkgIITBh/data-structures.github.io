@@ -1,4 +1,4 @@
-## Binary Search Trees
+## Introduction to Binary Search Trees
 
 The most extensive use of binary trees is for search and indexing applications where elements are from a totally ordered set. It is based on the idea of 
 making search faster by the principle of exclusion and inclusion like binary search.It supports the following set of operations as most of the other data
