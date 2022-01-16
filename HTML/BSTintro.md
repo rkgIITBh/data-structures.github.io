@@ -81,7 +81,7 @@ Case 1 can be handled by deleting the concerned leaf node. It does not affect th
 
 Case 2 can be handled simply by promoting the child of the node to be deleted to the parent's position. The subtree below is unaffected. 
 Since the child occupies the position of its previous parent, the absence of the parent node does not affect the rest of the tree. This case is illustrated
-below. 
+below. The nodes having one child are indicated by double circles in the figure below.
 <p align="center">
 <img src="../images/bstCase2delete.jpg">
 </p>
@@ -90,7 +90,7 @@ Case 3 is little involved. We need to find the inorder successor or the inorder 
 use inorder successor. The node is swapped with the inorder successor. Then the 
 the node is deleted from the new position. Either case 1 or case 2 would apply to the problem of deleting the node at new position. So, we need to prove that
 inorder successor is actually either a leaf node or a node with one child.  Before we proceed with the proof, examine the figure below 
-which illustrates case 3.  
+which illustrates case 3.  All internal nodes having two children are marked by double circles in the figures below
 <p align="center">
 <img src="../images/bstCase3deleteB.jpg">
 </p>
