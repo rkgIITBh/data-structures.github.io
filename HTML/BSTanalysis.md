@@ -51,6 +51,6 @@ Consider how the next insertion occurs.
 - The probability of searching any element is <i>1/n</i>.
 So the average number of probes for <i>i+1</i>the insertion would be:
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?&space;P(n,i)&space;=&space;\frac{1}{n}&space;&plus;&space;\frac{i}{n}(1&space;&plus;&space;P(i))&space;&plus;&space;(n-i-1)(1&plus;P(n-i-1))" title=" P(n,i) = \frac{1}{n} + \frac{i}{n}(1 + P(i)) + (n-i-1)(1+P(n-i-1))" />
+<img src="https://latex.codecogs.com/svg.image?&space;P(n,i)&space;=&space;\frac{1}{n}&space;&plus;&space;\frac{i}{n}\left(1&space;&plus;&space;P(i)\right)&space;&plus;&space;\frac{(n-i-1)}{n}\left(1&plus;P(n-i-1)\right)" title=" P(n,i) = \frac{1}{n} + \frac{i}{n}\left(1 + P(i)\right) + \frac{(n-i-1)}{n}\left(1+P(n-i-1)\right)" />
   </p>
 
