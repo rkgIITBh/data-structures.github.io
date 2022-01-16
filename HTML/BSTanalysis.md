@@ -58,3 +58,7 @@ So the average number of probes for <i>i+1</i>the insertion would be:
   <img src="https://latex.codecogs.com/svg.image?&space;&space;&space;=&space;1&space;&plus;&space;\frac{i}{n}P(i)&space;&plus;&space;\frac{n-i-1}{n}P(n-i-1)" title=" = 1 + \frac{i}{n}P(i) + \frac{n-i-1}{n}P(n-i-1)" />
   </p>
 
+The average value is obtained by letting <i>i</i> to be any of the <i>n</i> elements. So, the average value is given by the expression:
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?&space;&space;\frac{1}{n}\sum_i&space;P(n,i)" title=" \frac{1}{n}\sum_i P(n,i)" />
+  </p>
