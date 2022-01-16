@@ -52,5 +52,6 @@ Consider how the next insertion occurs.
 So the average number of probes for <i>i+1</i>the insertion would be:
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?&space;P(n,i)&space;=&space;\frac{1}{n}&space;&plus;&space;\frac{i}{n}\left(1&space;&plus;&space;P(i)\right)&space;&plus;&space;\frac{(n-i-1)}{n}\left(1&plus;P(n-i-1)\right)" title=" P(n,i) = \frac{1}{n} + \frac{i}{n}\left(1 + P(i)\right) + \frac{(n-i-1)}{n}\left(1+P(n-i-1)\right)" />
+  <img src="https://latex.codecogs.com/svg.image?&space;&space;=&space;\frac{1&space;&plus;&space;i&space;&plus;&space;n&space;-&space;i&space;-&space;1}{n}&space;&plus;&space;\frac{i}{n}P(i)&space;&plus;&space;\frac{n-i-1}{n}&space;P(n-i-1)" title=" = \frac{1 + i + n - i - 1}{n} + \frac{i}{n}P(i) + \frac{n-i-1}{n} P(n-i-1)" />
   </p>
 
