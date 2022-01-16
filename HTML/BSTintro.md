@@ -102,3 +102,5 @@ which illustrates case 3.  All internal nodes having two children are marked by 
 The inorder successor of a node is the leftmost node in the right subtree of the node to be deleted. If successor is not a leaf node then it can only have a 
 right child, because the presence of a left child would mean the node identified as the inorder successor is not correct. It cannot be the leftmost node in the 
 right subtree of the node to be deleted. 
+
+[Back to Index](../index.md)
