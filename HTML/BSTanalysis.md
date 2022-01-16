@@ -50,5 +50,7 @@ Consider how the next insertion occurs.
 - If right subtree of the root is probed for <i>i+1</i> insertion then path length is <i>1+P(n-1-i)</i>
 - The probability of searching any element is <i>1/n</i>.
 So the average number of probes for <i>i+1</i>the insertion would be:
-
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?&space;P(n,i)&space;=&space;\frac{1}{n}&space;&plus;&space;\frac{i}{n}(1&space;&plus;&space;P(i))&space;&plus;&space;(n-i-1)(1&plus;P(n-i-1))" title=" P(n,i) = \frac{1}{n} + \frac{i}{n}(1 + P(i)) + (n-i-1)(1+P(n-i-1))" />
+  </p>
 
