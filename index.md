@@ -71,6 +71,8 @@ future. Therefore, without programming practice in the data structure course, I 
 phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
+
+- [Introduction to Binary Search Tree](HTML/BSTintro.md)
 - [Converting an Infix Expression to its Equivalent Postfix](HTML/infixToPostfixExpression.md)
 - [Huffman Encoding Algorithm and its Implementation](HTML/huffmanCodeImpl.md)
 - [Prefix code and text compression](HTML/huffmanEncoding.md)
