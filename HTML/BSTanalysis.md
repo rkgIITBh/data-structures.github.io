@@ -60,5 +60,5 @@ So the average number of probes for <i>i+1</i>the insertion would be:
 
 The average value is obtained by letting <i>i</i> to be any of the <i>n</i> elements. So, the average value is given by the expression:
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?&space;&space;\frac{1}{n}\sum_i&space;P(n,i)" title=" \frac{1}{n}\sum_i P(n,i)" />
+<img src="https://latex.codecogs.com/svg.image?&space;&space;P(n)=\frac{1}{n}\sum_i&space;P(n,i)" title=" P(n)=\frac{1}{n}\sum_i P(n,i)" />
   </p>
