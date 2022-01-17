@@ -63,3 +63,7 @@ we can replace <i>P(n,i)</i> by <i>P(i)</i>. The simplified expression for <i>P(
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?&space;&space;P(n)=&space;1&plus;\frac{2}{n^2}\sum_i&space;P(i)" title=" P(n)= 1+\frac{2}{n^2}\sum_i P(i)" />
   </p>
+  
+Now apply induction to prove <img src="https://latex.codecogs.com/svg.image?P(n)&space;=&space;O(\log&space;n)" title="P(n) = O(\log n)" />. 
+For the base case, we know <i>P(1) = 1</i> and the corresponding expression is <img src="https://latex.codecogs.com/svg.image?1&plus;\frac{2}{n^2}\sum_i&space;iP(i)&space;=&space;1" title="1+\frac{2}{n^2}\sum_i iP(i) = 1" />
+
