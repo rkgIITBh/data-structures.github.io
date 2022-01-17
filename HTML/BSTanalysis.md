@@ -76,3 +76,5 @@ Replacing the sum by the final expression, we finally get
 <img src="https://latex.codecogs.com/svg.image?P(n)&space;=&space;1&space;&plus;&space;4\log&space;n" title="P(n) = 1 + 4\log n" />
 </p>
 Therefore, the average case complexity of an operation on BST is of the order of <i>log n</i>
+
+[Back to Index](../index.md)
