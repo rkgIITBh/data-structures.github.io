@@ -1,36 +1,27 @@
 ## Analysis of Binary Search Tree
 
-For analysis of time complexity for operations on BST we explore following questions.
-
+For analysis of time complexity for operations on BST we explore the following questions.
 - What could be a worst-case scenario?, and
-- What could be a best-case scenario? 
+- What could be a best-case scenario?
 
-Search is the important first step for both insertion and deletion. 
-In the worst-case, a successful or an unsuccessful search depends on the length of the tree path from the root to the farthest leaf node. 
+Search is the important first step for both insertion and deletion. A successful or unsuccessful search depends on the length of the tree path from the root to the farthest leaf node.
+A right-skewed or a left-skewed BSTs exhibit the pathological cases for insertions and deletions. These cases occur as follows:
+- Perform an ascending sequence of n insertions on an initially empty BST it generates a right-skewed tree.
+- Perform a descending sequence of n insertions on an initially empty BST it generates a left-skewed tree.
 
-The pathological cases for insertions and deletions are exhibited by a right skewed or a left skewed BSTs. These case occur respectively as follows: 
-
-- Perform an ascending sequence of <i>n</i> insertions on an initially empty BST it generates a right skewed tree.
-- Perform a descending sequence of <i>n</i> insertions on an initially empty BST it generates a left skewed tree.
-
-A completely skewed tree requires time of O(<i>n</i>) for any operation. On the other hand, an operation on a balanced binary search tree takes 
-O(<i>log n</i>).
-Therefore, 
-- A right skewed or a left skewed BST provides the worst-case scenario, and
-- A balanced BST gives provides a best-case scenario for BSTs. 
-
-When we have a random input source, then all distributions of values are equally likely. So, it is important to analyze the average case time 
-complexity. Let us find the average case analysis of BST. Our focus will be on average path length in a BST, because any operation depends on the 
-path length.   
-
-We begin with an example. Consider the tree of shown below. The total internal path length of the tree is 15. 
+A completely skewed tree requires a time of O(n) for any operation. On the other hand, an operation on a balanced binary search tree takes O(log n). Therefore,
+A right-skewed or a left-skewed BST provides the worst-case scenario, and
+A balanced BST gives a best-case scenario for BSTs.
+When we have a random input source, all distributions of values are equally likely. So, it is important to analyze the average case time complexity. Let us find 
+the average case analysis of BST. Our focus will be on average path length in a BST because any operation depends on the path length.
+We begin with an example. Consider the tree of shown below. The total internal path length of the tree is 15.
 <p align="center">
 <img src="../images/BSTinternalPath.jpg">
 </p>
 
 The first problem we need to address is:
 
-- How to compute internal path length of a BST in a dynamic situation? 
+- How to compute the internal path length of a BST in a dynamic situation? 
 
 The dynamic situation is presented by the possibilities of insertions and deletions happening in any possible order. We use the following assumptions:
 
@@ -44,7 +35,7 @@ the figure below:
 <p align="center">
 <img src="../images/averageCaseBST.jpg">
 </p>
-Consider how the next insertion occurs.
+Consider how the subsequent insertion occurs.
 - The root node will be probed in any case.
 - If left subtree of the root is probed for <i>i+1</i> insertion then path length is <i>1+P(i)</i>
 - If right subtree of the root is probed for <i>i+1</i> insertion then path length is <i>1+P(n-1-i)</i>
@@ -76,7 +67,7 @@ For the induction hypothesis, assume
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?\begin{array}{ll}&space;&space;P(n)&space;&&space;\le&space;1&space;&plus;&space;\frac{2}{n^2}&space;\sum_{i=0}^{n-1}&space;i(1&plus;4\log&space;i)\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;=&space;1&plus;\frac{2}{n^2}&space;\sum_{i=1}^{n-1}&space;4i\log&space;i&space;&plus;&space;\frac{2}{n^2}\sum_{i=0}^{n-1}&space;i\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le&space;2&space;&plus;&space;\left(\frac{8}{n^2}\sum_{i=1}^{n-1}&space;i\log&space;i\right)&space;\mbox{,&space;since&space;}&space;\sum_{i=1}^{n-1}&space;i&space;\le&space;\frac{n^2}{2}&space;\\\end{array}" title="\begin{array}{ll} P(n) & \le 1 + \frac{2}{n^2} \sum_{i=0}^{n-1} i(1+4\log i)\\ & = 1+\frac{2}{n^2} \sum_{i=1}^{n-1} 4i\log i + \frac{2}{n^2}\sum_{i=0}^{n-1} i\\ & \le 2 + \left(\frac{8}{n^2}\sum_{i=1}^{n-1} i\log i\right) \mbox{, since } \sum_{i=1}^{n-1} i \le \frac{n^2}{2} \\\end{array}" />
 </p>
-Consider the sum in the right hand side of previous inequality and apply simplification:
+Consider the sum on the right-hand side of previous inequality and apply simplification:
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?\begin{array}{ll}&space;&space;\sum_{i=1}^{n-1}&space;i\log&space;i&space;&=&space;&space;\sum_{i=1}^{\lceil\frac{n}{2}\rceil-1}&space;i\log&space;i&space;&plus;&space;\sum_{\lceil\frac{n}{2}\rceil}^{n-1}&space;i\log&space;i\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le&space;\sum_{i=1}^{\lceil\frac{n}{2}\rceil-1}&space;i\log\frac{n}{2}&space;&plus;&space;\sum_{\lceil\frac{n}{2}\rceil}^{n-1}&space;i\log&space;n\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le\frac{n^2}{8}\log\frac{n}{2}&space;&plus;&space;\frac{3n^2}{8}\log&space;n\end{array}" title="\begin{array}{ll} \sum_{i=1}^{n-1} i\log i &= \sum_{i=1}^{\lceil\frac{n}{2}\rceil-1} i\log i + \sum_{\lceil\frac{n}{2}\rceil}^{n-1} i\log i\\ & \le \sum_{i=1}^{\lceil\frac{n}{2}\rceil-1} i\log\frac{n}{2} + \sum_{\lceil\frac{n}{2}\rceil}^{n-1} i\log n\\ & \le\frac{n^2}{8}\log\frac{n}{2} + \frac{3n^2}{8}\log n\end{array}" />
   </p>
