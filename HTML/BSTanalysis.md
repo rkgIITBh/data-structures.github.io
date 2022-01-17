@@ -69,7 +69,7 @@ For the base case, we know <i>P(1) = 1</i> and the corresponding expression is
 <p align="center"><img src="https://latex.codecogs.com/svg.image?1&plus;\frac{2}{n^2}\sum_i&space;iP(i)&space;=&space;1" title="1+\frac{2}{n^2}\sum_i iP(i) = 1" /></p>
 For the induction hypothesis, assume 
 <p align="center>
-          <img src="https://latex.codecogs.com/svg.image?P(i)&space;=&space;4\log&space;i" title="P(i) = 4\log i" />
+        <img src="https://latex.codecogs.com/svg.image?1&space;&plus;&space;4\log&space;i" title="1 + 4\log i" />>
 </p> 
-for <img src="https://latex.codecogs.com/svg.image?0\le&space;i&space;<&space;n" title="0\le i < n" />
+
 
