@@ -71,7 +71,7 @@ For the induction hypothesis, assume
 <p align="center">
   <img src="https://latex.codecogs.com/svg.image?1&space;&plus;&space;4\log&space;i">
   </p>
-  for any <i>i</i> less than <i>n</i>.
+  for any <i>i</i> less than <i>n</i>. Now, we apply to terms of the sum in the expression for <i>P(n)</i> and simplify simplify it further to obtain: 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?\begin{array}{ll}&space;&space;P(n)&space;&&space;\le&space;1&space;&plus;&space;\frac{2}{n^2}&space;\sum_{i=0}^{n-1}&space;i(1&plus;4\log&space;i)\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;=&space;1&plus;\frac{2}{n^2}&space;\sum_{i=1}^{n-1}&space;4i\log&space;i&space;&plus;&space;\frac{2}{n^2}\sum_{i=0}^{n-1}&space;i\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le&space;2&space;&plus;&space;\left(\frac{8}{n^2}\sum_{i=1}^{n-1}&space;i\log&space;i\right)&space;\mbox{,&space;since&space;}&space;\sum_{i=1}^{n-1}&space;i&space;\le&space;\frac{n^2}{2}&space;\\\end{array}" title="\begin{array}{ll} P(n) & \le 1 + \frac{2}{n^2} \sum_{i=0}^{n-1} i(1+4\log i)\\ & = 1+\frac{2}{n^2} \sum_{i=1}^{n-1} 4i\log i + \frac{2}{n^2}\sum_{i=0}^{n-1} i\\ & \le 2 + \left(\frac{8}{n^2}\sum_{i=1}^{n-1} i\log i\right) \mbox{, since } \sum_{i=1}^{n-1} i \le \frac{n^2}{2} \\\end{array}" />
 </p>
