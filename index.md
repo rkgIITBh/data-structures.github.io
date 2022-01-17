@@ -72,6 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [Average Case Analysis of BST](HTML/BSTanalysis.md)
 - [Introduction to Binary Search Tree](HTML/BSTintro.md)
 - [Converting an Infix Expression to its Equivalent Postfix](HTML/infixToPostfixExpression.md)
 - [Huffman Encoding Algorithm and its Implementation](HTML/huffmanCodeImpl.md)
