@@ -78,5 +78,6 @@ For the induction hypothesis, assume
 Consider the sum 
 <p align="center">
    <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^{n-1}&space;i\log&space;i" title="\sum_{i=1}^{n-1} i\log i" />
+<br>
+<img src="https://latex.codecogs.com/svg.image?\begin{array}{ll}&space;&space;\sum_{i=1}^{n-1}&space;i\log&space;i&space;&=&space;&space;\sum_{i=1}^{\lceil\frac{n}{2}\rceil-1}&space;i\log&space;i&space;&plus;&space;\sum_{\lceil\frac{n}{2}\rceil}^{n-1}&space;i\log&space;i\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le&space;\sum_{i=1}^{\lceil\frac{n}{2}\rceil-1}&space;i\log\frac{n}{2}&space;&plus;&space;\sum_{\lceil\frac{n}{2}\rceil}^{n-1}&space;i\log&space;n\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le\frac{n^2}{8}\log\frac{n}{2}&space;&plus;&space;\frac{3n^2}{8}\log&space;n\end{array}" title="\begin{array}{ll} \sum_{i=1}^{n-1} i\log i &= \sum_{i=1}^{\lceil\frac{n}{2}\rceil-1} i\log i + \sum_{\lceil\frac{n}{2}\rceil}^{n-1} i\log i\\ & \le \sum_{i=1}^{\lceil\frac{n}{2}\rceil-1} i\log\frac{n}{2} + \sum_{\lceil\frac{n}{2}\rceil}^{n-1} i\log n\\ & \le\frac{n^2}{8}\log\frac{n}{2} + \frac{3n^2}{8}\log n\end{array}" />
   </p>
-
