@@ -25,7 +25,7 @@ path length.
 
 We begin with an example. Consider the tree of shown below. The total internal path length of the tree is 15. 
 <p align="center">
-<img src="../images/BSTinteralPath.jpg">
+<img src="../images/BSTinternalPath.jpg">
 </p>
 
 The first problem we need to address is:
