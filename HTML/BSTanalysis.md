@@ -81,7 +81,7 @@ Consider the sum in the right hand side of previous inequality and apply simplif
 <img src="https://latex.codecogs.com/svg.image?\begin{array}{ll}&space;&space;\sum_{i=1}^{n-1}&space;i\log&space;i&space;&=&space;&space;\sum_{i=1}^{\lceil\frac{n}{2}\rceil-1}&space;i\log&space;i&space;&plus;&space;\sum_{\lceil\frac{n}{2}\rceil}^{n-1}&space;i\log&space;i\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le&space;\sum_{i=1}^{\lceil\frac{n}{2}\rceil-1}&space;i\log\frac{n}{2}&space;&plus;&space;\sum_{\lceil\frac{n}{2}\rceil}^{n-1}&space;i\log&space;n\\&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\le\frac{n^2}{8}\log\frac{n}{2}&space;&plus;&space;\frac{3n^2}{8}\log&space;n\end{array}" title="\begin{array}{ll} \sum_{i=1}^{n-1} i\log i &= \sum_{i=1}^{\lceil\frac{n}{2}\rceil-1} i\log i + \sum_{\lceil\frac{n}{2}\rceil}^{n-1} i\log i\\ & \le \sum_{i=1}^{\lceil\frac{n}{2}\rceil-1} i\log\frac{n}{2} + \sum_{\lceil\frac{n}{2}\rceil}^{n-1} i\log n\\ & \le\frac{n^2}{8}\log\frac{n}{2} + \frac{3n^2}{8}\log n\end{array}" />
   </p>
 Replacing the sum by the final expression, we finally get 
-<p align+"center">
+<p align="center">
 <img src="https://latex.codecogs.com/svg.image?P(n)&space;=&space;1&space;&plus;&space;4\log&space;n" title="P(n) = 1 + 4\log n" />
 </p>
 Therefore, the average case complexity of an operation on BST is of the order of <i>log n</i>
