@@ -61,7 +61,7 @@ The average value is obtained by letting <i>i</i> to be any of the <i>n</i> elem
 In the above equation replace <i>P(n,i)</i> by the expression we found earlier. Since the pair of sums for <i>P(i)</i> and <i>P(n,i)</i> are symmetric, 
 we can replace <i>P(n,i)</i> by <i>P(i)</i>. The simplified expression for <i>P(n)</i> becomes:
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?&space;&space;P(n)=&space;1&plus;\frac{2}{n^2}\sum_i&space;P(i)" title=" P(n)= 1+\frac{2}{n^2}\sum_i P(i)" />
+<img src="https://latex.codecogs.com/svg.image?&space;&space;P(n)=&space;1&plus;\frac{2}{n^2}\sum_i&space;iP(i)" title=" P(n)= 1+\frac{2}{n^2}\sum_i iP(i)" />
   </p>
   
 Now apply induction to prove <img src="https://latex.codecogs.com/svg.image?P(n)&space;=&space;O(\log&space;n)" title="P(n) = O(\log n)" />. 
