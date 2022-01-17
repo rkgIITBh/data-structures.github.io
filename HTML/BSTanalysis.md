@@ -67,5 +67,5 @@ we can replace <i>P(n,i)</i> by <i>P(i)</i>. The simplified expression for <i>P(
 Now apply induction to prove <img src="https://latex.codecogs.com/svg.image?P(n)&space;=&space;O(\log&space;n)" title="P(n) = O(\log n)" />. 
 For the base case, we know <i>P(1) = 1</i> and the corresponding expression is 
 <p align="center"><img src="https://latex.codecogs.com/svg.image?1&plus;\frac{2}{n^2}\sum_i&space;iP(i)&space;=&space;1" title="1+\frac{2}{n^2}\sum_i iP(i) = 1" /></p>
-For the induction hypothesis, assume <img src="https://latex.codecogs.com/svg.image?P(i)&space;=&space;4\log&space;i" title="P(i) = 4\log i" /> for <img src="https://latex.codecogs.com/svg.image?0\le&space;i&space;<&space;n" title="0\le i < n" />
+For the induction hypothesis, assume <p align="center><img src="https://latex.codecogs.com/svg.image?P(i)&space;=&space;4\log&space;i" title="P(i) = 4\log i" /> for <img src="https://latex.codecogs.com/svg.image?0\le&space;i&space;<&space;n" title="0\le i < n" /></p>
 
