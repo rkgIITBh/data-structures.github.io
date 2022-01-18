@@ -72,6 +72,7 @@ requires a base case, an induction hypothesis and a proof for the induction step
   <img src="https://latex.codecogs.com/svg.image?1&space;&plus;&space;4\log&space;i">
   </p>
   for any <i>i</i> less than <i>n</i>. 
+  
  <b>Proof of induction step</b>: With the induction hypothesis in mind we apply to terms of the sum in the expression for <i>P(n)</i> and simplify it further
  to obtain: 
 <p align="center">
