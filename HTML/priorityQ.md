@@ -42,7 +42,7 @@ For example, consider the following binary tree in the figure below.
 <img src="../images/binaryHeap.jpg">
 </p>
 The parent of a node at position <i>i</i> is available in the index postion
-<p align+"center">
+<p align="center">
 <img src="https://latex.codecogs.com/svg.image?\left&space;\lceil&space;i/2\right&space;\rceil&space;-&space;1" title="\left \lceil i/2\right \rceil - 1" /> 
 </p>
 of the array. Before proceeding further, let us create an abstract type for HEAP in C that may be useful in implementing a binary heap. 
@@ -68,7 +68,6 @@ A new insertion can happen at the rightmost vacant slot of the deepest level of 
 <p align="center">
 <img src="../images/binaryHeap3.jpg">
 </p>
-
 
 The bottom-up heapify operation compares the values of the children and the parent. The process is applied until the value settles at its position. The C 
 function below implements the suggested algorithm 
