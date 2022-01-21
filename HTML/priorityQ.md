@@ -44,16 +44,30 @@ Let us consider an <i>insert</i> operation with respect to the heap below:
 <p align="center">
 <img src="../images/binaryHeap.jpg">
 </p>
-A new insertion can happen at the rightmost vacant slot of the deepest level of the tree, i.e., after 48. It may disturb the heap property if the value of the new insertion is
-smaller than the value of the parent. The <i>bottom-up heapify</i> operation can restore the heap property.  
+A new insertion can happen at the rightmost vacant slot of the deepest level of the tree, i.e., after 48. It may disturb the heap property if the value of the new insertion is smaller than the value of the parent. The <i>bottom-up heapify</i> operation can restore the heap property.  
 <p align="center">
 <img src="../images/binaryHeap2.jpg">
 </p>
 <p align="center">
 <img src="../images/binaryHeap3.jpg">
 </p>
-The bottom-up heapify operation compares the values of the children and the parent. The process is applied until the value settles at its
-position. Heapify takes time to order the tree path from the insertion point to the root in the worst-case case. 
+The bottom-up heapify operation compares the values of the children and the parent. The process is applied until the value settles at its position. The C 
+function below implements the suggested algorithm 
+```
+void bottomupHeapify(HEAP *h,int index){
+    int temp;
+    int parent = (index-1)/2;
+
+    if(h->arr[parent] > h->arr[index]){
+        //Swap and heapify recursively 
+        temp = h->arr[parent];
+        h->arr[parent] = h->arr[index];
+        h->arr[index] = temp;
+        bottomupHeapify(h,parent);
+    }
+}
+```
+Heapify takes time to order the tree path from the insertion point to the root in the worst-case case. 
 Since the height of a complete binary tree with <i>n</i> nodes is <i>log n</i>, heapify operation take time of <i>O(log n)</i>. 
 
 How does a <i>deleteMin</i> operation work? The element at the root is the smallest. So a deletion amounts to removing the root. If we remove the root, the tree falls into two different trees or heaps. There is no way to combine both heaps into one unless we apply a different way of deleting the 
