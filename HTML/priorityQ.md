@@ -44,8 +44,8 @@ Let us consider an <i>insert</i> operation with respect to the heap below:
 <p align="center">
 <img src="../images/binaryHeap.jpg">
 </p>
-A new insertion can happen at the rightmost vacant slot of the deepest level of the tree, i.e., after K. It disturbs the heap property as the value of the new insertion is
-smaller than the value of the parent. The bottom-up heapify operation can restore the heap property.  
+A new insertion can happen at the rightmost vacant slot of the deepest level of the tree, i.e., after K. It may disturb the heap property if the value of the new insertion is
+smaller than the value of the parent. The <i>bottom-up heapify</i> operation can restore the heap property.  
 
 The bottom-up heapify operation compares the values of the children and the parent. The process is applied until the value settles at its
 position. Heapify takes time to order the tree path from the insertion point to the root in the worst-case case. 
