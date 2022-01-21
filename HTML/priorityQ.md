@@ -76,8 +76,6 @@ root. Instead, if we take out the rightmost element from the highest level, heap
 - Swap the root with the rightmost element from the highest level.
 - Delete the element from the new position.
 - Now, apply a topdown heapify to push the new element to its correct position at the root.
-After the bottom up heapify operation the above tree becomes:
-
 
 Topdown heapify is only a bit different from bottom-up heapify. The process consists of the following steps:
 - Copy the root into the variable to be returned.
@@ -85,5 +83,39 @@ Topdown heapify is only a bit different from bottom-up heapify. The process cons
 - Repeatedly push the out-of-the-place value downwards by swapping it with the smaller values at the two children. 
 - Terminate if there is no out the place value.
 
-Topdown heapify operation also depends on the length of the tree path from the root to the deepest level. So, it is of time of <i>O(log n)</i> if there are
-<i>n</i> elements in the heap. The figure below illustrates the topdown up heapify operation after a <i>deleteMin</i> operation:
+Topdown heapify operation also depends on the length of the tree path from the root to the deepest level. A C function for topdown heapify appears below.
+
+```
+void topdownHeapify(HEAP *h, int parent){
+    int left = 2*parent + 1;
+    int right = 2*parent + 2;
+    int min;
+    int temp;
+
+    if(left >= h->nElement || left < 0)
+        left = -1;
+    if(right >= h->nElement || right < 0)
+        right = -1;
+
+    if(left != -1 && h->arr[left] < h->arr[parent])
+        min=left;
+    else
+        min =parent;
+    if(right != -1 && h->arr[right] < h->arr[min])
+        min = right;
+
+    if(min != parent){
+        temp = h->arr[min];
+        h->arr[min] = h->arr[parent];
+        h->arr[parent] = temp;
+
+        // Recursive  call
+        topdownHeapify(h, min);
+    }
+}
+```
+
+Heapify operation is applied until the out-of-the-place element settles in correct position in the tree. It requires a time of <i>O(log n)</i> if there are
+<i>n</i> elements in the heap. 
+
+The figure below illustrates the topdown up heapify operation after a <i>deleteMin</i> operation:
