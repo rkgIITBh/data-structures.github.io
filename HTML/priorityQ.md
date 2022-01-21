@@ -41,8 +41,11 @@ For example, consider the following binary tree in the figure below.
 <p align="center">
 <img src="../images/binaryHeap.jpg">
 </p>
-As indicated the parent of a node at position <i>i</i> is available in the slot <img src="https://latex.codecogs.com/svg.image?\left&space;\lceil&space;i/2\right&space;\rceil&space;-&space;1" title="\left \lceil i/2\right \rceil - 1" /> of the array.
-Before proceeding further, let us create an abstract type for HEAP in C that may be useful in implementing a binary heap. 
+The parent of a node at position <i>i</i> is available in the index postion
+<p align+"center">
+<img src="https://latex.codecogs.com/svg.image?\left&space;\lceil&space;i/2\right&space;\rceil&space;-&space;1" title="\left \lceil i/2\right \rceil - 1" /> 
+</p>
+of the array. Before proceeding further, let us create an abstract type for HEAP in C that may be useful in implementing a binary heap. 
 
 ```
 typedef struct heap{
