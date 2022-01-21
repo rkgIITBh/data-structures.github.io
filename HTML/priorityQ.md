@@ -137,3 +137,7 @@ Heapify operation is applied until the out-of-the-place element settles in corre
 <i>n</i> elements in the heap. 
 
 The figure below illustrates the topdown up heapify operation after a <i>deleteMin</i> operation:
+<p align="center">
+    <img src="../images/deleteMin1.jpg">
+       <img src="../images/deleteMin2.jpg">
+    </p>
