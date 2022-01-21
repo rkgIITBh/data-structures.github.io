@@ -37,13 +37,27 @@ We define a property called <i>heap property</i>.
 <strong>Heap Property</strong>: A complete binary tree has the heap property if the following property is valid at every node:
 The value stored in the node is smaller or equal to that stored at any of its children nodes. 
 
-Maintaining heap property is critical to the functioning of a priority queue. In a dynamic situation where insertions and deletions occur over time, maintaining 
-a heap requires additional processing called <i>heapify</i>. 
-
-Let us consider an <i>insert</i> operation with respect to the heap below:
+For example, consider the following binary tree in the figure below. 
 <p align="center">
 <img src="../images/binaryHeap.jpg">
 </p>
+As indicated the parent of a node at position <i>i</i> is available in the slot <img src="https://latex.codecogs.com/svg.image?\left&space;\lceil&space;i/2\right&space;\rceil&space;-&space;1" title="\left \lceil i/2\right \rceil - 1" /> of the array.
+Before proceeding further, let us create an abstract type for HEAP in C that may be useful in implementing a binary heap. 
+
+```
+typedef struct heap{
+    int *arr;     // Storage for elements
+    int nElement; // No elements present
+    int capacity; // Capacity of heap
+    int type;     // 0 for min heap, 1 for max heap
+} HEAP;
+```
+The structure contain the array, the number of valid elements in the array and the maximum capacity of the heap. A tag named <i>type</i> is used for 
+distinguishing min heap from max heap.
+
+Maintaining heap property is critical to the functioning of a priority queue. In a dynamic situation where insertions and deletions occur over time, maintaining 
+a heap requires additional processing called <i>heapify</i>. 
+
 A new insertion can happen at the rightmost vacant slot of the deepest level of the tree, i.e., after 48. It may disturb the heap property if the value of the new insertion is smaller than the value of the parent. The <i>bottom-up heapify</i> operation can restore the heap property.  
 <p align="center">
 <img src="../images/binaryHeap2.jpg">
@@ -51,6 +65,8 @@ A new insertion can happen at the rightmost vacant slot of the deepest level of 
 <p align="center">
 <img src="../images/binaryHeap3.jpg">
 </p>
+
+
 The bottom-up heapify operation compares the values of the children and the parent. The process is applied until the value settles at its position. The C 
 function below implements the suggested algorithm 
 
