@@ -57,9 +57,7 @@ root. Instead, if we take out the rightmost element from the highest level, heap
 - Delete the element from the new position.
 - Now, apply a topdown heapify to push the new element to its correct position at the root.
 After the bottom up heapify operation the above tree becomes:
-<p align="center">
-<img src="../images/binHeap1.jpg">
-</p>
+
 
 Topdown heapify is only a bit different from bottom-up heapify. The process consists of the following steps:
 - Copy the root into the variable to be returned.
@@ -69,6 +67,3 @@ Topdown heapify is only a bit different from bottom-up heapify. The process cons
 
 Topdown heapify operation also depends on the length of the tree path from the root to the deepest level. So, it is of time of <i>O(log n)</i> if there are
 <i>n</i> elements in the heap. The figure below illustrates the topdown up heapify operation after a <i>deleteMin</i> operation:
-<p align="center">
-<img src="../images/binHeap2.jpg">
-</p>
