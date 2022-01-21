@@ -66,6 +66,7 @@ Topdown heapify is only a bit different from bottom-up heapify. The process cons
 - Swap the value at the root with that at the rightmost node at the deepest level of the tree. 
 - Repeatedly push the out-of-the-place value downwards by swapping it with the smaller values at the two children. 
 - Terminate if there is no out the place value.
+
 Topdown heapify operation also depends on the length of the tree path from the root to the deepest level. So, it is of time of <i>O(log n)</i> if there are
 <i>n</i> elements in the heap. The figure below illustrates the topdown up heapify operation after a <i>deleteMin</i> operation:
 <p align="center">
