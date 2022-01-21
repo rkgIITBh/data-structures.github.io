@@ -141,3 +141,6 @@ The figure below illustrates the topdown up heapify operation after a <i>deleteM
     <img src="../images/deleteMin1.jpg">
        <img src="../images/deleteMin2.jpg">
     </p>
+    
+In optimization problem it may be required to dynamincally update a priority queue by decrease or increase of key values stored at the nodes. In a decrease key
+operation the part of the heap  the updated key remains unaffected. 
