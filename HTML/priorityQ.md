@@ -42,7 +42,7 @@ a heap requires additional processing called <i>heapify</i>.
 
 Let us consider an <i>insert</i> operation with respect to the heap below:
 <p align="center">
-<img src="../images/binHeap1.jpg">
+<img src="../images/binaryHeap.jpg">
 </p>
 A new insertion can happen at the rightmost vacant slot of the highest level in the tree. It disturbs the heap property as the value of the new insertion is
 smaller than the value of the parent. The bottom-up heapify operation can restore the heap property.  
