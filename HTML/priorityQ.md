@@ -53,6 +53,7 @@ A new insertion can happen at the rightmost vacant slot of the deepest level of 
 </p>
 The bottom-up heapify operation compares the values of the children and the parent. The process is applied until the value settles at its position. The C 
 function below implements the suggested algorithm 
+
 ```
 void bottomupHeapify(HEAP *h,int index){
     int temp;
