@@ -52,6 +52,7 @@ balance in the case of a zig-zag or zag-zig configuration. The figure below indi
 <p align="center">
     <img src="../images/needForDR.jpg">
 </p>
+
 A double rotation consists of two rotations in sequence. It is either 
 - A single right followed by a single left rotation, or
 - A single left followed by a single right rotation.
@@ -61,7 +62,7 @@ converts the tri-node configuration to zig-zig pattern. Therefore, a single righ
 <p align="center">
 <img src="../images/avlDoubleLR.jpg">
 </p>
-In contrast, a single right rotation on the zig-zag pattern converts it so zag-zag pattern. Now a single left rotation can restore the balance of the node. 
+In contrast, a single right rotation on the zag-zig pattern converts it so zag-zag pattern. Now a single left rotation can restore the balance of the node. 
 <p align="center">
 <img src="../images/avlDoubleRL.jpg">
 </p>
