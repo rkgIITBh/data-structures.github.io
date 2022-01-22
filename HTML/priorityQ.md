@@ -153,7 +153,8 @@ The case is reversed in the case of a max heap. Therefore for a max heap, the or
 - For a decrease key operation apply <i>topdown heapify</i>.
 The algorithms for the increase and decrease key operations are given below as C functions.
 
-```void decreaseKey(HEAP *h, int index, int val) {
+```
+void decreaseKey(HEAP *h, int index, int val) {
     if (isEmpty(h)) {
         printf("Error: heap is empty\n"); 
         return;
