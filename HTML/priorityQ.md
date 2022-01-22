@@ -142,5 +142,44 @@ The figure below illustrates the topdown up heapify operation after a <i>deleteM
        <img src="../images/deleteMin2.jpg">
     </p>
     
-In optimization problem it may be required to dynamincally update a priority queue by decrease or increase of key values stored at the nodes. In a decrease key
-operation the part of the heap  the updated key remains unaffected. 
+In optimization problems like single-source shortest paths, the values stored in a priority queue are updated on each iteration. The updates require operations
+like decrease or increase values stored at the nodes. If a min-heap is used, a decrease key operation affects only the part of the heap above the update. The 
+updated element may move up. In the case of an increase key operation the bottom part of the heap below the update is affected. The elements below the update
+may move up in a heap. Therefore, heapify operation should be applied as follows:
+- For a decrease key operation apply <i>bottomup heapify</i>,
+- For an increase key operation apply <i>topdown heapify</i>.
+The case is reversed in the case of a max heap. Therefore for a max heap, the order of heapify operations are:
+- For an increase key operation apply <i>bottomup heapify</i>,
+- For a decrease key operation apply <i>topdown heapify</i>.
+The algorithms for the increase and decrease key operations are given below as C functions.
+
+```void decreaseKey(HEAP *h, int index, int val) {
+    if (isEmpty(h)) {
+        printf("Error: heap is empty\n"); 
+        return;
+    }
+    h->arr[index] -= val;
+    if (h->type == 0) 
+         bottomupHeapify(h, index);
+    else 
+         topdownHeapify(h, index);
+}
+
+void increaseKey(HEAP *h, int index, int val) {
+    if (isEmpty(h)) {
+        printf("Error: heap is empty\n"); 
+        return;
+    }
+    h->arr[index] += val;
+    if (h->type == 0) 
+         topdownHeapify(h, index);
+    else 
+         bottomupHeapify(h, index);
+}
+```
+
+The reader is encouraged to use, modify and experiment with the complete source in C provided here.
+
+[Source code for Heap Operations](../CODES/Heap/index.md)
+
+[Back to Index](../index.md)
