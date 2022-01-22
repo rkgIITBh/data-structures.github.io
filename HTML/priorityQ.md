@@ -180,6 +180,6 @@ void increaseKey(HEAP *h, int index, int val) {
 
 The reader is encouraged to use, modify and experiment with the complete source in C provided here.
 
-[Source code for Heap Operations](../CODES/Heap/index.md)
+[Source code for Heap Operations](../CODES/BinaryHeap/index.md)
 
 [Back to Index](../index.md)
