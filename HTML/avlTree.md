@@ -41,7 +41,7 @@ A single rotation may either be a left or a right rotation depending on the dire
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 
-<img src="../images/avlSingleLeft.jpg">
+<img src="../images/avlSingleRight.jpg">
 </p>
 A single rotation is applicable to a pattern like above which we refer to as <i>zig-zig</i> pattern. A zig-zig pattern is formed due to one of the following configurations:
 
