@@ -55,6 +55,7 @@ balance in the case of a zig-zag or zag-zig configuration. The figure below indi
 A double rotation consists of two rotations in sequence. It is either 
 - A single right followed by a single left rotation, or
 - A single left followed by a single right rotation.
+
 The two rotations types are shown in the figures below. In the first figure we consider the tri-node configuration forming a zig-zag pattern. The first rotation
 converts the tri-node configuration to zig-zig pattern. Therefore, a single right rotation can restore the balance factors of the node. 
 <p align="center">
