@@ -74,6 +74,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 - [Average Case Analysis of BST](HTML/BSTanalysis.md)
 - [Introduction to Binary Search Tree](HTML/BSTintro.md)
+- [Priority Queue Operation Using Binary Heaps](HTML/priorityQ.md) 
 - [Converting an Infix Expression to its Equivalent Postfix](HTML/infixToPostfixExpression.md)
 - [Huffman Encoding Algorithm and its Implementation](HTML/huffmanCodeImpl.md)
 - [Prefix code and text compression](HTML/huffmanEncoding.md)
