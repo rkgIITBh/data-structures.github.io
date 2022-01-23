@@ -82,6 +82,8 @@ In contrast, a single right rotation on the zag-zig pattern converts it so zag-z
 <img src="../images/avlDoubleRL.jpg">
 </p>
 
+We end this blog here. But continue with AVL tree in the next blog.
+
 [Back to Index](../index.md)
 
 
