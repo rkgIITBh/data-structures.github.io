@@ -51,7 +51,7 @@ below illustrates the zig-zig tri-node configuration and the result of a single 
 On the other hand, if the tri-node configuration forms a zag-zag pattern, it implies that the balance factor of a node is disturbed due to a sequence of 
 insertions in its subtrees. A a  single left rotationcan restores the balance. A single left rotation has been illustrated in the figure below.
 <p align="center">
-<img src="../images/avlSingleRight.jpg">
+    <img src="../images/needForDR.jpg">
 </p>
 
 The imbalance at a node can occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as <b>zig-zag</b> 
@@ -59,7 +59,7 @@ pattern. There is also a symmetric pattern of <b>zag-zig</b> where the tri-node 
 rotation cannot fix the balance in the case of a zig-zag or zag-zig configuration. The figure below indicates that a single rotation only flips one configuration 
 to the other.
 <p align="center">
-    <img src="../images/needForDR.jpg">
+<img src="../images/avlSingleRight.jpg">
 </p>
 
 A double rotation consists of two rotations in sequence. It is either 
