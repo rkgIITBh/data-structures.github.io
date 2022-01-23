@@ -39,6 +39,7 @@ The operation which restores balance is known as rotation. A rotation involves a
 There rotation types depends on the pattern formed by the tri-node structure mentioned above. There are two types of rotations:
 - A single rotation
 - A double rotation
+
 A single rotation may either be a left or a right rotation, depending on the direction of rotation. The left rotation applies to the pattern where the 
 imbalance at a node occurs due to the left subtree of its left child. We refer the tri-node configuration  a zig-zig configuration if the balance factor
 at a node is distrubed due to a mutating operations subtrees of the node. Essentially, we use "zig" to refer to a left and "zag" to refer to
