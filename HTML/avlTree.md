@@ -44,12 +44,12 @@ A single rotation may either be a left or a right rotation, depending on the dir
 imbalance at a node occurs due to the left subtree of its left child. We refer the tri-node configuration  a <b>zig-zig</b> configuration if the balance factor
 at a node is distrubed due to a mutating operations subtrees of the node. Essentially, we use "<b>zig</b>" to refer to a left and "<b>zag</b>" to refer to
 a right branch.  A single right rotation can restore the balance in the case of a zig-zig pattern. The figure
-below illustrates the zig-zig tri-node configuration and the result of a single left rotation.
+below illustrates the zig-zig tri-node configuration and the result of a single right rotation.
 <p align="center">
 <img src="../images/avlSingleRight.jpg">
 </p>
 On the other hand, if the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the balance factor of a node is disturbed due to a sequence of 
-insertions in its subtrees. A a  single left rotationcan restores the balance. A single left rotation has been illustrated in the figure below.
+insertions in its subtrees. A single left rotation shown below can restores the balance. 
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 </p>
