@@ -1,4 +1,4 @@
-## AVL Tree
+## Maintaining a Balanced Binary Search Tree
 
 The average case analysis of Binary Search Trees (BST) shows that any operation (search, insertion, deletion)  on balanced BSTs requires the worst-case time of 
 <i>O(log n)</i>. Before proceeding further, let us formally define the balance property. 
@@ -76,6 +76,6 @@ In contrast, a single right rotation on the zag-zig pattern converts it so zag-z
 <img src="../images/avlDoubleRL.jpg">
 </p>
 
-
+[Back to Index](../index.md)
 
 
