@@ -8,15 +8,18 @@ The average case analysis of Binary Search Trees (BST) shows that any operation 
 A leaf node has no left or right child. Therefore, the height difference between its left and right subtree is 0. In other words, every leaf node
 of a binary tree possesses the balance property.
 
-We cannot always depend on a nice random input distribution to expect the tree to preserve balance property. However, as a BST undergoes a series of insertions 
-and deletions, the balance property is disturbed. Therefore, for the worst-case time of <i>O(log n)</i> per operation on a BST, it should maintain balance property in the presence of a sequence of insertions and deletions that can happen in any order. It implies that we need to address the following question. 
+We cannot always depend on a nice random input distribution to expect that the tree to preserve balance property. However, as a BST undergoes a series of 
+insertions and deletions, the balance property is disturbed. Therefore, for the worst-case time of <i>O(log n)</i> per operation on a BST, it should maintain 
+balance property in the presence of a sequence of insertions and deletions that can happen in any order. It implies that we need to address the following 
+question. 
 
-How could the balance property in a BST be restored after each mutating operation, like insertion or deletions? 
+- How the balance property be restored after each mutating operation, like insertion or deletions, on a BST? 
 
-We refer to an insertion or a deletion as a mutating operation because such an operation modifies the BST. On the other hand, a search is a non-mutating operation because it never alters a tree. 
+We view an insertion or a deletion as a mutating operation because such an operation modifies the BST. On the other hand, a search is a non-mutating operation 
+because it never alters a tree. 
 
-Adelson-Velsky-Landis (AVL) proposed a recursive O(1) operation to balance a BST if it loses the balance property. The operation is known as rotation. 
-Rotation is required after every operation when a disbalance occurs in the tree. AVL tree also requires a node to maintain height information and 
+Adelson-Velsky-Landis (AVL) came up a recursive O(1) operation to balance a BST if it loses the balance property. The operation is known as <b>rotation</b>. 
+A rotation is required after an operation if a disbalance occursat node in the tree. AVL tree also requires each node to maintain height information along with
 other required information as needed for a BST node. We use a define an AVL tree node minimally as follows:
 ```
 typedef struct node {
@@ -25,30 +28,35 @@ typedef struct node {
 } AVLNODE;
 ```
 
-Since the AVL tree is a BST, the rest of the BST operations apply to an AVL tree. However, often a mutating operation causes a disbalance at a node. 
+Since the AVL tree is a BST, the normal operations of the BST apply to an AVL tree. However, often a mutating operation causes a disbalance at a node. 
 AVL tree augments BST by incorporating additional features to restore balance after mutating. 
 
 The operation which restores balance is known as rotation. A rotation involves a tri-node structure in a BST. The tri-node structure consists of 
-- a node, one of its child and its grandchild.
-There are two types of rotations:
+- A node where balance factore is disturbed,
+- One of its child and
+- One of its grandchild.
+
+There rotation types depends on the pattern formed by the tri-node structure mentioned above. There are two types of rotations:
 - A single rotation
 - A double rotation
-
 A single rotation may either be a left or a right rotation, depending on the direction of rotation. The left rotation applies to the pattern where the 
-imbalance of node occurs due to a left subtree of its left child. The tri-node configuration involving an imbalanced node, its left child, and its left grandchild form a pattern we refer to as a zig-zig pattern. A single rotation can restore the balance in the case of a left zig-zig pattern. The figure
-below illustrates the tri-node configuration and the result of a single left rotation.
+imbalance at a node occurs due to the left subtree of its left child. We refer the tri-node configuration  a zig-zig configuration if the balance factor
+at a node is distrubed due to a mutating operations subtrees of the node. Essentially, we use "zig" to refer to a left and "zag" to refer to
+a right branch.  A single right rotation can restore the balance in the case of a zig-zig pattern. The figure
+below illustrates the zig-zig tri-node configuration and the result of a single left rotation.
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 </p>
-On the other hand, if the tri-node configuration forms a zag-zag pattern (consisting node, its right child and right grand child), a  single right rotation
-can restores the balance. A single right rotation has been illustrated in the figure below.
+On the other hand, if the tri-node configuration forms a zag-zag pattern, it implies that the balance factor of a node is disturbed due to a sequence of 
+insertions in its subtrees. A a  single left rotationcan restores the balance. A single left rotation has been illustrated in the figure below.
 <p align="center">
 <img src="../images/avlSingleRight.jpg">
 </p>
 
-Imbalance at a node can occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as zig-zag patter. There 
-is also a symmetric pattern of zag-zig where the tri-node structure consists of a node, its right child, and its left grandchild. A single rotation cannot fix the
-balance in the case of a zig-zag or zag-zig configuration. The figure below indicates that a single rotation only flips one configuration to the other.
+The imbalance at a node can occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as <b>zig-zag</b> 
+pattern. There is also a symmetric pattern of <b>zag-zig</b> where the tri-node structure consists of a node, its right child, and its left grandchild. A single 
+rotation cannot fix the balance in the case of a zig-zag or zag-zig configuration. The figure below indicates that a single rotation only flips one configuration 
+to the other.
 <p align="center">
     <img src="../images/needForDR.jpg">
 </p>
