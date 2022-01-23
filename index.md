@@ -72,6 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [Maintaining Balanced Binary Search Tree](HTML/avlTree.md)
 - [Average Case Analysis of BST](HTML/BSTanalysis.md)
 - [Introduction to Binary Search Tree](HTML/BSTintro.md)
 - [Priority Queue Operation Using Binary Heaps](HTML/priorityQ.md) 
