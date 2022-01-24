@@ -9,8 +9,13 @@ A leaf node has no left or right child. Therefore, the height difference between
 of a binary tree possesses the balance property.
 
 We cannot always depend on a nice random input distribution to expect that the tree to preserve balance property. However, as a BST undergoes a series of 
-insertions and deletions, the balance property is disturbed. Therefore, for the worst-case time of <i>O(log n)</i> per operation on a BST, it should maintain 
-balance property in the presence of a sequence of insertions and deletions that can happen in any order. It implies that we need to address the following 
+insertions and deletions, the balance property is disturbed. Even otherwise, the initial sequence of insertions could generate a completely skewed BST as
+shown below.
+<p align="center">
+    <img src="../images/skewedBST.jpg">
+    </p>
+For achieving the worst-case time of <i>O(log n)</i> per operation on a BST, we should restore balance property every time tree becomes unbalanced. Tree 
+eventually gets unbalanced as a sequence of insertions and deletions is applied over time. It implies that we need to address the following 
 question. 
 
 - How the balance property be restored after each mutating operation, like insertion or deletions, on a BST? 
