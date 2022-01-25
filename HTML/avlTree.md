@@ -23,7 +23,7 @@ may eventually become unbalanced as a sequence of insertions and deletions is ap
 We view an insertion or a deletion as a mutating operation because such an operation modifies the BST. However, a search is a non-mutating 
 operation because it never alters a tree. 
 
-Adelson-Velsky and Landis (AVL) came up a recursive O(1) operation to balance a BST if it loses the balance property. The operation is known as 
+Adelson-Velsky and Landis (AVL) came up a recursive O(1) operation to balance a BST if it loses the balance property. The operation is known as a
 <b>rotation</b>. A rotation is required after an operation if a disbalance occurs at a node in the tree. AVL tree also requires each node to maintain 
 height information along with other required information as needed for a BST node. We use the following minimal definition of an AVL tree node:
 ```
