@@ -8,9 +8,8 @@ The average case analysis of Binary Search Trees (BST) shows that any operation 
 A leaf node has no left or right child. Therefore, the height difference between its left and right subtree is 0. In other words, every leaf node
 of a binary tree possesses the balance property.
 
-We cannot always depend on a nice random input distribution to expect that the tree to preserve balance property. However, as a BST undergoes a series of 
-insertions and deletions, the balance property is disturbed. Even otherwise, the initial sequence of insertions could generate a completely skewed BST as
-shown below.
+We cannot always depend on a nice random input distribution to expect that the tree to preserve balance property. Futhermore, as a BST undergoes a series of 
+insertions and deletions, the balance property is disturbed. The initial sequence of insertions may also generate a completely skewed BST as shown below.
 <p align="center">
     <img src="../images/skewedBST.jpg">
     </p>
@@ -66,15 +65,16 @@ insertions in its subtrees. A single left rotation shown below can restores the 
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 </p>
+
 The imbalance at a node can occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as 
 <b>zig-zag</b> pattern. 
 There is also a symmetric pattern of <b>zag-zig</b> where the tri-node structure consists of a node, its right child, and its left grandchild. A single 
 rotation cannot fix the balance in the case of a zig-zag or zag-zig configuration. The figure below indicates that a single rotation only flips one configuration 
 to the other.
-
 <p align="center">
     <img src="../images/needForDR.jpg">
 </p>
+
 A double rotation consists of two rotations in sequence. It is either 
 - A single right followed by a single left rotation, or
 - A single left followed by a single right rotation.
@@ -84,6 +84,7 @@ converts the tri-node configuration to zig-zig pattern. Therefore, a single righ
 <p align="center">
 <img src="../images/avlDoubleLR.jpg">
 </p>
+
 In contrast, a single right rotation on the zag-zig pattern converts it so zag-zag pattern. Now a single left rotation can restore the balance of the node. 
 <p align="center">
 <img src="../images/avlDoubleRL.jpg">
