@@ -10,13 +10,13 @@ A leaf node has no left or right child. Therefore, the height difference between
 of a binary tree possesses the balance property.
 
 We cannot always depend on a nice random input distribution to expect that a BST to preserve balance property. As a BST undergoes a series of 
-insertions and deletions, the balance property also gets disturbed. Furthtermore, sometimes the initial sequence of insertions may generate a 
+insertions and deletions, the balance property also gets disturbed. Furthermore, sometimes the initial sequence of insertions may generate a 
 completely skewed BST as shown below.
 <p align="center">
     <img src="../images/skewedBST.jpg">
     </p>
-For achieving the worst-case time of <i>O(log n)</i> per operation on a BST, we should restore balance property every time tree becomes unbalanced. Tree 
-eventually gets unbalanced as a sequence of insertions and deletions is applied over time. It implies that we need to address the following question. 
+For achieving the worst-case time of <i>O(log n)</i> per operation on a BST, we should restore balance property every time tree becomes unbalanced. A BST 
+may eventually become unbalanced as a sequence of insertions and deletions is applied over time. It implies that we need to address the following question. 
 
 - How the balance property be restored after a BST becomes unbalanced due to mutating operations? 
 
@@ -57,7 +57,7 @@ illustrates the zig-zig tri-node configuration and the result of a single right 
 <p align="center">
 <img src="../images/avlSingleRight.jpg">
 </p>
-We can observe that a rotation operation preserves BST property. It changes the parent pointers of at most four subtrees T<sub>1</sub>, T<sub>2</sub> 
+We can observe that a rotation operation preserves the BST property. It changes the parent pointers of at most four subtrees T<sub>1</sub>, T<sub>2</sub> 
 of node c, T<sub>3</sub> of p, T<sub>4</sub> of node g respectively. Since p goes to top and its value is smaller than g. Further g's right subtree 
 T<sub>4</sub> has elements larger than g; and therefore, p is smaller than the elements of T<sub>4</sub>. It implies  both g and its right subtree 
 T<sub>4</sub> are correctly placed by the right rotation. Similarly, c being left child of p, both of its subtrees T<sub>1</sub> and T<sub>2</sub> are 
@@ -68,7 +68,7 @@ the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the b
 <img src="../images/avlSingleLeft.jpg">
 </p>
 
-The imbalance at a node can occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as 
+The imbalance at a node may occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as 
 <b>zig-zag</b> pattern. 
 There is also a symmetric pattern of <b>zag-zig</b> where the tri-node structure consists of a node, its right child, and its left grandchild. A single 
 rotation cannot fix the balance in the case of a zig-zag or zag-zig configuration. The figure below indicates that a single rotation only flips one 
