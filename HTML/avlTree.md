@@ -18,14 +18,14 @@ For achieving the worst-case time of <i>O(log n)</i> per operation on a BST, we 
 eventually gets unbalanced as a sequence of insertions and deletions is applied over time. It implies that we need to address the following 
 question. 
 
-- How the balance property be restored after each mutating operation, like insertion or deletions, on a BST? 
+- How the balance property be restored after a BST becomes unbalanced due to mutating operations? 
 
 We view an insertion or a deletion as a mutating operation because such an operation modifies the BST. On the other hand, a search is a non-mutating operation 
 because it never alters a tree. 
 
-Adelson-Velsky-Landis (AVL) came up a recursive O(1) operation to balance a BST if it loses the balance property. The operation is known as <b>rotation</b>. 
-A rotation is required after an operation if a disbalance occursat node in the tree. AVL tree also requires each node to maintain height information along with
-other required information as needed for a BST node. We use a define an AVL tree node minimally as follows:
+Adelson-Velsky and Landis (AVL) came up a recursive O(1) operation to balance a BST if it loses the balance property. The operation is known as <b>rotation</b>. 
+A rotation is required after an operation if a disbalance occurs at a node in the tree. AVL tree also requires each node to maintain height information along with
+other required information as needed for a BST node. We use a minimal definition of an AVL tree node as follows:
 ```
 typedef struct node {
     int info, ht;
@@ -33,8 +33,9 @@ typedef struct node {
 } AVLNODE;
 ```
 
-Since the AVL tree is a BST, the normal operations of the BST apply to an AVL tree. However, often a mutating operation causes a disbalance at a node. 
-AVL tree augments BST by incorporating additional features to restore balance after mutating. 
+The height information will be used to find out the balance factor of each node. The balance factor of a node is the differnce between heights of its left 
+and right child. The other normal operations of the BST apply to an AVL tree as it is also a BST, However, we need to add additional features to a BST to 
+maintain it as height balanced tree as mutating operation may often cause a disbalance at a node. 
 
 The operation which restores balance is known as rotation. A rotation involves a tri-node structure in a BST. The tri-node structure consists of 
 - A node where balance factore is disturbed,
