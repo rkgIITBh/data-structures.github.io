@@ -89,10 +89,16 @@ the node.
 <img src="../images/avlDoubleLR.jpg">
 </p>
 
-In contrast, a single right rotation on the zag-zig pattern converts it so zag-zag pattern. Now a single left rotation can restore the balance of the node. 
+In contrast, a single right rotation on the zag-zig pattern converts it so zag-zag pattern. Now a single left rotation can restore the balance of the 
+node. 
 <p align="center">
 <img src="../images/avlDoubleRL.jpg">
 </p>
+The question that remains unresloved is: where the rotation should be applied? If there is a node suffers from height imbalance, its ancestors also have 
+the height violations. The rotation should be applied to the deepest node where height violation occurs. If the height after fixing height violation
+becomes the same as the original subtree, then the height violation at ancestor nodes are automatically resolved. 
+
+Expanding details of insertion 
 
 We end this blog here. But continue with AVL tree in the next blog.
 
