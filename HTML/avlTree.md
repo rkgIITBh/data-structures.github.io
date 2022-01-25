@@ -58,10 +58,9 @@ four subtrees T<sub>1</sub>, T<sub>2</sub> of node c, T<sub>3</sub> of p, T<sub>
 than g. Further g's right subtree T<sub>4</sub> has elements larger than g; and therefore, p is smaller than the elements of T<sub>4</sub>. It implies  both
 g and its right subtree T<sub>4</sub> are correctly placed by the right rotation. Similarly, c being left child of p, both of its subtrees T<sub>1</sub> and 
 T<sub>2</sub> are correctly placed with respect to p. But p loses its right subtree T<sub>3</sub> which now becomes right subtree of g. Since T<sub>3</sub> 
-consists of elements larger than p but smaller than g. Therefore, by placing T<sub>3</sub> as left subtree of g, the BST property is preserved.  
-
-On the other hand, if the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the balance factor of a node is disturbed due to a sequence of 
-insertions in its subtrees. A single left rotation shown below can restores the balance. 
+consists of elements larger than p but smaller than g. Therefore, by placing T<sub>3</sub> as left subtree of g, the BST property is preserved. On the other hand, 
+if the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the balance factor of a node is disturbed due to a sequence of insertions in its 
+subtrees. A single left rotation shown below can restores the balance. 
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 </p>
