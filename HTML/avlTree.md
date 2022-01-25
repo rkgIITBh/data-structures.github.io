@@ -43,7 +43,8 @@ The operation which restores balance is known as rotation. A rotation involves a
 - One of its grandchild.
 
 There rotation types depends on the pattern formed by a tri-node configuration mentioned above. We refer to the tri-node as a <b>zig-zig</b> 
-or a zag-zag pattern, where a "<b>zig</b>" to refer to a left and a "<b>zag</b>" to refer to a right branch. So, if the child and grandchild of the node
+or a <b>zag-zag</b> pattern, where a "<b>zig</b>" to refer to a left and a "<b>zag</b>" to refer to a right branch. So, if the child and grandchild of
+the node
 are left child of their respective parents then a zig-zig pattern is formed. Similarly, if the child and the grandchild of the node are right child of
 of their respective parent then a zag-zag pattern is formed.
 
