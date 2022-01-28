@@ -44,8 +44,7 @@ The operation which restores balance is known as rotation. A rotation involves a
 
 There rotation types depends on the pattern formed by a tri-node configuration mentioned above. We refer to the tri-node as a <b>zig-zig</b> 
 or a <b>zag-zag</b> pattern, where a "<b>zig</b>" to refer to a left and a "<b>zag</b>" to refer to a right branch. So, if the child and grandchild of
-the node
-are left child of their respective parents then a zig-zig pattern is formed. Similarly, if the child and the grandchild of the node are right child of
+the node are left child of their respective parents then a zig-zig pattern is formed. Similarly, if the child and the grandchild of the node are right child of
 of their respective parent then a zag-zag pattern is formed.
 
 There are two types of rotations:
@@ -53,8 +52,8 @@ There are two types of rotations:
 - A double rotation
 
 A single rotation may either be a left or a right rotation, depending on the direction of rotation. The right rotation applies to the pattern where the 
-imbalance at a node occurs due to a zig-zig pattern. More precisely, a zig-zig pattern relates to imbalance in the left subtree of the left child of 
-a node. It also referred to as the case of an outside imbalance, because it happens due to the left outside tree of the left child. The figure below 
+imbalance at a node occurs due to a zig-zig pattern. More precisely, a zig-zig pattern relates to the imbalance occurring in the left subtree of the left
+child of a node. It also referred to as the case of an outside imbalance, because it happens due to the outer tree of the left child. The figure below 
 illustrates the zig-zig tri-node configuration and the result of a single right rotation.
 <p align="center">
 <img src="../images/avlSingleRight.jpg">
@@ -67,9 +66,10 @@ Since p < g, and T<sub>3</sub>, the rotation preserves the relative ordering of 
 relative positions of T<sub>1</sub>, c and T<sub>4</sub> are unchanged with respect to p. Therefore, the BST relationship is preserved after rotation.
 
 On the other hand, if the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the balance factor of a node is disturbed due to right subtree
-of a node. It mirrors the zig-zig case. The ordering of keys in this case is T<sub>1</sub> < g < T<sub>2</sub> < p < T<sub>3</sub> < c < T<sub>4</sub>.
-A single left rotation shown below can restores the balance. We can also prove that rotation also preserves the BST property in a similar way as we did
-earlier in zig-zig case.
+of a node. It mirrors the zig-zig case and alternatively known as a subcase of outside imbalance because imbalance occurs due to outer tree of right
+child of a node. The ordering of keys in this case is T<sub>1</sub> < g < T<sub>2</sub> < p < T<sub>3</sub> < c < T<sub>4</sub>.
+A single left rotation can restores the balance. We can also prove that rotation also preserves the BST property in a similar way as we did
+earlier in zig-zig case. Figure below illustrates a right rotation.
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 </p>
