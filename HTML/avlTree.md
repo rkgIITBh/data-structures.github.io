@@ -99,25 +99,8 @@ node.
 <p align="center">
 <img src="../images/avlDoubleRL.jpg">
 </p>
-The question that remains unresloved is: where the rotation should be applied? We examine the height imbalance caused by a new insertion in an AVL tree of 
-height h. One of the two conditions may hold after a new insertion:
-- It does not cause a height violation 
-- It  causes a height violation.
-
-If there is no height violation, then the insertion may cause the tree to have a height h or h+1. So, there is a possibility of the tree growing if
-no height violation occurs. Since, the tree maintains the height invariant we do not examine this case any further. 
-
-If a node suffers from height imbalance due to an insertion, its ancestors in the tree also suffer from height violations. A rotation should be applied 
-to the deepest node where height violation occurs. If the height of the tree after rotation remains h then the tree 
-has not grown. Therefore, the height violation at ancestor nodes are automatically resolved by fixing it at the deepest node. Now we consider the
-case where height is becomes h+1. Let us consider the subtree under the deepest node where height violation occurs, and assume that insertion occurs
-in the right subtree of the deepest node. We denote it by T<sub>R</sub>. The situation is captured in the figure below:
-<p align="center">
-    <img src="../images/avlHeightVio1.jpg">
-</p>
- 
-
-Expanding details of insertion 
+The question that remains unresloved is: where the rotation should be applied? We shall examine the height imbalance caused by a new insertion in an AVL tree of 
+height h in the next blog..
 
 We end this blog here. But continue with AVL tree in the next blog.
 
