@@ -32,7 +32,7 @@ height <i>h = 1</i> to the above inequality, and simplify. It gives
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?n(h)&space;>&space;2^{h/2-1}" title="n(h) > 2^{h/2-1}" />
 </p>
-which implies 
+which implies (take log of both sides)
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?\log&space;n(h)&space;>&space;h/2-1\mbox{,&space;or&space;}&space;h&space;<&space;2\log&space;n(h)" title="\log n(h) > h/2-1\mbox{, or } h < 2\log n(h)" />
   </p>
