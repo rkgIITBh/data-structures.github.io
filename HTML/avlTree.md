@@ -99,10 +99,9 @@ node.
 <p align="center">
 <img src="../images/avlDoubleRL.jpg">
 </p>
-The question that remains unresloved is: where the rotation should be applied? We shall examine the height imbalance caused by a new insertion in an AVL tree of 
-height h in the next blog..
+The question that remains unresloved is: where the rotation should be applied? 
 
-We end this blog here. But continue with AVL tree in the next blog.
+We end this blog here.  We shall examine the case of height violation caused by a new insertion in an AVL tree the next blog.
 
 [Back to Index](../index.md)
 
