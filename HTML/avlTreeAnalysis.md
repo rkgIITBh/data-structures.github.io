@@ -1,6 +1,6 @@
 ## Height of AVL Tree
 
-<strong>Height of AVL Tree</strong>: Prove that the height of an AVL tree with <i>n</i> nodes is <i>log n</i>.
+<strong>Height Property</strong>: The height of an AVL tree with <i>n</i> nodes is of <i>O(log n)</i>.
 
 Let <i>n(h)</i> be the minimum number of internal nodes in an AVL tree of height <i>h</i>. An AVL tree of height <i>h = 1</i> with of minimum 
 number of internal nodes should have at least one internal node (which is the root). An AVL tree of height <i>h = 2</i> must have at least two
@@ -8,9 +8,9 @@ internal nodes as shown below.
 <p align="center">
 <img src=../images/baseAVLTrees.jpg">
 </p>
-The AVL balance properties are satisfied by both the trees.
+We find that balance properties are satisfied by both the trees.
 
-We now recursively define an AVL tree of height <i>h</i> with minimum number of internal nodes as follows:
+Now recursively define an AVL tree of height <i>h</i> with minimum number of internal nodes as follows:
 - A root, which is an internal node,
 - One left subtree <i>T<sub>L</sub></i> with minimum number of internal nodes, and
 - One right subtree <i>T<sub>R</sub></i> with minimum number of internal nodes.
