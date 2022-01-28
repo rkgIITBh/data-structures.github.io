@@ -52,19 +52,24 @@ There are two types of rotations:
 - A single rotation
 - A double rotation
 
-A single rotation may either be a left or a right rotation, depending on the direction of rotation. The left rotation applies to the pattern where the 
-imbalance at a node occurs due to a zig-zig pattern. A single right rotation can restore the balance in the case of a zig-zig pattern. The figure below 
+A single rotation may either be a left or a right rotation, depending on the direction of rotation. The right rotation applies to the pattern where the 
+imbalance at a node occurs due to a zig-zig pattern. More precisely, a zig-zig pattern relates to imbalance in the left subtree of the left child of 
+a node. It also referred to as the case of an outside imbalance, because it happens due to the left outside tree of the left child. The figure below 
 illustrates the zig-zig tri-node configuration and the result of a single right rotation.
 <p align="center">
 <img src="../images/avlSingleRight.jpg">
 </p>
-We can observe that a rotation operation preserves the BST property. It changes the parent pointers of at most four subtrees T<sub>1</sub>, T<sub>2</sub> 
-of node c, T<sub>3</sub> of p, T<sub>4</sub> of node g respectively. Since p goes to top and its value is smaller than g. Further g's right subtree 
-T<sub>4</sub> has elements larger than g; and therefore, p is smaller than the elements of T<sub>4</sub>. It implies  both g and its right subtree 
-T<sub>4</sub> are correctly placed by the right rotation. Similarly, c being left child of p, both of its subtrees T<sub>1</sub> and T<sub>2</sub> are 
-correctly placed with respect to p. But p loses its right subtree T<sub>3</sub> which now becomes left subtree of g. Since T<sub>3</sub> consists of 
-elements larger than p but smaller than g. Therefore, by placing T<sub>3</sub> as left subtree of g, the BST property is preserved. On the other hand, if 
-the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the balance factor of a node is disturbed due to a sequence of insertions in its right subtree. A single left rotation shown below can restores the balance. 
+The right rotation operation preserves the BST property. It changes the root pointers of at most four subtrees, viz., T<sub>1</sub>, T<sub>2</sub> 
+of node c, T<sub>3</sub> of p, T<sub>4</sub> of node g respectively. T<sub>1</sub> and T<sub>4</sub> are outside trees and T<sub>2</sub> and T<sub>3</sub>
+are inside trees. From BST properties we know that T<sub>1</sub> < c < T<sub>2</sub> < p < T<sub>3</sub> < g < T<sub>4</sub>, where T<sub>i</sub>, for 
+<i>i=1,2,3, 4</i> refers to all key values in the subtree. After rotation, g becomes right child of p and T<sub>3</sub> becomes left child of g.
+Since p < g, and T<sub>3</sub>, the rotation preserves the relative ordering of keys p, g, and in T<sub>3</sub>, i.e, p < T<sub>3</sub> < g. The 
+relative positions of T<sub>1</sub>, c and T<sub>4</sub> are unchanged with respect to p. Therefore, the BST relationship is preserved after rotation.
+
+On the other hand, if the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the balance factor of a node is disturbed due to right subtree
+of a node. It mirrors the zig-zig case. The ordering of keys in this case is T<sub>1</sub> < g < T<sub>2</sub> < p < T<sub>3</sub> < c < T<sub>4</sub>.
+A single left rotation shown below can restores the balance. We can also prove that rotation also preserves the BST property in a similar way as we did
+earlier in zig-zig case.
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 </p>
