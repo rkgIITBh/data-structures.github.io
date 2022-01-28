@@ -6,7 +6,7 @@ Let <i>n(h)</i> be the minimum number of internal nodes in an AVL tree of height
 number of internal nodes should have at least one internal node (which is the root). An AVL tree of height <i>h = 2</i> must have at least two
 internal nodes as shown below. 
 <p align="center">
-<img src=../images/basecaseAVLtrees.jpg">
+<img src="../images/baseAVLtrees.jpg">
 </p>
 We find that balance properties are satisfied by both the trees.
 
