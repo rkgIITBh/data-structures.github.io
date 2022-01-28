@@ -75,8 +75,8 @@ earlier in zig-zig case. Figure below illustrates a right rotation.
 </p>
 
 The imbalance at a node may occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as 
-<b>zig-zag</b> pattern. 
-There is also a symmetric pattern of <b>zag-zig</b> where the tri-node structure consists of a node, its right child, and its left grandchild. A single 
+<b>zig-zag</b> pattern. There is also a symmetric pattern of <b>zag-zig</b> where the tri-node structure consists of a node, its right child, and its left 
+grandchild. Since the imbalances are due to inner trees, the two cases are sometimes considered as subcase of the inside imbalance case. A single 
 rotation cannot fix the balance in the case of a zig-zag or zag-zig configuration. The figure below indicates that a single rotation only flips one 
 configuration to the other.
 <p align="center">
