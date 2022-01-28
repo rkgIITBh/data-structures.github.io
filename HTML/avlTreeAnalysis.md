@@ -27,9 +27,10 @@ By unrolling the inequality of recurrence relation repeatedly, we get
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?n(h)&space;=&space;2^i&space;n(h-2i)" title="n(h) = 2^i n(h-2i)" />
   </p>
-Solving for the base case <i>n(1) = 1 </i>, we get
+By setting <i>h-2i = 1</i>, we get <i>i = h/2 - 1</i>. Now use the base case for the minimum number of internal nodes in a AVL tree of height <i>h = 1</i>.
+to the above inequality, and simplify. It gives 
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?n(h)&space;=&space;2^{h/2-1}" title="n(h) = 2^{h/2-1}" />
+<img src="https://latex.codecogs.com/svg.image?n(h)&space;>&space;2^{h/2-1}" title="n(h) > 2^{h/2-1}" />
 </p>
 which implies 
 <p align="center">
