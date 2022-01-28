@@ -31,7 +31,9 @@ Solving for the base case <i>n(1) = 1 </i>, we get
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?n(h)&space;=&space;2^{h/2-1}" title="n(h) = 2^{h/2-1}" />
 </p>
-
-which implies <i>log n(h) > h/2-1</i>, or <i>h < 2log n(h) </i>.  
+which implies 
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?\log&space;n(h)&space;>&space;h/2-1\mbox{,&space;or&space;}&space;h&space;<&space;2\log&space;n(h)" title="\log n(h) > h/2-1\mbox{, or } h < 2\log n(h)" />
+  </p>
 The total number of nodes in a tree is always greater than the the number of internal nodes in the tree. Therefore, the height of an AVL tree is 
   always less than <i>2 log n</i>, where <i>n</i> is the number of nodes in the AVL tree.
