@@ -23,11 +23,15 @@ Without loss of generality, we assume that height of the left subtree <i>T<sub>L
 
 We now assume the induction hypothesis that the stated AVL height property holds for any AVL tree with height less than <i>h</i>.
 
-By unroll the inequality of recurrence relation repeatedly, we get
+By unrolling the inequality of recurrence relation repeatedly, we get
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?n(h)&space;=&space;2^i&space;n(h-2i)" title="n(h) = 2^i n(h-2i)" />
   </p>
-Solving for the base case <i>n(1) = 1 </i>, we get <img src="https://latex.codecogs.com/svg.image?n(h)&space;=&space;2^{h/2-1}" title="n(h) = 2^{h/2-1}" />
-which implies <i>log n(h) > h/2-1</i>, or <i>h < 2log n(h) </i>  
-Since, total number of nodes in a tree is always greater than the the number of internal nodes in the tree. Therefore, the height of an AVL tree is 
+Solving for the base case <i>n(1) = 1 </i>, we get
+<p align+"center">
+<img src="https://latex.codecogs.com/svg.image?n(h)&space;=&space;2^{h/2-1}" title="n(h) = 2^{h/2-1}" />
+</p>
+
+which implies <i>log n(h) > h/2-1</i>, or <i>h < 2log n(h) </i>.  
+The total number of nodes in a tree is always greater than the the number of internal nodes in the tree. Therefore, the height of an AVL tree is 
   always less than <i>2 log n</i>, where <i>n</i> is the number of nodes in the AVL tree.
