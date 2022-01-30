@@ -1,4 +1,17 @@
-## Fixing Height Violation in AVL Tree
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <style>
+        sub {
+            vertical-align: sub;
+            font-size: medium;
+        }
+    </style>
+</head>
+  
+<body>
+  <h2>Fixing Height Violation in AVL Tree</h2>
 
 Let <i>h</i> be the height of an AVL tree T before an insertion. After a new insertion, one of the following conditions may occur:
 
@@ -56,3 +69,5 @@ We leave it to the reader to convince that a similar set of arguments can prove 
 the AVL tree. However, double rotations are needed for fixing height violations due to insertions in T<sub>in</sub>.
 
 [Back to Index](../index.md)
+  </body>
+  </html>
