@@ -14,8 +14,7 @@ We only consider the insertions into T<sub>R</sub>. Symmetric cases occur if the
 <img src="../images/htVioAVL1.jpg">
 </p>
 
-T<sub>R</sub> must be as taller than T<sub>L</sub> for the height violation to take place.  
-Since the height of the orignal tree T is <i>h</i>,   
+T<sub>R</sub> must be as taller than T<sub>L</sub> for the height violation to take place. Since the height of the orignal tree T is <i>h</i>,   
 
 - The height of T<sub>R</sub> should be <i>h-1</i>, and 
 - The height of T<sub>L</sub> should be <i>h-2</i>. 
