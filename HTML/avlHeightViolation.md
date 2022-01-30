@@ -8,7 +8,7 @@ Let <i>h</i> be the height of an AVL tree T before an insertion. After a new ins
 The first case requires no fixing or rotation, as the height invariance is maintained at every node. The BST property is maintained by the insertion.
 Therefore, the tree preserves both height balance property and the BST property.  
 
-A height violation may occur after an insertion into <pre><code>$T_R$</code></pre> where T_R is the right subtree of T. We only consider the insertions into 
+A height violation may occur after an insertion into T<sub>R</sub> where T_R is the right subtree of T. We only consider the insertions into 
 T_R. Symmetric cases occur if the insertion were made to T<sub>L</sub>. 
 <p align="center">
 <img src="../images/htVioAVL1.jpg">
