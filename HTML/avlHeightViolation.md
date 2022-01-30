@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-  
-<head>
-    <style>
-        sub {
-            vertical-align: sub;
-            font-size: medium;
-        }
-    </style>
-</head>
-  
-<body>
-  <h2>Fixing Height Violation in AVL Tree</h2>
+##Fixing Height Violation in AVL Tree
 
 Let <i>h</i> be the height of an AVL tree T before an insertion. After a new insertion, one of the following conditions may occur:
 <ul>
@@ -21,8 +8,8 @@ Let <i>h</i> be the height of an AVL tree T before an insertion. After a new ins
 The first case requires no fixing or rotation, as the height invariance is maintained at every node. The BST property is maintained by the insertion.
 Therefore, the tree preserves both height balance property and the BST property.  
 
-  A height violation may occur after an insertion into T<sub>R</sub> where T<sub>R</sub> is the right subtree of T. We only consider the insertions into 
-  T<sub>R</sub>. Symmetric cases occur if the insertion were made to T<sub>L</sub>. 
+A height violation may occur after an insertion into T<sub>R</sub> where T<sub>R</sub> is the right subtree of T. We only consider the insertions into 
+T<sub>R</sub>. Symmetric cases occur if the insertion were made to T<sub>L</sub>. 
 <p align="center">
 <img src="../images/htVioAVL1.jpg">
 </p>
@@ -31,20 +18,20 @@ Therefore, the tree preserves both height balance property and the BST property.
 <ul>
   <li>The height of T<sub>R</sub> should be <i>h-1</i>, and</li>
   <li>The height of T<sub>L</sub> should be <i>h-2</i>.</li> 
-  </ul>
+</ul>
 
   After an insertion the height of T<sub>R</sub> becomes <i>h</i>, and the height of T becomes <i>h+1</i>. The difference between heights of T<sub>R</sub> and 
   T<sub>L</sub> increases to 2. Obviously, T<sub>R</sub> cannot be empty. If so, then T<sub>L</sub> is empty, and <i>h = 0</i>. Let us expand T_R into its components subtrees.
 <ul>
   <li>Its left subtree is referred to as inner tree and denoted by T<sub>in</sub>,</li>
   <li>Its right subtree is referred as outer tree, and denote by T<sub>out</sub>.</li>
-  </ul>
+</ul>
 
 Let us consider insertion in T<sub>out</sub>. What would be heights of T<sub>in</sub> and T<sub>out</sub>? For a height violation, the height of T<sub>out</sub>
 should be as high as possible. Therefore, 
 <ul>
   <li>he height of T<sub>out</sub> should be <i>h-2</i></li>
-  </ul>
+</ul>
 
 The insertion can be either in T<sub>out</sub> or T<sub>in</sub>.  The first figure below illustrates the insertion into T<sub>o</sub> 
 <p align="center">
@@ -71,6 +58,5 @@ property. The next figure illustrates the case of both subtrees with same height
 We leave it to the reader to convince that a similar set of arguments can prove that fixing height violation at the lowest node restores height invariant for 
 the AVL tree. However, double rotations are needed for fixing height violations due to insertions in T<sub>in</sub>.
 
-  <a href="../index.md"> Back to Index</a>
-  </body>
-  </html>
+<a href="../index.md">Back to Index</a>
+  
