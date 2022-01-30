@@ -21,7 +21,7 @@ T<sub>R</sub>. Symmetric cases occur if the insertion were made to T<sub>L</sub>
 </ul>
 
   After an insertion the height of T<sub>R</sub> becomes <i>h</i>, and the height of T becomes <i>h+1</i>. The difference between heights of T<sub>R</sub> and 
-  T<sub>L</sub> increases to 2. Obviously, T<sub>R</sub> cannot be empty. If so, then T<sub>L</sub> is empty, and <i>h = 0</i>. Let us expand T_R into its components subtrees.
+  T<sub>L</sub> increases to 2. Obviously, T<sub>R</sub> cannot be empty. If so, then T<sub>L</sub> is empty, and <i>h = 0</i>. Let us expand T<sub>R</sub> into its components subtrees.
 <ul>
   <li>Its left subtree is referred to as inner tree and denoted by T<sub>in</sub>,</li>
   <li>Its right subtree is referred as outer tree, and denote by T<sub>out</sub>.</li>
