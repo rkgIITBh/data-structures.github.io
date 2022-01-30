@@ -8,8 +8,8 @@ Let <i>h</i> be the height of an AVL tree T before an insertion. After a new ins
 The first case requires no fixing or rotation, as the height invariance is maintained at every node. The BST property is maintained by the insertion.
 Therefore, the tree preserves both height balance property and the BST property.  
 
-A height violation may occur after an insertion into T<sub>R</sub> where T<sub>R</sub> is the right subtree of T. 
-We only consider the insertions into T<sub>R</sub>. Symmetric cases occur if the insertion were made to T<sub>L</sub>. 
+A height violation may occur after an insertion into T<sub>R</sub> where T<sub>R</sub> is the right subtree of T. We only consider the insertions into 
+T<sub>R</sub>. Symmetric cases occur if the insertion were made to T<sub>L</sub>. 
 <p align="center">
 <img src="../images/htVioAVL1.jpg">
 </p>
@@ -19,11 +19,9 @@ T<sub>R</sub> must be as taller than T<sub>L</sub> for the height violation to t
 - The height of T<sub>R</sub> should be <i>h-1</i>, and 
 - The height of T<sub>L</sub> should be <i>h-2</i>. 
 
-After an insertion the height of T<sub>R</sub> becomes <i>h</i>, and the height of T becomes <i>h+1</i>. The difference between heights of 
-T<sub>R</sub> and T<sub>L</sub> increase to 2. 
+After an insertion the height of T<sub>R</sub> becomes <i>h</i>, and the height of T becomes <i>h+1</i>. The difference between heights of T<sub>R</sub> and T<sub>L</sub> increase to 2. 
 
-Obviously, T<sub>R</sub> cannot be empty. If so, then T<sub>L</sub> is empty, and <i>h = 0</i>.  
-Let us expand T<sub>R</sub> into its components subtrees.
+Obviously, T<sub>R</sub> cannot be empty. If so, then T<sub>L</sub> is empty, and <i>h = 0</i>. Let us expand T<sub>R</sub> into its components subtrees.
 
 - Its left subtree is referred to as inner tree and denoted by T<sub>i</sub>,
 - Its right subtree is referred as outer tree, and denote by T<sub>o</sub>. 
