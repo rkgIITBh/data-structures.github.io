@@ -63,7 +63,24 @@ of node c, T<sub>3</sub> of p, T<sub>4</sub> of node g respectively. T<sub>1</su
 are inside trees. From BST properties we know that T<sub>1</sub> < c < T<sub>2</sub> < p < T<sub>3</sub> < g < T<sub>4</sub>, where T<sub>i</sub>, for 
 <i>i=1,2,3, 4</i> refers to all key values in the subtree. After rotation, g becomes right child of p and T<sub>3</sub> becomes left child of g.
 Since p < g, and T<sub>3</sub>, the rotation preserves the relative ordering of keys p, g, and in T<sub>3</sub>, i.e, p < T<sub>3</sub> < g. The 
-relative positions of T<sub>1</sub>, c and T<sub>4</sub> are unchanged with respect to p. Therefore, the BST relationship is preserved after rotation.
+relative positions of T<sub>1</sub>, c and T<sub>4</sub> are unchanged with respect to p. Therefore, the BST relationship is preserved after rotation. 
+C-function for single right rotation is provided below.
+
+```
+AVLNODE *rotateRight(AVLNODE *g) {
+    // Tri-node forms a zig-zig pattern 
+    AVLNODE *p = g->left;   // p goes to top 
+    AVLNODE *T2 = p->right; // g > p > T2 
+
+    p->right = g;  // p < g 
+    g->left = T2;  // T2 < g 
+
+    g->ht = MAX(ht(g->left), ht(g->right)) + 1; 
+    p->ht = MAX(ht(p->left), ht(p->right)) + 1;
+
+    return p;
+}
+```
 
 On the other hand, if the tri-node configuration forms a <b>zag-zag</b> pattern, it implies that the balance factor of a node is disturbed due to right subtree
 of a node. It mirrors the zig-zig case and alternatively known as a subcase of outside imbalance because imbalance occurs due to outer tree of right
@@ -73,6 +90,24 @@ earlier in zig-zig case. Figure below illustrates a right rotation.
 <p align="center">
 <img src="../images/avlSingleLeft.jpg">
 </p>
+
+Single left rotation is given below. It is very much similar to single right rotation.
+
+```
+AVLNODE *rotateLeft(AVLNODE *g) {
+    // Tri-node forms a zag-zag pattern 
+    AVLNODE *p = g->right; // y > x
+    AVLNODE *T2 = p->left; // x < T2 < y  
+
+    p->left = g;
+    g->right = T2; 
+
+    g->ht = MAX(ht(g->left), ht(g->right)) + 1;
+    p->ht = MAX(ht(p->left), ht(p->right)) + 1;
+
+    return p;
+}
+```
 
 The imbalance at a node may occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as 
 <b>zig-zag</b> pattern. There is also a symmetric pattern of <b>zag-zig</b> where the tri-node structure consists of a node, its right child, and its left 
@@ -99,9 +134,34 @@ node.
 <p align="center">
 <img src="../images/avlDoubleRL.jpg">
 </p>
+
+The following two functions are for double rotations as discussed above. Both use the single rotations twice in the order determined by the tri-node patterns.
+
+```
+// Double rotation for zig-zag pattern
+AVLNODE *rotateRightLeft(AVLNODE *g) {
+    
+    AVLNODE *p = g->left;
+    AVLNODE *c = p->right;
+    g->left = rotateLeft(c);
+    return rotateRight(g);
+} 
+
+// Double rotation for zag-zig pattern
+AVLNODE *rotateLeftRight(AVLNODE *g) {
+    AVLNODE *p = g->right;
+    AVLNODE *c = p->left;
+    g->left = rotateRight(c);
+    return rotateLeft(g);
+} 
+
+```
+
 The question that remains unresloved is: where the rotation should be applied? 
 
 We end this blog here.  We shall examine the case of height violation caused by a new insertion in an AVL tree the next blog.
+
+[Source Code for AVL tree operations](../CODES/AVLtree/index.md)
 
 [Back to Index](../index.md)
 
