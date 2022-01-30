@@ -19,9 +19,8 @@ T<sub>R</sub> must be as taller than T<sub>L</sub> for the height violation to t
 - The height of T<sub>R</sub> should be <i>h-1</i>, and 
 - The height of T<sub>L</sub> should be <i>h-2</i>. 
 
-After an insertion the height of T<sub>R</sub> becomes <i>h</i>, and the height of T becomes <i>h+1</i>. The difference between heights of T<sub>R</sub> and T<sub>L</sub> increase to 2. 
-
-Obviously, T<sub>R</sub> cannot be empty. If so, then T<sub>L</sub> is empty, and <i>h = 0</i>. Let us expand T<sub>R</sub> into its components subtrees.
+After an insertion the height of T<sub>R</sub> becomes <i>h</i>, and the height of T becomes <i>h+1</i>. The difference between heights of T<sub>R</sub> and 
+T<sub>L</sub> increase to 2. Obviously, T<sub>R</sub> cannot be empty. If so, then T<sub>L</sub> is empty, and <i>h = 0</i>. Let us expand T<sub>R</sub> into its components subtrees.
 
 - Its left subtree is referred to as inner tree and denoted by T<sub>i</sub>,
 - Its right subtree is referred as outer tree, and denote by T<sub>o</sub>. 
