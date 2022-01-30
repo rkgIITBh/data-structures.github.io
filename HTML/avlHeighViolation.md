@@ -1,4 +1,4 @@
-## Fixing Lowest Height Violation in AVL Tree
+## Fixing Height Violation in AVL Tree
 
 Let <i>h</i> be the height of an AVL tree T before an insertion. After a new insertion, one of the following conditions may occur:
 
