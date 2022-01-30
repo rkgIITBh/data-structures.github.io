@@ -53,4 +53,4 @@ property. The next figure illustrates the case of both subtrees with same height
 </p>
 
 We leave it to the reader to convince that a similar set of arguments can prove that fixing height violation at the lowest node restores height invariant for 
-the AVL tree. 
+the AVL tree. However, double rotations needed for fixing height violations due to insertions in T<sub>in</sub>.
