@@ -41,7 +41,7 @@ The second depicts the insertion scenario for T<sub>in</sub>.
 
 Let us examine the two scenarios in the figures above. In the first one, the height of T<sub>in</sub> can be either <i>h-3</i> or <i>h-2</i>. 
 The height violation takes place only if T<sub>out</sub> is as tall as possible. Its height should be <i>h-2</i>. If the height of T<sub>in</sub> 
-is <i>h-3</i>, then the lowest node where height violation occurs at <i>y</i>. 
+is <i>h-3</i>, then the lowest node where height violation occurs at the root of T<sub>R</sub>. 
 <p align="center">
 <img src="../images/htVioAVL4.jpg">
 </p>
