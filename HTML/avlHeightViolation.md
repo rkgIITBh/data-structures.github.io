@@ -9,7 +9,7 @@ The first case requires no fixing or rotation, as the height invariance is maint
 Therefore, the tree preserves both height balance property and the BST property.  
 
 A height violation may occur after an insertion into T<sub>R</sub> where T<sub>R</sub> is the right subtree of T. We only consider the insertions into 
-T<sub>R</sub>. Symmetric cases occur if the insertion were made to T<sub>L</sub>. 
+T_R. Symmetric cases occur if the insertion were made to T<sub>L</sub>. 
 <p align="center">
 <img src="../images/htVioAVL1.jpg">
 </p>
