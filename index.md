@@ -72,7 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
-- [Fixing Height Violations in AVL Trees](avlHeighViolation.md)
+- [Fixing Height Violations in AVL Trees](HTML/avlHeighViolation.md)
 - [Maintaining Balanced Binary Search Tree](HTML/avlTree.md)
 - [Average Case Analysis of BST](HTML/BSTanalysis.md)
 - [Introduction to Binary Search Tree](HTML/BSTintro.md)
