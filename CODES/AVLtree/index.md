@@ -2,25 +2,28 @@
 
 ```
 #ifndef AVL_H
-#define AVL_H 
-#define MAX(X,Y) ((X) < (Y)) ? (X) : (Y)
+#define AVL_H
 
-// Node structure for an AVL tree node
-typedef struct node {
+// Define AVL node structure
+typedef struct Node {
     int info;
-    struct node *left;
-    struct node *right;
+    struct Node *left;
+    struct Node *right;
     int ht;
 } AVLNODE;
 
-// Retrins height
-int ht(AVLNODE *N) {
+// Get height of a node
+int height(AVLNODE *N) {
     if (N == NULL)
-       return 0;
+        return 0;
     return N->ht;
 }
 
-// Create a new AVL node
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+// Create a node
 AVLNODE *createNode(int val) {
     AVLNODE *node = (AVLNODE *) malloc(sizeof(AVLNODE));
     if (node != NULL) {
@@ -28,106 +31,90 @@ AVLNODE *createNode(int val) {
         node->left = NULL;
         node->right = NULL;
         node->ht = 1;
-        return (node);
+    } else {
+        printf("Error: malloc failure\n");
+        exit(1);
     }
-    else { 
-        // Cannot create node, exit the program 
-        printf("Error: malloc failed\n");
-        exit(1); 
-    }
+    return (node);
 }
 
-// Right rotate
+// Rotate right to fix zig-zig pattern of trinode configuration (g,p,c)
 AVLNODE *rotateRight(AVLNODE *g) {
-    // Tri-node forms a zig-zig pattern 
-    AVLNODE *p = g->left;   // p goes to top 
-    AVLNODE *T2 = p->right; // g > p > T2 
+    AVLNODE *p = g->left;
+    AVLNODE *T2 = p->right;
 
-    p->right = g;  // p < g 
-    g->left = T2;  // T2 < g 
+    p->right = g;
+    g->left = T2;
 
-    g->ht = MAX(ht(g->left), ht(g->right)) + 1; 
-    p->ht = MAX(ht(p->left), ht(p->right)) + 1;
+    g->ht = max(height(g->left), height(g->right)) + 1;
+    p->ht = max(height(p->left), height(p->right)) + 1;
 
     return p;
 }
 
-
-// Single left rotate for zag-zag pattern 
+// Rotate left to fix zag-zag pattern of trinode configuration (g,p,c)
 AVLNODE *rotateLeft(AVLNODE *g) {
-    // Tri-node forms a zag-zag pattern 
-    AVLNODE *p = g->right; // y > x
-    AVLNODE *T2 = p->left; // x < T2 < y  
+    AVLNODE *p = g->right;
+    AVLNODE *T2 = p->left;
 
     p->left = g;
-    g->right = T2; 
+    g->right = T2;
 
-    g->ht = MAX(ht(g->left), ht(g->right)) + 1;
-    p->ht = MAX(ht(p->left), ht(p->right)) + 1;
+    g->ht = max(height(g->left), height(g->right)) + 1;
+    p->ht = max(height(p->left), height(p->right)) + 1;
 
     return p;
 }
 
-// Single right rotate for zig-zig pattern
-AVLNODE *rotateRightLeft(AVLNODE *g) {
-    // Double rotation for zig-zag pattern
-    AVLNODE *p = g->left;
-    AVLNODE *c = p->right;
-    g->left = rotateLeft(c);
-    return rotateRight(g);
-} 
-
-// Double rotation for zag-zig pattern
-AVLNODE *rotateLeftRight(AVLNODE *g) {
-    AVLNODE *p = g->right;
-    AVLNODE *c = p->left;
-    g->left = rotateRight(c);
-    return rotateLeft(g);
-} 
-
-// Computes the balance factor
-int getBF(AVLNODE *n) {
-    if (n == NULL)
+// Get the balance factor of a node
+int getBalance(AVLNODE *N) {
+    if (N == NULL)
         return 0;
-    return ht(n->left) - ht(n->right);
+    return height(N->left) - height(N->right);
 }
 
-// Inserts node into an AVL tree
+// Insert a node into an AVL tree. Similar to BST insertion except for rebalancing
 AVLNODE *insertNode(AVLNODE *node, int val) {
-    
-    int bf; // For computing balance factor
-    
-    // Find the position to insert the node 
-    if (node == NULL)
-        return (createNode(val));
+    int bf; // Stores balance factor
 
-    if (val < node->info) // Insert into left subtree
+    if (node == NULL)
+        return (createNode(val)); 
+
+    if (val < node->info)
         node->left = insertNode(node->left, val);
-    else if (val > node->info) // Insert into right subtree
+    else if (val > node->info)
         node->right = insertNode(node->right, val);
     else
         return node;
 
-    // Update balance factor of each node 
-    node->ht = 1 + MAX(ht(node->left), ht(node->right));
+    // Update the balance factor of each node and rebalance the tree if needed 
+    node->ht = 1 + max(height(node->left), height(node->right));
 
-    bf = getBF(node);
+    bf = getBalance(node);
     if (bf > 1 && val < node->left->info)
+        // Creates zig-zig pattern for tri-node
         return rotateRight(node);
 
     if (bf < -1 && val > node->right->info)
+        // Creates zag-zag pattern for tri-node
         return rotateLeft(node);
 
-    if (bf > 1 && val > node->left->info) 
-        return rotateLeftRight(node->left);
-    
+    if (bf > 1 && val > node->left->info) {
+        // Creates zig-zag pattern for tri-node
+        node->left = rotateLeft(node->left);
+        return rotateRight(node);
+    }
 
-    if (bf < -1 && val < node->right->info) 
-        return rotateRightLeft(node->right);
+    if (bf < -1 && val < node->right->info) {
+        // Creates zag-zig pattern for tri-node
+        node->right = rotateRight(node->right);
+        return rotateLeft(node);
+    }
 
     return node;
 }
 
+// Locate inorder successor of a node
 AVLNODE *minValueNode(AVLNODE *node) {
     AVLNODE *current = node;
 
@@ -137,9 +124,12 @@ AVLNODE *minValueNode(AVLNODE *node) {
     return current;
 }
 
-// Delete a nodes
+// Deletes a node of the AVL tree
 AVLNODE *deleteNode(AVLNODE *root, int val) {
     // Find the node and delete it
+    int bf;  // Used for computing balance factor
+    AVLNODE *temp; // Used for swapping and copying 
+    
     if (root == NULL)
         return root;
 
@@ -150,20 +140,21 @@ AVLNODE *deleteNode(AVLNODE *root, int val) {
         root->right = deleteNode(root->right, val);
 
     else {
+        // Located the node to be deleted
         if ((root->left == NULL) || (root->right == NULL)) {
-            AVLNODE *temp = root->left ? root->left : root->right;
-
+            // May have either no child or one child
+            temp = root->left ? root->left : root->right;
             if (temp == NULL) {
                 temp = root;
                 root = NULL;
             } else
-            *root = *temp;
-            free(temp);
+                *root = *temp;
+            free(temp); // Free memory allocated for deleted node
         } else {
-            AVLNODE *temp = minValueNode(root->right);
-
-            root->info = temp->info;
-
+            // Node has two children, locate its inorder successor which will replace the deleted node
+            temp = minValueNode(root->right);
+            root->info = temp->info; // Copy value of inorder successor
+            // Delete inorder successor will have one or no child
             root->right = deleteNode(root->right, temp->info);
         }
     }
@@ -171,53 +162,45 @@ AVLNODE *deleteNode(AVLNODE *root, int val) {
     if (root == NULL)
         return root;
 
-        // Update the balance factor of each node and
-        // balance the tree
-        root->ht = 1 + MAX(ht(root->left), ht(root->right));
+    // Update the balance factor of each node and rebalance the tree if needed
+    root->ht = 1 + max(height(root->left), height(root->right));
 
-        int bf = getBF(root);
-        if (bf > 1 && getBF(root->left) >= 0)
-            return rotateRight(root);
+    bf = getBalance(root);
+    if (bf > 1 && getBalance(root->left) >= 0)
+        // Trinode configuration creates zig-zig pattern
+        return rotateRight(root);
 
-        if (bf > 1 && getBF(root->left) < 0) 
-            return rotateLeftRight(root->left);
-        
-
-        if (bf < -1 && getBF(root->right) <= 0)
-            return rotateLeft(root);
-
-        if (bf < -1 && getBF(root->right) > 0) 
-            return rotateRightLeft(root->right); 
-
-        return root;
-}
-
-// Print tree in inOrder
-void printInOrder(AVLNODE *root) {
-    if (root != NULL) {
-         printInOrder(root->left);
-         printf("%d ", root->info);
-         printInOrder(root->right);
+    if (bf > 1 && getBalance(root->left) < 0) {
+        // Trinode configuration creates zig-zag pattern
+        root->left = rotateLeft(root->left);
+        return rotateRight(root);
     }
+
+    if (bf < -1 && getBalance(root->right) <= 0)
+        // Trinode configuration creates zag-zag pattern
+        return rotateLeft(root);
+
+    if (bf < -1 && getBalance(root->right) > 0) {
+        // Trinode configuration creates zag-zig pattern
+        root->right = rotateRight(root->right);
+        return rotateLeft(root);
+    }
+
+    return root;
 }
 
-// Print tree in preOrder
+// Print the tree with node heights in preorder. Inorder or Postorder printing can be used here
 void printPreOrder(AVLNODE *root) {
     if (root != NULL) {
-         printf("%d ", root->info);
-         printPreOrder(root->left);
-         printPreOrder(root->right);
-    }
-}
-
-// Print tree in postOrder
-void printPostOrder(AVLNODE *root) {
-    if (root != NULL) {
-         printPostOrder(root->left);
-         printPostOrder(root->right);
-         printf("%d ", root->info);
+        printf("(%d,%d) ", root->info,root->ht);
+        printPreOrder(root->left);
+        printPreOrder(root->right);
     }
 }
 
 #endif
 ```
+
+A driver program should be written to test out the code.
+
+[Back to Index](../../index.md)
