@@ -75,8 +75,8 @@ AVLNODE *rotateRight(AVLNODE *g) {
     p->right = g;  // p < g 
     g->left = T2;  // T2 < g 
 
-    g->ht = MAX(height(g->left), height(g->right)) + 1; 
-    p->ht = MAX(height(p->left), height(p->right)) + 1;
+    g->ht = max(height(g->left), height(g->right)) + 1; 
+    p->ht = max(height(p->left), height(p->right)) + 1;
 
     return p;
 }
@@ -102,12 +102,14 @@ AVLNODE *rotateLeft(AVLNODE *g) {
     p->left = g;
     g->right = T2; 
 
-    g->ht = MAX(height(g->left), height(g->right)) + 1;
-    p->ht = MAX(height(p->left), height(p->right)) + 1;
+    g->ht = max(height(g->left), height(g->right)) + 1;
+    p->ht = max(height(p->left), height(p->right)) + 1;
 
     return p;
 }
 ```
+We have not specified two functions: <i>max</i> and <i>height</i>. The first one finds the maximum of two elements and the second one gets current height
+of the node from "ht" field.
 
 The imbalance at a node may occur due to the right subtree of the left child of a node in a BST; we refer to the configuration of tri-node structure as 
 <b>zig-zag</b> pattern. There is also a symmetric pattern of <b>zag-zig</b> where the tri-node structure consists of a node, its right child, and its left 
