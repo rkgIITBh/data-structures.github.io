@@ -137,7 +137,22 @@ node.
 <img src="../images/avlDoubleRL.jpg">
 </p>
 
+The functions for double rotations are simple. For zig-zag pattern, first the root of the right subtree should be rotated left. Following the left rotation a
+zag-zag pattern gets created that needs a right rotation to fix the imbalance. A symmetric situation occurs for a zag-zig pattern.
 
+```
+// Double rotate for zig-zag pattern of trinode configuration
+AVLNODE *rotateLeftRight(AVLNODE *g) {
+    g->left = rotateLeft(g->left);
+    return rotateRight(g);
+}
+
+// Double rotate for zag-zig pattern of trinode configuration
+AVLNODE *rotateRightLeft(AVLNODE *g) {
+    g->right = rotateRight(g->right);
+    return rotateLeft(g);
+}
+```
 The question that remains unresloved is: where the rotation should be applied? 
 
 We end this blog here.  We shall examine the case of height violation caused by a new insertion in an AVL tree the next blog.
