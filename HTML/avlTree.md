@@ -27,9 +27,9 @@ Adelson-Velsky and Landis (AVL) came up a recursive O(1) operation to balance a 
 <b>rotation</b>. A rotation is required after an operation if a disbalance occurs at a node in the tree. AVL tree also requires each node to maintain 
 height information along with other required information as needed for a BST node. We use the following minimal definition of an AVL tree node:
 ```
-typedef struct node {
+typedef struct Node {
     int info, ht;
-    struct node *left,*right;
+    struct Node *left,*right;
 } AVLNODE;
 ```
 
