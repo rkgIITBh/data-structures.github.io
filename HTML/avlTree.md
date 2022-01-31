@@ -75,8 +75,8 @@ AVLNODE *rotateRight(AVLNODE *g) {
     p->right = g;  // p < g 
     g->left = T2;  // T2 < g 
 
-    g->ht = MAX(ht(g->left), ht(g->right)) + 1; 
-    p->ht = MAX(ht(p->left), ht(p->right)) + 1;
+    g->ht = MAX(height(g->left), height(g->right)) + 1; 
+    p->ht = MAX(height(p->left), height(p->right)) + 1;
 
     return p;
 }
@@ -102,8 +102,8 @@ AVLNODE *rotateLeft(AVLNODE *g) {
     p->left = g;
     g->right = T2; 
 
-    g->ht = MAX(ht(g->left), ht(g->right)) + 1;
-    p->ht = MAX(ht(p->left), ht(p->right)) + 1;
+    g->ht = MAX(height(g->left), height(g->right)) + 1;
+    p->ht = MAX(height(p->left), height(p->right)) + 1;
 
     return p;
 }
@@ -135,27 +135,6 @@ node.
 <img src="../images/avlDoubleRL.jpg">
 </p>
 
-The following two functions are for double rotations as discussed above. Both use the single rotations twice in the order determined by the tri-node patterns.
-
-```
-// Double rotation for zig-zag pattern
-AVLNODE *rotateRightLeft(AVLNODE *g) {
-    
-    AVLNODE *p = g->left;
-    AVLNODE *c = p->right;
-    g->left = rotateLeft(c);
-    return rotateRight(g);
-} 
-
-// Double rotation for zag-zig pattern
-AVLNODE *rotateLeftRight(AVLNODE *g) {
-    AVLNODE *p = g->right;
-    AVLNODE *c = p->left;
-    g->left = rotateRight(c);
-    return rotateLeft(g);
-} 
-
-```
 
 The question that remains unresloved is: where the rotation should be applied? 
 
