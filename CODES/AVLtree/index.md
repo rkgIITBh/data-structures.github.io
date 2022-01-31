@@ -6,31 +6,32 @@
 
 // Define AVL node structure
 typedef struct Node {
-    int info;
+    int info;  // Node information
     struct Node *left;
     struct Node *right;
-    int ht;
+    int ht; // Height initially 1
 } AVLNODE;
 
-// Get height of a node
+// Get the height of a node
 int height(AVLNODE *N) {
     if (N == NULL)
-        return 0;
+      return 0;
     return N->ht;
 }
 
+// Helper function for maximum of two
 int max(int a, int b) {
     return (a > b) ? a : b;
 }
 
-// Create a node
+// Creates and returns a pointer to a new node
 AVLNODE *createNode(int val) {
     AVLNODE *node = (AVLNODE *) malloc(sizeof(AVLNODE));
     if (node != NULL) {
-        node->info = val;
-        node->left = NULL;
-        node->right = NULL;
-        node->ht = 1;
+       node->info = val;
+       node->left = NULL;
+       node->right = NULL;
+       node->ht = 1;
     } else {
         printf("Error: malloc failure\n");
         exit(1);
@@ -66,6 +67,18 @@ AVLNODE *rotateLeft(AVLNODE *g) {
     return p;
 }
 
+// Double rotate for zig-zag pattern of trinode configuration
+AVLNODE *rotateLeftRight(AVLNODE *g) {
+    g->left = rotateLeft(g->left);
+    return rotateRight(g);
+}
+
+// Double rotate for zag-zig pattern of trinode configuration
+AVLNODE *rotateRightLeft(AVLNODE *g) {
+    g->right = rotateRight(g->right);
+    return rotateLeft(g);
+}
+
 // Get the balance factor of a node
 int getBalance(AVLNODE *N) {
     if (N == NULL)
@@ -73,7 +86,7 @@ int getBalance(AVLNODE *N) {
     return height(N->left) - height(N->right);
 }
 
-// Insert a node into an AVL tree. Similar to BST insertion except for rebalancing
+// Insert a node into AVL tree
 AVLNODE *insertNode(AVLNODE *node, int val) {
     int bf; // Stores balance factor
 
@@ -87,7 +100,7 @@ AVLNODE *insertNode(AVLNODE *node, int val) {
     else
         return node;
 
-    // Update the balance factor of each node and rebalance the tree if needed 
+    // Update the balance factor of each node and rebalance if needed 
     node->ht = 1 + max(height(node->left), height(node->right));
 
     bf = getBalance(node);
@@ -101,20 +114,17 @@ AVLNODE *insertNode(AVLNODE *node, int val) {
 
     if (bf > 1 && val > node->left->info) {
         // Creates zig-zag pattern for tri-node
-        node->left = rotateLeft(node->left);
-        return rotateRight(node);
+        return rotateLeftRight(node);
     }
 
     if (bf < -1 && val < node->right->info) {
         // Creates zag-zig pattern for tri-node
-        node->right = rotateRight(node->right);
-        return rotateLeft(node);
+        return rotateRightLeft(node);
     }
 
     return node;
 }
 
-// Locate inorder successor of a node
 AVLNODE *minValueNode(AVLNODE *node) {
     AVLNODE *current = node;
 
@@ -126,10 +136,9 @@ AVLNODE *minValueNode(AVLNODE *node) {
 
 // Deletes a node of the AVL tree
 AVLNODE *deleteNode(AVLNODE *root, int val) {
-    // Find the node and delete it
+    // Locate the node and delete it
     int bf;  // Used for computing balance factor
-    AVLNODE *temp; // Used for swapping and copying 
-    
+    AVLNODE *temp; 
     if (root == NULL)
         return root;
 
@@ -140,7 +149,7 @@ AVLNODE *deleteNode(AVLNODE *root, int val) {
         root->right = deleteNode(root->right, val);
 
     else {
-        // Located the node to be deleted
+        // Node Located, delete it
         if ((root->left == NULL) || (root->right == NULL)) {
             // May have either no child or one child
             temp = root->left ? root->left : root->right;
@@ -151,10 +160,12 @@ AVLNODE *deleteNode(AVLNODE *root, int val) {
                 *root = *temp;
             free(temp); // Free memory allocated for deleted node
         } else {
-            // Node has two children, locate its inorder successor which will replace the deleted node
-            temp = minValueNode(root->right);
-            root->info = temp->info; // Copy value of inorder successor
-            // Delete inorder successor will have one or no child
+            // Node has two children, locate inorder successor 
+            // Copy its content in current node
+            temp = minValueNode(root->right); 
+            root->info = temp->info; 
+            
+            // Delete inorder successor having one or no child 
             root->right = deleteNode(root->right, temp->info);
         }
     }
@@ -162,7 +173,7 @@ AVLNODE *deleteNode(AVLNODE *root, int val) {
     if (root == NULL)
         return root;
 
-    // Update the balance factor of each node and rebalance the tree if needed
+    // Update the balance factor of each node, rebalance if needed
     root->ht = 1 + max(height(root->left), height(root->right));
 
     bf = getBalance(root);
@@ -172,8 +183,7 @@ AVLNODE *deleteNode(AVLNODE *root, int val) {
 
     if (bf > 1 && getBalance(root->left) < 0) {
         // Trinode configuration creates zig-zag pattern
-        root->left = rotateLeft(root->left);
-        return rotateRight(root);
+        return rotateLeftRight(root); 
     }
 
     if (bf < -1 && getBalance(root->right) <= 0)
@@ -182,19 +192,37 @@ AVLNODE *deleteNode(AVLNODE *root, int val) {
 
     if (bf < -1 && getBalance(root->right) > 0) {
         // Trinode configuration creates zag-zig pattern
-        root->right = rotateRight(root->right);
-        return rotateLeft(root);
+        return rotateRightLeft(root); 
     }
 
     return root;
 }
 
-// Print the tree with node heights in preorder. Inorder or Postorder printing can be used here
+// Print the tree in preorder
 void printPreOrder(AVLNODE *root) {
     if (root != NULL) {
         printf("(%d,%d) ", root->info,root->ht);
         printPreOrder(root->left);
         printPreOrder(root->right);
+    }
+}
+
+// Print the tree in postorder
+void printPostOrder(AVLNODE *root) {
+    if (root != NULL) {
+        printPostOrder(root->left);
+        printPostOrder(root->right);
+        printf("(%d,%d) ", root->info,root->ht);
+    }
+}
+
+
+// Print the tree in inorder
+void printInOrder(AVLNODE *root) {
+    if (root != NULL) {
+        printInOrder(root->left);
+        printf("(%d,%d) ", root->info,root->ht);
+        printInOrder(root->right);
     }
 }
 
