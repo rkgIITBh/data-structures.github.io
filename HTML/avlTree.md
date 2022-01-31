@@ -157,7 +157,7 @@ The question that remains unresloved is: where the rotation should be applied?
 
 We end this blog here.  We shall examine the case of height violation caused by a new insertion in an AVL tree the next blog.
 
-<!--[Source Code for AVL tree operations](../CODES/AVLtree/index.md)-->
+[Source Code for AVL tree operations](../CODES/AVLtree/index.md)
 
 [Back to Index](../index.md)
 
