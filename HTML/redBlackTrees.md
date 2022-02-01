@@ -71,5 +71,14 @@ We observe the following points about the tree after the two set of collapsing o
 - An internal node may have 2, or 3 or at most 4 children
 - The height of the collapsed tree <i>h'&nbsp;&ge;&nbsp; h/2</i>
 
+Except for point three, all other points are easy to understand. A black node in a red black tree may have
+
+- Two red children, or
+- One black black child and one red child, or
+- Two black children
+
+Collapsing two red children gives 4 black children to the parent. However, if one of the children of a black node is black, then it can give three black children 
+after the collapse operation. The third case is obvious.
+
 The number of internal nodes in the collapsed tree 
 <i> n&nbsp;&ge;&nbsp; 2<sup>h'</sup> - 1 &nbsp;&ge;&nbsp; 2<sup>h/2</sup> -1</i>. Therefore, <i> h&nbsp;&le;&nbsp; 2 log (n+1)</i>
