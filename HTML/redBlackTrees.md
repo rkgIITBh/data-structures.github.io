@@ -50,7 +50,7 @@ We apply the induction to both subtree separately and reach the following conclu
 - Right subtree of <i>T</i> has at least <i>2<sup>bh(r)-2</sup></i> internal nodes
 - Left subtree of <i>T</i> has at least <i>2<sup>bh(r)-2</sup></i> internal nodes
 
-Combining the above two results, we conclude that tree <i>T</i> must have <i>2*2<sup>bh(r)-2</sub> = 2<sup>bh(r)-1</sup></i>.  
+Combining the above two results, we conclude that tree <i>T</i> must have <i>2*2<sup>bh(r)-2</sup> = 2<sup>bh(r)-1</sup></i>.  
 
 <strong>Height of a red black tree</strong>:  The height of a red black tree with <i>n</i> nodes is <i>O(log n)</i>.
 
