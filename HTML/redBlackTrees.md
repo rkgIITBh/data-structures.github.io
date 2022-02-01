@@ -14,8 +14,7 @@ A red black tree is a self-balancing binary search tree (BST) that two different
 
 - Order invariant: preserves ordering property of a BST
 - Node colors: nodes are either colored red or black 
-- Black root and leaves: the root is always colored black, and 
-all leaf nodes are colored black
+- Black root and leaves: the root is always colored black, and all leaf nodes are colored black
 - Color invariant: no two consecutive nodes are colored red
 - Height invariant: the number of black nodes on any path from the root a leaf  is the same 
 
@@ -23,18 +22,16 @@ A newly inserted node is colored red. It may violate color invariant, i.e., two 
 So, insertion may require color fixing if two red nodes appear consecutively. The fixing must be done by recoloring the nodes in such a way that the height 
 invariant (black height) is preserved. Maintaining black height is important because time complexities of the operation depend on black height. 
 
-<strong>Black height</strong>: Black height of a node <i>n</i> in a red black tree is equal to the number of black height from <i>n</i> to the farthest leaf node from <i>n</i>.
+<strong>Black height</strong>: Black height of a node <i>n</i> in a red black tree is equal to the number of black height from <i>n</i> to the farthest leaf 
+node from <i>n</i>.
 
-Figure below depicts a red black tree of black height 3. It does not include external nodes. It includes black external nodes which are leaf nodes of the
-tree.
+Figure below depicts a red black tree of black height 3. It does not include external nodes. It includes black external nodes which are leaf nodes of the tree.
 <p align="center">
 <img src="../images/redBlackTree1.jpg">
 </p>
 The black height of the above tree is 3. Every path from root to any leaf node has exactly 3 black colored nodes. The black height of 8 is two. All leaf nodes
 are external nodes. These nodes do not store actual elements, but make the tree strictly binary. So, the tree is not only a BST but its every node has 
-exactly two children. 
-
-The black height of a red black tree <i>T</i> with root <i>r</i> is denoted by <i>bh(r)</i>. We can prove the following property about black height.
+exactly two children. The black height of a red black tree <i>T</i> with root <i>r</i> is denoted by <i>bh(r)</i>. We can prove the following property about black height.
 
 <strong>Minimum number of internal node</strong>: Let the black height of a RBT <i>T</i> with root <i>r</i> be <i>bh(r)</i>. Then <i>T</i> consists of at least 
 <i>2<sup>{bh(r)}-1</sup></i> internal nodes. 
