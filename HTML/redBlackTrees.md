@@ -65,6 +65,7 @@ The next set of parallel collapsing operations reduce the tree to the figure sho
 <img src="../images/redBlackTree3.jpg">
 </p>
 We observe the following points about the tree after the two set of collapsing operations are complete:
+
 - Each node in the compact red black tree consists of only black nodes 
 - All the external nodes are at the same depth from the root 
 - An internal node may have 2, or 3 or at most 4 children
