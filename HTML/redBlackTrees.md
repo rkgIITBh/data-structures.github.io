@@ -81,6 +81,7 @@ Collapsing two red children gives four black children to the parent. However, if
 after the collapse operation. The third case is obvious.
 
 The number of internal nodes in the collapsed tree 
-<i> n&nbsp;&ge;&nbsp; 2<sup>h'</sup> - 1 &nbsp;&ge;&nbsp; 2<sup>h/2</sup> -1</i>. Therefore, <i> h&nbsp;&le;&nbsp; 2 log (n+1)</i>
+<i> n&nbsp;&ge;&nbsp; 2<sup>h'</sup> - 1 &nbsp;&ge;&nbsp; 2<sup>h/2</sup> -1</i>. Therefore, <i> h&nbsp;&le;&nbsp; 2 log (n+1)</i>. In the next blog we plan to 
+focus on operations on red-black trees.
 
 [Back to Index](../index.md)
