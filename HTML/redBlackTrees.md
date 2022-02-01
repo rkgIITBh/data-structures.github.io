@@ -13,8 +13,7 @@ A red-black tree is a self-balancing binary search tree (BST) with two different
 0, and 1 represent red and black colors, respectively. The important characteristics of a red-black tree are as follows:
 
 - Order invariant: preserves ordering property of a BST
-- Color invariants:
-- 
+- Three color invariants:
      - Node colors: nodes are either colored red or black 
      - Blackroot and leaves: the root is always colored black, and all leaf nodes are colored black
      - no two consecutive nodes are colored red
