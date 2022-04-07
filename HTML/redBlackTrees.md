@@ -13,19 +13,18 @@ fewer structural changes to a BST than AVL. If the performance is not very impor
 preferable. If performance is important then probably preference will be to use B-trees. However, red-black tree is a 
 challenging exercise for the students for mastering data structures. 
 
-A red black tree has two different types of nodes, viz., red and black. The nodes are distinguished by storing a color bit with each. A 
-0, and an 1 represents red and black nodes respectively. The important characteristics of a red black tree are as follows:
+A red black tree has two different types of nodes, viz., red and black. The nodes are distinguished by storing a color bit 
+with each. A 0, and an 1 represents red and black nodes respectively. The important characteristics of a red black tree 
+are as follows:
 
-- <b>Order invariant</b>: It preserves ordering property of a BST.
-- <b>Node colors</b>: The nodes are either colored red or black.
-- <b>External nodes</b>: Leaf nodes black are external nodes, they 
+1. <b>Order invariant</b>: It preserves ordering property of a BST.
+2. <b>Node colors</b>: The nodes are either colored red or black.
+3. <b>External nodes</b>: Leaf nodes black are external nodes, they 
 store NULL pointers, and are colored black.
-- <b>Internal nodes</b>: Internal nodes store keys, pointer to left and right
-child. Any or both child pointers may point to leaf nodes.
-- <b>Black root</b>: The root is always colored black, and 
-all leaf nodes are colored black. 
-- <b>Color invariant</b>: No two consecutive nodes are colored red.
-- <b>Height invariant</b>: The number of black nodes on any path from the root a leaf is the same.
+4. <b>Internal nodes</b>: Internal nodes store keys, pointer to left and right child. Any or both child pointers may point to leaf nodes.
+5. <b>Black root</b>: The root is always colored black, and all leaf nodes are colored black. 
+6. <b>Color invariant</b>: No two consecutive nodes are colored red.
+7. <b>Height invariant</b>: The number of black nodes on any path from the root a leaf is the same.
 
 A new node gets red color when it is inserted. A new insertion may, therefore, violate color invariant. Two red nodes may appear as parent and child in
 the tree after an insertion. A color fixing operation is applied whenever two red nodes appear consecutively. The fixing is performed by recoloring the 
@@ -83,13 +82,13 @@ Therefore, <i> h&nbsp;&le;&nbsp; 2 log (n+1)</i>2 log (n+1)</i>
 
 We summarize the properties again for the readers' understanding:
 
-- A node every node is colored either red or black. 
-- The root node is always black. 
-- A leaf or an external node is always colored black.
-- A leaf stores null pointers for its right and left child.
-- Both of children of a red node must be black.
-- A black node may have a red node as one of its children 
-- All paths from a node to descendant leaves must have same number of black node. 
+1. A node every node is colored either red or black. 
+2. The root node is always black. 
+3. A leaf or an external node is always colored black.
+4. A leaf stores null pointers for its right and left child.
+5. Both of children of a red node must be black.
+6. A black node may have a red node as one of its children 
+7. All paths from a node to descendant leaves must have same number of black node. 
 
 The advantage of using leaves as external nodes is that a new insertion is always happens an interior node in the place of a black leaf. It may increase
 the height of the tree. The process of insertion is as follow:
