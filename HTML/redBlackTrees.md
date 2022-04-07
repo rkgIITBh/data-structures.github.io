@@ -1,34 +1,33 @@
 ## Introduction to Red Black Trees
 
-AVL trees is a self-balancing BST trees. For every node of the tree, it maintains a height difference between the left and 
+AVL trees is a self-balancing BST tree. Every node of the tree maintains a height difference between the left and 
 the right sub-tree as 0, -1 or 1. Therefore, any BST operation, such as a search, or an insertion, or a deletion, on an AVL 
-tree with <i>n</i> nodes requires O(<i>log n</i>) time. The balance can be restore by applying rotation, if and when it 
-is disturbed. The rotation operation should be applied as often as the tree loses its balance. We have explored AVL tree 
-in sufficient details in last couple of blogs. 
+tree with <i>n</i> nodes requires O(<i>log n</i>) time. If and when the balance is disturbed, the balance can be restored by applying rotation. The rotation operation should be applied as often as the tree loses its balance. We have explored AVL tree 
+in sufficient detail in the last couple of blogs. 
 
 Red black tree is also a self-balancing BST.  It relaxes the requirement for frequent maintenance of node balance. The 
-readers may refer to [wikipedia for the history](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) around discovery of 
+readers may refer to [wikipedia for the history](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) around the discovery of 
 red black trees. The performance of red black trees is about 10-20% faster than that of AVL trees. A red black tree makes 
-fewer structural changes to a BST than AVL. If the performance is not very important, then AVL is simpler and more 
-preferable. If performance is important then probably preference will be to use B-trees. However, red-black tree is a 
+fewer structural changes to a BST than AVL. If the performance is not very important, AVL is simpler and  
+preferable. If performance is important, then probably preference will be to use B-trees. However, red-black tree is a 
 challenging exercise for the students for mastering data structures. 
 
 A red black tree has two different types of nodes, viz., red and black. The nodes are distinguished by storing a color bit 
-with each. A 0, and an 1 represents red and black nodes respectively. The important characteristics of a red black tree 
+with each. A 0, and a 1 represent red and black nodes, respectively. The important characteristics of a red black tree 
 are as follows:
 
-1. <b>Order invariant</b>: It preserves ordering property of a BST.
+1. <b>Order invariant</b>: It preserves the ordering property of a BST.
 2. <b>Node colors</b>: The nodes are either colored red or black.
 3. <b>External nodes</b>: Leaf nodes black are external nodes, they 
-store NULL pointers, and are colored black.
-4. <b>Internal nodes</b>: Internal nodes store keys, pointer to left and right child. Any or both child pointers may point to leaf nodes.
+store NULL pointers and are colored black.
+4. <b>Internal nodes</b>: An internal node stores a key, pointers to left and right child. Any or both child pointers may point to leaf nodes.
 5. <b>Black root</b>: The root is always colored black, and all leaf nodes are colored black. 
 6. <b>Color invariant</b>: No two consecutive nodes are colored red.
-7. <b>Height invariant</b>: The number of black nodes on any path from the root a leaf is the same.
+7. <b>Height invariant</b>: The number of black nodes on any path from the root to a leaf is the same.
 
 A new node gets red color when it is inserted. A new insertion may, therefore, violate color invariant. Two red nodes may appear as parent and child in
-the tree after an insertion. A color fixing operation is applied whenever two red nodes appear consecutively. The fixing is performed by recoloring the 
-nodes in such a way that the height invariant (black height) is preserved. Maintaining black height is important because time complexities of an 
+the tree after insertion. A color fixing operation is applied whenever two red nodes appear consecutively. The fixing is performed by recoloring the 
+nodes so that the height invariant (black height) is preserved. Maintaining black height is important because the time complexities of an 
 operation depend on black height. 
 
 <strong>Black height</strong>: Black height of a node <i>n</i> in a red black tree is equal to the number of black height from <i>n</i> to the farthest leaf node from <i>n</i>.
@@ -37,9 +36,9 @@ Figure below depicts a red black tree of black height 3. It does not include ext
 <p align="center">
 <img src="../images/redBlackTree1.jpg">
 </p>
-The black height of the above tree is 3. Every path from root to any leaf node has exactly 3 black colored nodes. The black height of node 8 is two. 
+The black height of the above tree is 3. Every path from the root to any leaf node has exactly 3 black-colored nodes. The black height of node 8 is two. 
 All leaf nodes are external nodes. A leaf node does not store actual elements. However, the presence of external nodes makes the tree strictly binary. 
-Therefore, a red black tree is not only a self-balancing BST but also a strictly binary tree. 
+Therefore, a red-black tree is not only a self-balancing BST but also a strictly binary tree. 
 
 The black height of a red black tree <i>T</i> with root <i>r</i> is denoted by <i>bh(r)</i>. We can prove the following property about black height.
 
@@ -65,15 +64,15 @@ If a red black tree <i>T</i> with root <i>r</i> has a black of height of </i>bh(
 Further, at least half the nodes in a path from root to a leaf node in any red black tree are black. Leaf is also black. Therefore, <i>bh(r) &nbsp;&le;&nbsp; h/2</i>, where
 <i>h</i> is the height of <i>T</i>. It implies, <i>h/2 &nbsp;&ge;&nbsp; log (n+1)</i>. Hence, <i>h = O(log n)</i>.
 
-Another way of proving the above property is by collapsing the nodes of a red black tree. The pictures below depict the sequence of collapsing operation 
-on the nodes of a red black tree.
+Another way of proving the above property is by collapsing the nodes of a red-black tree. The pictures below depict the sequence of collapsing operation 
+on the nodes of a red-black tree.
 <p align="center">
 <img src="../images/redBlackTree2.jpg">
 </p>
 We observe the following points about the tree after collapsing operation is complete:
-- Each node in the compact red black tree consists of only black nodes 
+- Each node in the compact red-black tree consists of only black nodes 
 - All the external nodes are at the same depth from the root 
-- An internal node may have 2, or 3 or at most 4 children
+- An internal node may have 2, or 3, or at most four children
 - The height of the collapsed tree <i>h'&nbsp;&ge;&nbsp; h/2</i>
 
 The number of internal nodes in the collapsed tree 
@@ -82,30 +81,13 @@ Therefore, <i> h&nbsp;&le;&nbsp; 2 log (n+1)</i>2 log (n+1)</i>
 
 We summarize the properties again for the readers' understanding:
 
-1. A node every node is colored either red or black. 
+1. A node is colored either red or black. 
 2. The root node is always black. 
 3. A leaf or an external node is always colored black.
 4. A leaf stores null pointers for its right and left child.
 5. Both of children of a red node must be black.
 6. A black node may have a red node as one of its children 
-7. All paths from a node to descendant leaves must have same number of black node. 
+7. All paths from a node to descendant leaves must have the same number of black nodes. 
 
-The advantage of using leaves as external nodes is that a new insertion is always happens an interior node in the place of a black leaf. It may increase
-the height of the tree. The process of insertion is as follow:
-
-- The newly inserted node is colored red. 
-- The two children of inserted nodes are external leaves that are colored black.
-
-Let us understand if the process of insertion preserves the color properties 
-stated earlier: 
-
-- Since a new insertion is always a red node, it does not disturb black depth of any node. So, the third color property of is preserved.
-- The second color property is also preserved as all
-leaves are colored black.
-- Color property 5 is also satisfied.
-- So the violation of the color invariant may be due to properties 2
-and 4 being disturbed.
-
-We plan to investigate color fixing techniques after a new insertion in the next blog. 
 
 [Back to Index](../index.md)
