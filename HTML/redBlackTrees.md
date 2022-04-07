@@ -1,15 +1,17 @@
 ## Introduction to Red Black Trees
 
-AVL trees is a self-balancing BST trees. For every node of the tree, it maintains a height difference between the left and the right sub-tree as 
-0, -1 or 1. Therefore, any BST operation, such as a search, or an insertion, or a deletion, on an AVL tree with <i>n</i> nodes requires O(<i>log n</i>) time.  
-The balance can be restore by applying rotation, if and when it gets disturbed. The rotation operation should be applied as often as the tree loses its 
-balance. We have explored AVL tree extensively in last couple of blogs. 
+AVL trees is a self-balancing BST trees. For every node of the tree, it maintains a height difference between the left and 
+the right sub-tree as 0, -1 or 1. Therefore, any BST operation, such as a search, or an insertion, or a deletion, on an AVL 
+tree with <i>n</i> nodes requires O(<i>log n</i>) time. The balance can be restore by applying rotation, if and when it 
+is disturbed. The rotation operation should be applied as often as the tree loses its balance. We have explored AVL tree 
+in sufficient details in last couple of blogs. 
 
-Red black tree is also a self-balancing BST.  It relaxes the requirement for frequent maintenance of node balance. The readers may refer to 
-[wikipedia for the history](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) around discovery of red black trees.
-The performance of red black trees is about 10-20% faster than that of AVL trees. A red black tree makes fewer structural changes to a BST than AVL. 
-If the performance is not very important, then AVL is simpler and more preferable. If performance is important then probably 
-preference will be to use B-trees. However, red-black tree is a challenging exercise for the students for mastering data structures. 
+Red black tree is also a self-balancing BST.  It relaxes the requirement for frequent maintenance of node balance. The 
+readers may refer to [wikipedia for the history](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) around discovery of 
+red black trees. The performance of red black trees is about 10-20% faster than that of AVL trees. A red black tree makes 
+fewer structural changes to a BST than AVL. If the performance is not very important, then AVL is simpler and more 
+preferable. If performance is important then probably preference will be to use B-trees. However, red-black tree is a 
+challenging exercise for the students for mastering data structures. 
 
 A red black tree has two different types of nodes, viz., red and black. The nodes are distinguished by storing a color bit with each. A 
 0, and an 1 represents red and black nodes respectively. The important characteristics of a red black tree are as follows:
