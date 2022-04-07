@@ -8,8 +8,8 @@ in sufficient detail in the last couple of blogs.
 Red-black tree is also a self-balancing BST.  It relaxes the requirement for frequent maintenance of node balance. The 
 readers may refer to [wikipedia for the history](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) around the discovery 
 of red-black trees. The performance of red-black trees is about 10-20% faster than that of AVL trees. A red-black tree 
-makes fewer structural changes to a BST than AVL. If the performance is not very important, AVL is simpler and  
-preferable. If performance is important, then probably preference will be to use B-trees. However, red-black tree is a 
+makes fewer structural changes to a BST than AVL. If the performance is not very important, AVL is simpler and  preferable.
+If performance is important, then probably preference will be to use B-trees. However, red-black tree is a 
 challenging exercise for the students for mastering data structures. 
 
 A red-black tree has two different types of nodes, viz., red and black. The nodes are distinguished by storing a color bit 
@@ -40,6 +40,7 @@ The black height of the above tree is 3. Every path from the root to any leaf no
 All leaf nodes are external nodes. A leaf node does not store actual elements. However, the presence of external nodes 
 makes the tree strictly binary. Therefore, a red-black tree is not only a self-balancing BST but also a strictly binary 
 tree. 
+
 
 The black height of a red-black tree <i>T</i> with root <i>r</i> is denoted by <i>bh(r)</i>. We can prove the following property about black height.
 
