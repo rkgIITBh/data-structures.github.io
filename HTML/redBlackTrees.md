@@ -34,7 +34,7 @@ Maintaining black height is important because the timecomplexities of an operati
 
 Figure below depicts a red-black tree of black height 3. It does not include external nodes. 
 <p align="center">
-<img src="../images/redBlackTree1.jpg">
+<img src="../images/redBlackTree1.jpg" height="250" width="380">
 </p>
 The black height of the above tree is 3. Every path from the root to any leaf node has exactly 3 black-colored nodes. The black height of node 8 is two. 
 All leaf nodes are external nodes. A leaf node does not store actual elements. However, the presence of external nodes 
