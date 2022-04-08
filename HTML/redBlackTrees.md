@@ -66,12 +66,16 @@ If a red-black tree <i>T</i> with root <i>r</i> has a black of height of </i>bh(
 Further, at least half the nodes in a path from root to a leaf node in any red-black tree are black. Leaf is also black. Therefore, <i>bh(r) &nbsp;&le;&nbsp; h/2</i>, where
 <i>h</i> is the height of <i>T</i>. It implies, <i>h/2 &nbsp;&ge;&nbsp; log (n+1)</i>. Hence, <i>h = O(log n)</i>.
 
-Another way of proving the above property is by collapsing the nodes of a red-black tree. The pictures below depict the sequence of collapsing operation 
-on the nodes of a red-black tree.
+Another way of proving the above property is by collapsing the nodes of a red-black tree. The pictures below depict the 
+sequence of collapsing operation on the nodes of a red-black tree.
 <p align="center">
 <img src="../images/redBlackTree2.jpg">
 </p>
+<p align="center">
+<img src="../images/collapsingRedBlackTree.jpg">
+</p>
 We observe the following points about the tree after collapsing operation is complete:
+
 - Each node in the compact red-black tree consists of only black nodes 
 - All the external nodes are at the same depth from the root 
 - An internal node may have 2, or 3, or at most four children
