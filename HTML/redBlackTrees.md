@@ -69,7 +69,7 @@ Further, at least half the nodes in a path from root to a leaf node in any red-b
 Another way of proving the above property is by collapsing the nodes of a red-black tree. The pictures below depict the 
 sequence of collapsing operation on the nodes of a red-black tree.
 <p align="center">
-<img src="../images/redBlackTree2.jpg">
+<img src="../images/redBlackTree2.jpg" width="400" height="500">
 </p>
 <p align="center">
 <img src="../images/collapsingRedNodes.png">
