@@ -72,7 +72,7 @@ sequence of collapsing operation on the nodes of a red-black tree.
 <img src="../images/redBlackTree2.jpg">
 </p>
 <p align="center">
-<img src="../images/collapsingRedBlackTree.jpg">
+<img src="../images/collapsingRedNode.png">
 </p>
 We observe the following points about the tree after collapsing operation is complete:
 
