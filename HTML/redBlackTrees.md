@@ -22,7 +22,7 @@ are as follows:
 store NULL pointers and are colored black.
 4. <b>Internal nodes</b>: An internal node stores a key, pointers to left and right child. Any or both child pointers may point to leaf nodes.
 5. <b>Black root</b>: The root is always colored black, and all leaf nodes are colored black. 
-6. <b>Color invariant</b>: No two consecutive nodes are colored red.
+6. <b>Color invariant</b>: No two consecutive nodes are colored red. Equivalently no red node has a red child.
 7. <b>Height invariant</b>: The number of black nodes on any path from the root to a leaf is the same.
 
 A new node gets red color when it is inserted. A new insertion may, therefore, violate color invariant. Two red nodes may 
@@ -91,7 +91,7 @@ We summarize the properties again for the readers' understanding:
 2. The root node is always black. 
 3. A leaf or an external node is always colored black.
 4. A leaf stores null pointers for its right and left child.
-5. Both of children of a red node must be black.
+5. A red node does not have a red child. Its children must be black.
 6. A black node may have a red node as one of its children 
 7. All paths from a node to descendant leaves must have the same number of black nodes. 
 
