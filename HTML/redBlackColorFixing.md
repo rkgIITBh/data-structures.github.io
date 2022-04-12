@@ -18,9 +18,9 @@ our effort a bit systematic.
 
 The newly inserted node gets two external leaf nodes. The new node is painted red. For example, insertion of
 node 3 into the red-black tree $T$ results in $T'$ shown to the right. 
-<p style="text-align:center;">
+<cener>
 <img src="../images/rbInsertNew.png" align="center">
-</p>
+</center>
 Painting a new node with red color preserves four out of five color properties. By doing so, we violate only the color invariant property. There is a 
 possibility that the newly inserted node's parent is also red. Fixing color invariant is the most difficult restructuring operation for carrying out BST 
 operations on red-black trees. 
@@ -38,9 +38,9 @@ These cases are:
 - Transfer the black color of the grandparent to the parent and the uncle, and 
 - Paint the grandparent red. 
 
-<p style="text-align:center;">
+<center>
 <img src="../images/case1colorInv.png" >
-</p>
+</center>
 
 The color flipping operation does not disturb black height. However, the issue of color invariance may reappear one level up towards the root with the grandparent and the parent of the grandparent being red.  
 
@@ -50,9 +50,7 @@ now becomes the sibling of the new node. The configuration involving newly inser
 illustrated below.
 
 
-  <center>
-<img src="../images/case2colorInv.png" >
-  </center>
+  <center><img src="../images/case2colorInv.png"></center>
 
 
 The restructuring operation converts case 2 to an instance of case 3 as we can
@@ -60,9 +58,9 @@ see in the right half of the above picture. To fully handle case 2, we need to d
 
 The instance of case 3 occurs when incoming node is the left child of its parent and the parent's sibling is black. As 
 we explained above, restructuring of case 2 produces case 3. The figure below depicts this case. 
-<p style="text-align:center;">
+<center>
 <img src="../images/case3colorInv.png" align="center">
-</p>
+</center>
 
 The grandparent slips one level down and towards right subtree. As both the grandparent and its right child are black, the 
 right subtree gains black height by one. Furthermore, due to right rotation, the left subtree loses its height by one. 
