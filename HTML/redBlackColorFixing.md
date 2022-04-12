@@ -17,7 +17,7 @@ However, we will make an effort to deal with the case from the perspective of id
 our effort a bit systematic.
 
 The newly inserted node gets two external leaf nodes. The new node is painted red. For example, insertion of
-node 3 into the red-black tree $T$ results in $T'$ shown to the right. 
+node 3 into the red-black tree <i>T</i> results in <i>T'</i> shown to the right. 
 <cener>
 <img src="../images/rbInsertNew.png" align="center">
 </center>
