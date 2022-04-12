@@ -57,7 +57,7 @@ see in the right half of the above picture. To fully handle case 2, we need to d
 
 An instance of case 3 occurs when incoming node is the left child of its parent and the parent's sibling is black. The figure below depicts this case. 
 <p>
-<img src="../images/case3colorInv.png" align="center" width="250" width="790">
+<img src="../images/case3colorInv.png" align="center">
 </p>
 
 The grandparent slips one level down and towards right subtree. As both the grandparent and its right child are black, the right subtree gains black 
