@@ -50,7 +50,9 @@ now becomes the sibling of the new node. The configuration involving newly inser
 illustrated below.
 
 <p style="text-align:center;">
+  <center>
 <img src="../images/case2colorInv.png" >
+  </center>
 </p>
 
 The restructuring operation converts case 2 to an instance of case 3 as we can
