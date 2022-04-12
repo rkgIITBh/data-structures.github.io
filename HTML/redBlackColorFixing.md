@@ -18,15 +18,15 @@ our effort a bit systematic.
 
 The newly inserted node gets two external leaf nodes. The new node is painted red. For example, insertion of
 node 3 into the red-black tree <i>T</i> results in <i>T'</i> shown to the right. 
-<cener>
-<img src="../images/rbInsertNew.png" align="center">
-</center>
+
+<cener><img src="../images/rbInsertNew.png" align="center"></center>
+
 Painting a new node with red color preserves four out of five color properties. By doing so, we violate only the color invariant property. There is a 
 possibility that the newly inserted node's parent is also red. Fixing color invariant is the most difficult restructuring operation for carrying out BST 
 operations on red-black trees. 
 
 If the parent of the newly inserted node is black, then the color invariant is not violated. We, therefore, focus on the problem when the parent's color is red. 
-Furthermore, we only consider three cases for restoring color invariant. There are three other symmetric cases. The three cases are:  
+Furthermore, we only consider three cases for restoring color invariant. There are three other symmetric cases. The three cases we discuss here are:  
 
 1. The newly inserted node is the left child of its parent, and the parent sibling is a red node. 
 2. The newly inserted node is the right child of its parent, and the parent's sibling is black. 
@@ -38,9 +38,7 @@ These cases are:
 - Transfer the black color of the grandparent to the parent and the uncle, and 
 - Paint the grandparent red. 
 
-<center>
-<img src="../images/case1colorInv.png" >
-</center>
+<center><img src="../images/case1colorInv.png" ></center>
 
 The color flipping operation does not disturb black height. However, the issue of color invariance may reappear one level up towards the root with the grandparent and the parent of the grandparent being red.  
 
@@ -58,9 +56,8 @@ see in the right half of the above picture. To fully handle case 2, we need to d
 
 The instance of case 3 occurs when incoming node is the left child of its parent and the parent's sibling is black. As 
 we explained above, restructuring of case 2 produces case 3. The figure below depicts this case. 
-<center>
-<img src="../images/case3colorInv.png" align="center">
-</center>
+
+<center><img src="../images/case3colorInv.png" align="center"></center>
 
 The grandparent slips one level down and towards right subtree. As both the grandparent and its right child are black, the 
 right subtree gains black height by one. Furthermore, due to right rotation, the left subtree loses its height by one. 
