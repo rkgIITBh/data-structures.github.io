@@ -49,7 +49,7 @@ Case 2 occurs if incoming node is the right child of its parent, and the sibling
 First, we apply a left rotation around the parent. The rotation brings the child one level up and the sibling of the parent now becomes the sibling of 
 the new node. The configuration involving newly inserted node, the parent and the old sibling is illustrated below.
 <p>
-<img src="../images/case2colorInv.png" align="center" height="250" width="790">
+<img src="../images/case2colorInv.png" align="center" >
 </p>
 
 The restructuring operation converts case 2 to an instance of case 3 as we can
