@@ -40,7 +40,7 @@ this case are:
 - Paint the grandparent red. 
 
 <p>
-<img src="../images/case1colorInv.png" width="300" align="center" height="300">
+<img src="../images/case1colorInv.png" >
 </p>
 
 The color flipping operation does not disturb black height. However, the issue of color invariance may reappear one level up towards root with the grandparent and the parent of the grand parent being red.  
