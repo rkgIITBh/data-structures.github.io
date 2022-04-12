@@ -69,7 +69,7 @@ Hence, we can just flip the color of the grandparent and the incoming node after
 black of both right and left subtrees of the incoming node in the restructured tree.
 
 
-In the next blog, we will a few examples of insertions.
+In the next blog, we will discuss a few examples of insertions.
 
 
 [Back to index](../index.md)
