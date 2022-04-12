@@ -18,9 +18,9 @@ our effort a bit systematic.
 
 The newly inserted node gets two external leaf nodes. The new node is painted red. For example, insertion of
 node 3 into the red-black tree <i>T</i> results in <i>T'</i> shown to the right. 
-
+<p>
 <cener><img src="../images/rbInsertNew.png" align="center"></center>
-
+</p>
 Painting a new node with red color preserves four out of five color properties. By doing so, we violate only the color invariant property. There is a 
 possibility that the newly inserted node's parent is also red. Fixing color invariant is the most difficult restructuring operation for carrying out BST 
 operations on red-black trees. 
@@ -37,8 +37,8 @@ These cases are:
 
 - Transfer the black color of the grandparent to the parent and the uncle, and 
 - Paint the grandparent red. 
-
-<center><img src="../images/case1colorInv.png" ></center>
+<p>
+<center><img src="../images/case1colorInv.png" ></center></p>
 
 The color flipping operation does not disturb black height. However, the issue of color invariance may reappear one level up towards the root with the grandparent and the parent of the grandparent being red.  
 
@@ -47,8 +47,8 @@ First, we apply a left rotation around the parent. The rotation brings the child
 now becomes the sibling of the new node. The configuration involving newly inserted node, the parent and the old sibling is 
 illustrated below.
 
-
-  <center><img src="../images/case2colorInv.png"></center>
+<p>
+  <center><img src="../images/case2colorInv.png"></center></p>
 
 
 The restructuring operation converts case 2 to an instance of case 3 as we can
@@ -64,6 +64,8 @@ right subtree gains black height by one. Furthermore, due to right rotation, the
 Hence, we can just flip the color of the grandparent and the incoming node after right rotation. It will restore the 
 black of both right and left subtrees of the incoming node in the restructured tree.
 
+
 In the next blog, we will a few examples of insertions.
+
 
 [Back to index](../index.md)
