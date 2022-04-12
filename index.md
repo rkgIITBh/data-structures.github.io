@@ -72,6 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [Fixing color of Red-Black Trees After Insertions](HTML/redBlackColorfixing.md)
 - [Introduction to Red-Black Trees](HTML/redBlackTrees.md)
 - [Fixing Height Violations in AVL Trees](HTML/avlHeightViolation.md)
 - [Maintaining Balanced Binary Search Tree](HTML/avlTree.md)
