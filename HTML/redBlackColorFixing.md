@@ -49,11 +49,11 @@ First, we apply a left rotation around the parent. The rotation brings the child
 now becomes the sibling of the new node. The configuration involving newly inserted node, the parent and the old sibling is 
 illustrated below.
 
-<p style="text-align:center;">
+
   <center>
 <img src="../images/case2colorInv.png" >
   </center>
-</p>
+
 
 The restructuring operation converts case 2 to an instance of case 3 as we can
 see in the right half of the above picture. To fully handle case 2, we need to deal with case 3. 
