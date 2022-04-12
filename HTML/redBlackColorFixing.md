@@ -18,7 +18,7 @@ our effort a bit systematic.
 
 The newly inserted node gets two external leaf nodes. The new node is painted red. For example, insertion of
 node 3 into the red-black tree $T$ results in $T'$ shown to the right. 
-<p>
+<p style="text-align:center;">
 <img src="../images/rbInsertNew.png" align="center">
 </p>
 Painting a new node with red color preserves four out of five color properties. By doing so, we violate only the color invariant property. There is a 
@@ -38,7 +38,7 @@ These cases are:
 - Transfer the black color of the grandparent to the parent and the uncle, and 
 - Paint the grandparent red. 
 
-<p>
+<p style="text-align:center;">
 <img src="../images/case1colorInv.png" >
 </p>
 
@@ -49,8 +49,8 @@ First, we apply a left rotation around the parent. The rotation brings the child
 now becomes the sibling of the new node. The configuration involving newly inserted node, the parent and the old sibling is 
 illustrated below.
 
-<p>
-<img src="../images/case2colorInv.png" align="center" >
+<p style="text-align:center;">
+<img src="../images/case2colorInv.png" >
 </p>
 
 The restructuring operation converts case 2 to an instance of case 3 as we can
@@ -58,7 +58,7 @@ see in the right half of the above picture. To fully handle case 2, we need to d
 
 The instance of case 3 occurs when incoming node is the left child of its parent and the parent's sibling is black. As 
 we explained above, restructuring of case 2 produces case 3. The figure below depicts this case. 
-<p>
+<p style="text-align:center;">
 <img src="../images/case3colorInv.png" align="center">
 </p>
 
