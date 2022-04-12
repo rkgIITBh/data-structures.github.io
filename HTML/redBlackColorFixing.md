@@ -18,7 +18,7 @@ our effort a bit systematic.
 The newly inserted node gets two external leaf nodes. The new node is painted red. For example, insertion of
 node 3 into the red-black tree $T$ results in $T'$ shown to the right. 
 <p>
-<img src="../images/redBlackNewInsertion.jpg" align="center" width="780" height="250">
+<img src="../images/rbInsertNew.png" align="center">
 </p>
 Painting new node by red color preserves four out of five color properties. There is only the color invariant property being violated. There is a 
 possibility that the newly inserted node's parent is also red. Fixing color invariant is the most difficult restructuring operation for carrying out BST 
