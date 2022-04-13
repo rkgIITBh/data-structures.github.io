@@ -6,7 +6,7 @@ existing red-black tree. In this blog, our focus is on illustrating these violat
 The tree on the left part of figure below shows a violation of color invariance when key value 3 is inserted into the existing tree 
 consisting of set of keys \{1, 4, 5, 7, 8, 10, 17, 19\}. 
 
-<p text-stye:"center;"><img src="rbInsertCase1.png"></p>
+<p text-stye:"center;"><img src="../images/rbInsertCase1.png"></p>
 
 Key 3 is inserted as as red node below 5 replacing its left external leaf node. For brevity, the figure does not show external nodes. 
 Node 3 is painted red at the time of insertion. Its parent (node 5) is also red. Therefore, it leads to a color violation. 
@@ -23,11 +23,11 @@ As far as case 2 is concerned, the first restructuring operation is to apply a l
 affect only red nodes. Therefore, it rotation does disturb black height of the subtrees. So, case 2 turns into case 3. 
 The figure below illustrates the rotation operation. 
 
-<p text-stye:"center;"><img src="rbInsertCase2.png"></p>
+<p text-stye:"center;"><img src="../images/rbInsertCase2.png"></p>
 
 The resolution of case 3 requires a right rotation and color flipping as indicated below.  
 
-<p text-stye:"center;"><img src="rbInsertCase3.png"></p>
+<p text-stye:"center;"><img src="../image/rbInsertCase3.png"></p>
 
 A high level description of the algorithm for color fixing is given below:
 '''
