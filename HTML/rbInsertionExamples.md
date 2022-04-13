@@ -30,6 +30,7 @@ The resolution of case 3 requires a right rotation and color flipping as indicat
 <p style="text-align:center;"><img src="../images/rbInsertCase3.png"></p>
 
 A high level description of the algorithm for color fixing is given below:
+
 '''
 insertionRedblackTree(T, x) {
     color[x] = red;
