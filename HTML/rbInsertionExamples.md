@@ -31,7 +31,7 @@ The resolution of case 3 requires a right rotation and color flipping as indicat
 
 A high level description of the algorithm for color fixing is given below:
 
-'''
+```
 insertionRedblackTree(T, x) {
     color[x] = red;
     while (x <> root(T) && color[p(x)] == red) {
@@ -50,7 +50,7 @@ insertionRedblackTree(T, x) {
     }
     color[root(T)] = black;
 }
-'''
+```
 
 Recoloring takes O(1) time. Each rotation operation also has time complexity of O(1). So restoring color invariance at 
 each level of the tree takes O(1) time. Since the height of the tree is O(<i>log n</i>), the worst case time 
