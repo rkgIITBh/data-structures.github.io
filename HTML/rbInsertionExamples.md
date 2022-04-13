@@ -54,3 +54,5 @@ insertionRedblackTree(T, x) {
 Recoloring takes O(1) time. Each rotation operation also has time complexity of O(1). So restoring color invariance at 
 each level of the tree takes O(1) time. Since the height of the tree is O(<i>log n</i>), the worst case time 
 for resolution of color violation may take O(<i>log n</i>) time in the worstcase. 
+
+[Back to Index](../index.md)
