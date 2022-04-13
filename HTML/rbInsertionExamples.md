@@ -27,7 +27,7 @@ The figure below illustrates the rotation operation.
 
 The resolution of case 3 requires a right rotation and color flipping as indicated below.  
 
-<p text-stye:"center;"><img src="../image/rbInsertCase3.png"></p>
+<p text-stye:"center;"><img src="../images/rbInsertCase3.png"></p>
 
 A high level description of the algorithm for color fixing is given below:
 '''
