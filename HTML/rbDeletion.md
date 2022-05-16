@@ -56,7 +56,7 @@ Figure below illustrates the two subcases
 1. when right child of <i>s</i> is red  
 2. when left child of <i>s</i> is red.
 
-<p style="text-align:center:"><img src="../images/case1aDeletion.png"></p>
+<p style="text-align:center;"><img src="../images/case1aDeletion.png"></p>
 
 The first subcase is. 
 
