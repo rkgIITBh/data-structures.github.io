@@ -80,5 +80,16 @@ two subtrees are restored. After recoloring <i>z</i>, it contributes 1 to black 
 
 Therefore, we can remove the excess black of <i>v</i> as <i>p</i> also acquires the original left subtree of <i>z</i>.
 
+<strong>Case 2:</strong> <i>v</i>'s sibling <i>s</i> is black and so are its children.
+In this case also there are two subcases depending on whether the parent <i>p</i>'s color. 
 
+If <i>p</i> is red then exchanging colors of 
+<i>p</i> and <i>s</i> we get rid of excess black from <i>v</i>. It adjusts the black height of <i>p</i>'s right subtree to the original
+value by removing black color from <i>s</i>. But due to <i>p</i> acquiring black color, we could remove excess black from <i>v</i>. 
 
+The second subcase arises when <i>p</i> is black. In this case we cannot readjust excess black. But the excess black is transferred 
+to <i>p</i>. So, the issue of excess black is pushed one level up the tree.  Figure below illustrates both subcases.
+
+<p style="text-align:center:"><img src="../images/case2Deletion.png"></p>
+
+<strong>Case 3:</strong> Final case we need to consider is when sibling <i>s</i> is red.
