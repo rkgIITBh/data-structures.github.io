@@ -1,47 +1,77 @@
 ## Deletions in Red-Black Trees
 
-Deletions in a red-black tree must address two problems, namely,
+A deletion operation in a red-black tree should handle two problems: 
 
-1. Preserving BST property
-2. Check if color properties are violated and restore them.
+1. Preserving BST property.
+2. Checking if color properties are violated then restore them.
 
-First, lets us focus only on the issue of preserving BST property without introducing the complications of node colors. 
-We handle color violations at a later stage. The complexity of BST deletion of a node node <i>X</i> depends on 
-whether it a leaf node or an internal node.   
+The problem of preserving BST property without the complications of maintaining color properties of red-black tree is 
+relatively simple. The complexities of deletion in BST had been discussed earlier. For the sake of completeness, we briefly 
+summarize the deletion rules for BST.  The deletion of a node node <i>X</i> from a BST depends on whether <i>X</i> 
+is a leaf node or an internal node. A quick recap of these rules  is provided below: 
 
-As explained earlier in the BST Blog, there are three cases for deletion:
+There are three cases for BSR deletion:
 
 1. <i>X</i>'s is leaf node. 
-2. <i>X</i> has only one valid child.
-3. <i>X</i>'s both children are valid nodes. 
+2. <i>X</i> has only one child.
+3. <i>X</i>'s both children are nodes. 
 
-We have not considered external leaf nodes in BST. However, in red-black tree leaf nodes are external nodes which store only NULL pointers. 
-Therefore, a valid leaf node in BST is a node in the corresponding red-black with only external nodes as its children. 
+We did not consider external leaf nodes in BST. However, external nodes do not introduce any added complication. 
+A leaf node of a red-black trees is an external node with NULL pointers. Therefore, a leaf node in a BST  
+is mapped to a node having external nodes as its children in the corresponding red-black tree. 
 
-Case 1 is easiest to handle. After deleting <i>X</i> and its both leaf nodes, one external leaf node is at <i>X</i>'s position.  
+The rules for the deletion of a node $n$ in a BST are as follows:
 
-<p style="text-align:center:"><img src="../images/case1BSTdeletion.png"></p>
+1. If <i>X</i> is a leaf node, delete it.  
+2. If <i>X</i> has one child <i>Y</i>, eliminate <i>X</i> and let the grandparent adopt <i>Y</i> as its child. 
+3. If <i>X</i> has two children then first copy its in-order successor <i>Y</i>'s value in <i>X</i> then delete <i>Z</i>. 
 
-Case 2 requires promoting <i>X</i>'s child one level up.  <i>X</i>'s parent becomes its child's parent. 
-In other words, grandparent of the orphaned child is adopted by the grandparent. 
+We have already proved that the in-order successor of node in a BST either has  no children or has only a right child.  
+Figure below illustrates rule 3 of a deletion in a BST, 
 
-<p style="text-align:center:"><img src="../images/case2BSTdeletion.png"></p>
+<p style="text-align:center:"><img src="../images/deletionBST.png"></p>
 
-Case 3 is toughest to handle. However, the inorder successor of <i>X</i> must be a node that satisfies either case 1 or case 2. 
-We have discussed detail in the blog for Binary Search Tree. A curious reader may refer back to the previous blog on BST. For the sake of 
-completeness, we just provide an illustration of case 3 below.  
+It indicates that any removal operation is equivalent deletion of a node that has at least one external child. 
+In other words, the deletion of a node <i>X</i> in a BST may splice out a node at a position different 
+from <i>X</i> unless <i>X</i> is a leaf node. For example, the removal of 70 executed by removing the node 
+that actually had 55. However, it does not create any loss of information as the content of spliced node is copied 
+in advance at the position where 70 was originally stored. 
 
-<p style="text-align:center:"><img src="../images/case3deletion.png"></p>
+We shall refer to the node occupying the place of earlier position of <i>X</i> as the promoted node <i>P</i> 
+because, it moves closer to the root. If <i>X</i> is red, then color <i>P</i> as black. Otherwise, color 
+<i>P</i> as double black. The major issue in deletion is to handle distribution of the extra black acquired by
+<i>P</i>. The figure below illustrates two situations stated above. 
 
-The spliced node <i>Y</i> may be different from <i>X</i>.  
-However, splicing out <i>Y</i> does not create any complication as the content of <i>Y</i> is stored in advance. 
-However, for restoring color invariance we need to address the color issues with respect to spliced out node. 
+<p style="text-align:center:"><img src="../images/rbtDeletionIssues.png"></p>
 
-If <i>Y</i> were a red node, then splicing it does not affect color properties. 
-Figure below depicts the case where <i>X</i> has no valid children.\
+If the spliced out node is red there is no problem. The problem occurs only when spliced out node is black.  
 
-<p style="text-align:center:"><img src="../images/rbt_deleteYred.png"></p>
+We need to consider a few structural conditions of the tree when a deletion
+occurs. In following discussion, we denote the node acquiring excess black as
+<i>v</i>. 
 
-The above figure illustrates only the part of the tree of interest for deletion operation. The node pair labeled R/B and B/R 
-imply that if the first node is red and the second is black or vice versa.   
+<strong>Case 1:</strong> <i>v</i>'s sibling is black with a red child. 
+
+Figure below illustrates the case when right child of <i>s</i> is red.  
+
+<p style="text-align:center:"><img src="../images/case1aDeletion.png"></p>
+
+It is simple case. 
+
+- Perform a restructuring by a single rotation around the sibling <i>s</i>.
+- Recolor <i>s</i>'s red child with black. 
+
+The rotation operation promotes sibling <i>s</i> while recoloring red child
+increases the black height of the correspoinding subtree by 1. The other subtree of <i>s</i> is acquired 
+by <i>p</i>. So the black height both subtrees of <i>s</i> are balanced. The excess black at <i>v</i> is  
+absorbed by the recolor of right child of <i>s</i>.  
+
+Figure below depicts the case when <i>s</i>'s leftchild is red. In this case
+a double rotation of type RL has to be performed.
+
+<p style="text-align:center:"><img src="../images/case1bDeletion.png"></p>
+
+The readers can convince themselves that the  recoloration following by restructuring is correct.
+
+
 
