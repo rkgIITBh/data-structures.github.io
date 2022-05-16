@@ -29,7 +29,7 @@ The rules for the deletion of a node $n$ in a BST are as follows:
 We have already proved that the in-order successor of node in a BST either has  no children or has only a right child.  
 Figure below illustrates rule 3 of a deletion in a BST, 
 
-<p style="text-align:center:"><img src="../images/deletionBST.png"></p>
+<p style="text-align:center:"><img src="../images/deletionBST.png" class="center"></p>
 
 It indicates that any removal operation is equivalent to deleting a node with at least one external child. 
 In other words, the deletion of a node <i>X</i> in a BST may splice out a node at a position different 
@@ -42,7 +42,7 @@ because, it moves closer to the root. If <i>X</i> is red, then color <i>P</i> as
 <i>P</i> as double black. The major issue in deletion is to handle distribution of the extra black acquired by
 <i>P</i>. The figure below illustrates two situations stated above. 
 
-<p style="text-align:center:"><img src="../images/rbtDeletionIssues.png"></p>
+<p style="text-align:center:"><img src="../images/rbtDeletionIssues.png" class="center"></p>
 
 If the spliced-out node is red, there is no problem. The problem occurs only when the spliced-out node is black.  
 
