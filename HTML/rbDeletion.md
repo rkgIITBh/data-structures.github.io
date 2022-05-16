@@ -52,11 +52,13 @@ occurs. In following discussion, we denote the node acquiring excess black as
 
 <strong>Case 1:</strong> <i>v</i>'s sibling is black with a red child. 
 
-Figure below illustrates the case when right child of <i>s</i> is red.  
+Figure below illustrates the two subcases 
+1. when right child of <i>s</i> is red  
+2. when left child of <i>s</i> is red.
 
 <p style="text-align:center:"><img src="../images/case1aDeletion.png"></p>
 
-It is simple case. 
+The first subcase is. 
 
 - Perform a restructuring by a single rotation around the sibling <i>s</i>.
 - Recolor <i>s</i>'s red child with black. 
@@ -66,12 +68,17 @@ increases the black height of the correspoinding subtree by 1. The other subtree
 by <i>p</i>. So the black height both subtrees of <i>s</i> are balanced. The excess black at <i>v</i> is  
 absorbed by the recolor of right child of <i>s</i>.  
 
-Figure below depicts the case when <i>s</i>'s leftchild is red. In this case
-a double rotation of type RL has to be performed.
+The readers can convince themselves that the recoloration following by restructuring is correct for the second subcase. The restructuring
+of the tree is performed by two successive single rotations: first a right rotation and then a left rotation  around <i>z</i>. The first
+rotation bring <i>z</i> one level up and pushes <i>s</i> one level down. It may increase the black height of right subtree of <i>z</i>
+after the first rotation. However, after second rotation <i>z</i>'s level is increases by 1 again and <i>p</i> is pushed one level
+down. Since <i>z</i> goes one level up, its right subtree also pushed one level up. So the original configuration of <i>s</i> and its
+two subtrees are restored. After recoloring <i>z</i>, it contributes 1 to black heights of 
 
-<p style="text-align:center:"><img src="../images/case1bDeletion.png"></p>
+- <i>s</i> and its descendants, and
+- <i>p</i> and its descendants.
 
-The readers can convince themselves that the  recoloration following by restructuring is correct.
+Therefore, we can remove the excess black of <i>v</i> as <i>p</i> also acquires the original left subtree of <i>z</i>.
 
 
 
