@@ -105,10 +105,7 @@ color is flipped between the sibling <i>s</i> and the parent <i>p</i>. Now sibli
 Hence one of the previous cases applies.
 
 We have discussed the deletion process by specifying general rules for handling extra black acquired by a node 
-after deletion. So, it is time to examine some examples to familiarize the reader with actual operations.
+after deletion. So, it is time to examine some examples to familiarize the reader with actual operations. In the next blog
+we will deal with examples.
 
-Consider the red-black tree shown below:
-
-<p style="text-align:center;"><img src="../images/exampleForDeletion.png"></p>
-
-Let us remove 
+[Back to Index](../index.md)
