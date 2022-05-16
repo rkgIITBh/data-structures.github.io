@@ -10,7 +10,7 @@ relatively simple. The complexities of deletion in BST had been discussed earlie
 summarize the deletion rules for BST.  The deletion of a node node <i>X</i> from a BST depends on whether <i>X</i> 
 is a leaf node or an internal node. A quick recap of these rules  is provided below: 
 
-There are three cases for BSR deletion:
+There are three cases for BST deletion:
 
 1. <i>X</i>'s is leaf node. 
 2. <i>X</i> has only one child.
