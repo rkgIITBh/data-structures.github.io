@@ -93,3 +93,21 @@ to <i>p</i>. So, the issue of excess black is pushed one level up the tree.  Fig
 <p style="text-align:center:"><img src="../images/case2Deletion.png"></p>
 
 <strong>Case 3:</strong> Final case we need to consider is when sibling <i>s</i> is red.
+
+The case is illustrated in following figure.
+
+<p style="text-align:center:"><img src="../images/case3Deletion.png"></p>
+
+First restructure the case into one of previous cases where sibling of node with double black is black. We apply a left 
+rotation around <i>s</i>. It brings <i>s</i> to position of <i>p</i>, and <i>p</i> is pushed down one level below. The 
+color is flipped between the sibling <i>s</i> and the parent <i>p</i>. Now sibling of double black node <i>v</i> is black. 
+Hence one of the previous cases applies.
+
+We have discussed the deletion process in abstract which specify general rules for handling extra black acquired by a node 
+after deletion. So, it is time to examine some example to familiarize the reader with actual operations.
+
+Consider the red-black tree shown below:
+
+<p style="text-align:center:"><img src="../images/exampleForDeletion.png"></p>
+
+Let us remove 
