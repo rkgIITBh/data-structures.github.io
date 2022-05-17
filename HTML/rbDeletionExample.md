@@ -19,7 +19,7 @@ and left subtrees of 6. The black heights of the subtrees of the root 4 also are
 Next consider deletion of 5. It does not create any double black node. Therefore, we can delete the node without any problem.
 It is an example of the symmetric subcase 1 of case 1 of deletion explained earlier. The tree after deletion of 5 becomes:
 
-<p style="text-align:center;"><img src="../images/rbtDeletion_ex1delete5.jpg"></p>
+<p style="text-align:center;"><img src="../images/rbt_ex1delete5.jpg"></p>
 
 If we now remove 6 from the above tree, it creates excess black problem. Node 4's right child is a leaf with excess black. 
 The configuration is a symmetric case of case 2 (black sibling with a red child).  Since both children of the black sibling
@@ -27,4 +27,4 @@ are red we can apply restructuring and color compensation for either of the two 
 rotation on left sibling of the node with excess black. It pushes the sibling one level up and the parent one level down. 
 Hence, the black heights at parent is adjusted appropriately. The result is shown in the figure below.
 
-<p style="text-align:center;"><img src="../images/rbtDeletion_ex1delete6.jpg"></p>
+<p style="text-align:center;"><img src="../images/rbt_ex1delete6.jpg"></p>
