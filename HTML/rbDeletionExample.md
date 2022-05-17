@@ -12,5 +12,7 @@ We just need to recolor the sibling to red. The result is given below.
 
 <p style="text-align:center;"><img src="../images/rbtDeletion_ex1solved.jpg"></p>
 
-
+Flip the color of the sibling 5 from black to red. It reduces the black height of 5  to 1. Now eliminate the excess 
+color from right leaf of 6. It reduces the black height of right subtree of 6 which becomes 1. Therefore, the left and 
+subtrees of 6 are balanced. The black heights of the subtrees of the root 4 are also become balanced. 
 
