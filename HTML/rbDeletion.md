@@ -35,12 +35,20 @@ in a BST may splice out a node at a position different from <i>X</i> unless <i>X
 the node that had 55. However, it does not create any loss of information as the content of spliced node is copied in advance at the position where 70 was 
 originally stored. 
 
-Before proceeding further, we have two more important observations about red-black trees:
-1. Deleting a red node does not affect color properties of a red-black tree.
-2. A red node have two black children.
-Note that it possible for a red node to have two external leaf nodes as its children. But a red node cannot have one external leaf and one internal as its
-children.
+In the context of a red-black tree, it is convenient to distinguish between two types of leaf nodes, viz., an <b>external leaf</b> and an <b>internal leaf</b>. 
+An external leaf node contains no information. We have represented an external leaf diagramatically by little black rectangles. All external leaf nodes 
+are black. An internal leaf, which we will refer to simply as a leaf node, is a node with two external leaves as children. 
+A non-leaf red node cannot have one external leaf as one of its children as it violates the black height property of a legal red-black tree.
 
+Now we are ready to analyze the rules for deletions. The rules depend on the position of the node to be deleted.
+
+1. If a red leaf is to be deleted then there is no problem. No color properties will be disturbed if the node is deleted.
+2. If node to be deleted is black and has only one valid node as child, then that child must be red. In this case, the red child replaces the node
+   recolored black.
+3. If the node to be deleted has two internal nodes as children, then the inorder successor node is to be deleted. case, if one of the 
+   cases 1 or 2 applies then perform deletion following the appropriate rule. However, if the inorder successor is a black leaf then we have to
+   apply color compensation operations. 
+   
 The child of a node is always at a lower level than the node. If a node has two children then its inorder successor is always be at a level lower than 
 the node. Therefore, the removal of a node promotes a node at a lower level. For example, the deletion of a node having no child promotes one of its
 external leaf. Therefore, removal of a node <i>X</i> in a red-black tree promotes at least one node at a lower level. We shall refer to the node 
