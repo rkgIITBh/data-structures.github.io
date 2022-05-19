@@ -43,9 +43,9 @@ The rules for removing a node <i>X</i>  depend on the position of the node splic
 
 1. If <i>X</i> is a red leaf then there is no problem. No color properties will be disturbed if <i>X</i> is deleted.
 2. If <i>X</i> is black and it has only one valid node <i>Y</i> as child, then <i>Y</i> must be red. <i>Y</i> replaces <i>X</i> and is recolored black.
-3. If <i>X</i> has two internal nodes as children, then the inorder successor node <i>Y</i> should be deleted. if <i>Y</i> is a black 
-   leaf then we have to apply color compensation operations. Otherwise, one of the cases above should apply. So, the deletion is done using
-   the applicable rule.
+3. If <i>X</i> has two internal nodes as children, then the inorder successor node <i>Y</i> should be deleted. 
+
+
    
 Figure below illustrates deletion operations involving case 1 and case 2. 
 
@@ -55,8 +55,12 @@ Figure below illustrates deletion operations involving case 1 and case 2.
 <p style="text-align:center;"><img src="../images/rbt_black-RedDeletion.jpg">
    <br> <b>Case 2:</b> Deletion of a black node with a single red child.
 </p>
-Case 3 occurs when we attempt to delete a black leaf. It promotes an external leaf to occupy the position of the deleted node.
-The new external leaf acquires an excess black due to the removal of the black leaf as indicated in the figure below.
+In case 3, if the inorder successor <i>Y</i> is a black leaf then we have to apply color compensation operations. 
+Otherwise, one of the cases above should apply, and the deletion is done using the applicable rule.
+
+Hence, the most complex instance of case 3 occurs when we attempt to delete a black leaf.  It promotes an external leaf to 
+occupy the position of the deleted node. The new external leaf acquires an excess black due to the removal of the black leaf 
+as indicated in the figure below.
 
 <p style="text-align:center;"><img src="../images/rbt_blackDeletion.jpg">
    <br> <b>Case 3:</b> Deletion of a black leaf node.
