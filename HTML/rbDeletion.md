@@ -14,6 +14,7 @@ There are three cases for BST deletion:
 1. <i>X</i>'s is leaf node. 
 2. <i>X</i> has only one child.
 3. <i>X</i>'s both children are nodes. 
+
 We did not consider external leaf nodes in BST. However, external nodes do not introduce any added complications. An external leaf node of a red-black
 tree is an external node with NULL pointers. A leaf node in a BST is mapped to a node having external nodes as its children in the corresponding 
 red-black tree. We will refer to a BST leaf as an internal leaf in the red-black tree to distinguish it from an external leaf node.  
