@@ -28,7 +28,7 @@ The rules for the deletion of a node <i>X</i> in a BST are as follows:
 We have already proved that the in-order successor of node in a BST either has  no children or has only one right child. Figure below illustrates rule
 3 of a deletion in a BST, 
 
-<p style="text-align:center;"><img src="../images/deletionBST.png"></p>
+<p style="text-align:center;"><img src="../images/deletionBST.jpg"></p>
 
 The little black rectangles in the figure represent external leaf nodes which do not store any information. Any removal operation from a BST is 
 equivalent to deleting a node with at least one external child. The deletion of a node <i>X</i> may splice out a node at a position different from 
@@ -77,7 +77,7 @@ Figure below illustrates the two subcases
 1. when right child of <i>s</i> is red  
 2. when left child of <i>s</i> is red.
 
-<p style="text-align:center;"><img src="../images/case1aDeletion.png"></p>
+<p style="text-align:center;"><img src="../images/case1aDeletion.jpg"></p>
 
 The first subcase is. 
 
@@ -112,13 +112,13 @@ value by removing black color from <i>s</i>. But due to <i>p</i> acquiring black
 The second subcase arises when <i>p</i> is black. In this case, we cannot readjust excess black. But the excess black is transferred 
 to <i>p</i>. So, the issue of excess black is pushed one level up the tree.  Figure below illustrates both subcases.
 
-<p style="text-align:center;"><img src="../images/case2Deletion.png"></p>
+<p style="text-align:center;"><img src="../images/case2Deletion.jpg"></p>
 
 <strong>Case 3:</strong> Final case we need to consider is when sibling <i>s</i> is red.
 
 The case is illustrated in the following figure.
 
-<p style="text-align:center;"><img src="../images/case3Deletion.png"></p>
+<p style="text-align:center;"><img src="../images/case3Deletion.jpg"></p>
 
 First restructure the case into one of previous cases where sibling of node with double black is black. We apply a left 
 rotation around <i>s</i>. It brings <i>s</i> to position of <i>p</i>, and <i>p</i> is pushed down one level below. The 
