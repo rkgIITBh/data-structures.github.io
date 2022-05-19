@@ -64,14 +64,14 @@ new external leaf acquires an excess black due to the removal of the black leaf 
 <br> Case 3: Deletion of a black leaf node.
 </p>
 The removal of a node <i>X</i> in a red-black tree promotes at least one node at a lower level. We shall refer to the node occupying the earlier 
-position of <i>X</i> as the promoted node <i>P</i> because, it moves closer to the root. The color <i>P</i> as double black. The major issue in deletion
+position of <i>X</i> as the promoted node <i>P</i>, because it moves closer to the root. The color <i>P</i> as double black. The major issue in deletion
 is to handle distribution of the extra black acquired by <i>P</i>. The figure below illustrates two situations stated above. 
 
 
 We need to consider a few structural conditions of the tree when a deletion occurs. In the following discussion, we denote the node acquiring excess 
 black as <i>v</i>. 
 
-<strong>Case 1:</strong> <i>v</i>'s sibling is black with a red child. 
+<strong>Case 3a:</strong> <i>v</i>'s sibling is black with a red child. 
 
 Figure below illustrates the two subcases 
 1. when right child of <i>s</i> is red  
@@ -79,7 +79,7 @@ Figure below illustrates the two subcases
 
 <p style="text-align:center;"><img src="../images/case1aDeletion.jpg"></p>
 
-The first subcase is. 
+Handle the first subcase as follows. 
 
 - Perform a restructuring by a single rotation around the sibling <i>s</i>.
 - Recolor <i>s</i>'s red child with black. 
@@ -89,20 +89,18 @@ subtree of <i>s</i> is acquired by <i>p</i>. So the black height both subtrees o
 absorbed by the recolor of right child of <i>s</i>.  
 
 The readers can convince themselves that the recoloration followed by restructuring is correct for the second subcase. Two successive single rotations 
-perform the restructuring
-of the tree: first a right rotation and then a left rotation around <i>z</i>. The first
+perform the restructuring of the tree: first a right rotation and then a left rotation around <i>z</i>. The first
 rotation bring <i>z</i> one level up and pushes <i>s</i> one level down. It may increase the black height of the right subtree of <i>z</i>
 after the first rotation. However, after second rotation <i>z</i>'s level is increases by 1 again and <i>p</i> is pushed one level
 down. Since <i>z</i> goes one level up, its right subtree also pushed one level up. So the original configuration of <i>s</i> and its
-two subtrees are restored.  
-Recoloring <i>z</i>, it contributes 1 to the black heights of 
+two subtrees are restored.  Recoloring <i>z</i>, it contributes 1 to the black heights of:
 
 - <i>s</i> and its descendants, and
 - <i>p</i> and its descendants.
 
 Therefore, we can remove the excess black of <i>v</i> as <i>p</i> also acquires the original left subtree of <i>z</i>.
 
-<strong>Case 2:</strong> <i>v</i>'s sibling <i>s</i> is black and so are its children.
+<strong>Case 3b:</strong> <i>v</i>'s sibling <i>s</i> is black and so are its children.
 In this case also there are two subcases depending on whether the parent <i>p</i>'s color. 
 
 If <i>p</i> is red then exchanging colors of 
@@ -114,7 +112,7 @@ to <i>p</i>. So, the issue of excess black is pushed one level up the tree.  Fig
 
 <p style="text-align:center;"><img src="../images/case2Deletion.jpg"></p>
 
-<strong>Case 3:</strong> Final case we need to consider is when sibling <i>s</i> is red.
+<strong>Case 3c:</strong> Final case we need to consider is when sibling <i>s</i> is red.
 
 The case is illustrated in the following figure.
 
