@@ -1,13 +1,13 @@
-## Deletions in Red-Black Trees
+## Deletion Operation on Red-Black Trees
 
 A deletion operation in a red-black tree should handle two problems: 
 
 1. Preserving BST property.
-2. Checking if color properties are violated then restore them.
+2. Checking if any violation of color properties and restoring them.
 
 The problem of preserving BST property without the complications of maintaining the color properties of a red-black tree is relatively simple. We 
 discussed the complexities of deletion in BST earlier. For completeness, we briefly summarize the deletion rules for BST.  The deletion of a node 
-<i>X</i> from a BST depends on whether it is a leaf or an internal node. A quick recap of these rules  is provided below: 
+<i>X</i> from a BST depends on whether it is a leaf or an internal node. A quick recap of these rules  appear below: 
 
 There are three cases for BST deletion:
 
@@ -38,12 +38,12 @@ As indicated earlier, an external leaf node contains no information. All externa
 simply as a leaf node. It is a node with two external leaves as children. A non-leaf red node cannot have one external leaf as one of its children as it 
 violates the black height property of a legal red-black tree.
 
-The rules for deleting a node <i>X</i> from a red-black tree depend on the position of the node to be deleted.
+The rules for removing a node <i>X</i>  depend on the position of the node spliced out from a red-black tree.
 
 1. If <i>X</i> is a red leaf then there is no problem. No color properties will be disturbed if <i>X</i> is deleted.
 2. If <i>X</i> is black and it has only one valid node <i>Y</i> as child, then <i>Y</i> must be red. <i>Y</i> replaces <i>X</i> and is recolored black.
 3. If <i>X</i> has two internal nodes as children, then the inorder successor node <i>Y</i> should be deleted. if <i>Y</i> is a black 
-   leaf then we have to apply color compensation operations. Otherwise, one of the cases above should apply. So, the deletion can be done using
+   leaf then we have to apply color compensation operations. Otherwise, one of the cases above should apply. So, the deletion is done using
    the applicable rule.
    
 Figure below illustrates deletion operations involving case 1 and case 2. 
