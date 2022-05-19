@@ -15,9 +15,9 @@ There are three cases for BST deletion:
 2. <i>X</i> has only one child.
 3. <i>X</i>'s both children are nodes. 
 
-We did not consider external leaf nodes in BST. However, external nodes do not introduce any added complications. A leaf node of a red-black tree is an 
-external node with NULL pointers. Therefore, a leaf node in a BST is mapped to a node having external nodes as its children in the corresponding 
-red-black tree. 
+We did not consider external leaf nodes in BST. However, external nodes do not introduce any added complications. An external leaf node of a red-black
+tree is an external node with NULL pointers. A leaf node in a BST is mapped to a node having external nodes as its children in the corresponding 
+red-black tree. We will refer to a BST leaf as an internal leaf in red-black tree to distinguish it from an external leaf node.  
 
 The rules for the deletion of a node <i>X</i> in a BST are as follows:
 
@@ -30,38 +30,36 @@ We have already proved that the in-order successor of node in a BST either has  
 
 <p style="text-align:center;"><img src="../images/deletionBST.jpg"></p>
 
-The little black rectangles in the figure represent external leaf nodes which do not store any information. Any removal operation from a BST is 
-equivalent to deleting a node with at least one external child. The deletion of a node <i>X</i> may splice out a node at a position different from 
-<i>X</i> unless <i>X</i> is a node with two external leaves. For example, the removal of 70 executed by removing the node that had 55. However, it 
-does not create any loss of information as the content of spliced node is copied in advance at the position where 70 was originally stored. 
+The little black rectangles in the figure represent external leaf nodes. The deletion of a node <i>X</i> may splice out 
+a node at a position different from <i>X</i> unless <i>X</i> is a node with two external leaves. For example, the removal of 70 executed by removing the
+node that had 55. However, it does not create any loss of information as the content of spliced node is copied in advance at the position where 70 was 
+originally stored. 
 
-In the context of a red-black tree, it is convenient to distinguish between two types of leaf nodes, viz., an <b>external leaf</b> and an <b>internal 
-leaf</b>. An external leaf node contains no information. All external leaf nodes are black. An internal leaf, which we will refer to simply as a leaf 
-node, is a node with two external leaves as children. A non-leaf red node cannot have one external leaf as one of its children as it violates the black
-height property of a legal red-black tree.
+As indicated earlier, an external leaf node contains no information. All external leaf nodes are black. We will refer to an internal leaf 
+simply as a leaf node. It is a node with two external leaves as children. A non-leaf red node cannot have one external leaf as one of its children as it 
+violates the black height property of a legal red-black tree.
 
-The rules for deletion of a node from a red-black tree depends on the position of the node to be deleted.
+The rules for deletion of a node <i>X</i> from a red-black tree depends on the position of the node to be deleted.
 
-1. If a red leaf is to be deleted then there is no problem. No color properties will be disturbed if the node is deleted.
-2. If node to be deleted is black and it has only one valid node as child, then that child must be red. In this case, the red child replacing the node
-   is recolored black.
-3. If the node to be deleted has two internal nodes as children, then the inorder successor node is to be deleted. if the inorder successor is a black 
-   leaf then we have to apply color compensation operations. Otherwise, one of the aforementioned cases should apply and deletion can be done using the
-   appropriate rules.
+1. If <i>X</i> is a red leaf then there is no problem. No color properties will be disturbed if <i>X</i> is deleted.
+2. If <i>X</i> is black and it has only one valid node <i>Y</i> as child, then <i>Y</i> must be red. <i>Y</i> replaces <i>X</i> and is recolored black.
+3. If <i>X</i> has two internal nodes as children, then the inorder successor node <i>Y</i> should be deleted. if <i>Y</i> is a black 
+   leaf then we have to apply color compensation operations. Otherwise, one of the aforementioned cases should apply. So, the deletion can be done using
+   the applicable rule.
    
 Figure below illustrates deletion operations involving case 1 and case 2. 
 
 <p style="text-align:center;"><img src="../images/rbt_redLeafDeletion.jpg">
-<br> Case 1: Deletion of a red leaf
+<br><b> Case 1:</b> Deletion of a red leaf
 </p>
 <p style="text-align:center;"><img src="../images/rbt_black-RedDeletion.jpg">
-<br> Case 2: Deletion of a black node with a single red child.
+   <br> <b>Case 2:</b> Deletion of a black node with a single red child.
 </p>
 Case 3 occurs when we attempt to delete a black leaf as stated above. It promotes an external leaf to occupy the position of the deleted node. The
 new external leaf acquires an excess black due to the removal of the black leaf as indicated in the figure below.
 
 <p style="text-align:center;"><img src="../images/rbt_blackDeletion.jpg">
-<br> Case 3: Deletion of a black leaf node.
+   <br> <b>Case 3:</b> Deletion of a black leaf node.
 </p>
 The removal of a node <i>X</i> in a red-black tree promotes at least one node at a lower level. We shall refer to the node occupying the earlier 
 position of <i>X</i> as the promoted node <i>P</i>, because it moves closer to the root. The color <i>P</i> as double black. The major issue in deletion
