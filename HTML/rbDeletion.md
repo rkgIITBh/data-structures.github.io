@@ -54,17 +54,18 @@ Figure below illustrates deletion operations involving case 1 and case 2.
 <p style="text-align:center;"><img src="../images/rbt_redLeafDeletion.jpg">
 <br> Case 1: Deletion of a red leaf
 </p>
-<p style="text-align:center;"><img src="../images/rbt_black_RedDeletion.jpg">
+<p style="text-align:center;"><img src="../images/rbt_black-RedDeletion.jpg">
 <br> Case 2: Deletion of a black node with a single red child.
 </p>
+Case 3 occurs when we attempt to delete a black leaf as stated above. It promotes an external leaf to occupy the position of the deleted node. The
+new external leaf acquires an excess black due to the removal of the black leaf as indicated in the figure below.
 
-For handling the complications involved in deleting a black internal leaf, some important observations are in order. The child of a node is always at
-a lower level than the parent node. If a node has two children then its inorder successor will be a left descendant in the tree. Therefore, the
-inorder successor is always be at a level lower than the node. Therefore, the removal of a node promotes a node at a lower level. For example, the 
-deletion of a node having no child promotes one of its external leaf. Therefore, the removal of a node <i>X</i> in a red-black tree promotes at least
-one node at a lower level. We shall refer to the node occupying the earlier position of <i>X</i> as the promoted node <i>P</i> because, it moves closer
-to the root. If <i>X</i> is red, then color <i>P</i> as black. Otherwise, color <i>P</i> as double black. The major issue in deletion is to handle 
-distribution of the extra black acquired by <i>P</i>. The figure below illustrates two situations stated above. 
+<p style="text-align:center;"><img src="../images/rbt_blackDeletion.jpg">
+<br> Case 3: Deletion of a black leaf node.
+</p>
+The removal of a node <i>X</i> in a red-black tree promotes at least one node at a lower level. We shall refer to the node occupying the earlier 
+position of <i>X</i> as the promoted node <i>P</i> because, it moves closer to the root. The color <i>P</i> as double black. The major issue in deletion
+is to handle distribution of the extra black acquired by <i>P</i>. The figure below illustrates two situations stated above. 
 
 
 We need to consider a few structural conditions of the tree when a deletion occurs. In the following discussion, we denote the node acquiring excess 
