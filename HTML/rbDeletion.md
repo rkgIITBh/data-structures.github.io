@@ -129,4 +129,5 @@ We have discussed the deletion process by specifying general rules for handling 
 after deletion. So, it is time to examine some examples to familiarize the reader with actual operations. In the next blog
 we will deal with examples.
 
+
 [Back to Index](../index.md)
