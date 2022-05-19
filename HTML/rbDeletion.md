@@ -25,8 +25,8 @@ The rules for the deletion of a node <i>X</i> in a BST are as follows:
 2. If <i>X</i> has one child <i>Y</i>, eliminate <i>X</i> and make the parent of <i>X</i> adopt <i>Y</i> as its child. 
 3. If <i>X</i> has two children then first copy the value stored in the in-order successor, say <i>Y</i>, in <i>X</i>'s position then delete <i>Y</i>.
 
-We have already proved that the in-order successor of node in a BST either has  no children or has only one right child. Figure below illustrates rule
-3 of a deletion in a BST, 
+We have already proved that the in-order successor of node in a BST either has  no children or has only one right child. 
+Figure below illustrates rule 3 of a deletion in a BST, 
 
 <p style="text-align:center;"><img src="../images/deletionBST.jpg"></p>
 
@@ -45,8 +45,6 @@ The rules for removing a node <i>X</i>  depend on the position of the node splic
 2. If <i>X</i> is black and it has only one valid node <i>Y</i> as child, then <i>Y</i> must be red. <i>Y</i> replaces <i>X</i> and is recolored black.
 3. If <i>X</i> has two internal nodes as children, then the inorder successor node <i>Y</i> should be deleted. 
 
-
-   
 Figure below illustrates deletion operations involving case 1 and case 2. 
 
 <p style="text-align:center;"><img src="../images/rbt_redLeafDeletion.jpg">
@@ -55,19 +53,22 @@ Figure below illustrates deletion operations involving case 1 and case 2.
 <p style="text-align:center;"><img src="../images/rbt_black-RedDeletion.jpg">
    <br> <b>Case 2:</b> Deletion of a black node with a single red child.
 </p>
-In case 3, if the inorder successor <i>Y</i> is a black leaf then we have to apply color compensation operations. 
-Otherwise, one of the cases above should apply, and the deletion is done using the applicable rule.
 
-Hence, the most complex instance of case 3 occurs when we attempt to delete a black leaf.  It promotes an external leaf to 
+In case 3, if the inorder successor <i>Y</i> is a black leaf then we have to apply color compensation operations. 
+Otherwise, either case 1 or case 2 should apply, and the deletion is done using the applicable rule.
+
+The most complex instance of case 3 occurs when we attempt to delete a black leaf.  It promotes an external leaf to 
 occupy the position of the deleted node. The new external leaf acquires an excess black due to the removal of the black leaf 
 as indicated in the figure below.
 
 <p style="text-align:center;"><img src="../images/rbt_blackDeletion.jpg">
    <br> <b>Case 3:</b> Deletion of a black leaf node.
 </p>
-Removing a node <i>X</i> in a red-black tree promotes at least one node at a lower level. We shall refer to the node occupying the earlier 
-position of <i>X</i> as the promoted node <i>P</i>, because it moves closer to the root. The color <i>P</i> as double black. The major issue in deletion
-is to handle the distribution of the extra black acquired by <i>P</i>. The figure below illustrates two situations stated above. 
+
+Removing a node <i>X</i> in a red-black tree promotes at least one node at a lower level. We shall refer to the node 
+occupying the earlier position of <i>X</i> as the promoted node <i>P</i>, because it moves closer to the root. The color 
+<i>P</i> as double black. The major issue in deletion is to handle the distribution of the extra black acquired by 
+<i>P</i>. The figure below illustrates two situations stated above. 
 
 
 We need to consider a few structural conditions of the tree when a deletion occurs. In the following discussion, we denote the node acquiring excess 
