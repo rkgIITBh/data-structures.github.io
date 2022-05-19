@@ -30,35 +30,42 @@ We have already proved that the in-order successor of node in a BST either has  
 
 <p style="text-align:center;"><img src="../images/deletionBST.png"></p>
 
-It indicates that any removal operation is equivalent to deleting a node with at least one external child. The deletion of a node <i>X</i> 
-in a BST may splice out a node at a position different from <i>X</i> unless <i>X</i> is a leaf node. For example, the removal of 70 executed by removing 
-the node that had 55. However, it does not create any loss of information as the content of spliced node is copied in advance at the position where 70 was 
-originally stored. 
+The little black rectangles in the figure represent external leaf nodes which do not store any information. Any removal operation from a BST is 
+equivalent to deleting a node with at least one external child. The deletion of a node <i>X</i> may splice out a node at a position different from 
+<i>X</i> unless <i>X</i> is a node with two external leaves. For example, the removal of 70 executed by removing the node that had 55. However, it 
+does not create any loss of information as the content of spliced node is copied in advance at the position where 70 was originally stored. 
 
-In the context of a red-black tree, it is convenient to distinguish between two types of leaf nodes, viz., an <b>external leaf</b> and an <b>internal leaf</b>. 
-An external leaf node contains no information. We have represented an external leaf diagramatically by little black rectangles. All external leaf nodes 
-are black. An internal leaf, which we will refer to simply as a leaf node, is a node with two external leaves as children. 
-A non-leaf red node cannot have one external leaf as one of its children as it violates the black height property of a legal red-black tree.
+In the context of a red-black tree, it is convenient to distinguish between two types of leaf nodes, viz., an <b>external leaf</b> and an <b>internal 
+leaf</b>. An external leaf node contains no information. All external leaf nodes are black. An internal leaf, which we will refer to simply as a leaf 
+node, is a node with two external leaves as children. A non-leaf red node cannot have one external leaf as one of its children as it violates the black
+height property of a legal red-black tree.
 
-Now we are ready to analyze the rules for deletions. The rules depend on the position of the node to be deleted.
+The rules for deletion of a node from a red-black tree depends on the position of the node to be deleted.
 
 1. If a red leaf is to be deleted then there is no problem. No color properties will be disturbed if the node is deleted.
-2. If node to be deleted is black and has only one valid node as child, then that child must be red. In this case, the red child replaces the node
-   recolored black.
-3. If the node to be deleted has two internal nodes as children, then the inorder successor node is to be deleted. case, if one of the 
-   cases 1 or 2 applies then perform deletion following the appropriate rule. However, if the inorder successor is a black leaf then we have to
-   apply color compensation operations. 
+2. If node to be deleted is black and it has only one valid node as child, then that child must be red. In this case, the red child replacing the node
+   is recolored black.
+3. If the node to be deleted has two internal nodes as children, then the inorder successor node is to be deleted. if the inorder successor is a black 
+   leaf then we have to apply color compensation operations. Otherwise, one of the aforementioned cases should apply and deletion can be done using the
+   appropriate rules.
    
-The child of a node is always at a lower level than the node. If a node has two children then its inorder successor is always be at a level lower than 
-the node. Therefore, the removal of a node promotes a node at a lower level. For example, the deletion of a node having no child promotes one of its
-external leaf. Therefore, removal of a node <i>X</i> in a red-black tree promotes at least one node at a lower level. We shall refer to the node 
-occupying the earlier position of <i>X</i> as the promoted node <i>P</i> because, it moves closer to the root. If <i>X</i> is red, then color 
-<i>P</i> as black. Otherwise, color <i>P</i> as double black. The major issue in deletion is to handle distribution of the extra black acquired by 
-<i>P</i>. The figure below illustrates two situations stated above. 
+Figure below illustrates deletion operations involving case 1 and case 2. 
 
-<p style="text-align:center;"><img src="../images/rbtDeletionIssues.png"></p>
+<p style="text-align:center;"><img src="../images/rbt_redLeafDeletion.jpg">
+<br> Case 1: Deletion of a red leaf
+</p>
+<p style="text-align:center;"><img src="../images/rbt_black_RedDeletion.jpg">
+<br> Case 2: Deletion of a black node with a single red child.
+</p>
 
-If the spliced-out node is red, there is no problem. The problem occurs only when the spliced-out node is black.  
+For handling the complications involved in deleting a black internal leaf, some important observations are in order. The child of a node is always at
+a lower level than the parent node. If a node has two children then its inorder successor will be a left descendant in the tree. Therefore, the
+inorder successor is always be at a level lower than the node. Therefore, the removal of a node promotes a node at a lower level. For example, the 
+deletion of a node having no child promotes one of its external leaf. Therefore, the removal of a node <i>X</i> in a red-black tree promotes at least
+one node at a lower level. We shall refer to the node occupying the earlier position of <i>X</i> as the promoted node <i>P</i> because, it moves closer
+to the root. If <i>X</i> is red, then color <i>P</i> as black. Otherwise, color <i>P</i> as double black. The major issue in deletion is to handle 
+distribution of the extra black acquired by <i>P</i>. The figure below illustrates two situations stated above. 
+
 
 We need to consider a few structural conditions of the tree when a deletion occurs. In the following discussion, we denote the node acquiring excess 
 black as <i>v</i>. 
