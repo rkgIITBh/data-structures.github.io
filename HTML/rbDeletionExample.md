@@ -1,32 +1,34 @@
 ## Deletion Operations on Red-Black Trees (Examples)
-We have studied the principles governing deletion operation on red-black trees in the previous blog. Cases 1 and 2 do not 
-involve many complications. So, our focus in this blog is on case 3. Let us start with an example of a red-black tree 
-provided in the figure below.
+
+In the previous blog, we looked at the concepts that govern deletion operations on red-black trees. Cases 1 and 2 are simple
+and straoghtforward to handle. Therefore, the focus of this blog is on Case 3. Let's start with a red-black tree, as seen in
+the illustration below.
 
 <p style="text-align:center;"><img src="../images/rbtDeletion_ex1.jpg"></p>
 
-Suppose we want to delete 7. Since 7 is a black node, its deletion causes an excess of black color with a leaf node 
-that replaces 7 as in the above figure. We need to remove the excess black by restructuring 
-and color compensation. Node 5 is the sibling of the leaf with excess black. Its both children are black. Thererfore, the 
-configuration fits into subcase 1 of case 2 that we have discussed in the previous blog. We need to flip the
-color of the sibling 5 to red.  Figure below depicts the result.
+Let's say we want to remove number 7. Because node 7 is a black node, its removal results in an excess of black color, as 
+shown in the diagram above. We need to restructure and color compensate to get rid of the surplus black. The leaf with excess 
+black is the sibling of Node 5. It has two black children. Therefore, the configuration fits into subcase 1 of case 2 that 
+we have discussed in the previous blog. The color of sibling 5 must be changed to red. The outcome is shown in the diagram 
+below.
 
 <p style="text-align:center;"><img src="../images/rbtDeletion_ex1solved.jpg"></p>
 
-The black height of 5 becomes 1. Now eliminate the excess color from the right leaf of 6. It balances the black height of the right 
-and left subtrees of 6. The black heights of the subtrees of the root 4 are also balanced. 
+The black height of 5 is reduced to one. Remove the extra color from the right leaf of the 6. The black height of the right
+and left subtrees of 6 is balanced. The black heights of the root 4's subtrees are equally evenly balanced.
 
-Next, consider the deletion of 5. It does not create any double black node. Therefore, we can delete the node without any problem.
-It is an example of the symmetric subcase 1 of case 1. The tree after deletion of 5 becomes:
+Consider removing 5 from the modified tree. It does create any double black nodes. It is an example of a symmetric case of 
+case 1. We may delete the node without requiring any restructuring or color compensation operation. After removing 5 from 
+the tree, it becomes:
 
 <p style="text-align:center;"><img src="../images/rbt_ex1delete5.jpg"></p>
 
-If we now remove 6 from the above tree, it creates an excess black problem. Node 4's right child is a leaf with an excess black. 
-The configuration is symmetric to case 2 (black sibling with a red child).  Since both children of the black sibling
-are red, we can apply restructuring and color compensation for either of the two subcases. More precisely, we apply a right
-rotation on the left sibling of the node with excess black. It pushes the sibling one level up and the parent one level down. 
-It complensates the excess black and appropriately adjusts the black height at the parent. 
-Figure below shows the result.
+When we take 6 out of the above tree, we have an excess black problem. The right child of Node 4 is a leaf with an excess
+of black.It is symmetrical to Case 3b's configuration (black sibling with a red child). We can apply restructure and color
+compensation to either of the two subcases because both children of the black sibling are red. More exactly, we rotate the 
+left sibling of the node with excess black to the right. It moves the sibling up one level and the parent down one level.
+It adjusts the black height at the parent to compensate for the excess black. The outcome is depicted in the diagram below.
+
 
 <p style="text-align:center;"><img src="../images/rbt_ex1delete6.jpg"></p>
 
