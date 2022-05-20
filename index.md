@@ -72,6 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [Examples of Deletions in Red-Black Trees](HTML/rbDeletionExample.md)
 - [Deletions in Red-Black Trees](HTML/rbDeletion.md)
 - [Examples of Insertions in Red-Black Trees](HTML/rbInsertionExamples.md)
 - [Fixing color of Red-Black Trees After Insertions](HTML/redBlackColorFixing.md)
