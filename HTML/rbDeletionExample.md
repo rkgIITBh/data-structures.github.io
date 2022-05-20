@@ -8,7 +8,7 @@ the illustration below.
 
 Let's say we want to remove number 7. Because node 7 is a black node, its removal results in an excess of black color, as 
 shown in the diagram above. We need to restructure and color compensate to get rid of the surplus black. The leaf with excess 
-black is the sibling of Node 5. It has two black children. Therefore, the configuration fits into subcase 1 of case 2 that 
+black is the sibling of Node 5. It has two black children. Therefore, the configuration fits into subcase 1 of case 3b that 
 we have discussed in the previous blog. The color of sibling 5 must be changed to red. The outcome is shown in the diagram 
 below.
 
