@@ -24,7 +24,7 @@ the tree, it becomes:
 <p style="text-align:center;"><img src="../images/rbt_ex1delete5.jpg"></p>
 
 When we take 6 out of the above tree, we have an excess black problem. The right child of Node 4 is a leaf with an excess
-of black.It is symmetrical to Case 3b's configuration (black sibling with a red child). We can apply restructure and color
+of black.It is symmetrical to Case 3a's configuration (black sibling with a red child). We can apply restructure and color
 compensation to either of the two subcases because both children of the black sibling are red. More exactly, we rotate the 
 left sibling of the node with excess black to the right. It moves the sibling up one level and the parent down one level.
 It adjusts the black height at the parent to compensate for the excess black. The outcome is depicted in the diagram below.
