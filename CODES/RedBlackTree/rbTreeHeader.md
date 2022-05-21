@@ -1,3 +1,8 @@
+The header file consists of functions required for implementation of red-black tree. The node structure consists of five
+fields including three links. It uses a field for color and information. The rest of the fields are links to left, right 
+and parent of the node. We use a separate structure for tree and a single dummy node representing external leaf. All 
+leaf nodes have their right and left links pointing to this dummy external link. It saves allocation of space for external
+leaves. In-line comments give further explanation of code.  
 ```
 #ifndef RBTREE_H
 #define RBTREE_H
