@@ -58,7 +58,7 @@ for resolution of color violation may take O(<i>log n</i>) time in the worstcase
 
 <strong>Implementation of red-black trees</strong>
 
-- [Header file](../CODES/RedBlackTree/rbHeader.md)
+- [Header file](../CODES/RedBlackTree/rbTreeHeader.md)
 - [Driver program](../CODES/RedBlackTree/Driverprogram.md)
 
 
