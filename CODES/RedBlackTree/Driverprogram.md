@@ -38,4 +38,4 @@ int main() {
 }
 ```
 
-[Back to index](../../index.md)
+[Back to insertion examples index](../../HTML/rbInsertion.md)
