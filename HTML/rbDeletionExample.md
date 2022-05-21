@@ -32,8 +32,8 @@ It adjusts the black height at the parent to compensate for the excess black. Th
 
 <p style="text-align:center;"><img src="../images/rbt_ex1delete6.jpg"></p>
 
-[Red-Black Tree Header File](../CODES/rbTree.md)
+[Red-Black Tree Header File](../CODES/RedBlackTree/rbTreeHeader.md)
 
-[Driver Program](../CODES/newRBtree.md)
+[Driver Program](../CODES/RedBlackTree/Driverprogram.md)
 
 [Back to index](../index.md)
