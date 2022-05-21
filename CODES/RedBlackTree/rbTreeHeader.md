@@ -195,4 +195,4 @@ int randNumber() {
 #endif
 ```
 
-[Back to Index](../HTML/rbTreeInsertionExamples.md)
+[Back to Index](../HTML/rbInsertionExamples.md)
