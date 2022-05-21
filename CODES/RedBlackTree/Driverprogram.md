@@ -1,3 +1,6 @@
+Preorder and inorder lists can be used to reconstruct the tree. The input may included repeated elements. In case of repeated
+elements, one becomes the parent of the other repeated element. 
+
 ```
 #include <stdio.h>
 #include <stdlib.h>
