@@ -46,20 +46,24 @@ increases by <i>2k - 1</i>, where <i>k=ceiling(M/2)</i>. So for different height
 
 <p style="text-align:center;">
    
-|--------|-----------------------------------|
-| Height | Number of keys                    |
-|   1    | 1                                 |
-|   2    | 1+2<i>(k-1)</i>                   |
-|   3    | 1+2<i>(k-1)</i>+2<i>(k-1)k</i>    |
+
+| Height | Number of keys | 
+|--------|----------------|   
+|   1    | 1              |
+|--------|----------------|
+|   2    | 1+2<i>(k-1)</i>|
+|--------|----------------|
+|   3    | 1+2<i>(k-1)</i>+2<i>(k-1)k</i>|
+|--------|----------------|
 |   4    | 1+2<i>(k-1)(1+k+k<sup>2</sup>)</i>|
-|--------|-----------------------------------|
+
 
 </p>
 
 In general if height is <i>h</i> then the number of keys will be:
 
 <p style="text-align:center;">
-<i>2(k-1)(1+k+k<sup>2</sup> + k<sup>3</sup> + ... + k<sup>h</sup></i>
+<i>2(k-1)(1+k+k<sup>2</sup> + k<sup>3</sup> + ... + k<sup>h</sup>)</i>
 </p>
 
 In the example given above, we don't distinguish between items and their key. Equivalently, an item and its key are the same. 
