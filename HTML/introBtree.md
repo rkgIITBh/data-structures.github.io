@@ -48,7 +48,7 @@ increases by <i>2k - 1</i>, where <i>k=ceiling(M/2)</i>. So for different height
    
 
 | Height | Number of keys | 
-|--------|----------------|   
+| -------- | -------|   
 |   1    | 1 |
 |   2    | 1+2<i>(k-1)</i>|
 |   3    | 1+2<i>(k-1)</i>+2<i>(k-1)k</i>|
