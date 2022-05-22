@@ -45,16 +45,17 @@ In the worst case, the number of keys in a tree of height 1 is 1. For 1 increase
 increases by <i>2k - 1</i>, where <i>k=ceiling(M/2)</i>. So for different heights of the tree in the worst case, we get
 
 <p style="text-align:center;">
-| Height | Number of keys |
-|--------|----------------|
-|   1    | 1              |
-|--------|----------------|
-|   2    | 1+2<i>(k-1)</i>      |
-|--------|----------------|
-|   3    | 1+2<i>(k-1)</i>+2<i>(k-1)k</i>|
-|--------|----------------|
+|--------|-----------------------------------|
+| Height | Number of keys                    |
+|--------|-----------------------------------|
+|   1    | 1                                 |
+|--------|-----------------------------------|
+|   2    | 1+2<i>(k-1)</i>                   |
+|--------|-----------------------------------|
+|   3    | 1+2<i>(k-1)</i>+2<i>(k-1)k</i>    |
+|--------|-----------------------------------|
 |   4    | 1+2<i>(k-1)(1+k+k<sup>2</sup>)</i>|
-|--------|----------------|
+|--------|-----------------------------------|
 </p>
 
 In general if height is <i>h</i> then the number of keys will be:
