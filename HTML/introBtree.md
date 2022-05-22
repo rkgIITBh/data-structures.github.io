@@ -44,7 +44,6 @@ accessible from the pointer between the numbers <i>a</i> and  <i>b</i>.
 In the worst case, the number of keys in a tree of height 1 is 1. For 1 increase in height of the tree the number of keys 
 increases by <i>2k - 1</i>, where <i>k=ceiling(M/2)</i>. So for different heights of the tree in the worst case, we get
 
-<p style="text-align:center;">
    
 
 | Height | Number of keys | 
@@ -55,7 +54,6 @@ increases by <i>2k - 1</i>, where <i>k=ceiling(M/2)</i>. So for different height
 |   4    | 1+2<i>(k-1)(1+k+k<sup>2</sup>)</i>|
 
 
-</p>
 
 In general if height is <i>h</i> then the number of keys will be:
 
