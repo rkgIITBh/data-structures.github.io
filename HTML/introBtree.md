@@ -13,7 +13,7 @@ partitioned over many operations. We will return to amortized time in the analys
 
 <strong>Defining a B-Tree</strong>
 
-We specify a B-Tree with following properties.
+We specify a B-Tree with the following properties.
 
 - The root is a special node that may have between 2 and <i>M</i> children. 
 - An internal node may have between <i>M/2</i> and <i>M</i> children.
