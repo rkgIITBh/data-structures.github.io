@@ -83,7 +83,7 @@ binary search tree with binary list search. For convenience in description we us
 - <i>N<sub>n</sub></i>: Next node
 
 We apply the following method for searching a key:
-1. Set root as current node <i>N<sub>c</sub></i>, and set <i>k<sub>c</sub></i> = first key in the node
+1. Set root as current node <i>N<sub>c</sub></i>, and set <i>k<sub>c</sub></i> = first key in <i>N<sub>c</sub></i>.
 2. If <i>k</i> = <i>k<sub>c</sub></i> return the node and the index of <i>k<sub>c</sub></i>.
 3. Else if there are more than one key in <i>N<sub>c</sub></i> then compare <i>k</i> with the next key <i>k<sub>n</sub></i>.
 4. If <i>k</i> < <i>k<sub>n</sub></i> then <i>k</i> lies in the range (<i>k<sub>c</sub></i>, <i>k<sub>n</sub></i>).
