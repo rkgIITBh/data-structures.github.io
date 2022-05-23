@@ -84,9 +84,9 @@ binary search tree with binary list search. For convenience in description we us
 
 We apply the following method for searching a key:
 1. Set root as current node <i>N<sub>c</sub></i>, and set <i>k<sub>c</sub></i> = first key in the node
-2. If <i>k</i> is equal to <i>k<sub>c</sub></i> return the node and the key index.
+2. If <i>k</i> = <i>k<sub>c</sub></i> return the node and the index of <i>k<sub>c</sub></i>.
 3. Else if there are more than one key in <i>N<sub>c</sub></i> then compare <i>k</i> with the next key <i>k<sub>n</sub></i>.
-4. If <i>k</i> < <i>k<sub>n</sub></i> then <i>k</i> lies in the range (<i>k<sub>p</sub></i>, <i>k<sub>n</sub></i>).
+4. If <i>k</i> < <i>k<sub>n</sub></i> then <i>k</i> lies in the range (<i>k<sub>c</sub></i>, <i>k<sub>n</sub></i>).
 5. Set left child of <i>N<sub>c</sub></i> as <i>N<sub>c</sub></i>.
 6. If <i>N<sub>c</sub></i> is a leaf then use binary search to find presence or absence of <i>k</i> in the current node.
 7. Else recursively search for <i>k</i> from <i>N<sub>c</sub></i> 
