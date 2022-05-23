@@ -1,14 +1,15 @@
 ## Introduction to B-Trees
 
-\alpha B-Trees are used to store very large dictionaries B-Trees allow searches, insertions, and deletions in amortized 
+B-Trees are used to store very large dictionaries B-Trees allow searches, insertions, and deletions in amortized 
 logarithmic time. Before we describe the node structures, it is important to know about amortized cost. 
 
-<strong>Amortized cost:</strong> is defined over a sequence or a set of operations. If some operations of a given set are costly because future operations become cheap, 
-we say time is amortized over the given set of operations. We have learned about amortized cost earlier in the 
-context of union and find instructions on disjoint sets. The reader might remember that a sequence 
-of O(n) unions and finds can be executed in O(nG(n)) time where G(n) is an extremely slow-growing function. So, 
-for all practical purpose, each operation of sequence take O(1) amortized time. Loosely speaking, amortized time is time 
-partitioned over many operations. We will return to amortized time in the analysis of B-Tree at a later point.
+<strong>Amortized cost:</strong> is defined over a sequence or a set of operations. If some operations of a given set are 
+costly because future operations become cheap, we say time is amortized over the given set of operations. We have learned 
+about amortized cost earlier in the context of <b>union</b> and <b>find</b> instructions on disjoint sets. The reader 
+might remember that a sequence of O(<i>n</i>) unions and finds can be executed in O(<i>nG(n</i>)) time where <i>G(n)</i>
+is an extremely slow-growing function. So, for all practical purpose, each operation of sequence take O(1) amortized
+time. Loosely speaking, amortized time is time partitioned over many operations. We will return to amortized time in 
+the analysis of B-Tree at a later point.
 
 
 <strong>Defining a B-Tree</strong>
@@ -24,9 +25,9 @@ We specify a B-Tree with the following properties.
 The root may be the only node that is less than half full.
 
 B-Trees do not require rebalancing operations like rotations. But they may need nodes to split and merge when many 
-insertions and deletions occur. Insertions increase the number of stored elements and may require splits. Splits may propagate up
-to the root, causing a tree's height to increase. On the other hand, the merging of nodes occurs with deletions. It may cause
-the height of a B-Tree to decrease. The elements appear in sorted order at nodes. 
+insertions and deletions occur. Insertions increase the number of stored elements and may require splits. Splits may 
+propagate up to the root, causing a tree's height to increase. On the other hand, the merging of nodes occurs with 
+deletions. It may cause the height of a B-Tree to decrease. The elements appear in sorted order at nodes. 
 
 The figure below gives the picture of a B-Tree with <i>M=4</i>. 
 
@@ -42,7 +43,8 @@ Any number <i>x</i> in <i>(a, b)</i>, if it exists in the tree, may be found in 
 accessible from the pointer between the numbers <i>a</i> and  <i>b</i>.  
 
 In the worst case, the number of keys in a tree of height 1 is 1. For 1 increase in height of the tree the number of keys 
-increases by <i>2k - 1</i>, where <i>k=ceiling(M/2)</i>. So for different heights of the tree in the worst case, we get
+increases by <i>2k - 1</i>, where <i>k</i>=ceiling(<i>M/2</i>). So for different heights of the tree in the worst case, 
+we get
  
 
 | Height | Number of keys | 
