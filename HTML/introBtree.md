@@ -86,10 +86,9 @@ We apply the following method for searching a key:
 1. Set root as current node <i>N<sub>c</sub></i>, and set <i>k<sub>c</sub></i> = first key in <i>N<sub>c</sub></i>.
 2. If <i>k</i> = <i>k<sub>c</sub></i> return the node and the index of <i>k<sub>c</sub></i>.
 3. Else if there are more than one key in <i>N<sub>c</sub></i> then find the smallest key greater than <i>k</i>, and call it <i>k<sub>n</sub></i>, <i>k</i> lies in the range (<i>k<sub>p</sub></i>, <i>k<sub>n</sub></i>).
-4. If <i>k</i> < <i>k<sub>n</sub></i> then <i>k</i> lies in the range (<i>k<sub>c</sub></i>, <i>k<sub>n</sub></i>).
-5. Set left child of <i>k<sub>n</sub></i> as <i>N<sub>c</sub></i>.
-6. If <i>N<sub>c</sub></i> is a leaf then use binary search to find presence or absence of <i>k</i> in the current node.
-7. Else recursively search for <i>k</i> in <i>N<sub>c</sub></i> 
+4. Set left child of <i>k<sub>n</sub></i> as <i>N<sub>c</sub></i>.
+5. If <i>N<sub>c</sub></i> is a leaf then use binary search to find presence or absence of <i>k</i> in the current node.
+6. Else recursively search for <i>k</i> in <i>N<sub>c</sub></i> 
 
 
 <strong>Insertion:</strong> For insertion of a key <i>x</i>, we proceed as  follows:
