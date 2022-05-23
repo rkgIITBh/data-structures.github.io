@@ -39,11 +39,11 @@ In the figure, the root has two elements: 20 and 40.
 - The elements greater than 40 are reachable from the pointer to the right of 40. 
 
 Loosely speaking, the two adjacent numbers <i>a</i>, <i>b</i> in an internal node represent an open interval <i>(a, b)</i>. 
-Any number <i>x</i> in <i>(a, b)</i>, if it exists in the tree, may be found in one of the descendant node <i>u</i> of <i>v</i> which 
-accessible from the pointer between the numbers <i>a</i> and  <i>b</i>.  
+Any number <i>x</i> in <i>(a, b)</i>, if it exists in the tree, may be found in one of the descendant node <i>u</i> of 
+<i>v</i> which is accessible from the pointer between the numbers <i>a</i> and  <i>b</i>.  
 
 In the worst case, the number of keys in a tree of height 1 is 1. For 1 increase in height of the tree the number of keys 
-increases by <i>2k - 1</i>, where <i>k</i>=ceiling(<i>M/2</i>). So for different heights of the tree in the worst case, 
+increases by <i>2k - 1</i>, where <i>k</i>=&lceil;<i>M/2</i>&rceil;. So for different heights of the tree in the worst case, 
 we get
  
 
