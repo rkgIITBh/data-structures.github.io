@@ -1,6 +1,6 @@
 ## Introduction to B-Trees
 
-B-Trees are used to store very large dictionaries B-Trees allow searches, insertions, and deletions in amortized 
+\alpha B-Trees are used to store very large dictionaries B-Trees allow searches, insertions, and deletions in amortized 
 logarithmic time. Before we describe the node structures, it is important to know about amortized cost. 
 
 <strong>Amortized cost:</strong> is defined over a sequence or a set of operations. If some operations of a given set are costly because future operations become cheap, 
