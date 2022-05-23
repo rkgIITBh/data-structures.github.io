@@ -18,15 +18,15 @@ We specify a B-Tree with the following properties.
 
 - The root is a special node that may have between 2 and <i>M</i> children. 
 - An internal node may have between <i>M/2</i> and <i>M</i> children.
-- The number of keys stored at a node is 1 less than the number of children.  
+- The number of keys stored at a node is one less than the number of children.  
 - Each leaf node is at the same depth from the root.
 - A leaf node stores at most <i>M-1</i> and at least <i>M/2</i> elements in sorted order. 
 
-The root may be the only node that is less than half full.
+The root is the only node that may be less than half full.
 
-B-Trees do not require rebalancing operations like rotations. But they may need nodes to split and merge when many 
+B-Trees do not require rebalancing operations like rotations. But they need nodes to split and merge when many 
 insertions and deletions occur. Insertions increase the number of stored elements and may require splits. Splits may 
-propagate up to the root, causing a tree's height to increase. On the other hand, the merging of nodes occurs with 
+propagate up to the root, causing the tree's height to increase. On the other hand, the merging of nodes occurs with 
 deletions. It may cause the height of a B-Tree to decrease. The elements appear in sorted order at nodes. 
 
 The figure below gives the picture of a B-Tree with <i>M=4</i>. 
@@ -62,9 +62,9 @@ In general if height is <i>h</i> then the number of keys will be:
 <i>2(k-1)(1+k+k<sup>2</sup> + k<sup>3</sup> + ... + k<sup>h</sup>)</i>
 </p>
 
-In the example given above, we don't distinguish between items and their key. Equivalently, an item and its key are the same. 
-However, typically we make a distinction between items and their corresponding keys. Items are records accessed by 
-providing corresponding keys. There are two ways of storing items in B-Tree. 
+In the above example, we don't distinguish between items and their keys. Equivalently, an item and its key are are the same. 
+However, typically in real database implementation, a distinction exists between items and their corresponding keys. 
+Items are records accessed by providing corresponding primary keys. Therefore, we have two ways of storing items in B-Tree. 
 
 1. Keys are stored at nodes, and items are stored at external nodes. 
 2. A key and its corresponding item are stored together at the same position.  
@@ -73,8 +73,7 @@ Using different keys and items, we can modify the above example to store data at
 
 <p style="text-align:center;"><img src="../images/bTreeEx2.png"></p>
 
-<strong>Search:</strong> Search operation in a B-Tree is a generalization
-of the binary search. 
+<strong>Search:</strong> Search operation in a B-Tree is a generalization of the binary search. 
 
 <strong>Insertion:</strong> For insertion of a key <i>x</i>, we proceed as  follows:
 
