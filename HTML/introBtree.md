@@ -73,7 +73,24 @@ Using different keys and items, we can modify the above example to store data at
 
 <p style="text-align:center;"><img src="../images/bTreeEx2.png"></p>
 
-<strong>Search:</strong> Search operation in a B-Tree is a generalization of the binary search. 
+<strong>Search:</strong> Search operation in a B-Tree is a generalization of the binary search. It combines advantage of a
+binary search tree with binary list search. For convenience in description we use the following notation:
+- <i>k</i>: key value for search
+- <i>k<sub>c</sub></i>: current key in the current search node
+- <i>k<sub>p</sub></i>: previous key used for comparison.
+- <i>k<sub>n</sub></i>: next key used for comparison.
+- <i>N<sub>c</sub></i>: Current node
+- <i>N<sub>n</sub></i>: Next node
+
+We apply the following method for searching a key:
+1. Set root as current node <i>N<sub>c</sub></i>, and set <i>k<sub>c</sub></i> = first key in the node
+2. If <i>k</i> is equal to <i>k<sub>c</sub></i> return the node and the key index.
+3. Else if there are more than one key in <i>N<sub>c</sub></i> then compare <i>k</i> with the next key <i>k<sub>n</sub></i>.
+4. If <i>k</i> < <i>k<sub>n</sub></i> then <i>k</i> lies in the range (<i>k<sub>p</sub></i>, <i>k<sub>n</sub></i>).
+5. Set left child of <i>N<sub>c</sub></i> as <i>N<sub>c</sub></i>.
+6. If <i>N<sub>c</sub></i> is a leaf then use binary search to find presence or absence of <i>k</i> in the current node.
+7. Else recursively search for <i>k</i> from <i>N<sub>c</sub></i> 
+
 
 <strong>Insertion:</strong> For insertion of a key <i>x</i>, we proceed as  follows:
 
