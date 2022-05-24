@@ -91,6 +91,41 @@ We apply the following method for searching a key:
 5. If <i>N<sub>c</sub></i> is a leaf then search it for <i>k</i>, if found return the node and the index of the key, otherwise report <i>k</i> not found
 6. If <i>N<sub>c</sub></i> non-leaf node repeat from step 2.
 
+
+We define a B-Tree using tree like node structure. However, there may be a maximum of <i>M</i> links per node. Hence, the
+node structure for B-Tree is as follows:
+```
+typedef struct bNode {
+     int keys[MAX + 1]; // Maximum number of keys
+     int count;         // Keeps track of number of keys
+     struct bNode parent; // Link to parent node
+     struct bNode *link[MAX]; // Links to children node 
+} BTREENODE;
+
+```
+We can now write pseudo-code for searching for a key
+```
+// Search node
+void search(int key, int *pos, BTREENODE *myNode) {
+  if (isEmpty(currNode)) {
+      // Return if empty
+      return; 
+  }
+  // Search for the input key 
+  if (key < curr->key[1]) {
+    *pos = 0;
+  } else {
+    for (*pos = currNode->count; (key < currNode->key[*pos] && *pos > 1); (*pos)--);
+    if (key == currNode->key[*pos]) {
+      printf("%d is found", key);
+      return;
+    }
+  }
+  search(key, pos, currNode->link[*pos]);
+
+  return;
+}
+```
 <strong>Insertion:</strong> Fort inserting a node, perform a search for the key in the given B-Tree. If element is not found 
 the search will terminate at a leaf. If the leaf contains less than <i>M-1</i> keys then insert the key there. It will 
 require data movements. Some keys may have to be moved to right to make room for the new insertion. If the leaf is full
