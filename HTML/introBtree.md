@@ -74,22 +74,21 @@ Using different keys and items, we can modify the above example to store data at
 <p style="text-align:center;"><img src="../images/bTreeEx2.png"></p>
 
 <strong>Search:</strong> Search operation in a B-Tree is a generalization of the binary search. It combines advantage of a
-binary search tree with binary list search. For convenience in description we use the following notation:
+binary search tree with plain binary search on a sorted list. For convenience in description we use the following notation:
 - <i>k</i>: key value for search
-- <i>k<sub>c</sub></i>: current key in the current search node
-- <i>k<sub>p</sub></i>: previous key used for comparison.
-- <i>k<sub>n</sub></i>: next key used for comparison.
 - <i>N<sub>c</sub></i>: Current node
-- <i>N<sub>n</sub></i>: Next node
+
 
 We apply the following method for searching a key:
-1. Set root as current node <i>N<sub>c</sub></i>. 
-2. Set <i>k<sub>c</sub></i> = first key in <i>N<sub>c</sub></i>. If <i>k</i> = <i>k<sub>c</sub></i> return the node and the index of <i>k<sub>c</sub></i>.
-3. If there are more than one key in <i>N<sub>c</sub></i> then find the smallest key greater than <i>k</i>, and call it <i>k<sub>n</sub></i>, call the previous key as <i>k<sub>p</sub>. </i><i>k</i> lies in the range (<i>k<sub>p</sub></i>, <i>k<sub>n</sub></i>).
+1. Set root as current node <i>N<sub>c</sub></i>. Set <i>k<sub>c</sub></i> = first key in <i>N<sub>c</sub></i>.
+2. If <i>k</i> = <i>k<sub>c</sub></i> return the node and the index of <i>k<sub>c</sub></i>.
+3. If more than one key exist in <i>N<sub>c</sub></i> then 
+   - find the smallest key greater than <i>k</i>, and call it <i>k<sub>n</sub></i>, 
+   - call the previous key as <i>k<sub>p</sub>. 
+   - </i><i>k</i> lies in the range (<i>k<sub>p</sub></i>, <i>k<sub>n</sub></i>).
 4. Set left child of <i>k<sub>n</sub></i> as <i>N<sub>c</sub></i>.
-5. If <i>N<sub>c</sub></i> is a leaf then search it for <i>k</i>, if found return the node and the index of the key, othherwise report not found
-6. Recursively search for <i>k</i> in non-leaf node <i>N<sub>c</sub></i> 
-
+5. If <i>N<sub>c</sub></i> is a leaf then search it for <i>k</i>, if found return the node and the index of the key, otherwise report <i>k</i> not found
+6. If <i>N<sub>c</sub></i> non-leaf node repeat from step 2.
 
 <strong>Insertion:</strong> For insertion of a key <i>x</i>, we proceed as  follows:
 
