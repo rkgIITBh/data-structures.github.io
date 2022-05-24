@@ -42,9 +42,9 @@ Loosely speaking, the two adjacent numbers <i>a</i>, <i>b</i> in an internal nod
 Any number <i>x</i> in <i>(a, b)</i>, if it exists in the tree, may be found in one of the descendant node <i>u</i> of 
 <i>v</i> which is accessible from the pointer between the numbers <i>a</i> and  <i>b</i>.  
 
-In the worst case, the number of keys in a tree of height 1 is 1. For 1 increase in height of the tree the number of keys 
-increases by <i>2k - 1</i>, where <i>k</i>=&lceil;<i>M/2</i>&rceil;. So for different heights of the tree in the worst case, 
-we get
+The minmum number of keys in a tree of height 1 is 1. If we increase height of the tree by 1, the minimum number of keys 
+increases by <i>2k - 1</i>, where <i>k</i>=&lceil;<i>M/2</i>&rceil;. So for different heights of the tree in the minimum 
+number of nodes is: 
  
 
 | Height | Number of keys | 
@@ -56,12 +56,13 @@ we get
 
 
 
-In general if height is <i>h</i> then the number of keys will be:
+In general if height is <i>h</i> then the minimum number of keys will be:
 
 <p style="text-align:center;">
 <i>2(k-1)(1+k+k<sup>2</sup> + k<sup>3</sup> + ... + k<sup>h</sup>)</i>
 </p>
-
+Therefore, for a B-Tree with <i>n</i> nodes the height should be at most 1 + log<i><sub>k</sub></i>((1+<i>n</i>)/2)
+<br><br>
 In the above example, we don't distinguish between items and their keys. Equivalently, an item and its key are are the same. 
 However, typically in real database implementation, a distinction exists between items and their corresponding keys. 
 Items are records accessed by providing corresponding primary keys. Therefore, we have two ways of storing items in B-Tree. 
@@ -109,5 +110,15 @@ More formally, the step-wise process of insertion is as follows:
    - If parent is full, it may necessitate a split of parent and split may percolate recursively to root. 
  4. Split the root if required and terminate.
  
-Notice that splitting root increase the height of the tree. However, unlike balanced trees rotations are not required to 
-fixiup or rebalancing. 
+Splitting of the root creates a new root and increase the height of the tree. However, unlike balanced trees, B-Tree does
+not use rotations to fixiup or rebalancing the tree. 
+
+<strong>Deletion:</strong> If the element <i>x</i> for deletion is not located in a leaf then we can replace <i>x</i> by
+the largest element <i>y</i> in the left subtree of <i>x</i>. The key <i>y</i> must be located in a leaf node. So, the 
+deletion process is essentially a generalization of the deletion in BST. All deletions occur in leaf nodes. It may lead to
+an underflow. An underflow occurs when the number of keys in a leaf node is reduced to <i>M/2 - 1</i>. If the sibling 
+node has surplus keys to share, keys can be moved to deficient node and restore the requirement of B-Tree. However, if 
+the sibling has just <i>M/2</i> keys we can merge the two siblings to form one node. Merging may percolate up and 
+require merging at a level up. When children of the root merge together to form one node a new root is created which
+decrements the height by 1. Thus repeated deletions may lead to a reduction in tree height.
+ 
