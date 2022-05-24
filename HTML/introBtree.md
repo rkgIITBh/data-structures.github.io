@@ -83,33 +83,31 @@ We apply the following method for searching a key:
 1. Set root as current node <i>N<sub>c</sub></i>. Set <i>k<sub>c</sub></i> = first key in <i>N<sub>c</sub></i>.
 2. If <i>k</i> = <i>k<sub>c</sub></i> return the node and the index of <i>k<sub>c</sub></i>.
 3. If more than one key exist in <i>N<sub>c</sub></i> then 
-   - find the smallest key greater than <i>k</i>, and call it <i>k<sub>n</sub></i>, 
-   - call the previous key as <i>k<sub>p</sub>. 
+   - Find the smallest key greater than <i>k</i>, and call it <i>k<sub>n</sub></i>, 
+   - Call the previous key as <i>k<sub>p</sub>. 
    - </i><i>k</i> lies in the range (<i>k<sub>p</sub></i>, <i>k<sub>n</sub></i>).
 4. Set left child of <i>k<sub>n</sub></i> as <i>N<sub>c</sub></i>.
 5. If <i>N<sub>c</sub></i> is a leaf then search it for <i>k</i>, if found return the node and the index of the key, otherwise report <i>k</i> not found
 6. If <i>N<sub>c</sub></i> non-leaf node repeat from step 2.
 
-<strong>Insertion:</strong> For insertion of a key <i>x</i>, we proceed as  follows:
+<strong>Insertion:</strong> Fort inserting a node, perform a search for the key in the given B-Tree. If element is not found 
+the search will terminate at a leaf. If the leaf contains less than <i>M-1</i> keys then insert the key there. It will 
+require data movements. Some keys may have to be moved to right to make room for the new insertion. If the leaf is full
+(i.e., it contains <i>M-1</i> keys) then create a new leaf. Retain the first half the keys in the old leaf and move the
+second half of the keys to newly created leaf. Push the median to parent and create an extra child link for the new leaf 
+to right of median key pushed to the parent. If parent does not have room, repeat the splitting process again at the parent. 
+The recursice process of splitting may finally the root and increase the height of the tree.
 
-1. Search and find the proper position where the element <i>x</i> may be inserted.
-2. If the number of elements in the leaf node <i>l</i> is less than <i>L</i> 
-   then place <i>x</i> in sorted position in <i>l</i>. 
-3. Otherwise an overflow occurs. Split <i>l</i> into two leaves:
-   - Collect first ceiling(L+1/2) keys with one leaf and the next 
-     floor(L+1/2) keys in another. 
-   - Add new child to the parent for accessing newly added leaf. 
-   - If an overflow occurs at parent if it ends up with <i>M+1</i> 
-     children. 
-4. If an internal node ends up with <i>M+1</i> children then"
-   - Split it into two nodes first one with ceiling(M+1/2) children
-     and the next one with floor(M+1/2) children.
-   - Add a new child to the parent. 
-   - If parent has <i>M+1</i> childre then overflow occurs.
-5. Split overflowed root into two like an internal node, and create
-   a new parent. 
-   - hang two children (orinal root) and newly created node under
-     the new node.
-   - Propagate keys up to the new node which becomes the root. 
+More formally, the step-wise process of insertion is as follows:
 
-Splitting root increase the height of the tree. No rotation or restructuring of the root is required. 
+1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call the node as <i>N</i>.
+2. If <i>N</i> has room shift larger element to right, place <i>k</i>, and terminate.  
+3. Otherwise, <i>N</i> is full, split it two nodes:
+   - Retain the smaller half the keys in the original node 
+   - Move the larger half of keys to the newly create node.
+   - Choose the median of the keys and push it to the parent of original leaf. 
+   - If parent is full, it may necessitate a split of parent and split may percolate recursively to root. 
+ 4. Split the root if required and terminate.
+ 
+Notice that splitting root increase the height of the tree. However, unlike balanced trees rotations are not required to 
+fixiup or rebalancing. 
