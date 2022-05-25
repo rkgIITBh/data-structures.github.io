@@ -62,7 +62,7 @@ In general if height is <i>h</i> then the minimum number of keys will be:
 </p>
 Therefore, for a B-Tree with <i>n</i> nodes the height should be at most 1 + log<i><sub>k</sub></i>((1+<i>n</i>)/2)
 <br><br>
-In the above example, we don't distinguish between items and their keys. Equivalently, an item and its key are are the same. 
+In the above example, we do not distinguish between items and their keys. Equivalently, an item and its key are are the same. 
 However, typically in real database implementation, a distinction exists between items and their corresponding keys. 
 Items are records accessed by providing corresponding primary keys. Therefore, we have two ways of storing items in B-Tree. 
 
@@ -76,55 +76,29 @@ Using different keys and items, we can modify the above example to store data at
 <strong>Search:</strong> Search operation in a B-Tree is a generalization of the binary search. It combines advantage of a
 binary search tree with plain binary search on a sorted list. For convenience in description we use the following notation:
 - <i>k</i>: key value for search
-- <i>N<sub>c</sub></i>: Current node
+- <i>n</i>: Current node
 
-
-We apply the following method for searching a key:
-1. Set root as current node <i>N<sub>c</sub></i>. Set <i>k<sub>c</sub></i> = first key in <i>N<sub>c</sub></i>.
-2. If <i>k</i> = <i>k<sub>c</sub></i> return the node and the index of <i>k<sub>c</sub></i>.
-3. If more than one key exist in <i>N<sub>c</sub></i> then 
-   - Find the smallest key greater than <i>k</i>, and call it <i>k<sub>n</sub></i>, 
-   - Call the previous key as <i>k<sub>p</sub>. 
-   - </i><i>k</i> lies in the range (<i>k<sub>p</sub></i>, <i>k<sub>n</sub></i>).
-4. Set left child of <i>k<sub>n</sub></i> as <i>N<sub>c</sub></i>.
-5. If <i>N<sub>c</sub></i> is a leaf then search it for <i>k</i>, if found return the node and the index of the key, otherwise report <i>k</i> not found
-6. If <i>N<sub>c</sub></i> non-leaf node repeat from step 2.
-
-
-We define a B-Tree using tree like node structure. However, there may be a maximum of <i>M</i> links per node. Hence, the
-node structure for B-Tree is as follows:
-```
-typedef struct bNode {
-     int keys[MAX + 1]; // Maximum number of keys
-     int count;         // Keeps track of number of keys
-     struct bNode parent; // Link to parent node
-     struct bNode *link[MAX]; // Links to children node 
-} BTREENODE;
+The search typically start from root. We try to find a match for <i>k</i> in the local cache of keys maintained at the
+current node <i>n</i>. If a match is found then we return the node and the index of the matched key. If no match is found
+in local key cache and <i>n</i> is a leaf, the search terminates without a match for <i>k</i>. Otherwise, we use the left 
+child pointer of the smallest key greater than <i>k</i> in the current node, and recursively perform search from the
+left child. The pseudo code for searching a <i>k</i> in a given B-Tree appears below.
 
 ```
-We can now write pseudo-code for searching for a key
-```
-// Search node
-void search(int key, int *pos, BTREENODE *myNode) {
-  if (isEmpty(currNode)) {
-      // Return if empty
-      return; 
-  }
-  // Search for the input key 
-  if (key < curr->key[1]) {
-    *pos = 0;
-  } else {
-    for (*pos = currNode->count; (key < currNode->key[*pos] && *pos > 1); (*pos)--);
-    if (key == currNode->key[*pos]) {
-      printf("%d is found", key);
-      return;
-    }
-  }
-  search(key, pos, currNode->link[*pos]);
-
-  return;
+BtreeSearch(n, k) {
+     i = 1;   // Start from first key position
+     while (i <= n.count and k >= n.key[i])   //n.count gives the number of keys in node n
+           i = i + 1;  // Locate the smallest key greater than k
+     if (i <= n.count and k == n.key[i]) // n.key[i] matches k
+           return (n, i); 
+     if (isLeaf(n))
+           return NIL   // If current node is leaf then key is absent
+     else 
+          // Recursively search the child node from the pointer to the left of n.key[i]
+           return BtreeSearch(n.child, k);
 }
 ```
+
 <strong>Insertion:</strong> Fort inserting a node, perform a search for the key in the given B-Tree. If element is not found 
 the search will terminate at a leaf. If the leaf contains less than <i>M-1</i> keys then insert the key there. It will 
 require data movements. Some keys may have to be moved to right to make room for the new insertion. If the leaf is full
