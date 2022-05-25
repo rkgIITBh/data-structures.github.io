@@ -107,7 +107,77 @@ second half of the keys to newly created leaf. Push the median to parent and cre
 to right of median key pushed to the parent. If parent does not have room, repeat the splitting process again at the parent. 
 The recursice process of splitting may finally the root and increase the height of the tree.
 
-More formally, the step-wise process of insertion is as follows:
+Essentially, the algoritm for insertion requires two different procedures, namely,
+- If the node is full then split the node, place one half of nodes in one and other half in another node of the split
+- If the node is not full then insert the key into the node. 
+
+```
+B-Tree-Insert (T, k) {
+    r = T.root
+    if (r.count == M - 1) {
+       // The root is full, we have to split it
+       s = allocate-node (); 
+       T.root = s; 	// New root node
+       s.leaf = FALSE; // new node will have some children
+       s.count = 0;	   // Initialize
+       s.c1 = r;       //  Child of s is the old root node
+       B-Tree-Split-Child (s, 1, r); // r is split, 1st half of keys goes into r
+       B-Tree-Insert-Nonfull (s, k); // s is not full
+   } else
+       // r is not full, we can insert k into r
+       B-Tree-Insert-Nonfull (r, k);               
+}
+```
+```
+B-Tree-Insert-Nonfull (x, k)
+  	i = n[x]
+
+	  if leaf[x] then
+
+		 // shift everything over to the "right" up to the
+		 // point where the new key k should go
+
+		 while i >= 1 and k < keyi[x] { 
+			   keyi+1[x] = keyi[x]
+			   i--
+		 }
+
+		// stick k in its right place and bump up n[x]
+
+		keyi+1[x] = k
+		n[x]++
+	else
+
+		// find child where new key belongs:
+
+		while i >= 1 and k < keyi[x] do
+			i--
+		end while
+
+		// if k is in ci[x], then k <= keyi[x] (from the definition)
+		// we'll go back to the last key (least i) where we found this
+		// to be true, then read in that child node
+
+		i++
+		Disk-Read (ci[x])
+		if n[ci[x]] = 2t - 1 then
+
+			// uh-oh, this child node is full, we'll have to split it
+
+			B-Tree-Split-Child (x, i, ci[x])
+
+			// now ci[x] and ci+1[x] are the new children, 
+			// and keyi[x] may have been changed. 
+			// we'll see if k belongs in the first or the second
+
+			if k > keyi[x] then i++
+		end if
+
+		// call ourself recursively to do the insertion
+
+		B-Tree-Insert-Nonfull (ci[x], k)
+	end if
+```
 
 1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call the node as <i>N</i>.
 2. If <i>N</i> has room shift larger element to right, place <i>k</i>, and terminate.  
