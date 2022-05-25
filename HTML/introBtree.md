@@ -1,20 +1,19 @@
 ## Introduction to B-Trees
 
 B-Trees are used to store very large dictionaries B-Trees allow searches, insertions, and deletions in amortized 
-logarithmic time. Before we describe the node structures, it is important to know about amortized cost. 
-
-<strong>Amortized cost:</strong> is defined over a sequence or a set of operations. If some operations of a given set are 
-costly because future operations become cheap, we say time is amortized over the given set of operations. We have learned 
-about amortized cost earlier in the context of <b>union</b> and <b>find</b> instructions on disjoint sets. The reader 
-might remember that a sequence of O(<i>n</i>) unions and finds can be executed in O(<i>nG(n</i>)) time where <i>G(n)</i>
-is an extremely slow-growing function. So, for all practical purpose, each operation of sequence take O(1) amortized
-time. Loosely speaking, amortized time is time partitioned over many operations. We will return to amortized time in 
-the analysis of B-Tree at a later point.
+logarithmic time.  A B-Tree node may have up to a few thousand nodes. Since B-Trees have very high branching 
+factor, the tree tend to be bushy compared to red-black tree. It does not require rebalancing operations like rotations.
+But as more and more insertions happen, the nodes cannot accommodate them. So, nodes must be added to handle insertions.
+On the other hand, when deletions take place, it leads to wastage of storage space. To handle both situations, B-Tree
+nodes are restructured by splitting and merging. Splitting of a node occurs more and more keys accumulate for room 
+at the node. Similarly, merging occurs when a pair of sibling nodes have lot of vacancies for keys due repeated 
+deletions. Merging reduces height as it may propagate up to the root of tree. Splitting also propagate all the way to
+the root of a tree causing its height to increase. 
 
 
 <strong>Defining a B-Tree</strong>
 
-We specify a B-Tree with the following properties.
+We formalize the definition of a B-Tree specifying the following properties.
 
 - The root is a special node that may have between 2 and <i>M</i> children. 
 - An internal node may have between <i>M/2</i> and <i>M</i> children.
@@ -22,10 +21,10 @@ We specify a B-Tree with the following properties.
 - Each leaf node is at the same depth from the root.
 - A leaf node stores at most <i>M-1</i> and at least <i>M/2</i> elements in sorted order. 
 
-The root is the only node that may be less than half full.
+The root is the only node in a B-Tree that may be less than half full.
 
-B-Trees do not require rebalancing operations like rotations. But they need nodes to split and merge when many 
-insertions and deletions occur. Insertions increase the number of stored elements and may require splits. Splits may 
+B-Trees do not require rebalancing operations like rotations. But they need nodes to split and merge to handle dynamicity
+of key insertions and deletions. Insertions increase the number of stored elements and may require splits. Splits may 
 propagate up to the root, causing the tree's height to increase. On the other hand, the merging of nodes occurs with 
 deletions. It may cause the height of a B-Tree to decrease. The elements appear in sorted order at nodes. 
 
@@ -157,3 +156,17 @@ the sibling has just <i>M/2</i> keys we can merge the two siblings to form one n
 require merging at a level up. When children of the root merge together to form one node a new root is created which
 decrements the height by 1. Thus repeated deletions may lead to a reduction in tree height.
  
+ 
+ 
+ 
+ 
+ 
+Before we describe the node structures, it is important to know about amortized cost.
+<strong>Amortized cost:</strong> is defined over a sequence or a set of operations. If some operations of a given set are 
+costly because future operations become cheap, we say time is amortized over the given set of operations. We have learned 
+about amortized cost earlier in the context of <b>union</b> and <b>find</b> instructions on disjoint sets. The reader 
+might remember that a sequence of O(<i>n</i>) unions and finds can be executed in O(<i>nG(n</i>)) time where <i>G(n)</i>
+is an extremely slow-growing function. So, for all practical purpose, each operation of sequence take O(1) amortized
+time. Loosely speaking, amortized time is time partitioned over many operations. We will return to amortized time in 
+the analysis of B-Tree at a later point.
+
