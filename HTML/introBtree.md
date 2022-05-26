@@ -129,59 +129,56 @@ B-Tree-Insert (T, k) {
        B-Tree-Insert-Nonfull (r, k);               
 }
 ```
-The algorithm takes a topdown approach to insert a new key. It begins search from the root down to a node that has a room for the insertion.
-If the search ultimately reaches leaf node where the key would belong.  If the node is not full then the insertion is done by shifting other
-larger keys to the right. However, if 
+The algorithm uses a topdown approach to insert a new key. It begins search from the root down to a node that has a room for the insertion.
+If the search ultimately may reach either a non-leaf node or a leaf node where the key belongs.  If the node is not full then the insertion 
+is done by shifting other larger keys to the right. However, if the node is full then the node is split into two. The first half of the keys
+are placed in the orinal node and a new node is allocated for 2nd half of the keys.  
 
 ```
 B-Tree-Insert-Nonfull (x, k)
-  	i = n[x]
+     i = n.count;
+     if (isLeaf(n)) { 
 
-	  if leaf[x] then
+              // shift everything over to the "right" up to the
+	      // point where the new ken.y k should go
+                 
+	      while (i >= 1 and k < n.key[i] ){ 
+                   n.key[i+1] = n.key[i];
+                    i--;
+             }
 
-		 // shift everything over to the "right" up to the
-		 // point where the new key k should go
+             // stick k in its right place and bump up n[x]
 
-		 while i >= 1 and k < keyi[x] { 
-			   keyi+1[x] = keyi[x]
-			   i--
-		 }
+            n.key[i+1] = k;
+            n.count++
+      } else {
 
-		// stick k in its right place and bump up n[x]
+            // find child where new key belongs:
 
-		keyi+1[x] = k
-		n[x]++
-	else
+            while (i >= 1 and k < n,key[i]) i--;.
 
-		// find child where new key belongs:
+            // if k is in ci[x], then k <= keyi[x] (from the definition)
+            // we'll go back to the last key (least i) where we found this
+            // to be true, then read in that child node
 
-		while i >= 1 and k < keyi[x] do
-			i--
-		end while
+            i++;
+            Disk-Read (ci[x])
+            if ((n.ci).count = M - 1) {
 
-		// if k is in ci[x], then k <= keyi[x] (from the definition)
-		// we'll go back to the last key (least i) where we found this
-		// to be true, then read in that child node
+                  // ith child node is full, we will have to split it
 
-		i++
-		Disk-Read (ci[x])
-		if n[ci[x]] = 2t - 1 then
+                  B-Tree-Split-Child (n, i, n.child[i]);
 
-			// uh-oh, this child node is full, we'll have to split it
+                  // now ci[x] and ci+1[x] are the new children, 
+                  // and keyi[x] may have been changed. 
+                  // we'll see if k belongs in the first or the second
 
-			B-Tree-Split-Child (x, i, ci[x])
+                  if k > keyi[x] then i++
+            }
 
-			// now ci[x] and ci+1[x] are the new children, 
-			// and keyi[x] may have been changed. 
-			// we'll see if k belongs in the first or the second
-
-			if k > keyi[x] then i++
-		end if
-
-		// call ourself recursively to do the insertion
-
-		B-Tree-Insert-Nonfull (ci[x], k)
-	end if
+           // call ourself recursively to do the insertion
+           B-Tree-Insert-Nonfull (n.c[i], k);
+}
 ```
 
 1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call the node as <i>N</i>.
