@@ -99,7 +99,7 @@ BtreeSearch(n, k) {
 }
 ```
 
-<strong>Insertion:</strong> Fort inserting a node, perform a search for the key in the given B-Tree. If element is not found 
+<strong>Insertion:</strong> Perform a key search in the given B-Tree for the element. If element is not found 
 the search will terminate at a leaf. If the leaf contains less than <i>M-1</i> keys then insert the key there. It will 
 require data movements. Some keys may have to be moved to right to make room for the new insertion. If the leaf is full
 (i.e., it contains <i>M-1</i> keys) then create a new leaf. Retain the first half the keys in the old leaf and move the
@@ -108,12 +108,13 @@ to right of median key pushed to the parent. If parent does not have room, repea
 The recursice process of splitting may finally the root and increase the height of the tree.
 
 Essentially, the algoritm for insertion requires two different procedures, namely,
-- If the node is full then split the node, place one half of nodes in one and other half in another node of the split
-- If the node is not full then insert the key into the node. 
+- If the node is full then split the node, place one half of nodes in one and other half in another node of the split.
+- If the node is not full then insert the key into the node at proper position by shifting some existing keys to right. 
+
 
 ```
 B-Tree-Insert (T, k) {
-    r = T.root
+    r = T.root // Start with root
     if (r.count == M - 1) {
        // The root is full, we have to split it
        s = allocate-node (); 
@@ -128,6 +129,10 @@ B-Tree-Insert (T, k) {
        B-Tree-Insert-Nonfull (r, k);               
 }
 ```
+The algorithm takes a topdown approach to insert a new key. It begins search from the root down to a node that has a room for the insertion.
+If the search ultimately reaches leaf node where the key would belong.  If the node is not full then the insertion is done by shifting other
+larger keys to the right. However, if 
+
 ```
 B-Tree-Insert-Nonfull (x, k)
   	i = n[x]
