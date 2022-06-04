@@ -113,29 +113,30 @@ Essentially, the algoritm for insertion requires two different procedures, namel
 
 
 ```
-B-Tree-Insert (T, k) {
+B-Tree-Insert(T, k) {
     r = T.root // Start with root
     if (r.count == M - 1) {
        // The root is full, we have to split it
-       s = allocate-node (); 
+       s = allocate-node(); 
        T.root = s; 	// New root node
        s.leaf = FALSE; // new node will have some children
        s.count = 0;	   // Initialize
-       s.c1 = r;       //  Child of s is the old root node
-       B-Tree-Split-Child (s, 1, r); // r is split, 1st half of keys goes into r
-       B-Tree-Insert-Nonfull (s, k); // s is not full
+       s.c[1] = r;       //  Child of s is the old root node
+       B-Tree-Split-Child(s, 1, r); // r is split, 1st half of keys goes into r
+       B-Tree-Insert-Nonfull(s, k); // s is not full
    } else
        // r is not full, we can insert k into r
-       B-Tree-Insert-Nonfull (r, k);               
+       B-Tree-Insert-Nonfull(r, k);               
 }
 ```
-The algorithm uses a topdown approach to insert a new key. It begins search from the root down to a node that has a room for the insertion.
-If the search ultimately may reach either a non-leaf node or a leaf node where the key belongs.  If the node is not full then the insertion 
-is done by shifting other larger keys to the right. However, if the node is full then the node is split into two. The first half of the keys
-are placed in the orinal node and a new node is allocated for 2nd half of the keys.  
+The algorithm uses a topdown approach to insert a new key. It begins search from the root down to a node that has a room for 
+the insertion. If the search ultimately may reach either a non-leaf node or a leaf node where the key belongs.  If the node is 
+not full then the insertion is done by shifting other larger keys to the right. However, if the node is full then the node is 
+split into two. The first half of the keys are placed in the orinal node and a new node is allocated for 2nd half of the 
+keys.  
 
 ```
-B-Tree-Insert-Nonfull (x, k)
+B-Tree-Insert-Nonfull(x, k)
      i = n.count;
      if (isLeaf(n)) { 
 
@@ -155,25 +156,25 @@ B-Tree-Insert-Nonfull (x, k)
 
             // find child where new key belongs:
 
-            while (i >= 1 and k < n,key[i]) i--;.
+            while (i >= 1 and k < n.key[i]) i--;.
 
             // if k is in ci[x], then k <= keyi[x] (from the definition)
             // we'll go back to the last key (least i) where we found this
             // to be true, then read in that child node
 
             i++;
-            Disk-Read (ci[x])
-            if ((n.ci).count = M - 1) {
+            Disk-Read (c[i])
+            if ((n.c[i]).count = M - 1) {
 
                   // ith child node is full, we will have to split it
 
                   B-Tree-Split-Child (n, i, n.child[i]);
 
-                  // now ci[x] and ci+1[x] are the new children, 
-                  // and keyi[x] may have been changed. 
+                  // now c[i] and c[i+1] are the new children, 
+                  // and key[i] may have been changed. 
                   // we'll see if k belongs in the first or the second
 
-                  if k > keyi[x] then i++
+                  if k > key[i] then i++
             }
 
            // call ourself recursively to do the insertion
@@ -203,11 +204,8 @@ require merging at a level up. When children of the root merge together to form 
 decrements the height by 1. Thus repeated deletions may lead to a reduction in tree height.
  
  
- 
- 
- 
- 
 Before we describe the node structures, it is important to know about amortized cost.
+
 <strong>Amortized cost:</strong> is defined over a sequence or a set of operations. If some operations of a given set are 
 costly because future operations become cheap, we say time is amortized over the given set of operations. We have learned 
 about amortized cost earlier in the context of <b>union</b> and <b>find</b> instructions on disjoint sets. The reader 
