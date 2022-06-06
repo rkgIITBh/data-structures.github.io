@@ -111,6 +111,11 @@ Essentially, the algoritm for insertion requires two different procedures, namel
 - If the node is full then split the node, place one half of nodes in one and other half in another node of the split.
 - If the node is not full then insert the key into the node at proper position by shifting some existing keys to right. 
 
+The algorithm uses a topdown approach to insert a new key. It begins search from the root down to a node that has a room for 
+the insertion. If the search ultimately may reach either a non-leaf node or a leaf node where the key belongs. If the node 
+is not full then the insertion is done by shifting other larger keys to the right. However, if the node is full then the 
+node is split into two. The first half of the keys are placed in the orinal node and a new node is allocated for 2nd half 
+of the keys.
 
 ```
 B-Tree-Insert(T, k) {
@@ -119,9 +124,9 @@ B-Tree-Insert(T, k) {
        // The root is full, we have to split it
        s = allocate-node(); 
        T.root = s; 	// New root node
-       s.leaf = FALSE; // new node will have some children
-       s.count = 0;	   // Initialize
-       s.c[1] = r;       //  Child of s is the old root node
+       s.leaf = FALSE;  // New node will have some children
+       s.count = 0;	// Initialize
+       s.c[1] = r;      // Child of s is the old root node
        B-Tree-Split-Child(s, 1, r); // r is split, 1st half of keys goes into r
        B-Tree-Insert-Nonfull(s, k); // s is not full
    } else
@@ -129,14 +134,10 @@ B-Tree-Insert(T, k) {
        B-Tree-Insert-Nonfull(r, k);               
 }
 ```
-The algorithm uses a topdown approach to insert a new key. It begins search from the root down to a node that has a room for 
-the insertion. If the search ultimately may reach either a non-leaf node or a leaf node where the key belongs.  If the node is 
-not full then the insertion is done by shifting other larger keys to the right. However, if the node is full then the node is 
-split into two. The first half of the keys are placed in the orinal node and a new node is allocated for 2nd half of the 
-keys.  
+The algorithm for an insertion into non-full node appears below. 
 
 ```
-B-Tree-Insert-Nonfull(x, k)
+B-Tree-Insert-Nonfull(n, k)
      i = n.count;
      if (isLeaf(n)) { 
 
@@ -158,36 +159,39 @@ B-Tree-Insert-Nonfull(x, k)
 
             while (i >= 1 and k < n.key[i]) i--;.
 
-            // if k is in ci[x], then k <= keyi[x] (from the definition)
-            // we'll go back to the last key (least i) where we found this
-            // to be true, then read in that child node
-
+            // if k is in n.child[i], then k <= n.key[i] (from the definition)
+            // We should track back the last key (least i) where the inequality is violated.
+	    // And read that node from disk.
             i++;
             Disk-Read (c[i])
-            if ((n.c[i]).count = M - 1) {
+	    
+            if ((n.child[i]).count = M - 1) {
 
                   // ith child node is full, we will have to split it
 
                   B-Tree-Split-Child (n, i, n.child[i]);
 
-                  // now c[i] and c[i+1] are the new children, 
+                  // now n.child[i] and n.child[i+1] are the new children, 
                   // and key[i] may have been changed. 
                   // we'll see if k belongs in the first or the second
 
-                  if k > key[i] then i++
+                  if (k > key[i])
+		      i++;
             }
 
-           // call ourself recursively to do the insertion
+           //Recursively call this procedure to perform the insertion at right non-full node.
            B-Tree-Insert-Nonfull (n.c[i], k);
 }
 ```
 
-1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call the node as <i>N</i>.
-2. If <i>N</i> has room shift larger element to right, place <i>k</i>, and terminate.  
-3. Otherwise, <i>N</i> is full, split it two nodes:
+A summary of the overall procedure is provided below for reference.
+
+1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call this node as <i>N</i>.
+2. If <i>N</i> has space for more keys (non-full) shift the larger element to the right, place <i>k</i>, and terminate.  
+3. Otherwise, <i>N</i> is full. So split it two nodes by creating a new node:
    - Retain the smaller half the keys in the original node 
    - Move the larger half of keys to the newly create node.
-   - Choose the median of the keys and push it to the parent of original leaf. 
+   - Choose the median of the keys and push it to the parent of original node
    - If parent is full, it may necessitate a split of parent and split may percolate recursively to root. 
  4. Split the root if required and terminate.
  
