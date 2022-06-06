@@ -140,53 +140,50 @@ The algorithm for an insertion into non-full node appears below.
 B-Tree-Insert-Nonfull(n, k)
      i = n.count;
      if (isLeaf(n)) { 
-
-              // shift everything over to the "right" up to the
-	      // point where the new ken.y k should go
+              // Search for a non existing key will terminate when we are about to fall off from 
+	      // the tree. So the node must be a leaf node. Shift keys of this leaf node to the 
+	      // right up to the point where the new key k should go
                  
 	      while (i >= 1 and k < n.key[i] ){ 
                    n.key[i+1] = n.key[i];
                     i--;
              }
 
-             // stick k in its right place and bump up n[x]
-
+             // Put k in its right place and increment the count of keys
             n.key[i+1] = k;
-            n.count++
+            n.count++;
+	    
       } else {
+            // Find child where new key belongs traversing the tree down to a leaf. 
+            while (i >= 1 and k < n.key[i]) 
+	        i--;.
 
-            // find child where new key belongs:
-
-            while (i >= 1 and k < n.key[i]) i--;.
-
-            // if k is in n.child[i], then k <= n.key[i] (from the definition)
-            // We should track back the last key (least i) where the inequality is violated.
-	    // And read that node from disk.
+            // If k belongs to n.child[i], then k <= n.key[i]. We should track back the last 
+	    // key (least i) where the inequality is violated, and read that node from disk.
             i++;
             Disk-Read (c[i])
 	    
             if ((n.child[i]).count = M - 1) {
-
                   // ith child node is full, we will have to split it
 
                   B-Tree-Split-Child (n, i, n.child[i]);
 
-                  // now n.child[i] and n.child[i+1] are the new children, 
-                  // and key[i] may have been changed. 
-                  // we'll see if k belongs in the first or the second
+                  // Now n.child[i] and n.child[i+1] are the new children, and key[i] may have been changed. 
+                  // Find out if k belongs in the first or the second
 
                   if (k > key[i])
 		      i++;
             }
 
            //Recursively call this procedure to perform the insertion at right non-full node.
-           B-Tree-Insert-Nonfull (n.c[i], k);
+           B-Tree-Insert-Nonfull (n.child[i], k);
 }
 ```
 
 A summary of the overall procedure is provided below for reference.
 
-1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call this node as <i>N</i>.
+1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call this node <i>N</i>.
+<i>N</i> must be a leaf node, because search terminates only at a leaf node when a key is absent in the tree. 
 2. If <i>N</i> has space for more keys (non-full) shift the larger element to the right, place <i>k</i>, and terminate.  
 3. Otherwise, <i>N</i> is full. So split it two nodes by creating a new node:
    - Retain the smaller half the keys in the original node 
