@@ -183,9 +183,9 @@ B-Tree-Insert-Nonfull(n, k)
 A summary of the overall procedure is provided below for reference.
 
 1. Start at the root node and search for the key <i>k</i> to find the place where it can be pushed. Call this node <i>N</i>.
-<i>N</i> must be a leaf node, because search terminates only at a leaf node when a key is absent in the tree. 
+A search terminates only at a leaf node when a key, so  <i>N</i> must be is a leaf node. 
 2. If <i>N</i> has space for more keys (non-full) shift the larger element to the right, place <i>k</i>, and terminate.  
-3. Otherwise, <i>N</i> is full. So split it two nodes by creating a new node:
+3. Otherwise, <i>N</i> is full. Split it two nodes by creating a new node:
    - Retain the smaller half the keys in the original node 
    - Move the larger half of keys to the newly create node.
    - Choose the median of the keys and push it to the parent of original node
