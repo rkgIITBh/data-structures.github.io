@@ -193,7 +193,7 @@ A search terminates only at a leaf node when a key, so  <i>N</i> must be is a le
  4. Split the root if required and terminate.
  
 Splitting of the root creates a new root and increase the height of the tree. However, unlike balanced trees, B-Tree does
-not use rotations to fixiup or rebalancing the tree. 
+not use rotations to fixup or rebalance the tree. 
 
 <strong>Deletion:</strong> If the element <i>x</i> for deletion is not located in a leaf then we can replace <i>x</i> by
 the largest element <i>y</i> in the left subtree of <i>x</i>. The key <i>y</i> must be located in a leaf node. So, the 
