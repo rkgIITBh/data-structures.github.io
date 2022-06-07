@@ -195,14 +195,14 @@ A search terminates only at a leaf node when a key, so  <i>N</i> must be is a le
 Splitting of the root creates a new root and increase the height of the tree. However, unlike balanced trees, B-Tree does
 not use rotations to fixup or rebalance the tree. 
 
-Inserting a key into a non-full node, simply fills the node with an extra key. For example, if we insert
-16 into the BTree given in the image at the beginning of this blog, the leftmost node will become full. Figure below 
-illustrates the result of insertion. 
+A new insertion into a non-full leaf node simply fills the node with an extra key. For example, if we insert
+16 into the B-Tree of figure 1 that appears at the beginning of this blog, the leftmost node becomes full. The figure below 
+illustrates the result of this insertion. 
 <p style="text-align:center;"><img src="../images/bTreeEx3.jpg"></p>
 
-However, if we now insert 28 to the resulting B-Tree, it causes a split in third leaf which initially had keys 22, 25 and 26.
-A new leaf is created with key 28. The median 26 is pushed up to the parent node of the original leaf. The result of this
-insertion is shown below. 
+However, if we now insert 28 to the resulting B-Tree, it splits in third leaf that initially had keys 22, 25 and 26.
+A new leaf with key 28 is created, and the median key 26 is pushed up to the parent node of the original leaf. The result
+of this insertion appears below. 
  <p style="text-align:center;"><img src="../images/bTreeEx4.jpg"></p>
  
 <strong>Deletion:</strong> If the element <i>x</i> for deletion is not located in a leaf then we can replace <i>x</i> by
