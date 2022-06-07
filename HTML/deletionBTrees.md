@@ -1,6 +1,6 @@
 <strong>Deletion:</strong> Suppose we want to delete a key <i>k</i> from a node <i>n</i>. If <i>n</i> is not in a leaf 
-then we can replace <i>k</i> by the largest key <i>k<sub>L</sub> in the left subtree under node <i>n</i>. The key 
-<i>k<sub>L</sub> would occur in a leaf node. The deletion process is essentially a generalization of the deletion in 
+then we can replace <i>k</i> by the largest key <i>k<sub>L</sub></i> in the left subtree under node <i>n</i>. The key 
+<i>k<sub>L</sub></i> would occur in a leaf node. The deletion process is essentially a generalization of the deletion in 
 BST. Therefore, all deletions occur in leaf nodes. It may lead to an underflow. An underflow occurs when the number of
 keys in a leaf node is reduced to <i>M/2 - 1</i>. If the sibling node has surplus keys to share, keys can be moved to
 the deficient node and restore the requirement of B-Tree. However, if the sibling has just <i>M/2</i> keys we have 
