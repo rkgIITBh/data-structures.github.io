@@ -72,6 +72,7 @@ phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [B-Trees and Insertions into B-Trees](HTML/introBtree.md)
 - [Examples of Deletions in Red-Black Trees](HTML/rbDeletionExample.md)
 - [Deletions in Red-Black Trees](HTML/rbDeletion.md)
 - [Examples of Insertions in Red-Black Trees](HTML/rbInsertionExamples.md)
