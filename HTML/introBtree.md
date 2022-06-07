@@ -1,4 +1,4 @@
-## Introduction to B-Trees
+## B-Trees
 
 B-Trees are used to store very large dictionaries B-Trees allow searches, insertions, and deletions in amortized 
 logarithmic time.  A B-Tree node may have up to a few thousand nodes. Since B-Trees have very high branching 
@@ -205,6 +205,10 @@ A new leaf with key 28 is created, and the median key 26 is pushed up to the par
 of this insertion appears below. 
  <p style="text-align:center;"><img src="../images/bTreeEx4.jpg"></p>
  
+We end this blog here, and continue with deletion operation on B-Trees in the next blog.
+
+[Back to Index](../index.md)
+
 <strong>Deletion:</strong> If the element <i>x</i> for deletion is not located in a leaf then we can replace <i>x</i> by
 the largest element <i>y</i> in the left subtree of <i>x</i>. The key <i>y</i> must be located in a leaf node. So, the 
 deletion process is essentially a generalization of the deletion in BST. All deletions occur in leaf nodes. It may lead to
