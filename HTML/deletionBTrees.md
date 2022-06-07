@@ -36,7 +36,7 @@ L:                // A key can be borrow from n1
              }
    }
 ... 
- 
+
 Before we describe the node structures, it is important to know about amortized cost.
 
 
