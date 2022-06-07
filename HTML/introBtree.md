@@ -111,11 +111,13 @@ Essentially, the algoritm for insertion requires two different procedures, namel
 - If the node is full then split the node, place one half of nodes in one and other half in another node of the split.
 - If the node is not full then insert the key into the node at proper position by shifting some existing keys to right. 
 
-The algorithm uses a topdown approach to insert a new key. It begins search from the root down to a node that has a room for 
-the insertion. If the search ultimately may reach either a non-leaf node or a leaf node where the key belongs. If the node 
-is not full then the insertion is done by shifting other larger keys to the right. However, if the node is full then the 
-node is split into two. The first half of the keys are placed in the orinal node and a new node is allocated for 2nd half 
-of the keys.
+The algorithm uses a bottom up approach for insertion of a new key. It begins search  a leaf node where the key belongs. 
+If the node is not full then the insertion is done by shifting other larger keys to the right. However, if the node is 
+full then the node is split into two. The first half of the keys are placed in the original node and a new node is 
+allocated for 2nd half of the keys. The median key is promoted to a place in the parent of the original leaf. It may
+cause a split in the parent node if the latter is full. The splits can occur recursively all the way to the root. When the
+root is split a new root is created and the height of the tree increases. The pseudo code of the algorithm for insertion
+is provided below. 
 
 ```
 B-Tree-Insert(T, k) {
@@ -192,15 +194,15 @@ A search terminates only at a leaf node when a key, so  <i>N</i> must be is a le
    - If parent is full, it may necessitate a split of parent and split may percolate recursively to root. 
  4. Split the root if required and terminate.
  
-Splitting of the root creates a new root and increase the height of the tree. However, unlike balanced trees, B-Tree does
+Splitting of the root creates a new root and increases the height of the tree. However, unlike balanced trees, B-Tree does
 not use rotations to fixup or rebalance the tree. 
 
-A new insertion into a non-full leaf node simply fills the node with an extra key. For example, if we insert
-16 into the B-Tree of figure 1 that appears at the beginning of this blog, the leftmost node becomes full. The figure below 
-illustrates the result of this insertion. 
+As discussed above, a new insertion into a non-full leaf node simply fills the node with an extra key. For example, if we 
+insert 16 into the B-Tree of figure 1 that appears at the beginning of this blog, the leftmost node becomes full. The figure
+below illustrates the result of this insertion. 
 <p style="text-align:center;"><img src="../images/bTreeEx3.jpg"></p>
 
-However, if we now insert 28 to the resulting B-Tree, it splits in third leaf that initially had keys 22, 25 and 26.
+However, suppose we insert 28 to the resulting B-Tree, it splits in third leaf that initially had keys 22, 25 and 26.
 A new leaf with key 28 is created, and the median key 26 is pushed up to the parent node of the original leaf. The result
 of this insertion appears below. 
  <p style="text-align:center;"><img src="../images/bTreeEx4.jpg"></p>
