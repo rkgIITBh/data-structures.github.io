@@ -22,9 +22,9 @@ deleteKey(k, r) {
     else {
         // n is a leaf node */
         if(isUnderflow(n)){
-             // Let n1 be the sibling of n;
+L:           // Let n1 be the sibling of n;
              if( isRich(n1)){ 
-L:                // A key can be borrow from n1
+                  // A key can be borrow from n1
                   borrow a key from n1 via the parent node p;
              } else{ 
                   // n1 is 1 key away from underflowing 
