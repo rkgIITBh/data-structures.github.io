@@ -12,22 +12,26 @@ by 1. Thus repeated deletions may lead to a reduction in tree height.
  
 ```
 deleteKey(k, r) {
-    (n, i) = BtreeSearchKey(r, k); // Locate 
+    (n, i) = BtreeSearchKey(r, k); // Locate the node and the key position
     if(!isLeaf(n)) {
-         delete n.key[i] from n;
-         // Find smallest key k1 greater than k  
+         // n is an internal node
+         removeKey(n, i);
+         
+         // Find the smallest key k1 greater than k  
          // k1 is guaranteed to be on a leaf node L
-         (L, j) = BtreeSearchLarge(n,i); 
+         (L, j) = BtreeLocateLargerKey(n,i); 
          
          // Copy L.key[j] in position n.key[i]
-         copy(L.key[j], n.key[i]) 
+         L.key[j] = n.key[i]; 
          
          // Delete L.key[j]
          removeKey(L, j); 
-    else {
+    } else {
         // n is a leaf node 
-        if(isUnderflow(n))
-             borrow_cum_merge(n.sibling, n);
+        if(isUnderflow(n)) {
+             m = n.sibling;
+             borrow_cum_merge(m, n);
+        }
     }
 }
 
@@ -41,9 +45,11 @@ borrow_cum_merge(m, n) {
                   // Pull the key from the parent ’p’, and merge it
                   // with the keys of ’n’ and ’m’ into a new node
                   mergeNodes(n, m); 
-                  if( isUnderflow(p)) 
+                  if( isUnderflow(p)) {
                        // Recursively call borrow_cum_merge 
-                       borrow_cum_merge(p.sibling, p);
+                       u = p.sibling;
+                       borrow_cum_merge(u, p);
+                  }
              }
    }
 ```
