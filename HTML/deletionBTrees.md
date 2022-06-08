@@ -54,7 +54,7 @@ Couple of points in description of pseudo code requires a bit of explanation.
 
 The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M/2</i>. On the other hand, 
 <tt>isUnderflow</tt> returns <tt>TRUE</tt> if count is less than <i>M/2</i>. Therefore, <tt>isUnderflow()</tt> and 
-<tt>isRich()</tt> can be implemented using one single function as one is the complement of the other.  
+<tt>isRich()</tt> can be implemented using one single function.  
 
 Before we describe the node structures, it is important to know about amortized cost.
 
