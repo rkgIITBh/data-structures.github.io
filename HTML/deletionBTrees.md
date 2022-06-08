@@ -63,19 +63,30 @@ The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M
 <tt>isRich()</tt> can be implemented using one single function.  
 
 Now it is time to examine a few examples of deletions in a B-Tree. Let us begin with the most simple example, i.e.,
-deletion of a key from a leaf node. We assume that the leaf has more than <i>M/2</i> keys. So, underflow problem 
-does not arise. Figure below illustrates the deletion operation for this case.
+deletion of a key from a leaf node. We need to consider three different possibilities in deletion of key from 
+a leaf node <i>L</i>. 
+- The simplest possibility is when <i>L</i> has more than <i>M/2</i> keys. 
+- The second possibility occurs if <i>L</i> has exactly <i>M/2</i> Keys, but the sibling of <i>L</i> has surplus keys.
+- The third possibility occurs if both <i>L</i> and its sibling have exactly <i>M/2</i>. 
+
+The first possibility is handled as shown in the figure below.
 
 <p style="text-align:center;"><img src="../images/bTreeDelEx5.png"></p>
+Since <i>L</i> has a surplus key removal of a key does not affect any other nodes in the tree. 
 
-The next figure illustrates the case when only key is deleted from a leaf node. In this case we assume that the parent
-node has more than <i>M/2</i> keys. So, we can borrow a key from the parent and create a new node in place of the deleted
-node.
+The next figure illustrates the second possibility. Deletion of the key from <i>L</i> leads to elimination of <i>L</i>. 
+However, the sibling of <i>L</i> has a surplus key. Therefore, we replace <i>L</i> by creating a leaf node with the 
+spare key from <i>L</i>'s sibling. is deleted from a leaf node. So, deletion of the key only require a rearrangement of
+keys among the leaf nodes.
 <p style="text-align:center;"><img src="../images/bTreeDelEx6.png"></p>
 
-The third case is also for a deletion of a key from a leaf node, but this time the parent node does not have surplus key
-to share. 
+The configuration of nodes describing the third possibility appears in the figure below. In this case, the sibling of 
+<i>L</i> does not have a spare key. 
 <p style="text-align:center;"><img src="../images/bTreeDelEx7.png"></p>
+
+The way to handle this situation is to demote a key from the parent 
+node for replacing <i>L</i>. However, pulling a key from parent implies that patent would lose a child. In other words,
+the number child pointers from the parent decrements by 1. We can handle it by merging two adjacent children.   
 
 Having considered possible situations that arises for deletion of key from a leaf node, let us consider the situations
 that may aries in deletion operation from internal node. Figure below illustrates one such situation. In this case, 
