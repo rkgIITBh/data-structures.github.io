@@ -12,27 +12,36 @@ may lead to a reduction in tree height.
  
 ```
 deleteKey(k, r) {
-    n = searchKey(k, r);
+    (n, i) = BtreeSearchKey(r, k); // Locate 
     if(!isLeaf(n)) {
-         delete k from n;
-         find the immediately largest key k1;
-         // k1 is guaranteed to be on a leaf node l
-         copy k1 in the old position k;
-         deleteKey(k1, l);
+         delete n.key[i] from n;
+         // Find immediately largest key k1 
+         // k1 is guaranteed to be on a leaf node L
+         (L, j) = BtreeSearchLarge(n,i); 
+         // copy k1 in the old position k;
+         copy(L.key[j], n.key[i]) 
+         // Delete L.key[j]
+         deleteKey(L, j);
     else {
-        // n is a leaf node */
-        if(isUnderflow(n)){
-L:           // Let n1 be the sibling of n;
-             if( isRich(n1)){ 
-                  // A key can be borrow from n1
-                  borrow a key from n1 via the parent node p;
+        // n is a leaf node 
+        if(isUnderflow(n))
+             borrow_cum_merge(n.sibling, n);
+    }
+}
+
+borrow_cum_merge(m, n) {
+             // m is the sibling of n;
+             if( isRich(m)){ 
+                  // A key can be borrow from m
+                  borrow a key from m via the parent node p;
              } else{ 
-                  // n1 is 1 key away from underflowing 
+                  // m is 1 key away from underflowing 
                   // pull the key from the parent ’p’, and merge it
-                  // with the keys of ’n’ and ’n1’ into a new node
-                  mergeNodes(n, n1); 
+                  // with the keys of ’n’ and ’m’ into a new node
+                  mergeNodes(n, m); 
                   if( isUnderflow(p)) 
-                       repeat from L;
+                       // Recursively call borrow_cum_merge 
+                       borrow_cum_merge(p.sibling, p);
              }
    }
 ```
