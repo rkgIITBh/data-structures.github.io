@@ -36,22 +36,22 @@ deleteKey(k, r) {
 }
 
 borrow_cum_merge(m, n) {
-             // m is the sibling of n;
-             if( isRich(m)){ 
-                  // A key can be borrow from m
-                  borrow a key from m via the parent node p;
-             } else{ 
-                  // m is 1 key away from underflowing 
-                  // Pull the key from the parent ’p’, and merge it
-                  // with the keys of ’n’ and ’m’ into a new node
-                  mergeNodes(n, m); 
-                  if( isUnderflow(p)) {
-                       // Recursively call borrow_cum_merge 
-                       u = p.sibling;
-                       borrow_cum_merge(u, p);
-                  }
-             }
-   }
+      // m is the sibling of n;
+      if( isRich(m)){ 
+          // A key can be borrow from m
+          borrow a key from m via the parent node p;
+      } else{ 
+          // m is 1 key away from underflowing 
+          // Pull the key from the parent ’p’, and merge it
+          // with the keys of ’n’ and ’m’ into a new node
+          mergeNodes(n, m); 
+          if( isUnderflow(p)) {
+              // Recursively call borrow_cum_merge 
+              u = p.sibling;
+              borrow_cum_merge(u, p);
+          }
+     }
+}
 ```
 
 Couple of points in the pseudo code need a bit of explanation. 
