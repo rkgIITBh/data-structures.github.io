@@ -64,4 +64,13 @@ The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M
 
 Now it is time to examine a few examples of deletions in a B-Tree. 
 
+<p style="text-align:center;"><img src="../images/bTreeDelEx5.png"></p>
+
+<p style="text-align:center;"><img src="../images/bTreeDelEx6.png"></p>
+
+<p style="text-align:center;"><img src="../images/bTreeDelEx7.png"></p>
+
+<p style="text-align:center;"><img src="../images/bTreeDelEx8.png"></p>
+
+<p style="text-align:center;"><img src="../images/bTreeDelEx9.png"></p>
 
