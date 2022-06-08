@@ -15,13 +15,15 @@ deleteKey(k, r) {
     (n, i) = BtreeSearchKey(r, k); // Locate 
     if(!isLeaf(n)) {
          delete n.key[i] from n;
-         // Find immediately largest key k1 
+         // Find smallest key k1 greater than k  
          // k1 is guaranteed to be on a leaf node L
          (L, j) = BtreeSearchLarge(n,i); 
-         // copy k1 in the old position k;
+         
+         // Copy L.key[j] in position n.key[i]
          copy(L.key[j], n.key[i]) 
+         
          // Delete L.key[j]
-         deleteKey(L, j);
+         deleteKey(L, j); 
     else {
         // n is a leaf node 
         if(isUnderflow(n))
@@ -36,7 +38,7 @@ borrow_cum_merge(m, n) {
                   borrow a key from m via the parent node p;
              } else{ 
                   // m is 1 key away from underflowing 
-                  // pull the key from the parent ’p’, and merge it
+                  // Pull the key from the parent ’p’, and merge it
                   // with the keys of ’n’ and ’m’ into a new node
                   mergeNodes(n, m); 
                   if( isUnderflow(p)) 
@@ -45,6 +47,14 @@ borrow_cum_merge(m, n) {
              }
    }
 ```
+
+Couple of points in description of pseudo code requires a bit of explanation. 
+- The deletion of key after copying <tt>L.key[j]</tt> at <tt>n.key[i]</tt> may require data movement inside <tt>L</tt>.
+- We need to check the count of keys in a node for the functions <tt>isRich()</tt> and <tt>isUnderflow()</tt>. 
+
+The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M/2</i>. On the other hand, 
+<tt>isUnderflow</tt> returns <tt>TRUE</tt> if count is less than <i>M/2</i>. Therefore, <tt>isUnderflow()</tt> and 
+<tt>isRich()</tt> can be implemented using one single function as one is the complement of the other.  
 
 Before we describe the node structures, it is important to know about amortized cost.
 
