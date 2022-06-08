@@ -23,7 +23,7 @@ deleteKey(k, r) {
          copy(L.key[j], n.key[i]) 
          
          // Delete L.key[j]
-         deleteKey(L, j); 
+         removeKey(L, j); 
     else {
         // n is a leaf node 
         if(isUnderflow(n))
@@ -49,8 +49,8 @@ borrow_cum_merge(m, n) {
 ```
 
 Couple of points in description of pseudo code requires a bit of explanation. 
-- The deletion of key after copying <tt>L.key[j]</tt> at <tt>n.key[i]</tt> may require data movement inside <tt>L</tt>.
-- We need to check the count of keys in a node for the functions <tt>isRich()</tt> and <tt>isUnderflow()</tt>. 
+- The function <tt>removeKey()</tt> may require data movement inside <tt>L</tt>.
+- Te functions <tt>isRich()</tt> and <tt>isUnderflow()</tt> just require checking of key count in a node.
 
 The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M/2</i>. On the other hand, 
 <tt>isUnderflow</tt> returns <tt>TRUE</tt> if count is less than <i>M/2</i>. Therefore, <tt>isUnderflow()</tt> and 
