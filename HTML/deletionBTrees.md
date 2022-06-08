@@ -2,13 +2,13 @@
  
 Suppose we want to delete a key <i>k</i> from a node <i>n</i>. If <i>n</i> is not in a leaf 
 then we can replace <i>k</i> by the largest key <i>k<sub>L</sub></i> in the left subtree under node <i>n</i>. The key 
-<i>k<sub>L</sub></i> would occur in a leaf node. The deletion process is essentially a generalization of the deletion in 
-BST. Therefore, all deletions occur in leaf nodes. It may lead to an underflow. An underflow occurs when the number of
-keys in a leaf node is reduced to <i>M/2 - 1</i>. If the sibling node has surplus keys to share, keys can be moved to
-the deficient node and restore the requirement of B-Tree. However, if the sibling has just <i>M/2</i> keys we have 
-merge the two siblings into one node. Merging may percolate up and require merging at a level up. When children of the 
-root merge together to form one node a new root is created which decrements the height by 1. Thus repeated deletions 
-may lead to a reduction in tree height.
+<i>k<sub>L</sub></i> would occur in a leaf node <i>L</i>. The deletion process is essentially a generalization of the 
+deletion of a key in BST. Therefore, all deletions occur in leaf nodes. It may lead to an underflow. An underflow 
+occurs when the number of keys in a leaf node is reduced to <i>M/2 - 1</i>. If the sibling node has surplus keys to 
+share, keys can be moved to the deficient node and restore the requirement of B-Tree. However, if the sibling has
+just <i>M/2</i> keys we have merge the two siblings into one node. Merging may percolate up and require merging at 
+a level up. When children of the root merge together to form one node a new root is created which decrements the height
+by 1. Thus repeated deletions may lead to a reduction in tree height.
  
 ```
 deleteKey(k, r) {
