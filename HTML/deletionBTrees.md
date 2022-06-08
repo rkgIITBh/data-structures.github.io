@@ -97,6 +97,9 @@ keys with the sibling node which is non-full.
 <p style="text-align:center;"><img src="../images/bTreeDelEx8.png"></p>
 
 The second situation occurs when we attempt to delete a key from a node having <i>M/2</i> keys. So the deletion leads to
-a node having less than the required number of keys.
+a node having less than the required number of keys. For example, suppose we want to delete key 36 from the tree given
+below.
 <p style="text-align:center;"><img src="../images/bTreeDelEx9.png"></p>
-
+We can possibly merge its children and create a leaf node containing keys {30,38}. However, it leads to an unbalanced tree
+as leaf nodes are not at the same depth. How can we handle it? The simplest way is to pull up a key from right child of
+the parent node. So, 70 goes to the parent node. The height of the tree is reduced by 1.
