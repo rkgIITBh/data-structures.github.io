@@ -48,7 +48,7 @@ borrow_cum_merge(m, n) {
    }
 ```
 
-Couple of points in description of pseudo code requires a bit of explanation. 
+Couple of points in the pseudo code need a bit of explanation. 
 - The function <tt>removeKey()</tt> may require data movement inside <tt>L</tt>.
 - Te functions <tt>isRich()</tt> and <tt>isUnderflow()</tt> just require checking of key count in a node.
 
