@@ -72,29 +72,31 @@ a leaf node <i>L</i>.
 The first possibility is handled as shown in the figure below.
 
 <p style="text-align:center;"><img src="../images/bTreeDelEx5.png"></p>
-Since <i>L</i> has a surplus key removal of a key does not affect any other nodes in the tree. 
+Deleting 33 from the leaf node having keys {31, 33} has no effect overall configuration of B-Tree as one key is still left
+in that leaf. 
 
-The next figure illustrates the second possibility. Deletion of the key from <i>L</i> leads to elimination of <i>L</i>. 
-However, the sibling of <i>L</i> has a surplus key. Therefore, we replace <i>L</i> by creating a leaf node with the 
-spare key from <i>L</i>'s sibling. is deleted from a leaf node. So, deletion of the key only require a rearrangement of
-keys among the leaf nodes.
+The next figure illustrates the second possibility. Deletion of the key 31 leads to elimination of the leaf containing
+it. However, the left sibling of concernied leaf has keys {22, 25}. Therefore, we can borrow one key from the sibling
+via the parent node. It leads to replacing 31 by the spare key 30 from the parent, while the key 25 is promoted to parent
+node.  So, deletion of the key 31 only requires a rearrangement of keys among the leaf nodes and its parent.
 <p style="text-align:center;"><img src="../images/bTreeDelEx6.png"></p>
 
-The configuration of nodes describing the third possibility appears in the figure below. In this case, the sibling of 
-<i>L</i> does not have a spare key. 
+The configuration of nodes describing the third possibility appears in the figure below. We attempt to remove key 30. The
+sibling of the leaf containing 30 does not have a spare key. 
 <p style="text-align:center;"><img src="../images/bTreeDelEx7.png"></p>
 
-The way to handle this situation is to demote a key from the parent 
-node for replacing <i>L</i>. However, pulling a key from parent implies that patent would lose a child. In other words,
-the number child pointers from the parent decrements by 1. We can handle it by merging two adjacent children.   
+We may possibly pull a key from the parent node for replacing node containing 30. However, it causes parent to lose a 
+child. Therefore, the number child pointers from the parent is reduced by 1. We can handle it by pulling a key from the
+parent and merging it with one key in the relevant leaf node. So, 25 is pulled from the parent and merged with the leaf
+containing 22.
 
-Having considered possible situations that arises for deletion of key from a leaf node, let us consider the situations
-that may aries in deletion operation from internal node. Figure below illustrates one such situation. In this case, 
-key 25 is deleted. But deletion results in the left leaf node being orphaned. So, we need to merge its keys with 
-the sibling node which is non-full. 
+Having considered all possible situations arising out of deletion of key from a leaf node, let us now consider the
+situations that may aries in deletion operation from an internal node. Figure below illustrates one such situation. 
+In this case, key 25 is deleted. But deletion results in the left leaf node being orphaned. So, we need to merge its 
+keys with the sibling node which is non-full. 
 <p style="text-align:center;"><img src="../images/bTreeDelEx8.png"></p>
 
-The second situation occurs when we attempt to delete a key from a node having <i>M/2</i> keys. So deletion leads to
-an empty node. Handling this case requires pulling up a key to  
+The second situation occurs when we attempt to delete a key from a node having <i>M/2</i> keys. So the deletion leads to
+a node having less than the required number of keys.
 <p style="text-align:center;"><img src="../images/bTreeDelEx9.png"></p>
 
