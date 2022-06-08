@@ -56,6 +56,6 @@ The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M
 <tt>isUnderflow</tt> returns <tt>TRUE</tt> if count is less than <i>M/2</i>. Therefore, <tt>isUnderflow()</tt> and 
 <tt>isRich()</tt> can be implemented using one single function.  
 
-Before we describe the node structures, it is important to know about amortized cost.
+Now it is time to examine a few examples of deletions in a B-Tree. 
 
 
