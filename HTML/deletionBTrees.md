@@ -62,15 +62,28 @@ The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M
 <tt>isUnderflow</tt> returns <tt>TRUE</tt> if count is less than <i>M/2</i>. Therefore, <tt>isUnderflow()</tt> and 
 <tt>isRich()</tt> can be implemented using one single function.  
 
-Now it is time to examine a few examples of deletions in a B-Tree. 
+Now it is time to examine a few examples of deletions in a B-Tree. Let us begin with the most simple example, i.e.,
+deletion of a key from a leaf node. We assume that the leaf has more than <i>M/2</i> keys. So, underflow problem 
+does not arise. Figure below illustrates the deletion operation for this case.
 
 <p style="text-align:center;"><img src="../images/bTreeDelEx5.png"></p>
 
+The next figure illustrates the case when only key is deleted from a leaf node. In this case we assume that the parent
+node has more than <i>M/2</i> keys. So, we can borrow a key from the parent and create a new node in place of the deleted
+node.
 <p style="text-align:center;"><img src="../images/bTreeDelEx6.png"></p>
 
+The third case is also for a deletion of a key from a leaf node, but this time the parent node does not have surplus key
+to share. 
 <p style="text-align:center;"><img src="../images/bTreeDelEx7.png"></p>
 
+Having considered possible situations that arises for deletion of key from a leaf node, let us consider the situations
+that may aries in deletion operation from internal node. Figure below illustrates one such situation. In this case, 
+key 25 is deleted. But deletion results in the left leaf node being orphaned. So, we need to merge its keys with 
+the sibling node which is non-full. 
 <p style="text-align:center;"><img src="../images/bTreeDelEx8.png"></p>
 
+The second situation occurs when we attempt to delete a key from a node having <i>M/2</i> keys. So deletion leads to
+an empty node. Handling this case requires pulling up a key to  
 <p style="text-align:center;"><img src="../images/bTreeDelEx9.png"></p>
 
