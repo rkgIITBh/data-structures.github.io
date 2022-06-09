@@ -110,4 +110,5 @@ We can merge its children and create a leaf node containing keys {30,38}. Howeve
 as leaf nodes are not at the same depth. How can we handle it? The simplest way is to pull up a key from the right child of
 the parent node. So, 70 goes to the parent node. The height of the tree is reduced by 1.
 
+
 [Back to Index](../index.md)
