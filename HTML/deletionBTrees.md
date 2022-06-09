@@ -54,13 +54,22 @@ borrow_cum_merge(m, n) {
 }
 ```
 
-Couple of points in the pseudo code need a bit of explanation. 
+A few points in the pseudo code for <tt>borrow_cum_merge()</tt> need a bit of explanation. 
 - The function <tt>removeKey()</tt> may require data movement inside <tt>L</tt>.
 - Te functions <tt>isRich()</tt> and <tt>isUnderflow()</tt> just require checking of key count in a node.
 
+
 The function <tt>isRich</tt> returns <tt>TRUE</tt> if count is greater than <i>M/2</i>. On the other hand, 
 <tt>isUnderflow</tt> returns <tt>TRUE</tt> if count is less than <i>M/2</i>. Therefore, <tt>isUnderflow()</tt> and 
-<tt>isRich()</tt> can be implemented using one single function.  
+<tt>isRich()</tt> can be implemented using one single function. 
+
+If an underflow occurs after deletion of a key from a node then a surplus key can be borrowed from its rich sibling.
+However, it the sibling itself is one key away from underflow, then we perform a merging of keys as follows:
+- Pull the key from the parent whose right pointer points to the sibling node.
+- Merge the key retrieved from the parent, the remaining keys from node of the deleted key, and the keys from the sibling. 
+
+The merging process reduces the number of children of the parent by one while the sibling becomes richer by addition of
+left out keys from the deleted node and the key pulled out from the parent node. 
 
 Now it is time to examine a few examples of deletions in a B-Tree. Let us begin with the most simple example, i.e.,
 deletion of a key from a leaf node. We need to consider three different possibilities in deletion of key from 
