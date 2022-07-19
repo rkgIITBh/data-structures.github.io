@@ -1,6 +1,6 @@
 ## B-Trees
 
-B-Trees are used to store very large dictionaries. B-Trees allow searches, insertions, and deletions in 
+B-Trees are used to store very large dictionaries. They allow searches, insertions, and deletions in 
 logarithmic time.  A B-Tree node may have up to a few thousand nodes. Since B-Trees have very high branching 
 factor, the tree tend to be bushy compared to red-black tree. It does not require rebalancing operations like rotations.
 But as more and more insertions happen, the nodes cannot accommodate them. So, nodes must be added to handle insertions.
