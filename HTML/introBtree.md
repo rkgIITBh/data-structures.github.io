@@ -2,9 +2,9 @@
 
 B-Trees are used to store very large dictionaries. They allow searches, insertions, and deletions in 
 logarithmic time.  A B-Tree node may have up to a few thousand nodes. Since B-Trees have very high branching 
-factor, the tree tend to be bushy compared to red-black tree. It does not require rebalancing operations like rotations.
-But as more and more insertions happen, the nodes cannot accommodate them. So, nodes must be added to handle insertions.
-On the other hand, when deletions take place, it leads to wastage of storage space. To handle both situations, B-Tree
+factor, the tree tend to be bushy compared to red-black tree. They do not require rebalancing operations like rotations.
+But as more and more insertions happen, the nodes cannot accommodate them. So, more nodes must be added to handle insertions.
+When deletions take place, it leads to some wastage of storage space. To handle both situations, B-Tree
 nodes are restructured by splitting and merging. Splitting of a node occurs more and more keys accumulate for room 
 at the node. Similarly, merging occurs when a pair of sibling nodes have lot of vacancies for keys due repeated 
 deletions. Merging reduces height as it may propagate up to the root of tree. Splitting also propagate all the way to
