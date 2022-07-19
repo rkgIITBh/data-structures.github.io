@@ -105,7 +105,8 @@ require data movements. Some keys may have to be moved to right to make room for
 (i.e., it contains <i>M-1</i> keys) then create a new leaf. Retain the first half the keys in the old leaf and move the
 second half of the keys to newly created leaf. Push the median to parent and create an extra child link for the new leaf 
 to right of median key pushed to the parent. If parent does not have room, repeat the splitting process again at the parent. 
-The recursice process of splitting may finally the root and increase the height of the tree.
+The recursice process of splitting may finally split the root and increase the height of the tree by adding a new
+root.
 
 Essentially, the algoritm for insertion requires two different procedures, namely,
 - If the node is full then split the node, place one half of nodes in one and other half in another node of the split.
