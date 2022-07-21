@@ -50,12 +50,12 @@ rotation.
 A zig-zig splay is a RR type double rotation consisting of a right rotation
 on <i>p</i> followed by a right rotation on <i>x</i>. 
 <p style="text-align:center">
- <img src="../images/LR-splay.png" alt="Zig-Zig splay"> 
+ <img src="../images/RR-splay.png" alt="Zig-Zig splay"> 
 </p>
 A zig-zag splay is a LR type double roatation consisting of a left rotation
 on <i>p</i> followed by a right rotation on <i>x</i>.
 <p style="text-align:center">
- <img src="../images/RR-splay.png" alt="Zig-Zag splay"> 
+ <img src="../images/LR-splay.png" alt="Zig-Zag splay"> 
 </p>
 
 Having understood the basic splay operation let us examine how it helps using
