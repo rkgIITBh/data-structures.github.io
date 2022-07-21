@@ -84,7 +84,12 @@ originally.
  <img src="../images/splayExample2.png" alt="splaying example 2">
  </p>
 As the reader may observe the only operation used for turning the tree
-into a bushy tree is rotation.
+into a bushy tree is rotation. It indicates that in a completely skewed
+tree accessing node 1 takes <i>n-1</i> units of time. But accessing 2 
+after splaying takes <i>n/2</i> units of time instead of <i>n-2</i> units
+of time. No node is as deep as it was in original tree. However, splaying
+may not always lead to a cheaper accesses of nodes. It can lead to bad 
+reorganization of the tree when accesses are cheap.
 
 We end this blog here.
 
