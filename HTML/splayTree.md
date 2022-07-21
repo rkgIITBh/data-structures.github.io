@@ -62,6 +62,7 @@ Having understood the basic splay operation let us examine how it helps using
 a small example given in the image below:
 <p style="text-align:center">
  <img src="../images/splayExample.png" alt="splaying example 1"> 
+ ----
  <img src="../images/splayExample1.png" alt="splaying example 2"> 
 </p>
 The final tree, in bottom right most, becomes more bushy compared to 
