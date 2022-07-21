@@ -63,7 +63,7 @@ a small example given in the image below:
 <p style="text-align:center">
  <img src="../images/splayExample.png" alt="splaying example 1"> 
  </p>
- ----
+ <hr />
  <p style="text-align:center">
  <img src="../images/splayExample1.png" alt="splaying example 2"> 
 </p>
