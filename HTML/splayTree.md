@@ -83,6 +83,16 @@ originally.
 <p style="text-align:center">
  <img src="../images/splayExample2.png" alt="splaying example 2">
  </p>
+The rotation starts with tri-node configuration consisting of 1-2-3. 
+Since it is a zig-zig pattern, it requires a RR rotation. After first
+rotation 1 goes up 2 becomes right child of 1. Then second R rotation 
+pushes 1 to previous position of 1. Element 3 becomes right child of 1,
+and the previous right child of 1 becomes left child of 3. Therefore
+we get the configuration as shown in 2nd diagram of the figure. After
+it the splaying is applied to tri-node configuration 1-4-5 of the 
+2nd diagram. It is again a zig-zig pattern and requires a double right
+rotation.
+
 As the reader may observe the only operation used for turning the tree
 into a bushy tree is rotation. It indicates that in a completely skewed
 tree accessing node 1 takes <i>n-1</i> units of time. But accessing 2 
