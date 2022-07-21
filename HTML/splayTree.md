@@ -85,10 +85,10 @@ originally.
  </p>
 The rotation starts with tri-node configuration consisting of 1-2-3. 
 Since it is a zig-zig pattern, it requires a RR rotation.
+
 - Appying first rotation brings 3 one level down Node 2 becomes parent of 3,
 Node 1 is pushed one level up as left child of 2. 
-- Second right rotation pushes 1 to positon of 2 and the latter becomes right child of
-1.
+- Second right rotation pushes 1 to positon of 2 and the latter becomes right child of 1.
 
 Therefore we get the configuration as shown in 2nd diagram of the figure. After
 it the splaying is applied to tri-node configuration 1-4-5 of the 
