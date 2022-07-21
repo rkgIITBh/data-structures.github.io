@@ -91,6 +91,7 @@ of time. No node is as deep as it was in original tree. However, splaying
 may not always lead to a cheaper accesses of nodes. It can lead to bad 
 reorganization of the tree when accesses are cheap.
 
+
 We end this blog here.
 
 [Back to Index](../index.md)
