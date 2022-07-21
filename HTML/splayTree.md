@@ -76,5 +76,7 @@ Let us see how splaying helps in an extended example. We start with an
 extremely skewed initial tree consisting seven elements as in the figure
 below.
 
-
+<p style="text-align:center">
+ <img src="../images/splayExample2.png" alt="splaying example 2">
+ </p>
 
