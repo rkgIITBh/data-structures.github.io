@@ -53,6 +53,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [Splay Trees](HTML/splayTree.md)
 - [Deletion of Keys from B-Trees](HTML/deletionBTrees.md)
 - [B-Trees and Insertions into B-Trees](HTML/introBtree.md)
 - [Examples of Deletions in Red-Black Trees](HTML/rbDeletionExample.md)
