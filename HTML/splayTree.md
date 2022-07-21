@@ -74,8 +74,9 @@ we reorganize the tree to make future operation cheaper.
 
 Let us see how splaying helps in an extended example. We start with an
 extremely skewed initial tree consisting seven elements as in the figure
-below. It moves element 1 to the root, and the tree becomes more bushy
-than it was originally.
+below. Suppose we access element 1 in the tree below. Splaying moves 
+element 1 to the root, and the tree becomes more bushy than it was 
+originally.
 <p style="text-align:center">
  <img src="../images/splayExample2.png" alt="splaying example 2">
  </p>
