@@ -24,9 +24,20 @@ worst-case. So, we define the potential by the following function
 </p>
 Where <i>S(i)</i> denotes the number of descendants of <i>i</i> (including itself). Let us define 
 log <i>S(i)=R(i)</i>, where <i>R(i)</i> is the rank (or height) of node <i>i</i>. Thus <i>R(T)</i>
-is the height of the tree <i>T</i>. Let us consider the earlier example of splaying explained in
-<a href="./splayTree.md">Splay Trees</a>.
+is the height of the tree <i>T</i>. 
 
+We need some preliminary results for our analysis. The first results is given in Lemma 1 and the
+second in Lemma 2.
+
+<strong>Lemma 1</strong>: If <i>a + b &le; c</i> where <i>a</i> and <i>b</i> are both positive
+integers then log <i>a</i> + log <i>b</c> &lt; log <i>c</i> - 2.
+
+<strong>Proof</strong>: We know arithmetic mean is less than equal to geometric mean. So,
+&radic;(<i>ab</i>) &lt; <i>(a+b)/2</i> &lt; <i>c/2</i>. Taking square of both side of previous 
+inequality, we have <i>ab</i> &lt: <i>c<sup>2</sup>/4</i>. Now take log of both side to get
+the result.
+
+Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
 Suppose we apply splaying on node 2. The series of trees after each
 splay is give below as <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
 <i>T<sub>4</sub></i>. Consider the rank of node 2 in the four trees. The first operation is a
