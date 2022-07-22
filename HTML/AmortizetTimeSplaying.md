@@ -3,7 +3,7 @@
 The contents of this blog is bit mathematical and requires a bit of maturity in understanding. We
 have discussed splaying operation in a previous blog. In course of discussion we mentioned that
 splay tree data structure support a sequence of O(<i>m</i>) operations in average O(<i>log n</i>)
-unit of time per operation or overall time of O(<i>m log n<i>) time. In a completely left or right
+unit of time per operation or overall time of O(<i>m log n</i>) time. In a completely left or right
 skewed tree, the time for accessing the leaf node could be as expensive as O(<i>n</i>), where 
 <i>n</i> is the number of nodes in the tree. The average time we mentioned is actually amortized 
 time or time partitioned over a sequence of operations. If we consider an operation in isolation then
