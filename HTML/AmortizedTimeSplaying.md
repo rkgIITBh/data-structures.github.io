@@ -80,8 +80,8 @@ by the following expression.
 </div>
 We observe the following:
 
-- Size of subtree under <i>g</i> increases after splaying. So, <i>R<sub>f</sub>(g) &gt R<sub>i</sub>(g)</i>.
-- Size of subtree under <i>p</i> increases after splaying. So, <i>R<sub>f</sub>(p) &gt R<sub>i</sub>(p)</i>.
+- Size of subtree under <i>g</i> increases after splaying. So, <i>R<sub>f</sub>(g) &gt; R<sub>i</sub>(g)</i>.
+- Size of subtree under <i>p</i> increases after splaying. So, <i>R<sub>f</sub>(p) &gt; R<sub>i</sub>(p)</i>.
 - Also before rotation the size of subtree of <i>p</i> is bigger than size of subtree of <i>x</i>.
 
 When we use the above information and simplify the time for zig-zag splaying we get
