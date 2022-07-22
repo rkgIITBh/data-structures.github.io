@@ -23,7 +23,7 @@ worst-case. So, we define the potential by the following function
   &#x3D5;(T) = &Sigma;log(<i>S(i)</i>)
 </p>
 Where <i>S(i)</i> denotes the number of descendants of <i>i</i> (including itself). Let us define 
-<i>log S(i)=R(i)</i>, where <i>R(i)</i> is the rank (or height) of node <i>i</i>. Thus <i>R(T)</i>
+log <i>S(i)=R(i)</i>, where <i>R(i)</i> is the rank (or height) of node <i>i</i>. Thus <i>R(T)</i>
 is the height of the tree <i>T</i>. Let us consider the earlier example of splaying explained in
 [Splay Trees](./splayTree.md). Suppose we apply splaying on node 2. The series of trees after each
 splay is give below as <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
