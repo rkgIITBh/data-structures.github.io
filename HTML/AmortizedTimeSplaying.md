@@ -26,8 +26,7 @@ Where <i>S(i)</i> denotes the number of descendants of <i>i</i> (including itsel
 log <i>S(i)=R(i)</i>, where <i>R(i)</i> is the rank (or height) of node <i>i</i>. Thus <i>R(T)</i>
 is the height of the tree <i>T</i>. 
 
-We need some preliminary results for our analysis. The first results is given in Lemma 1 and the
-second in Lemma 2.
+We need a preliminary result for our analysis which is given in Lemma 1.
 
 <strong>Lemma 1</strong>: If <i>a + b &le; c</i> where <i>a</i> and <i>b</i> are both positive
 integers then log <i>a</i> + log <i>b</i> &lt; 2log <i>c</i> - 2.
