@@ -78,16 +78,21 @@ by the following expression.
 <div style align="text:center">
   <i>2+R<sub>f</sub>(x) + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> 
 </div>
-We observe the following:
+From the figure we observe <i>S<sub>f</sub>(p) + S<sub>f</sub>(g) &lt; S<sub>f</sub>(x)</i>. Therefore, from
+the lemma we can conclude:
+<i>log S<sub>f</sub>(p) + log S<sub>f</sub>(g) &lt; 2 log S<sub>f</sub>(x) - 2</i>
 
-- Size of subtree under <i>g</i> increases after splaying. So, <i>R<sub>f</sub>(g) &gt; R<sub>i</sub>(g)</i>.
-- Size of subtree under <i>p</i> increases after splaying. So, <i>R<sub>f</sub>(p) &gt; R<sub>i</sub>(p)</i>.
-- Also before rotation the size of subtree of <i>p</i> is bigger than size of subtree of <i>x</i>.
+Summarizing the observation from the figure, we get the following:
 
-When we use the above information and simplify the time for zig-zag splaying we get
+- <i>R<sub>f</sub>(x) = R<sub>i</sub>(g)</i>.
+- <i>R<sub>i</sub>(g) &gt; R<sub>i</sub>(x)</i>.
+- <i>R<sub>f</sub>(p) + R<sub>f</sub>(g) &lt; 2R<sub>i</sub>(x) - 2</i>.
+
+Therefore simplifying the time for zig-zag splaying with above results, we get
 <div style align="text:center">
   <i>2 + R<sub>f</sub>(p) + R<sub>f</sub>(g) - 2R<sub>i</sub>(x)</i> 
 </div>
+
 Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
 Suppose we apply splaying on node 2. The series of trees after each
 splay is give below as <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
