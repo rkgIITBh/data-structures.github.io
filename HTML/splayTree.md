@@ -105,12 +105,12 @@ tri-node configuration 1-6-7. Therefore, applying double right rotation
 to it, we get the result shown in the right-most diagram.
 
 As the reader may observe, the only rotation operations are
-used in turning a skewed tree into a bushy tree.  
-Accessing node 1 takes <i>n-1</i> units of time. But accessing 2 
-after splaying takes <i>n/2</i> units of time instead of <i>n-2</i> units
-of time. No node is as deep as it was in the original tree. However, splaying
-may not always lead to cheaper access to nodes. It can lead to bad 
-reorganization of the tree when accesses are cheap.
+used in turning a skewed tree into a bushy tree. Accessing node 1 takes 
+<i>n-1</i> units of time. But accessing 2 after splaying takes 
+<i>n/2</i> units of time instead of <i>n-2</i> units of time. No node is as 
+deep as it was in the original tree. However, splaying may not always 
+lead to cheaper access to nodes. It can lead to bad reorganization of 
+the tree when accesses are cheap.
 
 
 We end this blog here.
