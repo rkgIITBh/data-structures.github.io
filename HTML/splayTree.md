@@ -92,6 +92,7 @@ are as specified below:
 
 - The first rotation brings node 3 one level down. Node 2 becomes the parent of 3.  
 - The second right rotation pushes node 1 to the position of 2. It becomes the parent of 2. 
+
 Since rotations preserve BST property, node 2 is the right 
 child of 1, and node 3 is the right child of 2. Therefore we get the 
 configuration as shown in the 2nd diagram of the figure. The second
