@@ -44,33 +44,50 @@ Let the ranks and sizes of a node <i>x</i> be denoted respectively by:
 - Before splaying: <i>R<sub>i</sub>(x)</i> and <i>S<sub>i</sub>(x)</i> 
 - After splaying: <i>R<sub>f</sub>(x)</i> and <i>S<sub>f</sub>(x)</i> 
 
-<strong>Zig step</strong>: For completeness of description, zig-splaying is shown in the figure
+<strong>Zig step</strong>: For completeness of description, zig type splaying is shown in the figure
 below. 
 <p align="text:center">
-  <img src="../images/zigSplay.png">
+  <img src="../images/R-splay.png">
 </p>
-Actual time for zig step is 1 because it is a rotation that involves
-modification of three links. Notice that potential change is only respect to subtrees under <i>x</i> 
-and its parent <i>p</i>. So the change in potential is easy to compute. It is:
+Actual time for zig step is 1 because it is a rotation. The computation of potential 
+change is easy. Since splaying affects subtress under <i>x</i> 
+and its parent <i>p</i>, we need to compute change with respect to these two subtree.
 <div style align="text:center">
   <i>1+R<sub>f</sub>(x) + R<sub>f</sub>(p) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
 </div>
-The size of the subtree of <i>p</i> increases after splaying. So we have <i>R<sub>f</sub>(p) &gt; R<sub>i</sub>(p)</i> 
-Hence the amortised time for zig operation is bounded above by the expression:
-<p style align="text:center">
-  <i>R<sub>f</sub>(x) - R<sub>i</sub>(x) &gt; 0</i>
-</p>
+The size of the subtree of <i>p</i> decreases after splaying. So we have 
+<i>R<sub>f</sub>(p) &lt; R<sub>i</sub>(p)</i>. However, the size of subtree of <i>x</i>
+increases. So, <i>R<sub>f</sub>(x) &gt; R<sub>i</sub>(x)</i>. We can now simplify the
+expression for average time <i>AT<sub>zig</sub></i> for zig type splaying as follows:
+<div style align="text:center">
+  <i>AT<sub>zig</sub> &lt; 1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
+</div>
 Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that 
 <div style align="text:center">
-  <i>1+3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
+  <i>AT<sub>zig</sub> &lt; 1+3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
 </div>
 
-<strong>Zig-zig step</strong>: Actual time for zig-zig is 2 (double rotation). The potential change
-occurs at three subtrees under <i>x</i>, <i>p</i> and <i>g</i>. 
+<strong>Zig-zag step</strong>: A zig-zig type splaying requires a double rotation as shown in 
+the image below. 
+<p align="text:center">
+  <img src="../images/LR-splay.png">
+</p>
+Actual time for zig-zag is 2 (double rotation). The potential change occurs for three subtrees
+under <i>x</i>, <i>p</i> and <i>g</i>. The reader can observe that potential change is given
+by the following expression.
 <div style align="text:center">
-  <i>1+R<sub>f</sub>(x) + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> 
+  <i>2+R<sub>f</sub>(x) + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> 
 </div>
+We observe the following:
 
+- Size of subtree under <i>g</i> increases after splaying. So, <i>R<sub>f</sub>(g) &gt R<sub>i</sub>(g)</i>.
+- Size of subtree under <i>p</i> increases after splaying. So, <i>R<sub>f</sub>(p) &gt R<sub>i</sub>(p)</i>.
+- Also before rotation the size of subtree of <i>p</i> is bigger than size of subtree of <i>x</i>.
+
+When we use the above information and simplify the time for zig-zag splaying we get
+<div style align="text:center">
+  <i>2 + R<sub>f</sub>(p) + R<sub>f</sub>(g) - 2R<sub>i</sub>(x)</i> 
+</div>
 Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
 Suppose we apply splaying on node 2. The series of trees after each
 splay is give below as <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
