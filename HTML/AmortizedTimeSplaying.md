@@ -44,7 +44,12 @@ Let the ranks and sizes of a node <i>x</i> be denoted respectively by:
 - Before splaying: <i>R<sub>i</sub>(x)</i> and <i>S<sub>i</sub>(x)</i> 
 - After splaying: <i>R<sub>f</sub>(x)</i> and <i>S<sub>f</sub>(x)</i> 
 
-<strong>Zig step</strong>: Actual time for zig step is 1 because it is a rotation that involves
+<strong>Zig step</strong>: For completeness of description, zig-splaying is shown in the figure
+below. 
+<p align="text:center">
+  <img src="../images/zigSplay.png">
+</p>
+Actual time for zig step is 1 because it is a rotation that involves
 modification of three links. Notice that potential change is only respect to subtrees under <i>x</i> 
 and its parent <i>p</i>. So the change in potential is easy to compute. It is:
 <div style align="text:center">
@@ -65,7 +70,6 @@ occurs at three subtrees under <i>x</i>, <i>p</i> and <i>g</i>.
 <div style align="text:center">
   <i>1+R<sub>f</sub>(x) + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> 
 </div>
-But the change in potential 
 
 Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
 Suppose we apply splaying on node 2. The series of trees after each
