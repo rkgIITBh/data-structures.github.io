@@ -9,7 +9,7 @@ skewed tree, the time for accessing the leaf node could be as expensive as O(<i>
 time or time partitioned over a sequence of operations. If we consider an operation in isolation then
 the average bound does not work. So, we need to provide an analysis of the amortized time.
 
-We start with a potential function. A potential function is a kind of reserve energy as a phycist 
+We start with a potential function. A potential function is a kind of reserve energy as a physicist 
 may define. The reserve energy tells us a system's intrinsic capabilities to work. When we execute 
 some activities potentials reduce. We can increase potential by eating nutritious food and
 train under a physical trainer. Amortised cost relies on doing some expensive activities to make
