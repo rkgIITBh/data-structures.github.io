@@ -53,7 +53,7 @@ and its parent <i>p</i>. So the change in potential is easy to compute. It is:
 The size of the subtree of <i>p</i> increases after splaying. So we have <i>R<sub>f</sub>(p) &gt; R<sub>i</sub>(p)</i> 
 Hence the amortised time for zig operation is bounded above by the expression:
 <div style align="text:center">
-  <i>1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
+  <i>1+R<sub>f</sub>(x) - R<sub>i</sub>(x) &gt; 0</i>
 </div>
 Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that 
 <div style align="text:center">
