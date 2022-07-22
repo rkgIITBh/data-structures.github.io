@@ -88,9 +88,10 @@ Summarizing the observation from the figure, we get the following:
 - <i>R<sub>i</sub>(g) &gt; R<sub>i</sub>(x)</i>.
 - <i>R<sub>f</sub>(p) + R<sub>f</sub>(g) &lt; 2R<sub>i</sub>(x) - 2</i>.
 
-Therefore simplifying the time for zig-zag splaying with above results, we get
+Substituting <i>R<sub>f</sub>(g)</i> for <i>R<sub>f</sub>(x)</i>, we get
 <div style align="text:center">
-  <i>2 + R<sub>f</sub>(p) + R<sub>f</sub>(g) - 2R<sub>i</sub>(x)</i> 
+  <i>2 + R<sub>i</sub>(g) +  R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> <br>
+  
 </div>
 
 Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
