@@ -25,7 +25,9 @@ worst-case. So, we define the potential by the following function
 Where <i>S(i)</i> denotes the number of descendants of <i>i</i> (including itself). Let us define 
 log <i>S(i)=R(i)</i>, where <i>R(i)</i> is the rank (or height) of node <i>i</i>. Thus <i>R(T)</i>
 is the height of the tree <i>T</i>. Let us consider the earlier example of splaying explained in
-[Splay Trees](./splayTree.md). Suppose we apply splaying on node 2. The series of trees after each
+<a href="./splayTree.md">Splay Trees</a>.
+
+Suppose we apply splaying on node 2. The series of trees after each
 splay is give below as <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
 <i>T<sub>4</sub></i>. Consider the rank of node 2 in the four trees. The first operation is a
 zig-zag on tri-node configuration 2-1-4. Its cost is at most 3(<i>R<sub>2</sub> - R<sub>1</sub></i>).
