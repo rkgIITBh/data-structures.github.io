@@ -34,7 +34,7 @@ integers then log <i>a</i> + log <i>b</i> &lt; log <i>c</i> - 2.
 
 <strong>Proof</strong>: We know arithmetic mean is less than equal to geometric mean. So,
 &radic;(<i>ab</i>) &lt; <i>(a+b)/2</i> &lt; <i>c/2</i>. Taking square of both side of previous 
-inequality, we have <i>ab</i> &lt: <i>c<sup>2</sup>/4</i>. Now take log of both side to get
+inequality, we have <i>ab</i> &lt; <i>c<sup>2</sup>/4</i>. Now take log of both side to get
 the result.
 
 Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
