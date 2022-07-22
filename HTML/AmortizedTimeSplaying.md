@@ -36,6 +36,37 @@ integers then log <i>a</i> + log <i>b</i> &lt; 2log <i>c</i> - 2.
 inequality, we have <i>ab</i> &le; <i>c<sup>2</sup>/4</i>. Now take log of both side to get
 the result.
 
+We are ready to analyze the time for splaying. As explained already, the fundamental opreations 
+are zig, zig-zig and zig-zag. So we focus on complexitie of these operations. 
+
+Let the ranks and sizes of a node <i>x</i> be denoted respectively by:
+
+- Before splaying: <i>R<sub>i</sub>(x)</i> and <i>S<sub>i</sub>(x)</i> 
+- After splaying: <i>R<sub>f</sub>(x)</i> and <i>S<sub>f</sub>(x)</i> 
+
+<strong>Zig step</strong>: Actual time for zig step is 1 because it is a rotation that involves
+modification of three links. Notice that potential change is only respect to subtrees under <i>x</i> 
+and its parent <i>p</i>. So the change in potential is easy to compute. It is:
+<div style align="text:center">
+  <i>1+R<sub>f</sub>(x) + R<sub>f</sub>(p) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
+</div>
+The size of the subtree of <i>p</i> increases after splaying. So we have <i>R<sub>f</sub>(p) &gt; R<sub>i</sub>(p)</i> 
+Hence the amortised time for zig operation is bounded above by the expression:
+<div style align="text:center">
+  <i>1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
+</div>
+Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that 
+<div style align="text:center">
+  <i>1+3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
+</div>
+
+<strong>Zig-zig step</strong>: Actual time for zig-zig is 2 (double rotation). The potential change
+occurs at three subtrees under <i>x</i>, <i>p</i> and <i>g</i>. 
+<div style align="text:center">
+  <i>1+R<sub>f</sub>(x) + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> 
+</div>
+But the change in potential 
+
 Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
 Suppose we apply splaying on node 2. The series of trees after each
 splay is give below as <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
