@@ -30,7 +30,7 @@ We need some preliminary results for our analysis. The first results is given in
 second in Lemma 2.
 
 <strong>Lemma 1</strong>: If <i>a + b &le; c</i> where <i>a</i> and <i>b</i> are both positive
-integers then log <i>a</i> + log <i>b</i> &lt; log <i>c</i> - 2.
+integers then log <i>a</i> + log <i>b</i> &lt; 2log <i>c</i> - 2.
 
 <strong>Proof</strong>: We know arithmetic mean is less than equal to geometric mean. So,
 &radic;(<i>ab</i>) &le; <i>(a+b)/2</i> &le; <i>c/2</i>. Taking square of both side of previous 
