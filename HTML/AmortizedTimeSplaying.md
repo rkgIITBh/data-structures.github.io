@@ -35,8 +35,8 @@ integers then log <i>a</i> + log <i>b</i> &lt; 2log <i>c</i> - 2.
 inequality, we have <i>ab</i> &le; <i>c<sup>2</sup>/4</i>. Now take the log of both sides to get
 the result.
 
-We are ready to analyze the time for splaying. As explained already, the fundamental operations 
-are zig, zig-zig, and zig-zag. So we focus on the complexity of these operations. 
+The fundamental operations for spalying
+are zig, zig-zig, and zig-zag. Let us focus on the complexity of these operations. 
 
 Let the ranks and sizes of a node <i>x</i> be denoted respectively by:
 
@@ -50,7 +50,8 @@ below.
 </p>
 The actual time for the zig step is 1 because it is a rotation. The computation of potential 
 change is easy. Since splaying affects subtrees under <i>x</i> 
-We need to compute potential change for these two subtrees and their parent <i>p</i>.
+To compute average time <i>AT<sub>zig</sub></i>, we require potential change for subtrees under
+<i>x</i> and the parent <i>p</i>.
 <div style align="text:center">
   <i>AT<sub>zig</sub> &le; 1+R<sub>f</sub>(x) + R<sub>f</sub>(p) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
 </div>
