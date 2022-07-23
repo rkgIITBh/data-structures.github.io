@@ -78,9 +78,8 @@ by the following expression.
 <div style align="text:center">
   <i>2+R<sub>f</sub>(x) + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> 
 </div>
-From the figure we observe <i>S<sub>f</sub>(p) + S<sub>f</sub>(g) &lt; S<sub>f</sub>(x)</i>. Therefore, from
-the lemma we can conclude:
-<i>log S<sub>f</sub>(p) + log S<sub>f</sub>(g) &lt; 2 log S<sub>f</sub>(x) - 2</i>
+From the figure we observe <i>S<sub>f</sub>(p) + S<sub>f</sub>(g) &lt; S<sub>f</sub>(x)</i>. Therefore, from the above lemma we can conclude:
+<i>log S<sub>f</sub>(p) + log S<sub>f</sub>(g) &lt; 2 log S<sub>f</sub>(x) - 2</i>. Since log <i>Size = height</i>, we have <i>R<sub>f</sub>(p) + R<sub>f</sub>(g) &lt; 2R<sub>i</sub>(x)-2</i>.
 
 Summarizing the observation from the figure, we get the following:
 
