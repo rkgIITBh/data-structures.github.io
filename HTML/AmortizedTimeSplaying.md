@@ -49,9 +49,9 @@ below.
   <img src="../images/R-splay.png">
 </p>
 The actual time for the zig step is 1 because it is a rotation. The computation of potential 
-change is easy. Since splaying affects subtrees under <i>x</i> 
-To compute average time <i>AT<sub>zig</sub></i>, we require potential change for subtrees under
-<i>x</i> and the parent <i>p</i>.
+change is easy. The splaying affects subtrees under <i>x</i> and <i>p</i>. 
+The average time <i>AT<sub>zig</sub></i> is equal to the potential change for subtrees under
+two subtrees. Therefore,
 <div style align="text:center">
   <i>AT<sub>zig</sub> &le; 1+R<sub>f</sub>(x) + R<sub>f</sub>(p) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
 </div>
