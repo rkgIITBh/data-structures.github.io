@@ -107,8 +107,13 @@ Let us examine the example of splaying given below:
 </p>
 Let the four trees be denoted by  <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
 <i>T<sub>4</sub></i>
-Consider the rank of node 2 in the four trees. The first operation is a
-zig-zag on tri-node configuration 2-1-4. Its cost is at most 3(<i>R<sub>2</sub> - R<sub>1</sub></i>).
+Consider the rank of node 1 in the four trees. It requires three zig-zig splays with 
+respective costs:
 
-  - Initial access cost for 2 is <i>R<sub>1</sub></i>
-  - 
+  - 3(<i>R<sub>2</sub>(1) - R<sub>1</sub>(1)</i>),
+  - 3(<i>R<sub>3</sub>(1) - R<sub>2</sub>(1)</i>), and
+  - 3(<i>R<sub>4</sub>(1) - R<sub>3</sub>(1)</i>).
+ 
+Adding three expressions we get final cost as 3(<i>R<sub>4</sub>(1) - R<sub>1</sub>(1)</i>). Adding
+actual cost of 1 to it, we have 1 +  3(<i>R<sub>4</sub>(1) - R<sub>1</sub>(1)</i>) which is of 
+O(log <i>n</i>).  
