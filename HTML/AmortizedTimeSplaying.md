@@ -93,11 +93,21 @@ Substituting <i>R<sub>f</sub>(g)</i> for <i>R<sub>f</sub>(x)</i>, we get
   <i>&le; 2 + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i></br>
   <i>&le; 2(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
 </div>
-
-Let us consider the earlier example of splaying explained in <a href="./splayTree.md">Splay Trees</a>.
-Suppose we apply splaying on node 2. The series of trees after each
-splay is give below as <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
-<i>T<sub>4</sub></i>. Consider the rank of node 2 in the four trees. The first operation is a
+Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x) &gt; 0</i>, we have
+<div style align="text:center">
+  <i>AT<sub>zig-zag</sub> &le; 3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
+  </div>
+  
+  <strong>Zig-zig</strong>: Analysis of zig-zig step is similar to that for zig-zag. Amortized cost
+  of a single zig, or zig-zag or zig-zig splay is bounded above by <i>3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>.
+  
+Let us examine the example of splaying given below:
+<p align="text:center">
+  <img src="../images/splayExample1.png">
+</p>
+Let the four trees be denoted by  <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
+<i>T<sub>4</sub></i>
+Consider the rank of node 2 in the four trees. The first operation is a
 zig-zag on tri-node configuration 2-1-4. Its cost is at most 3(<i>R<sub>2</sub> - R<sub>1</sub></i>).
 
   - Initial access cost for 2 is <i>R<sub>1</sub></i>
