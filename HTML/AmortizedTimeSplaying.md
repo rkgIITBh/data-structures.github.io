@@ -52,7 +52,7 @@ The actual time for the zig step is 1 because it is a rotation. The computation 
 change is easy. Since splaying affects subtrees under <i>x</i> 
 We need to compute potential change for these two subtrees and their parent <i>p</i>.
 <div style align="text:center">
-  <i>1+R<sub>f</sub>(x) + R<sub>f</sub>(p) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
+  <i>AT<sub>zig</sub> &le; 1+R<sub>f</sub>(x) + R<sub>f</sub>(p) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
 </div>
 The size of the subtree of <i>p</i> decreases after splaying. So we have 
 <i>R<sub>f</sub>(p) &lt; R<sub>i</sub>(p)</i>. However, the size of subtree of <i>x</i>
