@@ -116,4 +116,8 @@ respective costs:
  
 Adding three expressions we get final cost as 3(<i>R<sub>4</sub>(1) - R<sub>1</sub>(1)</i>). Adding
 actual cost of 1 to it, we have 1 +  3(<i>R<sub>4</sub>(1) - R<sub>1</sub>(1)</i>) which is of 
-O(log <i>n</i>).  
+O(log <i>n</i>). Since every operation on splay tree requires splaying, the amortized cost of 
+any operation on a splay tree is O(log <i>n</i>) where <i>n</i> is the number of nodes in the 
+tree.
+
+[Back to Index](../index.md)
