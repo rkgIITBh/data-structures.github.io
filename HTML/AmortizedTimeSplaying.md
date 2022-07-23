@@ -1,4 +1,4 @@
-## Amortised Time Analysis for Splay Trees
+## Amortised Time Complexity for Splay Trees
 
 The contents of this blog are a bit mathematical and require a bit of maturity in understanding. We
 have discussed splaying operation in a previous blog. In course of discussion we mentioned that
