@@ -59,7 +59,7 @@ The size of the subtree of <i>p</i> decreases after splaying. So we have
 <i>R<sub>f</sub>(p) &lt; R<sub>i</sub>(p)</i>. However, the size of subtree of <i>x</i>
 increases. So, <i>R<sub>f</sub>(x) &gt; R<sub>i</sub>(x)</i>. We can now simplify the
 expression for average time <i>AT<sub>zig</sub></i> for zig type splaying as follows:
-<div style ="text-algin:center">
+<div style="text-algin:center">
   <i>AT<sub>zig</sub> &lt; 1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
 </div>
 Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that 
