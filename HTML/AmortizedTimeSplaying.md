@@ -103,7 +103,7 @@ Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x) &gt; 0</i>, we have
   
 Let us examine the example of splaying given below:
 <p align="text:center">
-  <img src="../images/splayExample1.png">
+  <img src="../images/splayExample2.png">
 </p>
 Let the four trees be denoted by  <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
 <i>T<sub>4</sub></i>
