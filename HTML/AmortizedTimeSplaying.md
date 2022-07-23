@@ -52,7 +52,7 @@ The actual time for the zig step is 1 because it is a rotation. The computation 
 change is easy. The splaying affects subtrees under <i>x</i> and <i>p</i>. 
 The average time <i>AT<sub>zig</sub></i> is equal to the potential change for subtrees under
 two subtrees. Therefore,
-<div style align="text:center">
+<div style="text-align:center">
   <i>AT<sub>zig</sub> &le; 1+R<sub>f</sub>(x) + R<sub>f</sub>(p) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
 </div>
 The size of the subtree of <i>p</i> decreases after splaying. So we have 
@@ -63,18 +63,18 @@ expression for average time <i>AT<sub>zig</sub></i> for zig type splaying as fol
   <i>AT<sub>zig</sub> &lt; 1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
 </div>
 Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that 
-<div style align="text:center">
+<div style="text-align:center">
   <i>AT<sub>zig</sub> &lt; 1+3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
 </div>
 
 <strong>Zig-zag step</strong>: A zig-zig type splaying requires a double rotation, as shown in 
 the image below. 
-<p align="text:center">
+<p text="align:center">
   <img src="../images/LR-splay.png">
 </p>
 The actual time for zig-zag is 2 (double rotation). The potential change occurs for three subtrees
 under <i>x</i>, <i>p</i> and <i>g</i>. The reader can observe that the following expression gives potential change.
-<div style align="text:center">
+<div style="text-align:center">
   <i>2+R<sub>f</sub>(x) + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> 
 </div>
 From the figure we observe <i>S<sub>f</sub>(p) + S<sub>f</sub>(g) &lt; S<sub>f</sub>(x)</i>. Therefore, from the above lemma, we can conclude:
@@ -87,13 +87,13 @@ Summarizing the observation from the figure, we get the following:
 - <i>R<sub>f</sub>(p) + R<sub>f</sub>(g) &lt; 2R<sub>f</sub>(x) - 2</i>.
 
 Substituting <i>R<sub>f</sub>(g)</i> for <i>R<sub>f</sub>(x)</i>, we get
-<div style align="text:center">
+<div style="text-align:center">
   <i>2 + R<sub>i</sub>(g) +  R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> <br>
   <i>&le; 2 + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i></br>
   <i>&le; 2(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
 </div>
 Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x) &gt; 0</i>, we have
-<div style align="text:center">
+<div style="text-align:center">
   <i>AT<sub>zig-zag</sub> &le; 3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
   </div>
   
@@ -101,7 +101,7 @@ Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x) &gt; 0</i>, we have
   of a single zig, or zig-zag or zig-zag splay is bounded above by <i>3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>.
   
 Let us examine the example of splaying given below:
-<p align="text:center">
+<p style="text-align:center">
   <img src="../images/splayExample2.png">
 </p>
 Let the four trees be denoted by  <i>T<sub>1</sub></i>, <i>T<sub>2</sub></i>, <i>T<sub>3</sub></i>, and
