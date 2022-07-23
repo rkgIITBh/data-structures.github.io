@@ -90,7 +90,7 @@ Summarizing the observation from the figure, we get the following:
 Substituting <i>R<sub>f</sub>(g)</i> for <i>R<sub>f</sub>(x)</i>, we get
 <div style align="text:center">
   <i>2 + R<sub>i</sub>(g) +  R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p) - R<sub>i</sub>(g)</i> <br>
-  <i>&le; 2 + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i>
+  <i>&le; 2 + R<sub>f</sub>(p) + R<sub>f</sub>(g) - R<sub>i</sub>(x) - R<sub>i</sub>(p)</i></br>
   <i>&le; 2(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
 </div>
 
