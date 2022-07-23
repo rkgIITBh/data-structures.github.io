@@ -45,7 +45,7 @@ Let the ranks and sizes of a node <i>x</i> be denoted respectively by:
 
 <strong>Zig step</strong>: For completeness of description, zig type splaying is shown in the figure
 below. 
-<p align="text:center">
+<p style="text-align:center">
   <img src="../images/R-splay.png">
 </p>
 The actual time for the zig step is 1 because it is a rotation. The computation of potential 
@@ -59,7 +59,7 @@ The size of the subtree of <i>p</i> decreases after splaying. So we have
 <i>R<sub>f</sub>(p) &lt; R<sub>i</sub>(p)</i>. However, the size of subtree of <i>x</i>
 increases. So, <i>R<sub>f</sub>(x) &gt; R<sub>i</sub>(x)</i>. We can now simplify the
 expression for average time <i>AT<sub>zig</sub></i> for zig type splaying as follows:
-<div style align="text:center">
+<div style ="text-algin:center">
   <i>AT<sub>zig</sub> &lt; 1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
 </div>
 Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that 
@@ -69,7 +69,7 @@ Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that
 
 <strong>Zig-zag step</strong>: A zig-zig type splaying requires a double rotation, as shown in 
 the image below. 
-<p text="align:center">
+<p style="text-align:center">
   <img src="../images/LR-splay.png">
 </p>
 The actual time for zig-zag is 2 (double rotation). The potential change occurs for three subtrees
