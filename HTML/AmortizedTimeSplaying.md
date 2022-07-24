@@ -62,11 +62,11 @@ The size of the subtree of <i>p</i> decreases after splaying. So we have
 increases. So, <i>R<sub>f</sub>(x) &gt; R<sub>i</sub>(x)</i>. We can now simplify the
 expression for average time <i>AT<sub>zig</sub></i> for zig type splaying as follows:
 <div style="text-align:center">
-  <i>AT<sub>zig</sub> &lt; 1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
+  <i>AT<sub>zig</sub> &le; 1+R<sub>f</sub>(x) - R<sub>i</sub>(x)</i>
 </div>
 Since <i>R<sub>f</sub>(x) - R<sub>i</sub>(x)</i> we conclude that 
 <div style="text-align:center">
-  <i>AT<sub>zig</sub> &lt; 1+3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
+  <i>AT<sub>zig</sub> &le; 1+3(R<sub>f</sub>(x) - R<sub>i</sub>(x))</i>
 </div>
 
 <strong>Zig-zag step</strong>: A zig-zig type splaying requires a double rotation, as shown in 
