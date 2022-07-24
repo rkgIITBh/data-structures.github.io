@@ -11,11 +11,12 @@ the average bound does not work. So, we need to provide an analysis of the amort
 
 We start with a potential function. A potential function is reserve energy, as a physicist 
 may define it. The reserve energy tells us a system's intrinsic capabilities to work. When we execute 
-some activities, potentials reduce. We can increase our potential by eating nutritious food and
-training under a physical trainer. When performing a task, we typically complete difficult parts
-first. The remaining parts of the task can become easier and require less energy to finish. 
-The amortized cost relies on on the similar approach. Any expensive activity is performed
-in a way to make future activities less expensive. 
+some activities, potentials reduce. To increase our potential, we eat nutritious food and
+train under a physical trainer. When performing a task, typically, we finish complex parts
+of the task before easy tasks. So, the remaining parts of the task become more manageable and 
+require less energy. The amortized cost relies on a similar approach. Any expensive
+activity is performed in a way that makes future activities less expensive. So, the overall
+energy requirement for each activity is minimal. 
   
 How do we define a potential for operations on splay trees? The operations supported by splay trees
 normal BST operations of search, insert, and delete. These operations depend on the length of the
