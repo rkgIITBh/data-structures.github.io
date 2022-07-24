@@ -22,7 +22,7 @@ How do we define a potential for operations on splay trees? The operations suppo
 normal BST operations of search, insert, and delete. These operations depend on the length of the
 tree path from the root to the accessed node.  In the worst-case, it is equal to the height of the tree. So, we define the potential by the following function
 <p style="text-align:center">
-  &#x3D5;(T) = &Sigma;log(<i>S(i)</i>)
+  &#x3D5;(T) = &Sigma;log <i>S(i)</i>
 </p>
 Where <i>S(i)</i> denotes the number of descendants of <i>i</i> (including itself). Let us define 
 log <i>S(i)=R(i)</i>, where <i>R(i)</i> is the rank (or height) of node <i>i</i>. Thus <i>R(T)</i>
