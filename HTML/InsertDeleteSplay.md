@@ -26,7 +26,7 @@ focus on important points of the implementation of only one rotation.
 
 Let us consider left rotation. A node and its right child are involved in a left rotation. For 
 completeness of description let us diagrammatically view the rotation once again.
-<p style="text-align:center>
+<p style="text-align:center">
      <img src="../images/leftRotation.png">
 </p>
 The diagram does not show the part of the tree above <i>g</i>. The subtrees retain their topological 
