@@ -29,12 +29,13 @@ completeness of description let us diagrammatically view the rotation once again
 <p style="text-align:center>
      <img src="../images/leftRotation.png">
 </p>
-
+The diagram does not show the part of the tree above <i>g</i>. The subtrees retain their topological 
+positions after rotation. The left subtree of <i>p</i> is linked as right subtree of <i>g</i>. 
+                                          
                                           
 ```
 void leftRotate(SPLAYTREE *t, NODE *p) {
-   // Rotation with reference to the parent node
-   // Right child and parent to be rotated left 
+   // Left rotation node p and g
    NODE *x = p->right;  // Get p's right child
    p->right = x->left;  
    if(x->left != NULL) {
