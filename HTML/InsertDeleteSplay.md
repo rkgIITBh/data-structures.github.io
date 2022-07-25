@@ -30,8 +30,14 @@ completeness of description let us diagrammatically view the rotation once again
      <img src="../images/leftRotation.png">
 </p>
 The diagram does not show the part of the tree above <i>g</i>. The subtrees retain their topological 
-positions after rotation. The left subtree of <i>p</i> is linked as right subtree of <i>g</i>. 
+positions after rotation. 
                                           
+- The left subtree of <i>x</i> is linked as right subtree of <i>p</i>. 
+- Node <i>g</i> becomes parent of <i>x</i>.
+- Node <i>p</i> becomes left child of <i>x</i>.    
+                                          
+The code is exactly modifying the links as explained above. The readers may go through the embedded
+comments in the code and observe the same.
                                           
 ```
 void leftRotate(SPLAYTREE *t, NODE *p) {
