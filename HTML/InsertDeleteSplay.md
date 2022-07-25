@@ -22,15 +22,15 @@ rotations in the first blog on splay tree. So, we now deal with implementation o
 operations. A double operation is a sequence of two rotations. So we need to focus only on 
 two different types of single rotations: left and right rotations. The code inlcudes explanatory 
 enough comments. Further the two rotations are symmetric. Therefore, it suffices to
-focus on important points of the implementation of only one rotation. Let us consider left rotation.
+focus on important points of the implementation of only one rotation. 
 
-The code is written with reference to parent node. A node and its right child are involved in
-a left rotation. For completeness of description let us diagrammatically view the rotation once
-again.
+Let us consider left rotation. A node and its right child are involved in a left rotation. For 
+completeness of description let us diagrammatically view the rotation once again.
 <p style="text-align:center>
-         <img src="../images/leftRotation.png">
+     <img src="../images/leftRotation.png">
 </p>
 
+                                          
 ```
 void leftRotate(SPLAYTREE *t, NODE *p) {
    // Rotation with reference to the parent node
