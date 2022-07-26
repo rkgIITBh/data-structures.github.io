@@ -95,9 +95,59 @@ void rightRotate(SPLAYTREE *t, NODE *p) {
    p->parent = x;
 }
 ```
-Insert and delete operations are similar to corresponding BST operations except that splaying is applied
-when a node is accessed. We, therefore, leave it to the readers to convince themselves that the code will
-work as expected.
+The next basic operation is splaying. Splaying is applied whenever a node is accessed. As already
+explained, splaying brings the accessed node to the root's position. It requires repeated rotations
+depending on the different patterns for a tri-node configuration consisting of the node, its 
+parent, and its grandparent. We apply either a double right 
+or a double LR rotation depending on the configuration. However, a single rotation is sufficient if the accessed node's parent is the root. The code for splaying appears below. We have inserted enough comments to explain the rotation type corresponding to the node configuration, its parent, and its
+grandparent.
+
+```
+void splay(SPLAYTREE *t, NODE *n) {
+   while(n->parent != NULL) { 
+        // n is not the root
+        if(n->parent == t->root) { 
+             // n is a child of the root
+             // apply single rotation
+             if(n == n->parent->left) {
+                  // Zig pattern
+                  rightRotate(t, n->parent);
+             }
+             else {
+                  // Zag pattern
+                  leftRotate(t, n->parent);
+             }
+        }
+        else {
+             NODE *p = n->parent;
+             NODE *g = p->parent; // Grandparent of n
+
+             if(n->parent->left == n && p->parent->left == p) {
+                  // Zig-zig pattern
+                  rightRotate(t, g);
+                  rightRotate(t, p);
+             } else if(n->parent->right == n && p->parent->right == p) {
+                 // Zag-zag pattern
+                  leftRotate(t, g);
+                  leftRotate(t, p);
+             } else if(n->parent->right == n && p->parent->left == p) {
+                  // Zag-zig pattern
+                  leftRotate(t, p);
+                  rightRotate(t, g);
+             } else if(n->parent->left == n && p->parent->right == p) {
+                  // Zig-zag pattern 
+                  rightRotate(t, p);
+                  leftRotate(t, g);
+             }
+       }
+   }
+}
+
+
+```
+Insert and delete operations are similar to corresponding BST operations except that splaying is
+needed after acessing the node. We, therefore, leave it to the readers to convince themselves 
+that the code works as expected.
 
 [C Program for Splay Trees](../CODE/splayTree.c)
 
