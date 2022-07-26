@@ -149,6 +149,6 @@ Insert and delete operations are similar to corresponding BST operations except 
 needed after acessing the node. We, therefore, leave it to the readers to convince themselves 
 that the code works as expected.
 
-[C Program for Splay Trees](../CODES/SplayTree/index.md)
+[C Program for Splay Trees](../CODES/SplayTrees/index.md)
 
 [Back to Index](../index.md)
