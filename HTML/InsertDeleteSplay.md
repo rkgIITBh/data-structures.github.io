@@ -37,7 +37,9 @@ positions after rotation.
 - Node <i>p</i> becomes left child of <i>x</i>.    
                                           
 The code is exactly modifying the links as explained above. The readers may go through the embedded
-comments in the code and observe the same.
+comments in the code and observe the same. There are some corner cases such as handling the case when
+the left subtree of <i>x</i> is NULL or the <i>p</i> is the root. The reader can easily understand the
+code. 
                                           
 ```
 void leftRotate(SPLAYTREE *t, NODE *p) {
@@ -93,3 +95,10 @@ void rightRotate(SPLAYTREE *t, NODE *p) {
    p->parent = x;
 }
 ```
+Insert and delete operations are similar to corresponding BST operations except that splaying is applied
+when a node is accessed. We, therefore, leave it to the readers to convince themselves that the code will
+work as expected.
+
+[C Program for Splay Trees](../CODE/splayTree.c)
+
+[Back to Index](../index.md)
