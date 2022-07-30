@@ -43,6 +43,6 @@ Using the node structures as explained above, we can store a sparse matrix as de
 We also need a unified node structure which is used for understanding organization of matrix nodes corresponding
 to a sparse matrix. The structure of this node is explained in the diagram below.
 <p style="text-aling:center">
-  <img src="../images/matrixEx1.png">
+  <img src="../images/sparseMatrixStr.png">
 </p>
 
