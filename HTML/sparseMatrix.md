@@ -11,7 +11,7 @@ realize that each matrix entry can be associated with four other entries to the 
 bottom. Therefore, we use linked lists to store a sparse matrix. The figure below depicts the relation of 
 an entry with other neighboring entries in a sparse matrix.
 <p style="text-aling:center">
-  <img src="../images/sparseNodeNeighbors.png">
+  <img src="../images/sparseMatNbrs.png">
 </p>
 The picture indicates that we can creat a node structure which lets each entry of a sparse matrix to be a
 part of at least two linked lists:
