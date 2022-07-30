@@ -11,5 +11,32 @@ realize that each matrix entry can be associated with four other entries to the 
 bottom. Therefore, we use linked lists to store a sparse matrix. The figure below depicts the relation of 
 an entry with other neighboring entries in a sparse matrix.
 <p style="text-aling:center">
-  <img src="../images/sparseNodeStructure.png">
-  </p>
+  <img src="../images/sparseNodeNeighbors.png">
+</p>
+The picture indicates that we can creat a node structure which lets each entry of a sparse matrix to be a
+part of at least two linked lists:
+
+- a linked list of entries in single column
+- a linked list of entries in single row
+
+Therefore, we need a node structure for matrix entries having two link pointers. Since we do not store zero
+elements physically, the row and col of the entry must be available with the value of the entry. So, the 
+node structure for a matrix entry must have five fields:
+
+- The value of the entry, row and column number to which the entry belongs.
+- Pointers to next entry in same row and next entry in same column.
+
+We also need a header nodes for each column and a header node for each row. The header node for a column should
+take us to the first non-zero entry in the column. In addition it should be able to take us to the next column
+header. Similar structure is also needed to a row header. Finally, we need a header node for the entire matrix.
+It should be able to point to first column and first row headers. So, we have  four different node structures as
+shown in the figure below:
+<p style="text-aling:center">
+  <img src="../images/matrixNodeStr.png">
+</p>
+
+Using the node structures as explained above, we can store a sparse matrix as depicted below:
+<p style="text-aling:center">
+  <img src="../images/matrixEx1.png">
+</p>
+
