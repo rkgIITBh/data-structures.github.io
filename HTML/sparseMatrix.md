@@ -52,6 +52,7 @@ Let us now explore how each node structure is represented by a C-structure. Firs
 the total number of non=zero elements. We denote the dimensions by two constants <i>MAX1</i> and 
 <i>MAX2</i>. An entry node has two pointers and a triplet that defines the non-zero element's row_no,
 col_no and the value. So, the C-structure corresponding to an entry node is as follows:
+
 ```
 #define MAX1 4 // row dimension
 #define MAX2 4 // column dimension
@@ -69,6 +70,7 @@ The next two node structures are for column and row headers. Each such structure
 two pointers. The column header should store the column number and points to next header node and 
 the next element in the same column. Similarly, a row header stores the row number and pointers to 
 next element in same row and the next row header. The next row header pointer is denoted as <i>down</i>. 
+
 ```
 // Structure for column headnode 
 typedef struct cHead {
@@ -116,6 +118,7 @@ the Figure 3 has only four non-zero elements. Therefore the sparsity of the matr
 
 We can create sparse matrix by creating a entry node for each non-zero element. The entry node is placed in 
 position corresponding to its row and column number. The code for creating entry node is given below.
+
 ```
 // Create an array MAX1 x Max2 for matrix 
 void createArray(SPARSE * p) {
