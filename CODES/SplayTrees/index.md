@@ -201,4 +201,4 @@ void delete(SPLAYTREE *t, NODE *n) {
 
 ```
 
-[Back to Splay Tree Operations](../HTML/InsertDeleteSplay.md)
+[Back to Splay Tree Operations](../../HTML/InsertDeleteSplay.md)
