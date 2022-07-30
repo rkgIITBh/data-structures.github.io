@@ -1,10 +1,12 @@
 ## Basic Operations on Splay Trees
 
 We have learned about splaying operations on a BST. We have also learned about insert, delete, and
-search operations on BST. Now we consider how these basic operations are implementable for spay 
-trees. We use a basic structure of nodes. A splay tree node does not require any extra information
-bit like AVL or Red Black tree. But splaying needs parent information. So, the definitions of
-a splay tree and its node are as follows:
+search operations on BST. Let us consider how these basic operations are implementable for spay 
+trees. The structure of a splay tree node should consist of at least four fields: info, left, right and
+parent. Info field stores the node information. It could be as simple as a label. The "info" field 
+contains an integer to keep the discussion simple. A splay tree node does not require other
+extra information bits like AVL (balance factor) or Red Black (color) tree. But splaying needs 
+parent information. So, the definitions of a splay tree and its node are as follows:
 ```
 typedef struct node {
    int info; // Information field
@@ -17,15 +19,15 @@ typedef struct splay_tree {
    struct node *root;  // Root of the tree
 } SPLAYTREE;
 ```
-The left and right rotations are fundamental to a splay operation. We have already explained the 
-rotations in the first blog on splay tree. So, we now deal with implementation of the rotation
-operations. A double operation is a sequence of two rotations. So we need to focus only on 
-two different types of single rotations: left and right rotations. The code inlcudes explanatory 
-enough comments. Further the two rotations are symmetric. Therefore, it suffices to
-focus on important points of the implementation of only one rotation. 
+The left and right rotations are fundamental to a splaying operation. We explained rotation 
+operations in the context of the AVL tree, Red Black tree, and the first blog on the splay trees. So, 
+A double rotation is a sequence of two rotations. So it suffices to focus only on 
+two different types of single rotations: left and right rotations. The code includes explanatory 
+and embedded with enough comments. The two rotations are symmetric. Therefore, we explain only
+important points of the implementation of one rotation. 
 
 Let us consider left rotation. A node and its right child are involved in a left rotation. For 
-completeness of description let us diagrammatically view the rotation once again.
+completeness of description, let us diagrammatically view the rotation once again.
 <p style="text-align:center">
      <img src="../images/leftRotation.png">
 </p>
@@ -36,10 +38,10 @@ positions after rotation.
 - Node <i>g</i> becomes parent of <i>x</i>.
 - Node <i>p</i> becomes left child of <i>x</i>.    
                                           
-The code is exactly modifying the links as explained above. The readers may go through the embedded
+The code given below modifies the links as explained above. The readers may go through the embedded
 comments in the code and observe the same. There are some corner cases such as handling the case when
-the left subtree of <i>x</i> is NULL or the <i>p</i> is the root. The reader can easily understand the
-code. 
+the left subtree of <i>x</i> is NULL or the <i>p</i> is the root. They are not difficult to understand.
+So, we leave it to the readers.
                                           
 ```
 void leftRotate(SPLAYTREE *t, NODE *p) {
@@ -79,7 +81,7 @@ void rightRotate(SPLAYTREE *t, NODE *p) {
    // Grandparent adopts x as child
    x->parent = p->parent;
    if(p->parent == NULL) { 
-        // If p was root make x as new root
+        // If p was root, make x as new root
         t->root = x;
    }
    else if(p == p->parent->right) {
@@ -95,12 +97,13 @@ void rightRotate(SPLAYTREE *t, NODE *p) {
    p->parent = x;
 }
 ```
-The next basic operation is splaying. Splaying is applied whenever a node is accessed. As already
+The next basic operation is playing. Splaying is applied whenever a node is accessed. As already
 explained, splaying brings the accessed node to the root's position. It requires repeated rotations
 depending on the different patterns for a tri-node configuration consisting of the node, its 
-parent, and its grandparent. We apply either a double right 
-or a double LR rotation depending on the configuration. However, a single rotation is sufficient if the accessed node's parent is the root. The code for splaying appears below. We have inserted enough comments to explain the rotation type corresponding to the node configuration, its parent, and its
-grandparent.
+parent, and its grandparent. We apply either a double right or a double LR rotation depending on 
+the configuration. However, a single rotation is sufficient if the accessed node's parent is the 
+root. The code for splaying appears below. We have inserted enough comments to explain the rotation 
+type corresponding to the node configuration, its parent, and its grandparent.
 
 ```
 void splay(SPLAYTREE *t, NODE *n) {
@@ -145,8 +148,8 @@ void splay(SPLAYTREE *t, NODE *n) {
 
 
 ```
-Insert and delete operations are similar to corresponding BST operations except that splaying is
-needed after acessing the node. We, therefore, leave it to the readers to convince themselves 
+Insert and delete operations are similar to corresponding BST operations, except splaying is
+needed after accessing the node. Therefore, we leave it to the readers to convince them 
 that the code works as expected.
 
 [C Program for Splay Trees](../CODES/SplayTrees/index.md)
