@@ -53,6 +53,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [Search, Insert, Delete and Splay on Splay Trees](HTML/InsertDeleteSplay.md)
 - [Amortized Time Complexity of Splay Trees](HTML/AmortizedTimeSplaying.md)
 - [Splay Trees](HTML/splayTree.md)
 - [Deletion of Keys from B-Trees](HTML/deletionBTrees.md)
