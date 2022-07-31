@@ -84,6 +84,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Stack of Multiple Data Types](HTML/multiStack.md)
 - [Stack Implementation](HTML/stackImplementation.md)
 - [Stacks as ADT](HTML/stacksADT.md)
+- [Sparse Matrix Using Linked List](HTML/sparseMatrix.md)
 - [Implementation of List in C](HTML/listImplementation.md)
 - [ADT List](HTML/adtList.md)
 - [Data Structures](HTML/dataStructures.md)
