@@ -1,47 +1,46 @@
 ## Sparse Matrix
 
-A sparse matrix of dimension <i>m</i>x<i>n</i> consists of fewer than <i>mn/2</i> non-zero elements. That is
-it has more zero than nonzero elements. When operating with multiple sparse matrix of high dimensionality, 
-storing and operating on them become chanllenging. The major problem lies in storing the sparse matrices. We
+A sparse matrix of dimension <i>m</i>x<i>n</i> consists of fewer than <i>mn/2</i> non-zero elements. That is, it has more zero than non-zero elements. When operating with multiple sparse matrices of high dimensionality, 
+storing and operating on them become challenging. The major problem lies in storing the sparse matrices. We
 require a bit of careful organization taking advantage of the fact that it has many zero elements. While 
-investigating linke lists, we noticed that in these data structures, each element can store references of 
-sequentially next element in the list. We can also use multiple link pointers with each node a linked list
-to associate it with different sequential lists. Examining the structure and operations on matrices, one may
-realize that each matrix entry can be associated with four other entries to the left, right, top and the 
+investigating linked lists, we noticed that in these data structures, each element could store references  
+sequentially next element in the list. We can also use multiple link pointers to associate each node with a linked list
+to different sequential lists. Examining the structure and operations on matrices, one may
+realize that each matrix entry can be associated with four other entries to the left, right, top, and  
 bottom. Therefore, we use linked lists to store a sparse matrix. The figure below depicts the relation of 
 an entry with other neighboring entries in a sparse matrix.
-<p style="text-aling:center">
+<p style="text-align:center">
   <img src="../images/sparseMatNbrs.png">
 </p>
-The picture indicates that we can creat a node structure which lets each entry of a sparse matrix to be a
+The picture indicates that we can create a node structure that lets each entry of a sparse matrix be a
 part of at least two linked lists:
 
-- a linked list of entries in single column
-- a linked list of entries in single row
+- a linked list of entries in a single column
+- a linked list of entries in a single row
 
 So, the structure of each node for matrix entries shall have two link pointers. Since non-zero elements
-are distributed over different positions of matrix, we should store the row and column position along
-with its values. The zero elements are not stored physically. So, the node structure of a matrix entry 
+are distributed over different matrix positions, we should store the row and column positions along
+with their values. The zero elements are not stored physically. So, the node structure of a matrix entry 
 has five fields:
 
-- The value of the entry, row and column number to which the entry belongs.
-- The pointers to next entry in the same row and next entry in the same column.
+- The value of the entry, row, and column number to which the entry belongs.
+- The pointers to the next entry are in the same row and the next in the same column.
 
-To access a row or a column of the matrix, we need header nodes. The header node of a column
+We need header nodes to access a row or a column of the matrix. The header node of a column
 allows us to access the first non-zero entry in that column. A similar header node for a row
 is also needed to access rows and the first element of each row. 
 
 We also need a header node for the entire matrix. It should be able to point to the first 
 column and the first row headers. So, the four different node structures we have defined are
 the figure below gives a pictorial illustration of the four node structures:
-<p style="text-aling:center">
+<p style="text-align:center">
   <img src="../images/matrixNodeStr.png"><br>
   Figure 1
 </p>
 
-Figure 2 shows an example for storing a sparse matrix with the nodes structures we have 
+Figure 2 shows an example of storing a sparse matrix with the nodes structures we have 
 explained above. 
-<p style="text-aling:center">
+<p style="text-align:center">
   <img src="../images/matrixEx1.png"><br>
   Figure 2
 </p>
@@ -49,14 +48,14 @@ explained above.
 We use a unified node structure for the code to understand the organization of matrix
 nodes corresponding to a sparse matrix. The structure of this node is explained in the
 diagram below.
-<p style="text-aling:center">
+<p style="text-align:center">
   <img src="../images/sparseMatrixStr.png"><br>
   Figure 3
 </p>
 Now let us convert each node structure to a corresponding C-structure. The dimensions of 
-the matrix are denoted by constants <i>MAX1</i> and <i>MAX2</i>. As we have already explained an 
+the matrix are denoted by constants <i>MAX1</i> and <i>MAX2</i>. As we have already explained, an 
 entry node has two pointers and a triplet that defines the non-zero element's row_no,
-col_no and the value. So, the C-structure corresponding to an entry node is as follows:
+col_no, and the value. So, the C-structure corresponding to an entry node is as follows:
 
 ```
 #define MAX1 4 // row dimension
@@ -72,12 +71,12 @@ typedef struct Node {
 } ENTRY;
 ```
 
-The next two C-structures are for column and row headers. Each such structure has one piece of
-information (row, or col) and two pointers. The column header should store the column number and points to next
+The next two C-structures are for column and row headers. Each structure has one piece of
+information (row or col) and two pointers. The column header should store the column number and point to the next
 header node and the next element in the same column. Similarly, a row header stores the row number
 and pointers to the next element in the same row and the next row header. For uniformity the next
 header nodes are accessible from <i>next</i> pointers in corresponding header nodes. The next element
-in the same row occurs to right and accessible from <i>right</i> pointer of an entry node. The next
+in the same row occurs to the right and is accessible from the <i>right</i> pointer of an entry node. The next
 element in the same column occurs below the current entry node. So it is accessible from the
 <i>down</i> pointer. The first element in a column and the first element in a row are accessible
 from corresponding header nodes by <i>right</i> and <i>down</i> pointers from respective headers. 
@@ -87,18 +86,18 @@ typedef struct cHead {
     int colno;
     ENTRY * down;
     struct cHead* next;
-} CHEAD;
+} CHAD;
 
 // Structure for row headnode 
-typedef struct rHead {
+typedef struct read {
     int rowno;
     ENTRY * right;
     struct rHead* next;
 } RHEAD;
 ```
-Since we are using linked lists for implementation of sparse matrix, we need a node which allows us 
-to access all the nodes sparse matrix including headers and entries. So, we create a <i>spmat</i> 
-node. It should have pointers to first row and the first column and store information regarding 
+Since we are using linked lists to implement a sparse matrix, we need a node that allows us 
+to access all the sparse matrix, including headers and entries. So, we create a <i>spmat</i> 
+node. It should have pointers to the first row and the first column and store information regarding 
 the number of rows and columns in the matrix. A C-structure to implement it is given below.
 
 ```
@@ -110,8 +109,8 @@ typedef struct spmat {
     int nCols;
 } SPMAT;
 ```
-Finally, for the purpose of experimenting our implementation, we have to create the triplets for
-non-zero element from a user's input. A combined structure for sparse matrix creation and 
+Finally, we must create the triplets for
+non-zero elements from a user's input to experiment with our implementation. A composite structure for sparse matrix creation and 
 subsequent operations is defined below. 
 
 ```
@@ -119,11 +118,11 @@ subsequent operations is defined below.
 // all elements which allows us to also build triplets 
 typedef struct sparse {
     int* sp; // Storage for all elements
-    int row; // Number of nonzero elements in matrix
-    SPMAT * smat;
+    int row; // Number of non-zero elements in matrix
+    SPORT * smat;
     CHEAD * cHead[MAX2];
     RHEAD * rhead[MAX1];
-    ENTRY * nd;
+    ENTRY * and;
 } SPARSE;
 
 
@@ -131,11 +130,11 @@ typedef struct sparse {
 
 Each non-zero element is a triplet of the form (row_no, col_no, value). Let <i>nonZero</i> be the number of non-zero
 elements, and <i>mn</i> is the dimension of the matrix. Then the ratio of <i>mn-nonZero</i> and <i>mn</i>
-defines the sparsity of matrix. If sparsity exceeds 0.5 then the matrix is sparse. The sparse matrix shown in
-the Figure 3 has only four non-zero elements. Therefore the sparsity of the matrix = 0.75. 
+defines the sparsity of the matrix. If sparsity exceeds 0.5, then the matrix is sparse. The sparse matrix is shown in
+Figure 3 has only four non-zero elements. Therefore the sparsity of the matrix = 0.75. 
 
-We can create sparse matrix by creating a entry node for each non-zero element. The entry node is placed in 
-position corresponding to its row and column number. The code for creating entry node is given below.
+We can create a sparse matrix by creating an entry node for each non-zero element. The entry node is placed in 
+the position corresponding to its row and column number. The code for creating the entry node is given below.
 
 ```
 // Create an array MAX1 x Max2 for matrix 
@@ -153,7 +152,7 @@ void createArray(SPARSE * p) {
 }
 ```
 
-The entire source code for creating, inserting,  printing non-zero elements of a sparse matrix
+The entire source code for creating, inserting, and printing non-zero elements of a sparse matrix
 is available from the link below. We have not examined matrix operations. There are many algorithms
 for operations on sparse matrix. These algorithms do not come under the scope of data structures.
  
