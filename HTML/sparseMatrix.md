@@ -96,9 +96,12 @@ typedef struct rHead {
     struct rHead* next;
 } RHEAD;
 ```
+Since we are using linked lists for implementation of sparse matrix, we need a node which allows us 
+to access all the nodes sparse matrix including headers and entries. So, we create a <i>spmat</i> 
+node. It should have pointers to first row and the first column and store information regarding 
+the number of rows and columns in the matrix. A C-structure to implement it is given below.
 
 ```
-
 // Structure for matrix headnode
 typedef struct spmat {
     RHEAD * firstRow;
@@ -106,7 +109,12 @@ typedef struct spmat {
     int nRows;
     int nCols;
 } SPMAT;
+```
+Finally, for the purpose of experimenting our implementation, we have to create the triplets for
+non-zero element from a user's input. A combined structure for sparse matrix creation and 
+subsequent operations is defined below. 
 
+```
 // Use for accessing whole of sparse matrix including
 // all elements which allows us to also build triplets 
 typedef struct sparse {
@@ -145,5 +153,10 @@ void createArray(SPARSE * p) {
 }
 ```
 
+The entire source code for creating, inserting,  printing non-zero elements of a sparse matrix
+is available from the link below. We have not examined matrix operations. There are many algorithms
+for operations on sparse matrix. These algorithms do not come under the scope of data structures.
+ 
+[Source code for sparse matrix](../../SPMAT/index.md)
 
-  . The sparsity is checked to 
+[Back to index](../index.md)
