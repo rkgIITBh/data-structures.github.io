@@ -156,6 +156,6 @@ The entire source code for creating, inserting, and printing non-zero elements o
 is available from the link below. We have not examined matrix operations. There are many algorithms
 for operations on sparse matrix. These algorithms do not come under the scope of data structures.
  
-[Source code for sparse matrix](../../CODES/SPMAT/index.md)
+[Source code for sparse matrix](../CODES/SPMAT/index.md)
 
 [Back to index](../index.md)
