@@ -19,38 +19,43 @@ part of at least two linked lists:
 - a linked list of entries in single column
 - a linked list of entries in single row
 
-Therefore, we need a node structure for matrix entries having two link pointers. Since we do not store zero
-elements physically, the row and col of the entry must be available with the value of the entry. So, the 
-node structure for a matrix entry must have five fields:
+So, the structure of each node for matrix entries shall have two link pointers. Since non-zero elements
+are distributed over different positions of matrix, we should store the row and column position along
+with its values. The zero elements are not stored physically. So, the node structure of a matrix entry 
+has five fields:
 
 - The value of the entry, row and column number to which the entry belongs.
-- Pointers to next entry in same row and next entry in same column.
+- The pointers to next entry in the same row and next entry in the same column.
 
-We also need a header nodes for each column and a header node for each row. The header node for a column should
-take us to the first non-zero entry in the column. In addition it should be able to take us to the next column
-header. Similar structure is also needed to a row header. Finally, we need a header node for the entire matrix.
-It should be able to point to first column and first row headers. So, we have  four different node structures as
-shown in the figure below:
+To access a row or a column of the matrix, we need header nodes. The header node of a column
+allows us to access the first non-zero entry in that column. A similar header node for a row
+is also needed to access rows and the first element of each row. 
+
+We also need a header node for the entire matrix. It should be able to point to the first 
+column and the first row headers. So, the four different node structures we have defined are
+the figure below gives a pictorial illustration of the four node structures:
 <p style="text-aling:center">
   <img src="../images/matrixNodeStr.png"><br>
   Figure 1
 </p>
 
-Using the node structures as explained above, we can store a sparse matrix as depicted below:
+Figure 2 shows an example for storing a sparse matrix with the nodes structures we have 
+explained above. 
 <p style="text-aling:center">
   <img src="../images/matrixEx1.png"><br>
   Figure 2
 </p>
 
-We also need a unified node structure which is used for understanding organization of matrix nodes corresponding
-to a sparse matrix. The structure of this node is explained in the diagram below.
+We use a unified node structure for the code to understand the organization of matrix
+nodes corresponding to a sparse matrix. The structure of this node is explained in the
+diagram below.
 <p style="text-aling:center">
   <img src="../images/sparseMatrixStr.png"><br>
   Figure 3
 </p>
-Let us now explore how each node structure is represented by a C-structure. First we need to define
-the total number of non=zero elements. We denote the dimensions by two constants <i>MAX1</i> and 
-<i>MAX2</i>. An entry node has two pointers and a triplet that defines the non-zero element's row_no,
+Now let us convert each node structure to a corresponding C-structure. The dimensions of 
+the matrix are denoted by constants <i>MAX1</i> and <i>MAX2</i>. As we have already explained an 
+entry node has two pointers and a triplet that defines the non-zero element's row_no,
 col_no and the value. So, the C-structure corresponding to an entry node is as follows:
 
 ```
@@ -66,11 +71,16 @@ typedef struct Node {
     struct Node* down;  // Ptr to next element in the same col
 } ENTRY;
 ```
-The next two node structures are for column and row headers. Each such structure has one information and 
-two pointers. The column header should store the column number and points to next header node and 
-the next element in the same column. Similarly, a row header stores the row number and pointers to 
-next element in same row and the next row header. The next row header pointer is denoted as <i>down</i>. 
 
+The next two C-structures are for column and row headers. Each such structure has one piece of
+information (row, or col) and two pointers. The column header should store the column number and points to next
+header node and the next element in the same column. Similarly, a row header stores the row number
+and pointers to the next element in the same row and the next row header. For uniformity the next
+header nodes are accessible from <i>next</i> pointers in corresponding header nodes. The next element
+in the same row occurs to right and accessible from <i>right</i> pointer of an entry node. The next
+element in the same column occurs below the current entry node. So it is accessible from the
+<i>down</i> pointer. The first element in a column and the first element in a row are accessible
+from corresponding header nodes by <i>right</i> and <i>down</i> pointers from respective headers. 
 ```
 // Structure for column headnode 
 typedef struct cHead {
