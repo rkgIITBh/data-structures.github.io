@@ -11,7 +11,7 @@ as follows:
   
 Figure 1 illustrates few binomial trees of small orders. 
 <p style="text-align:center">
-  <img src="../images/binomialTreeExamples"><br>
+  <img src="../images/binomialTreeExamples.png"><br>
   Figure 1
 </p>
 
@@ -50,5 +50,25 @@ generated tree B<sub>2</sub>. It produces a B<sub>3</sub>. So, in the third merg
 B<sub>3</sub> tree is merged with B<sub>3</sub> available in H<sub>2</sub>. Since only one B<sub>0</sub> 
 is available, it cannot be merged. Therefore, merging process completes with two trees B<sub>0</sub>
 and B<sub>4</sub>. The merging is illustrated below in Figure 2. 
+<p style="text-align:center">
+  <img src="../images/binomialTreeMerging.png"><br>
+  Figure 2
+</p>
+Merging of a pair of trees takes O(1) time. There may be O(log <i>n</i>) trees, so the merging takes
+O(log <i>n</i>) in the worst-case. We can sort the trees according to height. In this case the merging
+stop with the smallest non-existent tree in the existing binomial heap.
 
+Insertion is a special case of merging. We create a 0-order tree with the new element, then merge
+with existing forest of binonmial trees. The merging stops after <i>i</i>+1 steps if the smallest 
+non-existent binomial tree in the binomial heap is B<sub><i>i</i></sub>. Creating a <i>n</i> node
+heap starting from an empty binomial forest takes O(<i>n</i>) time. It is possible to create the 
+binomial heap with <i>n</i>-1 comparisons. Let us try creating binomial queues formed by inserting
+elements 1 to 8. 
+<p style="text-align:center">
+  <img src="../images/binomialTreeInsertion.png"><br>
+  Figure 2
+</p>
+
+The deleteMin operation is also easy. It breaks a binomial tree into two. Then we have to perform
+merging if required. So it takes time of O(log <i>n</i>) in the worst-case.
 
