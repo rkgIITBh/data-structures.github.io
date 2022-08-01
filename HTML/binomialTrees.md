@@ -28,8 +28,13 @@ of binomial trees are as listed below:
 
 A binomial heap is based on binomial tree structure. If the binomial heap has <i>n</i> nodes then 
 it has binomial trees equal to the number of 1 bits in binary representation of <i>n</i>. For example if
-<i>n=17</i>, the binomial heap representing it consist of two binomial trees 
-B<sub>4</sub> and B<sub>1</sub> that correspond to 1 bits in binary representation of 17, i.e., 1001.
+<i>n=13</i>, the binomial heap representing it consist of two binomial trees 
+B<sub>4</sub>, B<sub>3</sub>, and B<sub>1</sub> that correspond to 1 bits in binary representation of
+13, i.e., 1101. Figure 2 illustrates the equivalence.
+<p style="text-align:center">
+  <img src="../images/binomialTreeAndBITs.png"><br>
+  Figure 2
+</p>
 
 The deleteMin operation on a binomial heap is implemented by scanning all the roots of binomial trees that
 constitue the heap. We can maintain the minimum of all roots in a separate variable, and update it whenever
@@ -51,8 +56,12 @@ B<sub>3</sub> tree is merged with B<sub>3</sub> available in H<sub>2</sub>. Sinc
 is available, it cannot be merged. Therefore, merging process completes with two trees B<sub>0</sub>
 and B<sub>4</sub>. The merging is illustrated below in Figure 2. 
 <p style="text-align:center">
-  <img src="../images/binomialTreeMerging.png"><br>
-  Figure 2
+  <img src="../images/binomMerge.png"><br>
+  <img src="../images/binomMerge1.png"><br>
+  <img src="../images/binomMerge2.png"><br>
+  <img src="../images/binomMerge3.png"><br>
+  <img src="../images/binomMerge4.png"><br>
+  Figure 3
 </p>
 Merging of a pair of trees takes O(1) time. There may be O(log <i>n</i>) trees, so the merging takes
 O(log <i>n</i>) in the worst-case. We can sort the trees according to height. In this case the merging
