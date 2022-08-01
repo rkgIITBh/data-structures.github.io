@@ -42,10 +42,10 @@ process. Suppose
 1. H<sub>1</sub> consists of three trees B<sub>0</sub>, B<sub>1</sub>, B<sub>2</sub>.
 2. H<sub>2</sub> consists of two trees B<sub>1</sub>, B<sub>3</sub>.
 
-H<sub>3</sub> will consists of B<sub>0</sub>, B<sub>4</sub>. The first merging operation is executed by
-merging two trees B<sub>1</sub>, one each from H<sub>1</sub> and H<sub>2</sub>. Next B<sub>2</sub> from
-H<sub>1</sub> is merged with newly generated B<sub>2</sub>. It produces a B<sub>3</sub>. So, the third
-merging operation generates a B<sub>4</sub> due to merging of the new B<sub>3</sub> with B<sub>3</sub>
+The first merging operation takes two trees B<sub>1</sub>, one each from H<sub>1</sub> and H<sub>2</sub>
+and merges them to produce a B<sub>2</sub>. Next, we take the B<sub>2</sub> from
+H<sub>1</sub> and merge it with the newly generated B<sub>2</sub>. It produces a B<sub>3</sub>. So, the third
+merging operation generates a B<sub>4</sub> by merging of the new B<sub>3</sub> with B<sub>3</sub>
 from H<sub>2</sub>. Since only one B<sub>0</sub> is available, it cannot be merged. Therefore, merging
 process leaves only two trees B<sub>0</sub> and B<sub>4</sub>. The merging is illustrated below in 
 Figure 2.
