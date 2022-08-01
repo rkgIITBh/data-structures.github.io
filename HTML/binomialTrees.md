@@ -39,7 +39,7 @@ The merging of binomial trees of same orders in H<sub>1</sub> and H<sub>2</sub> 
 until no pair of binomial trees of same order is left. Let us take an example to illustrate the merging
 process. Suppose 
 
-1. H<sub>1</sub> consists of three trees B<sub>0</sub>, B<sub>1</sub>, B<2>.
+1. H<sub>1</sub> consists of three trees B<sub>0</sub>, B<sub>1</sub>, B<sub>2</sub>.
 2. H<sub>2</sub> consists of two trees B<sub>1</sub>, B<sub>3</sub>.
 
 H<sub>3</sub> will consists of B<sub>0</sub>, B<sub>4</sub>. The first merging operation is executed by
