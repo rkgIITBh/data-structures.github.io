@@ -24,7 +24,7 @@ of binomial trees are as listed below:
 - The root of a binomial tree of order <i>k</i> has <i>k</i> children
 - The leftmost child of the root is the root of a binomial tree of order 0
 - The second leftmost child is the root of a binomial tree of order 1
-- In general <i>i</i>th leftmost child is the root of a binomial tree of order  <i>i</i>
+- In general <i>i</i> th leftmost child is the root of a binomial tree of order  <i>i</i>
 
 A binomial heap is based on binomial tree structure. If the binomial heap has <i>n</i> nodes then 
 it has binomial trees equal to the number of 1 bits in binary representation of <i>n</i>. For example if
@@ -33,7 +33,7 @@ B<sub>4</sub> and B<sub>1</sub> that correspond to 1 bits in binary representati
 
 The deleteMin operation on a binomial heap is implemented by scanning all the roots of binomial trees that
 constitue the heap. We can maintain the minimum of all roots in a separate variable, and update it whenever
-it changes during a heap operation. Since binary representation has log <i>n</n> bits, deleteMin requires
+it changes during a heap operation. Since binary representation has log <i>n</i> bits, deleteMin requires
 O(log <i>n</i>). Merging two binomial heaps H<sub>1</sub> and H<sub>2</sub> is quite easy. 
 The merging of binomial trees of same orders in H<sub>1</sub> and H<sub>2</sub> is carried out
 until no pair of binomial trees of same order is left. Let us take an example to illustrate the merging
