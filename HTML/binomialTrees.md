@@ -66,7 +66,7 @@ binomial heap with <i>n</i>-1 comparisons. Let us try creating binomial queues f
 elements 1 to 8. 
 <p style="text-align:center">
   <img src="../images/binomialTreeInsertion.png"><br>
-  Figure 2
+  Figure 3
 </p>
 
 The deleteMin operation is also easy. It breaks a binomial tree into two. Then we have to perform
