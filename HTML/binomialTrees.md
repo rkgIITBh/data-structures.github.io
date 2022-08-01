@@ -11,7 +11,7 @@ as follows:
   
 Figure 1 illustrates few binomial trees of small orders. 
 <p style="text-align:center">
-  <img src="../images/binomialTreeExamples.png"><br>
+  <img src="../images/binomialTree.png"><br>
   Figure 1
 </p>
 
