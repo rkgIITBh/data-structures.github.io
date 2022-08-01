@@ -28,4 +28,24 @@ of binomial trees are as listed below:
 
 A binomial heap is based on binomial tree structure. If the binomial heap has <i>n</i> nodes then 
 it has binomial trees equal to the number of 1 bits in binary representation of <i>n</i>. For example if
-<i>n=</i>, then binary representation of 17 = 
+<i>n=17</i>, the binomial heap representing it consist of two binomial trees 
+B<sub>4</sub> and B<sub>1</sub> that correspond to 1 bits in binary representation of 17, i.e., 1001.
+
+The deleteMin operation on a binomial heap is implemented by scanning all the roots of binomial trees that
+constitue the heap. We can maintain the minimum of all roots in a separate variable, and update it whenever
+it changes during a heap operation. Since binary representation has log <i>n</n> bits, deleteMin requires
+O(log <i>n</i>). Merging two binomial heaps H<sub>1</sub> and H<sub>2</sub> is quite easy. 
+The merging of binomial trees of same orders in H<sub>1</sub> and H<sub>2</sub> is carried out
+until no pair of binomial trees of same order is left. Let us take an example to illustrate the merging
+process. Suppose 
+
+1. H<sub>1</sub> consists of three trees B<sub>0</sub>, B<sub>1</sub>, B<2>.
+2. H<sub>2</sub> consists of two trees B<sub>1</sub>, B<sub>3</sub>.
+
+H<sub>3</sub> will consists of B<sub>0</sub>, B<sub>4</sub>. The first merging operation is executed by
+merging two trees B<sub>1</sub>, one each from H<sub>1</sub> and H<sub>2</sub>. Next B<sub>2</sub> from
+H<sub>1</sub> is merged with newly generated B<sub>2</sub>. It produces a B<sub>3</sub>. So, the third
+merging operation generates a B<sub>4</sub> due to merging of the new B<sub>3</sub> with B<sub>3</sub>
+from H<sub>2</sub>. Since only one B<sub>0</sub> is available, it cannot be merged. Therefore, merging
+process leaves only two trees B<sub>0</sub> and B<sub>4</sub>. The merging is illustrated below in 
+Figure 2.
