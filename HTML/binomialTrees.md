@@ -54,12 +54,25 @@ B<sub>2</sub>. Next, we take the B<sub>2</sub> from H<sub>1</sub> and merge it w
 generated tree B<sub>2</sub>. It produces a B<sub>3</sub>. So, in the third merging the new 
 B<sub>3</sub> tree is merged with B<sub>3</sub> available in H<sub>2</sub>. Since only one B<sub>0</sub> 
 is available, it cannot be merged. Therefore, merging process completes with two trees B<sub>0</sub>
-and B<sub>4</sub>. The merging is illustrated below in Figure 2. 
+and B<sub>4</sub>. The merging is illustrated below in Figure 3. Figure 3a shows the initial
+merging where trees B<sub>0</sub> from each heap H<sub>1</sub> and H<sub>2</sub> are merged. 
 <p style="text-align:center">
-  <img src="../images/binomMerge1.png"><br>
+  <img src="../images/binomMerge1.png"><br><br>
+  Figure 3a
+  </p>
+ This merging produces the binomial forest on the right. Next, two B<sub>1</sub> trees are merged
+ which produces the binomial forest consisting of two B<sub>2</sub>. These two trees are merged in
+ third step. The result is shown in right part of Figure 3b.
+  <p style="text-align:center">
   <img src="../images/binomMerge2.png"><br>
+  Figure 3b
+  </p>
+  In fourth step, we merge two binomial trees of order 3. It gives a binomial tree of order 4 and
+  one binomial tree of order 3 is left unmerged. So the final status of binomial heap is shown in
+  Figure 3c.
+  <p style="text-align:center">
   <img src="../images/binomMerge4.png"><br>
-  Figure 3
+  Figure 3c
 </p>
 Merging of a pair of trees takes O(1) time. There may be O(log <i>n</i>) trees, so the merging takes
 O(log <i>n</i>) in the worst-case. We can sort the trees according to height. In this case the merging
