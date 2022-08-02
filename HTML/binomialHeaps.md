@@ -3,7 +3,7 @@ depicts a binomial heap consisting of 11 elements. The trees are linked together
 children links as indicated. 
 
 <p style="text-align:center">
-  <img src="../images/binomHeapEx1.png"><br>
+  <img src="../images/binomialHeapEx1.png"><br>
   Figure 1
 </p>
 
