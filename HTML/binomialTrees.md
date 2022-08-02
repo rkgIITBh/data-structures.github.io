@@ -77,6 +77,16 @@ Merging of a pair of trees takes O(1) time. Two heaps together may consists of u
 so the merging takes O(log <i>n</i>) in the worst-case. If we maintain the trees in the forest in sorted 
 order according to heights then the merging stop with the smallest non-existent tree.
 
+The reader may notice that we carry out merging from lowest order to highest order and stop at the order where
+it ends up with a tree of non existent order. The process of merging is akin to addition of two binary
+numbers. Figure 4 depicts binary addition in reverse order where carry bit corresponds to generation of a new
+binomial tree in the merging process. 
+
+<p style="text-align:center">
+  <img src="../images/binaryAddAndBinomHeap.png"><br><br>
+  Figure 4
+</p>
+
 Insertion is a special case of merging. We create a 0-order tree with the new element, then merge
 it with existing forest of binonmial trees. The merging stops after <i>i</i>+1 steps if the smallest 
 non-existent binomial tree in the binomial heap is B<sub><i>i</i></sub>. Creating a <i>n</i> node
