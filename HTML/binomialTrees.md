@@ -56,10 +56,8 @@ B<sub>3</sub> tree is merged with B<sub>3</sub> available in H<sub>2</sub>. Sinc
 is available, it cannot be merged. Therefore, merging process completes with two trees B<sub>0</sub>
 and B<sub>4</sub>. The merging is illustrated below in Figure 2. 
 <p style="text-align:center">
-  <img src="../images/binomMerge.png"><br>
   <img src="../images/binomMerge1.png"><br>
   <img src="../images/binomMerge2.png"><br>
-  <img src="../images/binomMerge3.png"><br>
   <img src="../images/binomMerge4.png"><br>
   Figure 3
 </p>
