@@ -86,6 +86,30 @@ Merging a pair of trees takes O(1) time. Two heaps together may consists of up t
 so the merging takes O(log <i>n</i>) in the worst-case. If we maintain the trees in the forest in sorted 
 order according to heights, then the merging stop with the smallest non-existent tree.
 
+The key algorithm for merging is linking of two binomial trees. It is given below:
+
+```
+linkBinomialTrees(T, S) {
+    r1 = getRoot(T);  // Root of the tree T
+    r2 = getRoot(S);  // Root of the tree S
+    if (r1->key < r2->key) { 
+         // Since key in the root of S is smaller than key in the root of T
+         // link the root of T as child of the root of S.         
+         r2->parent = r1; 
+         r1->child = r2; 
+         r2->sibling = r1->child;
+         r1->degree += 1;
+     } else {  
+         // Key in root of T is smaller, link S to T. 
+         r1->parent = r2;
+         r2->child = r1;
+         r1->sibling = r2->child;
+         r2->degree += 1;
+     }
+     return T;
+}
+```
+
 Next blog will deal with operation on binomial heaps
 
 [Back to Index](../index.md)
