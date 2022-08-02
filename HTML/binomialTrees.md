@@ -86,4 +86,6 @@ Merging a pair of trees takes O(1) time. Two heaps together may consists of up t
 so the merging takes O(log <i>n</i>) in the worst-case. If we maintain the trees in the forest in sorted 
 order according to heights, then the merging stop with the smallest non-existent tree.
 
+Next blog will deal with operation on binomial heaps
+
 [Back to Index](../index.md)
