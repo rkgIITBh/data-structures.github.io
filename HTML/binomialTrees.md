@@ -49,6 +49,7 @@ A straightforward merging cannot maintain heap property. To maintain heap proper
 the larger of the roots of the pair of trees a child of the smaller. In the first merging operation 
 we choose a B<sub>0</sub> from H<sub>1</sub> and another from H<sub>2</sub>. Merging these two trees
 we get a new B<sub>1</sub>. The result of merging is shown in right half of the figure.
+
 <p style="text-align:center">
   <img src="../images/binomMerge1.png"><br><br>
   Figure 3a
@@ -56,8 +57,9 @@ we get a new B<sub>1</sub>. The result of merging is shown in right half of the 
 
 Next, we take the B<sub>1</sub> from H<sub>1</sub> and merge it with the newly generated tree B<sub>1</sub>. 
 It produces a new B<sub>2</sub>. The result is illustrated in Figure 3b.
+
 <p style="text-align:center">
-  <img src="../images/binomMerge2.png"><br>
+  <img src="../images/binomMerge2.png"><br><br>
 Figure 3b
 </p>
 
@@ -65,8 +67,9 @@ So, in the third merging the new B<sub>2</sub> tree is merged with B<sub>2</sub>
 The merging creates a new binomial tree B<sub>3</sub>. However, a bionmial tree B<sub>2</sub> is left unmerged in
 heap H<sub>2</sub>. Therefore, when merging completes we are left with a heap consisting of two binomial trees
 B<sub>2</sub> and B<sub>3</sub> as shown in Figure 3c.
+
 <p style="text-align:center">
-  <img src="../images/binomMerge4.png"><br>
+  <img src="../images/binomMerge4.png"><br><br>
   Figure 3c
 </p>
 Merging of a pair of trees takes O(1) time. There may be O(log <i>n</i>) trees, so the merging takes
