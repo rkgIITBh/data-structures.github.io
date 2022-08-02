@@ -83,7 +83,7 @@ numbers. Figure 4 depicts binary addition in reverse order where carry bit corre
 binomial tree in the merging process. 
 
 <p style="text-align:center">
-  <img src="../images/binaryAddAndBinomHeap.png"><br><br>
+  <img src="../images/binaryAddBinomHeap.png"><br><br>
   Figure 4
 </p>
 
