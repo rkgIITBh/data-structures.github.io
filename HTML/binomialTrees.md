@@ -18,7 +18,7 @@ Figure 1 illustrates a few binomial trees of small orders.
 Let us explore some properties of binomial trees before discussing implementation issues. A binomial tree of
 order 0 has one node. Merging two binomial trees of order 0 creates one binomial tree of order 0. It has two
 nodes. Similarly, a binomial tree of order 2 has four nodes. In general a binomial tree of order <i>k</i> has
-2<sub><i>k</i></sub> nodes. We can verify the fact also from examples of binomial trees shown in Figure 1. More properties 
+2<sup><i>k</i></sup> nodes. We can verify the fact also from examples of binomial trees shown in Figure 1. More properties 
 of binomial trees are as listed below:
 
 - The root of a binomial tree of order <i>k</i> has <i>k</i> children
