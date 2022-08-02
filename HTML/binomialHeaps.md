@@ -1,3 +1,16 @@
+A binomial heap consists of a binomial forest with each tree preserving heap property. Figure 1 
+depicts a binomial heap consisting of 11 elements. The trees are linked together by sibling and
+children links as indicated. 
+
+<p style="text-align:center">
+  <img src="../images/binomHeapEx1.png"><br>
+  Figure 1
+</p>
+
+
+
+
+
 Insertion is a special case of merging. We create a 0-order tree with the new element, then merge
 it with existing forest of binonmial trees. The merging stops after <i>i</i>+1 steps if the smallest 
 non-existent binomial tree in the binomial heap is B<sub><i>i</i></sub>. Creating a <i>n</i> node
