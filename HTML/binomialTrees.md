@@ -1,7 +1,7 @@
 ## Binomial Trees
 
 An interesting tree structure called a binomial tree is based on the concept of binomial coefficients. 
-The definition of binomial trees relies on the recursive rules for the computation of binomial coefficients.
+The definition of binomial trees relies on the recursive rules for the computing binomial coefficients.
 We define binomial trees using a base case and a recursive rule for the generation of higher-order binomial trees
 as follows:
 
