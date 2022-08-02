@@ -5,9 +5,8 @@ The definition of binomial trees relies on the recursive rules for the computing
 We define binomial trees using a base case and a recursive rule for the generation of higher-order binomial trees
 as follows:
 
-- A binomial tree order 0 has a single node. 
-- A binomial tree of order <i>k</i> is created from two binomial trees of order <i>k-1</i> and makes the root of
-  one tree the left child of the root of the other tree.
+- <strong>Base case</strong>: A binomial tree order 0 has a single node. 
+- <strong>Recursive rule</strong>: A binomial tree of order <i>k</i> is constructed by merging two binomial trees of order <i>k-1</i>, where the root of one tree becomes the left child of the root of the other.
   
 Figure 1 illustrates a few binomial trees of small orders. 
 <p style="text-align:center">
@@ -18,8 +17,8 @@ Figure 1 illustrates a few binomial trees of small orders.
 Let us explore some properties of binomial trees before discussing implementation issues. A binomial tree of
 order 0 has one node. Merging two binomial trees of order 0 creates one binomial tree of order 0. It has two
 nodes. Similarly, a binomial tree of order 2 has four nodes. In general a binomial tree of order <i>k</i> has
-2<sup><i>k</i></sup> nodes. We can verify the fact also from examples of binomial trees shown in Figure 1. More properties 
-of binomial trees are as listed below:
+2<sup><i>k</i></sup> nodes. We can verify the fact also from examples of binomial trees shown in Figure 1. More 
+properties of binomial trees are as listed below:
 
 - The root of a binomial tree of order <i>k</i> has <i>k</i> children
 - The leftmost child of the root is the root of a binomial tree of order 0
