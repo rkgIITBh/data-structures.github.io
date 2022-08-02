@@ -67,6 +67,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Maintaining Balanced Binary Search Tree](HTML/avlTree.md)
 - [Average Case Analysis of BST](HTML/BSTanalysis.md)
 - [Introduction to Binary Search Tree](HTML/BSTintro.md)
+- [Introduction to Binomial Trees](HTML/binomialTrees.md)
 - [Priority Queue Operation Using Binary Heaps](HTML/priorityQ.md) 
 - [Converting an Infix Expression to its Equivalent Postfix](HTML/infixToPostfixExpression.md)
 - [Huffman Encoding Algorithm and its Implementation](HTML/huffmanCodeImpl.md)
