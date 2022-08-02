@@ -72,18 +72,20 @@ B<sub>2</sub> and B<sub>3</sub> as shown in Figure 3c.
   <img src="../images/binomMerge4.png"><br><br>
   Figure 3c
 </p>
-Merging of a pair of trees takes O(1) time. There may be O(log <i>n</i>) trees, so the merging takes
-O(log <i>n</i>) in the worst-case. We can sort the trees according to height. In this case the merging
-stop with the smallest non-existent tree in the existing binomial heap.
+
+Merging of a pair of trees takes O(1) time. Two heaps together may consists of up to O(log <i>n</i>) trees, 
+so the merging takes O(log <i>n</i>) in the worst-case. If we maintain the trees in the forest in sorted 
+order according to heights then the merging stop with the smallest non-existent tree.
 
 Insertion is a special case of merging. We create a 0-order tree with the new element, then merge
-with existing forest of binonmial trees. The merging stops after <i>i</i>+1 steps if the smallest 
+it with existing forest of binonmial trees. The merging stops after <i>i</i>+1 steps if the smallest 
 non-existent binomial tree in the binomial heap is B<sub><i>i</i></sub>. Creating a <i>n</i> node
 heap starting from an empty binomial forest takes O(<i>n</i>) time. It is possible to create the 
 binomial heap with <i>n</i>-1 comparisons. Let us try creating binomial queues formed by inserting
 elements 1 to 8. 
+
 <p style="text-align:center">
-  <img src="../images/binomialTreeInsertion.png"><br>
+  <img src="../images/binomHeapInsertion.png"><br>
   Figure 3
 </p>
 
