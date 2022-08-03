@@ -41,10 +41,10 @@ Figure 3 illustrates the deleteMin operation.
 
 <p style="text-align:center">
   <img src="../images/binomHeapDeleteMin1.png"><br>
+  Figure 3(a): Binomial heap before deleteMin operation.<br>
    <img src="../images/binomHeapDeleteMin2.png"><br>
-  Figure 3
+  Figure 3(b): After deleteMin operation.
 </p>
 
-deleteMin operation breaks the corresponding tree into
-The deleteMin operation is also easy. It breaks a binomial tree into two. Then we have to perform
-merging if required. So it takes time of O(log <i>n</i>) in the worst-case.
+The deleteMin operation is also easy. It breaks a binomial tree into two as shown in Figure 3(b).
+Then we have to perform merging if required. So it takes time of O(log <i>n</i>) in the worst-case.
