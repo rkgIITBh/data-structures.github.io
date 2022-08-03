@@ -32,15 +32,15 @@ list is the minimum element.
 After the root is deleted the corresponding tree breaks into constituent smaller binomial trees. Let
 
 - H<sub>1</sub> be the original heap. 
-- H' be the remaining part of original heap after deleteMin
-- H'' be the heap created by constuent smaller binomial trees after deleting the minimum element
+- H be the remaining part of original heap after deleteMin
+- H' be the heap created by constuent smaller binomial trees after deleting the minimum element
 
-We carry out merging of H' and H'' to get the heap H<sub>2</sub> after the deleteMin operation. 
+We carry out merging of H and H' to get the heap H<sub>2</sub> after the deleteMin operation. 
 Figure 3 illustrates the deleteMin operation.
 
 
 <p style="text-align:center">
-  <img src="../images/binomHeapDeleteMin.png"><br>
+  <img src="../images/binomHeapDeleteMin1.png"><br>
   Figure 3
 </p>
 
