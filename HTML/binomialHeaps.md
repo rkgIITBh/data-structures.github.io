@@ -41,6 +41,7 @@ Figure 3 illustrates the deleteMin operation.
 
 <p style="text-align:center">
   <img src="../images/binomHeapDeleteMin1.png"><br>
+   <img src="../images/binomHeapDeleteMin2.png"><br>
   Figure 3
 </p>
 
