@@ -33,7 +33,7 @@ The union operations are shown below in Figure 2(c), 2(d) and 2(e).
   Figure 2(c)<br><br>
   <img src="../images/unionBinom5.png"><br>
     Figure 2(d)<br><br>
-
+  <img src="../images/unionBinom6.png"><br>
   Figure 2(e)
 </p>
 
