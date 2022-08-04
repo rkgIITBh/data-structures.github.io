@@ -248,31 +248,7 @@ NODE* binomialHeapDelete(NODE* h, int val) {
 	// Delete the minimum element from heap
 	return deleteMin(h);
 }
-
-// Main function 
-int main() {
-	// The root is global
-    
-	binomialHeapInsert(10);
-	binomialHeapInsert(20);
-	binomialHeapInsert(30);
-	binomialHeapInsert(40);
-	binomialHeapInsert(50);
-
-	printf("The heap is:\n");
-	printHeap(root);
-
-	// Delete an element from heap
-	root = binomialHeapDelete(root, 10);
-
-	printf("\nAfter deleting 10, the heap is:\n");
-
-	printHeap(root);
-        printf("\n");
-
-	return 0;
-}
-
+// Create main() for experimenting with operations
 ```
 
 [Back to Binomial Heaps](../../HTML/binomialHeaps.md)
