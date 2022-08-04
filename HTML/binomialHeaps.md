@@ -27,11 +27,14 @@ The sorted list of binomial trees belonging to both heaps shown below in Figure 
   <img src="../images/unionBinom3.png"><br>
   Figure 2(b)
 </p>
-The union operations are shown below in Figure 2(c), and 2(d).
+The union operations are shown below in Figure 2(c), 2(d) and 2(e).
 <p style="text-align:center">
   <img src="../images/unionBinom4.png"><br>
   Figure 2(c)<br><br>
   <img src="../images/unionBinom5.png"><br>
+    Figure 2(d)<br><br>
+  <img src="../images/unionBinom6.png"><br>
+  Figure 2(e)
 </p>
 
 For insertion we create a heap of 0-order tree with the new element, then apply union
