@@ -268,7 +268,7 @@ int main() {
 	printf("\nAfter deleting 10, the heap is:\n");
 
 	printHeap(root);
-    printf("\n");
+        printf("\n");
 
 	return 0;
 }
