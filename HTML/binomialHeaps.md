@@ -14,24 +14,27 @@ Since the heap trees are ordered in ascending order, the root of the lowest orde
 at the beginning of a list. First we create a new sorted list of binomial trees belonging to
 two heaps. Then scan the new list mergeing the trees of lower orders from the beginning.
 The union operation stops when no further merging is possible. We have explained merging in 
-the previous blog.  Consider the two binomial heaps in Figure 2(a).
+the previous blog.  Consider the two binomial heaps in Figure 2(a). 
 
 <p style="text-align:center">
   <img src="../images/unionBinom1.png"><br>
+  Figure 2(a) <br><br>
   <img src="../images/unionBinom2.png"><br>
-  Figure 2(a)
+  Figure 2(b)
 </p>
 The sorted list of binomial trees belonging to both heaps shown below in Figure 2(b). 
 <p style="text-align:center">
   <img src="../images/unionBinom3.png"><br>
   Figure 2(b)
 </p>
-The union operations are shown below in Figure 2(c) and 2(d).
+The union operations are shown below in Figure 2(c), 2(d) and 2(e).
 <p style="text-align:center">
+  <img src="../images/unionBinom3.png"><br>
+  Figure 2(c)<br><br>  
   <img src="../images/unionBinom4.png"><br>
-  Figure 2(c)<br><br>
+  Figure 2(d)<br><br>
   <img src="../images/unionBinom5.png"><br>
-  Figure 2(d)
+  Figure 2(e)
 </p>
 
 For insertion we create a heap of 0-order tree with the new element, then apply union
