@@ -41,8 +41,8 @@ smaller binomial trees. For convenience in discussion we use the following notat
 - H' be the heap created by constuent smaller binomial trees after deleting the minimum element
 
 We carry out merging of H and H' to get the heap H<sub>2</sub> after the deleteMin operation. 
-We explained merging process in the previous blog. So, the reader may find that the result of
-carrying out deleteMin operation on binomial heap of Figure 3(a) is as follows:
+We explained merging process in the previous blog. So, the result after merging heaps 
+H and H' of Figure 3(b) after deleteMin operation on Figure 3(a) is as follows:
 
 <p style="text-align:center">
   <img src="../images/binomHeapDeleteMin3.png"><br>
