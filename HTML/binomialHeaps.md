@@ -1,3 +1,5 @@
+## Binomial Heaps
+
 A binomial heap consists of a binomial forest with each tree preserving heap property. Figure 1 
 depicts a binomial heap consisting of 11 elements. The trees are linked together by sibling and
 child links, as indicated. 
