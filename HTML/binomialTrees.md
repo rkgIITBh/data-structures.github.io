@@ -84,8 +84,9 @@ B<sub>2</sub> and B<sub>3</sub> as shown in Figure 4c.
 
 Merging a pair of trees takes O(1) time. Two heaps together may consists of up to O(log <i>n</i>) trees, 
 so the merging takes O(log <i>n</i>) in the worst-case. If we maintain the trees in the forest in sorted 
-order according to heights, then the merging stop with the smallest non-existent tree.
-
+order according to heights, then the merging stop with the smallest non-existent tree. However, 
+merge is performed most frequently. Therefore, a binomial forest maintained according to 
+ascending order of the constiuent binomial trees.
 The key algorithm for merging is linking of two binomial trees. It is given below:
 
 ```
