@@ -3,15 +3,15 @@
 ```
 // C++ program for implementation of
 // Binomial Heap and Operations on it
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
+#include <stdio.h> // Input output
+#include <stdlib.h> // Required for malloc function
+#include <limits.h> // Required for INT_MIN
 
-// Structure of Node
+// Structure of heap node
 typedef struct node {
-	int info;
+    int info;
     int degree;
-	struct node *parent;
+    struct node *parent;
     struct node *child;
     struct node *sibling;
 } NODE;
@@ -20,8 +20,7 @@ typedef struct node {
 // parameter in all functions.
 NODE * root = NULL;
 
-// link two heaps by making h1 a child
-// of h2.
+// link two heaps by making h1 a child of h2.
 int binomialLink(NODE* h1, NODE* h2) {
 	h1->parent = h2;
 	h1->sibling = h2->child;
@@ -29,7 +28,7 @@ int binomialLink(NODE* h1, NODE* h2) {
 	h2->degree = h2->degree + 1;
 }
 
-// create a Node
+// Create a heap node
 NODE* createNode(int n) {
 	NODE* newNode = (NODE *) malloc(sizeof(NODE));
 	newNode->info = n;
@@ -135,8 +134,7 @@ void printHeap(NODE* h) {
 	}
 }
 
-// Function to reverse a list
-// using recursion.
+// Function to reverse a list using recursion.
 int revertList(NODE* h) {
 	if (h->sibling != NULL) {
 		revertList(h->sibling);
@@ -146,13 +144,13 @@ int revertList(NODE* h) {
 		root = h;
 }
 
-// Function to extract minimum value
+// Function to delete minimum value
 NODE* deleteMin(NODE* h) {
 	if (h == NULL)
 		return NULL;
 
 	NODE* minNodePred = NULL; // Predecessor node
-	NODE* minNode = h;
+	NODE* minNode = h; // Define current minimum
 
 	// Find minimum value
 	int min = h->info;
