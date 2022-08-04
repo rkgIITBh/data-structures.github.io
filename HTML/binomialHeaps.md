@@ -19,7 +19,7 @@ binomial heap with <i>n</i>-1 comparisons. Let us try creating binomial queues f
 elements 1 to 8. 
 
 <p style="text-align:center">
-  <img src="../images/binomHeapInsertion.png"><br>
+  <img src="../images/binomHeapInsert.png"><br>
   Figure 2
 </p>
 
