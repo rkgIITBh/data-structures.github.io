@@ -274,4 +274,5 @@ int main() {
 }
 
 ```
-{Back to Binomial Heaps](../../HTML/binomialHeaps.md)
+
+[Back to Binomial Heaps](../../HTML/binomialHeaps.md)
