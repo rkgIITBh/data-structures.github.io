@@ -55,4 +55,5 @@ O(log <i>n</i>). If the heap trees are sorted in ascending order, deleteMin, the
 list is the minimum element. Then we have to perform merging if required. Therefore, the deleteMin
 operation takes time of O(log <i>n</i>) in the worst-case.
 
+[Back to Index](../index.md)
 
