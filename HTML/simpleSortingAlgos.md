@@ -82,7 +82,7 @@ is given below.
       }
     }
     n--; // Size of unsorted part decreases
-  until (!swapped)
+  until (swapped)
 }
 ```
 
