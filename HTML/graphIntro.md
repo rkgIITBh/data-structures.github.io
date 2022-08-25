@@ -40,8 +40,14 @@ An edge <i>(u, v) &isin; E</i> is directed from <i>u</i> to <i>v</i>. We say, <i
 and <i>v</i> is the terminal vertex for the edge. Sometimes, it is convenient to use a different
 symbol to represent an edge. For example, we can use <i>e = (u, v)</i> to denote an edge. We use
 a link with with arrow head to separately indicate the initial and terminal vertices of an edge in 
-picture of a directed graph. The picture below represents a directed graph. The direction of edges
+picture of a directed graph. The picture below represents a directed graph.
+<p style="text-align:center">
+  <img src="../images/directedGrpah.png">
+</p> 
+The direction of edges
 expresses an important feature of using the abstraction of a directed graph. In processing a graph
 data structure, we have to visit the vertices and traverse the edges. In a directed graph the 
 edges can only be traversed in the direction of orientations. We cannot traverse an edge against 
-the direction of its orientation.
+the direction of its orientation. It implies we can directly reach vertex <i>b</i> from <i>a</i>, 
+but not <i>a</i> from <i>b</i>. To reach reach <i>a</i> from <i>b</i> we have to reach <i>c</i>
+and from <i>c</i> to <i>a</i>.
