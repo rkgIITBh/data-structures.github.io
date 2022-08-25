@@ -5,7 +5,8 @@ we want to pictorially represent a relationship such as siblings (brothers or si
 For convenience, let us label the bubbles as <i>a, b, c, d, e</i>. To express the sibling 
 relationship between <i>a</i> and <i>b</i>, draw a line connecting the corresponding bubbles. 
 <p style="text-align:center">
-  <img src="../images/undirectedGraph.png">
+  <img src="../images/undirectedGraph.png"><br>
+  Figure 1
 </p> 
 The figure also represents other sibling relations.
 
@@ -20,7 +21,8 @@ context we use.
 We may also use graphs to represent the relationship between different objects. For example, the
 graph below has two sets of vertices: one set representing banks and the other set as banks' clients. The edges between vertices denote bank and customer relationships.
 <p style="text-align:center">
-  <img src="../images/bankClientGraph.png">
+  <img src="../images/bankClientGraph.png"><br>
+  Figure 2
 </p> 
 
 In general, graph abstraction is very powerful. In dealing with complex data structures, we 
@@ -38,7 +40,8 @@ and <i>v</i> is the terminal vertex for the edge.  We use a link with an arrowhe
 initial distinct from the terminal vertices of an edge in the picture of a directed graph. 
 The picture below represents a directed graph.
 <p style="text-align:center">
-  <img src="../images/directedGraph.png">
+  <img src="../images/directedGraph.png"><br>
+  Figure 3
 </p> 
 The direction of edges expresses an important feature of using the abstraction of a directed graph.
 In processing a graph data structure, we have to visit the vertices and traverse the edges. In a 
