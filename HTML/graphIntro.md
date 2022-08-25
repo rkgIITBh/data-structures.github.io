@@ -3,7 +3,7 @@
 Any relationship between objects or things can be represented using graphs. Suppose for instance,
 we want to pictorially represent the relationship such as siblings (brothers or sisters) among a 
 set of six people. We denote each person by a small point or bubble as shown in the figure below.
-For conveninence, let us label the bubbles as <i>a, b, c, d, e, f</i>. To express the sibling 
+For conveninence, let us label the bubbles as <i>a, b, c, d, e</i>. To express the sibling 
 relationship between <i>a</i> and <i>b</i>, draw a line connecting the corresponding bubbles. 
 <p style="text-align:center">
   <img src="../images/undirectedGraph.png">
