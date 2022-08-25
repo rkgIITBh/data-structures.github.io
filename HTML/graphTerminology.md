@@ -14,3 +14,5 @@ following edges:
 - <i>(v,v<sub>1</sub>) &isin; E</i>, 
 - <i>(v<sub>i</sub>,v<sub>i+1</sub>) &isin; E</i>, for <i>1 &le; i &le; k-1</i>, and 
 - <i>(v<sub>k</sub>, w) &isin; E</i>.
+
+If the graph is directed, then the path is known as a directed path. 
