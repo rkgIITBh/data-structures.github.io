@@ -30,3 +30,12 @@ In general, the graph abstraction is very powerful. In dealing with complex data
 find the abstraction allows us to link the complex relationships among objects. So, we need to
 define and build graph data structures from general abstraction of graph. Before we proceed 
 further, let us introduce graph terminology. 
+
+<strong>Definition</strong>: A directed graph <i>G</i> consists of a pair of sets
+ 
+- A set of vertices <i>V</i>
+- A set of edges <i>E</i> &#8838; <i>V &times; V</i>
+
+An edge <i>(u, v) &isin; E</i> is directed from <i>u</i> to <i>v</i>. We say, <i>u</i> is the initial
+and <i>v</i> is the terminal vertex for the edge. Sometimes, it is convenient to use a different
+symbol to represent an edge. So, we can use <i>e = (u, v)</i> to denote an edge.
