@@ -7,7 +7,7 @@ a graph structure from one or different vertices is extremely important. The acc
 reachability in a graph is defined in differnt context as follows:
 
 <strong>Path</strong>: There is a path from a vertex <i>v</i> to another vertex <i>w</i> if there is
-a sequence of vertices <i>v, v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>k</sub> w</i> such that there 
+a sequence of vertices <i>v, v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>k</sub>, w</i> such that there 
 exists edges between every pair of adjacent vertices of the sequence. That is, the graph has the 
 following edges:
 
