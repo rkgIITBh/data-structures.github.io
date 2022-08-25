@@ -62,3 +62,7 @@ There is no distinction between the end vertices of an edge as it exists in the 
 graph. An edge in an undirected graph can be traversed in both directions. There can be
 at most &#8739;<i>V(V-1)</i>&#8739; edges in an undirected graph with &#8739;<i>V</i>&#8739; vertices.
 Undirected graphs are more flexible in processing. The picture in figure 1 depicts an undirected graph.
+
+In the next blog we continue with graph terminology.
+
+[Back to Index](../index.md)
