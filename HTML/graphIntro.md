@@ -43,13 +43,12 @@ The picture below represents a directed graph.
 <p style="text-align:center">
   <img src="../images/directedGraph.png">
 </p> 
-The direction of edges
-expresses an important feature of using the abstraction of a directed graph. In processing a graph
-data structure, we have to visit the vertices and traverse the edges. In a directed graph the 
-edges can only be traversed in the direction of orientations. We cannot traverse an edge against 
-the direction of its orientation. It implies we can directly reach vertex <i>b</i> from <i>a</i>, 
-but not <i>a</i> from <i>b</i>. To reach reach <i>a</i> from <i>b</i> we have to reach <i>c</i>
-and from <i>c</i> to <i>a</i>.
+The direction of edges expresses an important feature of using the abstraction of a directed graph.
+In processing a graph data structure, we have to visit the vertices and traverse the edges. In a 
+directed graph the edges can only be traversed in the direction of orientations. We cannot traverse an 
+edge against the direction of its orientation. It implies we can directly reach vertex <i>b</i> 
+from <i>a</i>, but not <i>a</i> from <i>b</i>. There is no way to reach <i>a</i> from any of the 
+vertices.
 
 We will return to processing of directed graphs and connected terminology sometime later. Let us
 now focus on undirected graphs. Formally we define an undirected graph as follows:
