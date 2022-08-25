@@ -6,7 +6,7 @@ set of six people. We denote each person by a small point or bubble as shown in 
 For conveninence, let us label the bubbles as <i>a, b, c, d, e, f</i>. To express the sibling 
 relationship between <i>a</i> and <i>b</i>, draw a line connecting the corresponding bubbles. 
 <p style="text-align:center">
-  <img src="../images/siblingGraph.png">
+  <img src="../images/undirectedGraph.png">
 </p> 
 The figure also represents other sibling relations.
 
@@ -62,7 +62,4 @@ now focus on undirected graphs. Formally we define an undirected graph as follow
 There is no distinction between the end vertices of an edge as it exists in the case of a directed
 graph. An edge in an undirected graph can be traversed in both directions. There can be
 at most &#8739;<i>V(V-1)</i>&#8739; edges in an undirected graph with &#8739;<i>V</i>&#8739; vertices.
-Undirected graphs are more flexible to processing. The picture below depicts an undirected graph.
-<p style="text-align:center">
-  <img src="../images/undirectedGraph.png">
-</p> 
+Undirected graphs are more flexible to processing. The picture in figure 1 depicts an undirected graph.
