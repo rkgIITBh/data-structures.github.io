@@ -33,14 +33,13 @@ further, let us introduce graph terminology.
 
 <strong>Directed graphs</strong>: A directed graph <i>G</i> consists of a pair of sets
  
-- A set of vertices <i>V</i>
-- A set of edges <i>E</i> &#8838; <i>V &times; V</i>
+- A set of vertices <i>V</i>. Each vertex <i>v &isin; V</i> represents a record or an obect, or a piece of information. 
+- A set of edges <i>E</i> &#8838; <i>V &times; V</i>. Each edge <i>e = (u,v) &isin; E</i> joins two distinct vertices <i>u &ne; v</i>. There can be at most one edge between a pair of vertices.
 
 An edge <i>(u, v) &isin; E</i> is directed from <i>u</i> to <i>v</i>. We say, <i>u</i> is the initial
-and <i>v</i> is the terminal vertex for the edge. Sometimes, it is convenient to use a different
-symbol to represent an edge. For example, we can use <i>e = (u, v)</i> to denote an edge. We use
-a link with with arrow head to separately indicate the initial and terminal vertices of an edge in 
-picture of a directed graph. The picture below represents a directed graph.
+and <i>v</i> is the terminal vertex for the edge.  We use a link with with arrow head to indicate the
+initial distinct from the terminal vertices of an edge in picture of a directed graph. 
+The picture below represents a directed graph.
 <p style="text-align:center">
   <img src="../images/directedGraph.png">
 </p> 
@@ -61,8 +60,9 @@ now focus on undirected graphs. Formally we define an undirected graph as follow
 - A set of edges <i>E</i> &#8838; C(V,2)</i>
 
 There is no distinction between the end vertices of an edge as it exists in the case of a directed
-graph. An edge in an undirected graph can be traversed in both directions. Undirected graphs are
-more flexible to processing. The picture below depicts an undirected graph.
+graph. An edge in an undirected graph can be traversed in both directions. There can be
+at most &#8739;<i>V(V-1)</i>&#8739; edges in an undirected graph with &#8739;<i>V</i>&#8730; vertices.
+Undirected graphs are more flexible to processing. The picture below depicts an undirected graph.
 <p style="text-align:center">
   <img src="../images/undirectedGraph.png">
 </p> 
