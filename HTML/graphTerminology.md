@@ -46,7 +46,7 @@ with an example of a graph in the picture below.
 </p>
 The graph shown above is a disconnected graph as there is no path connecting vertex <i>a</i> to any of
 the vertices <i>f</i> or <i>g</i> or <i>h</i>. The graph has two connected components as marked H<sub>1</sub>
-and H<sub>2</sub> in the picture. Clearly, there is a between every pair of vertices belonging either to
+and H<sub>2</sub> in the picture. Clearly, there is a path between every pair of vertices belonging either to
 H<sub>1</sub> or H<sub>2</sub>. However, if we add vertex <i>c</i> to subgraph H<sub>2</sub> then it does
 remain connected. Similarly, if adding <i>g</i> to subgraph H<sub>1</sub> lead it to become disconnected.
 There is a simple cycle between vertices <i>f, g, h</i>. The subgraph H<sub>1</sub> has many simple cycles. 
