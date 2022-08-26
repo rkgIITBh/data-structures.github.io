@@ -38,6 +38,10 @@ graph <i>G=(V, E)</i>, if <i>V<sub>1</sub> &#8838; V</i> and <i>E<sub>1</sub> &#
 connected component of the graph. The maximality of a subgraph means that if we add one more vertex 
 from the graph to the subgraph, it no longer remains connected.
 
+<strong>Bipartite graphs</strong>: A graph <i>G = (V, E)</i> whose vertex set <i>V</i> can be divided into
+two disjoint sets <i>V<sub>1</sub></i> and <i>V<sub>2</sub></i> such that any edge has one end point in
+<i>V<sub>1</sub></i> and the other in <i>V<sub>2</sub></i>. 
+
 Let us check some examples to understand the definitions we have learned. We begin
 with an example of a graph in the picture below.
 <p style="text-align:center">
@@ -50,7 +54,10 @@ and H<sub>2</sub> in the picture. There is a path between every pair of vertices
 H<sub>1</sub> or H<sub>2</sub>. However, if we add vertex <i>c</i> to subgraph H<sub>2</sub> then it does
 remain connected. Similarly, if adding <i>g</i> to subgraph H<sub>1</sub> lead it to become disconnected.
 There is a simple cycle between vertices <i>f, g, h</i>. The subgraph H<sub>1</sub> has many simple cycles. 
-One example for a cycle of length 5 is <i>a, c, d, e, b</i>. 
+One example for a cycle of length 5 is <i>a, c, d, e, b</i>.
 
+We have already seen an example of a bipartite graph in previous blog. The example was that representing
+relationship of banks and its clients. It is assumed that all banks are independent entitites. Clients 
+can have accounts in multiple banks. But no client can be connected to another client. 
 
 [Back to Index](../index.md)
