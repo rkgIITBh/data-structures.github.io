@@ -24,4 +24,20 @@ following edges:
 <strong>Simple cycle</strong>: A simple cycle is a simple path where the two end vertices are also 
 connected with an edge. 
 
-<strong>Spanning tree </strong>
+<strong>Connected graphs</strong>: A graph <i>G</i> is connected if and only if there exists a
+path between every pair of vertices in <i>G</i>.
+
+<strong>Subgraph</strong>: A graph <i>H = (V<sub>1</sub>, E<sub>1</sub>)</i> is a subgraph of a
+graph <i>G=(V, E)</i>, if <i>V<sub>1</sub> &#8838; V</i> and <i>E<sub>1</sub> &#8838; E</i>.
+
+<strong>Connected component</strong>: A maximally connected subgraph of a graph is known as a 
+connected component of the graph.
+
+Let us check some of the examples to understand the definitions we have learned so far. We begin
+with an example of a graph in the picture below.
+<p style="text-align:center">
+  <img src="../images/graphExample1.png"><br>
+  Figure 1
+</p>
+The graph shown above is a disconnected graph as there is no path connecting vertex <i>a</i> and
+<i>g</i>. The graph has two connected components as marked in the picture.
