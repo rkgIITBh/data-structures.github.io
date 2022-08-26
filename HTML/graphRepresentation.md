@@ -37,5 +37,7 @@ using matrix is expensive. We can use a representation which lists the edges inc
 The adjacency list representation of a graph consists of <i>n</i> lists, one corresponding to each vertex.
 Every edge is listed twice in such a representation. Adjacency list representation of the graph in 
 Figure 1 is given below.
-
+<p style="text-align:center">
+   <img src="../images/adjacencyList.png">
+</p>
 
