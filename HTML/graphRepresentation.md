@@ -8,7 +8,7 @@ graph.
 The proof of the above property is simple. If we add the degrees of all vertices then 
 
 <p style="text-align:center">
-            &Sigma; deg[v] is an even number
+            &Sigma; deg[v] is an even number (why?)
 </p>
 
 But summing of degrees of all even degree vertices gives an even number. It implies that the sum of 
