@@ -55,10 +55,10 @@ The degree of vertex <i>a</i> is denoted by <i>deg[a]</i>. Since three edges are
 
 | Vertex | Degree  | Vertex  | Degree  | 
 |---|---|---|---|
-| a  | 3 | e  | 2 | 
+| a  | 3 | e  | 3 | 
 | b  | 2 | f  | 2 |
 | c  | 3 | g  | 2 |
-| d  | 3 |    |   |
+| d  | 3 | h  | 3 |
 
 
 The graph shown above is a disconnected graph as there is no path connecting vertex <i>a</i> to any of
