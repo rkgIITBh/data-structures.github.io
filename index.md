@@ -54,7 +54,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 ### List of Blogs
 
 - [Graph Terminology](HTML/graphTerminology.md)
-- [Introduction to graphs](HTML/graphsIntro.md)
+- [Introduction to graphs](HTML/graphIntro.md)
 - [Search, Insert, Delete and Splay on Splay Trees](HTML/InsertDeleteSplay.md)
 - [Amortized Time Complexity of Splay Trees](HTML/AmortizedTimeSplaying.md)
 - [Splay Trees](HTML/splayTree.md)
