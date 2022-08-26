@@ -53,7 +53,7 @@ graph in the picture below.
 The degree of vertex <i>a</i> is denoted by <i>deg[a]</i>. Since three edges are incident on <i>a</i>,
 <i>deg[a] = 3</i>. The table below lists out the degrees of a few of the vertices in the above graph.
 
-<center>
+<p style="text-align:center">
   
 | Vertex | Degree  | Vertex  | Degree  | 
 |---|---|---|---|
@@ -62,7 +62,7 @@ The degree of vertex <i>a</i> is denoted by <i>deg[a]</i>. Since three edges are
 | c  | 3 | g  | 2 |
 | d  | 3 | h  | 2 |
   
-</center>
+</p>
 
 The graph shown above is a disconnected graph as there is no path connecting vertex <i>a</i> to any of
 the vertices <i>f</i> or <i>g</i> or <i>h</i>. The graph has two connected components as marked H<sub>1</sub>
