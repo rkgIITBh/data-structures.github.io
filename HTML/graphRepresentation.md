@@ -30,7 +30,7 @@ relationship if a vertex is adjacent to another. Figure 1 illustrates the adjace
    <img src="../images/adjacencyMatrix.png">
 </p>
 Processing of a graph requires every entry of the adjacecny matrix to be accessed. So the any graph 
-algorithm requires time of at least O(<i>n<sup>2</sup></i>. 
+algorithm requires time of at least O(<i>n<sup>2</sup></i>). 
 
 However, if the graph is sparse, then most entries of adjacency matrix are zero. So, representing graphs
 using matrix is expensive. We can use a representation which lists the edges incident at every vertex. 
