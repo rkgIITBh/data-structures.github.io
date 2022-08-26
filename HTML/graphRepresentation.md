@@ -6,9 +6,11 @@ graph.
 <strong>Degree property</strong>: An undirected graph has even number of vertices of odd degrees.
 
 The proof of the above property is simple. If we add the degrees of all vertices then 
+
 <div style="text-align:center>
             &#8512; deg[v] is an even number
-            </div>
+</div>
+
 But summing of degrees of all even degree vertices gives an even number. It implies that the sum of 
 degrees of all odd degree vertices must also be an even number. It implies that there can be only even
 number of odd degree vertices.
