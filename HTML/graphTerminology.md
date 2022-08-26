@@ -56,8 +56,8 @@ remain connected. Similarly, if adding <i>g</i> to subgraph H<sub>1</sub> lead i
 There is a simple cycle between vertices <i>f, g, h</i>. The subgraph H<sub>1</sub> has many simple cycles. 
 One example for a cycle of length 5 is <i>a, c, d, e, b</i>.
 
-We have already seen an example of a bipartite graph in previous blog. The example was that representing
-relationship of banks and its clients. It is assumed that all banks are independent entitites. Clients 
-can have accounts in multiple banks. But no client can be connected to another client. 
+We have already seen an example of a bipartite graph in the previous blog. An example representing the 
+relationship between banks and their clients is given there. The banks are independent entities. A client may 
+choose to have accounts in multiple banks. But no client is connected to another.
 
 [Back to Index](../index.md)
