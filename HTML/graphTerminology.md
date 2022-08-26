@@ -21,6 +21,10 @@ following edges:
 
 <strong>Simple path</strong>: A path is called a simple path if every vertex on the given path is distinct.
 
+<strong>Length of a path</strong>: The number edges on a path is equal to its length. 
+So if a path represented by a sequence of <i>k</i> vertices then its length is <i>k-1</i>. 
+
+
 <strong>Simple cycle</strong>: A simple cycle is a simple path where the two end vertices are also 
 connected with an edge. 
 
@@ -31,7 +35,8 @@ path between every pair of vertices in <i>G</i>.
 graph <i>G=(V, E)</i>, if <i>V<sub>1</sub> &#8838; V</i> and <i>E<sub>1</sub> &#8838; E</i>.
 
 <strong>Connected component</strong>: A maximally connected subgraph of a graph is known as a 
-connected component of the graph.
+connected component of the graph. The maximality of a subgraph means that if we add one more vertex 
+from the graph to the subgraph then it no longer remain connected.
 
 Let us check some of the examples to understand the definitions we have learned so far. We begin
 with an example of a graph in the picture below.
@@ -39,5 +44,12 @@ with an example of a graph in the picture below.
   <img src="../images/graphExample1.png"><br>
   Figure 1
 </p>
-The graph shown above is a disconnected graph as there is no path connecting vertex <i>a</i> and
-<i>g</i>. The graph has two connected components as marked in the picture.
+The graph shown above is a disconnected graph as there is no path connecting vertex <i>a</i> to any of
+the vertices <i>f</i> or <i>g</i> or <i>h</i>. The graph has two connected components as marked H<sub>1</sub>
+and H<sub>2</sub> in the picture. Clearly, there is a between every pair of vertices belonging either to
+H<sub>1</sub> or H<sub>2</sub>. However, if we add vertex <i>c</i> to subgraph H<sub>2</sub> then it does
+remain connected. Similarly, if adding <i>g</i> to subgraph H<sub>1</sub> lead it to become disconnected.
+There is a simple cycle between vertices <i>f, g, h</i>. The subgraph H<sub>1</sub> has many simple cycles. 
+One example for a cycle of length 5 is <i>a, c, d, e, b</i>. 
+
+
