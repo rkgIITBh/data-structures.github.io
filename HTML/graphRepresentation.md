@@ -24,7 +24,7 @@ Assume that graph has two connected components. Consider any one of the connecte
 the degree of each vertex is at least <i>(n-1)/2</i>, each vertex is connected to <i>(n-1)/2</i>
 other vertices.  It implies that the connected component has at least <i>(n-1)/2 + 1 = (n+1)/2</i> 
 vertices. The total number of vertices in the graph will be equal to the sum of the vertices in two
-connected components is <i>(n+1)/2 + (n+1)/2 = n+1</i>. However, by assumption,  the total number 
+connected components which is <i>(n+1)/2 + (n+1)/2 = n+1</i>. However, by assumption,  the total number 
 of vertices cannot exceed <i>n</i>. Therefore, the graph must have only one connected component.
       
 A graph essentially represents relationships between objects or things. We can use a matrix to capture 
