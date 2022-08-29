@@ -44,7 +44,7 @@ total number of vertices in subgraphs is equal to
 To connect the vertex <i>v</i> to each of the subgraphs <i>Z<sub>i</sub></i> we require 
 one edge. So, the minimum number of edges required to make <i>G</i> connected is 
 <p style="text-align:center">
-    &Sigma;<sub>i=1</sub> (n<sub>i</sub> - 1) + k = n-1 - k + k = n-1</i> 
+    &Sigma;<sub>i</sub> (n<sub>i</sub> - 1) + k = n-1 - k + k = n-1</i> 
 </p>
       
 A graph essentially represents relationships between objects or things. We can use a matrix to capture 
