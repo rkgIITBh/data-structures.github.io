@@ -27,6 +27,20 @@ vertices. The total number of vertices in the graph is equal to the sum of the v
 connected components. It at least equal to <i>(n+1)/2 + (n+1)/2 = n+1</i>. However, 
 by assumption,  the total number of vertices cannot exceed <i>n</i>. Therefore, the graph must be
 connected.
+
+<strong>Connected graph property 1</strong>: A connected graph with <i>n</i> vertices has at least
+<i>n-1</i> edges.
+
+Let <i>G</i> have 1 vertex. It is obviously connected. So, the property holds. Now let <i>G</i> be
+a graph with <i>n &ge; 2</i> vertices. Choose an arbitrary vertex <i>v</i> from <i>G</i>. Consider
+the subgraph <i>H = G - {v}</i>. <i>H</i> may consist of <i>k</i> connected components
+<i>Z<sub>i</sub></i>. Assume that <i>Z<sub>i</sub></i> has <i>n<sub>i</sub></i> vertices. By 
+the induction hypothesis each <i>Z<sub>i</sub></i> has at least <i>n<sub>i</sub>-1</i> edges. To 
+connect left out vertex <i>v</i> to each of the subgraphs <i>Z<sub>i</sub></i> we require 
+<i>k</i> edges. So, the minimum number of edges required to make <i>G</i> connected is 
+<p style="text-align:center">
+    &Sigma;<sub>i=1</i><sup>k</sup> (n<sub>i</sub> - 1) + k = n-1 - k + k</i> 
+</p>
       
 A graph essentially represents relationships between objects or things. We can use a matrix to capture 
 relationships between objects. Therefore, the standard form for computer representation of a graph with
