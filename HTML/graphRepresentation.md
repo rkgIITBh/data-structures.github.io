@@ -5,7 +5,7 @@ graph.
 
 
 
-<strong>Degree property-1</strong>: An undirected graph has even number of vertices of odd degrees.
+<strong>Graph property-1</strong>: An undirected graph has even number of vertices of odd degrees.
 
 The proof of the above property is simple. If we add the degrees of all vertices then 
 
@@ -17,7 +17,7 @@ But summing of degrees of all even degree vertices gives an even number. It impl
 degrees of all odd degree vertices must also be an even number. It implies that there can be only even
 number of odd degree vertices.
       
-<strong>Degree property-2</strong>: Let <i>G</i> be a graph with <i>n</i> vertices and assume that the
+<strong>Graph property-2</strong>: Let <i>G</i> be a graph with <i>n</i> vertices and assume that the
 degree of each vertex is at least &LeftCeiling;<i>(n-1)/2</i>&RightCeiling; then the graph is connected.
 
 Let <i>n=2k</i>, for <i>k=1, 2, ...</i>. Let <i>G</i> be disjoint union of two complete subgraphs both having
