@@ -80,5 +80,5 @@ Figure 1 is given below.
    <img src="../images/adjacencyList.png">
 </p>
 
-[Back to Index](../index.MD)
+[Back to Index](../index.md)
 
