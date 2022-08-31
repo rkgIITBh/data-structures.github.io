@@ -34,7 +34,7 @@ Combining the two cases the minimum vertex degree required for <i>G</i> to be co
 - <i>n/2</i> when <i>n</i> is even, and 
 - <i>(n-1)/2</i> when <i>n</i> is odd. 
 
-The two conditions for connectivity can be expressed together as &#9484; (n-1)/2&#9488;
+The two conditions for connectivity can be expressed together as &LeftCeiling; (n-1)/2 &RightCeiling;
 
 <strong>Connected graph property 1</strong>: A connected graph with <i>n</i> vertices has at least
 <i>n-1</i> edges.
