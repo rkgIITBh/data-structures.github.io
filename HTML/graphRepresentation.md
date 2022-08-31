@@ -36,7 +36,7 @@ Combining the two cases the minimum vertex degree required for <i>G</i> to be co
 
 The two conditions for connectivity can be expressed together as &LeftCeiling; (n-1)/2 &RightCeiling;
 
-<strong>Connected graph property 1</strong>: A connected graph with <i>n</i> vertices has at least
+<strong>Graph property-3</strong>: A connected graph with <i>n</i> vertices has at least
 <i>n-1</i> edges.
 
 Let <i>G</i> have 1 vertex. It is obviously connected. So, the property holds. Now let <i>G</i> be
