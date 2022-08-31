@@ -1,4 +1,4 @@
-## Simple Graph Properties and Computer Representation of Graphs
+## A Few Simple Properties of a Graph and Computer Representation of a Graph
 
 Let us discuss some well known properties of an undirected graph before exploring the ways to process a
 graph. 
@@ -85,3 +85,4 @@ Figure 1 is given below.
    <img src="../images/adjacencyList.png">
 </p>
 
+[Back to Index](../index.md)
