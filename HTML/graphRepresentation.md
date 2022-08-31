@@ -1,4 +1,4 @@
-## A Few Simple Properties of a Graph and Computer Representation of a Graph
+## Graph Properties and Computer Representation
 
 Let us discuss some well known properties of an undirected graph before exploring the ways to process a
 graph. 
