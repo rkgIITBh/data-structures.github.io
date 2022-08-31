@@ -118,14 +118,14 @@ relationships between objects. Therefore, the standard form for computer represe
             <i>a[i, j] = 0</i> otherwise
             </p> 
 In other words, the <i>ij</i>th entry is 1 if the object <i>i</i> is related to the object <i>j</i>. In
-the pictorial representation, we denote the relationship by an edge joining the related objects. A 0 entry indicates the absence 
-of an edge. The matrix is called the adjacency matrix because it represents the 
+the pictorial representation, we denote the relationship by an edge joining the related objects. A 0 entry 
+indicates the absence of an edge. The matrix is called the adjacency matrix because it represents the 
 relationship if a vertex is adjacent to another. Figure 1 illustrates the adjacency matrix representation.
 <p style="text-align:center">
    <img src="../images/adjacencyMatrix.png">
 </p>
-Processing a graph requires every entry of the adjacency matrix to be accessed. So any graph 
-algorithm requires time of at least O(<i>n<sup>2</sup></i>). 
+Processing a graph requires every entry of the adjacency matrix to be accessed. So any graph algorithm 
+requires time of at least O(<i>n<sup>2</sup></i>). 
 
 However, if the graph is sparse, then most entries of the adjacency matrix are zero. So, representing graphs
 using a matrix is expensive. We can use a representation that lists the edges incident at every vertex. 
