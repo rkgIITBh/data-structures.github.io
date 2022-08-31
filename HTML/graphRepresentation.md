@@ -54,7 +54,11 @@ one edge. So, the minimum number of edges required to make <i>G</i> connected is
 <p style="text-align:center">
     &Sigma;<sub>i</sub> (n<sub>i</sub> - 1) + k = n-1 - k + k = n-1</i> 
 </p>
-      
+
+We can continue discussion on more graph properties. But our focus is graph algorithms. So we stop
+the discussion on graph properties for the moment. Let us focus on the computer processing of graphs.
+First and foremost question is: how to represent a graph as an abstract datatype?
+
 A graph essentially represents relationships between objects or things. We can use a matrix to capture 
 relationships between objects. Therefore, the standard form for computer representation of a graph with
 <i>n</i> vertices is a matrix of size <i>n<sup>2</sup></i>. An entry 
