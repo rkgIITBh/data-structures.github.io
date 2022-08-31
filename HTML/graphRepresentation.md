@@ -20,13 +20,21 @@ number of odd degree vertices.
 <strong>Degree property-2</strong>: Let <i>G</i> be a graph with <i>n</i> vertices and assume that the
 degree of each vertex is at least <i>(n-1)/2</i> then the graph is connected.
 
-Assume that graph has two connected components. Consider any one of the connected components. Since, 
-the degree of each vertex is at least <i>(n-1)/2</i>, each vertex is connected to <i>(n-1)/2</i>
-other vertices.  It implies that the connected component has at least <i>(n-1)/2 + 1 = (n+1)/2</i> 
-vertices. The total number of vertices in the graph is equal to the sum of the vertices in two
-connected components. It at least equal to <i>(n+1)/2 + (n+1)/2 = n+1</i>. However, 
-by assumption,  the total number of vertices cannot exceed <i>n</i>. Therefore, the graph must be
-connected.
+Let <i>n=2k</i>, for <i>k=1, 2, ...</i>. Let <i>G</i> be disjoint union of two complete subgraphs both having
+<i>k</i> vertices. Then the degree of each vertex in <i>G</i> is at least <i>k-1</i>. However <i>G</i> is 
+disconnected. So to have <i>G</i> connected the minimum vertex degree should be <i>k</i>. 
+
+Now consider the case when <i>G</i> has <i>2k-1</i> vertices. Again let <i>G</i> be disjoint union of two 
+complete subgraphs, one having <i>k</i> and other having <i>k-1</i> vertices. The minimum vertex degee 
+required for this to be true is <i>k-2</i>. So, the minimum vertex degree required for <i>G</i> to be 
+connected is <i>k-1</i>.
+
+Combining the two cases the minimum vertex degree required for <i>G</i> to be connected is:
+
+- <i>n/2</i> when <i>n</i> is even, and 
+- <i>(n-1)/2</i> when <i>n</i> is odd. 
+
+The two conditions for connectivity can be expressed together as &#9484; (n-1)/2&#9488;
 
 <strong>Connected graph property 1</strong>: A connected graph with <i>n</i> vertices has at least
 <i>n-1</i> edges.
