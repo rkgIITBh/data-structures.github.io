@@ -18,7 +18,7 @@ degrees of all odd degree vertices must also be an even number. It implies that 
 number of odd degree vertices.
       
 <strong>Graph property-2</strong>: Let <i>G</i> be a graph with <i>n</i> vertices and assume that the
-degree of each vertex is at least &LeftCeiling;<i>(n-1)/2</i>&RightCeiling; then the graph is connected.
+degree of each vertex is at least &#8968;<i>(n-1)/2</i>&#8969; then the graph is connected.
 
 Let <i>n=2k</i>, for <i>k=1, 2, ...</i>. Let <i>G</i> be disjoint union of two complete subgraphs both having
 <i>k</i> vertices. Then the degree of each vertex in <i>G</i> is at least <i>k-1</i>. However <i>G</i> is 
@@ -34,7 +34,7 @@ Combining the two cases the minimum vertex degree required for <i>G</i> to be co
 - <i>n/2</i> when <i>n</i> is even, and 
 - <i>(n-1)/2</i> when <i>n</i> is odd. 
 
-The two conditions for connectivity can be expressed together as &LeftCeiling; (n-1)/2 &RightCeiling;
+The two conditions for connectivity can be expressed together as &#8968;(n-1)/2&#8969;
 
 <strong>Graph property-3</strong>: A connected graph with <i>n</i> vertices has at least
 <i>n-1</i> edges.
