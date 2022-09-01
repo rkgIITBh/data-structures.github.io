@@ -107,5 +107,19 @@ GRAPH* createGraph(EDGE edges[], int n, int flag) {
 	return graph;
 }
 
+```
+
+The only other important function is to print the adjacency lists. The print function is quite
+straight forward. We wrote two different print functions:
+
+- One for printing a directed or an undirected graph
+- The other for printing a weight graph.
+
+The print function is given below.
 
 ```
+```
+
+[Link to source code](../CODES/Graphs/index.md)
+
+[Back to Index](../index.md)
