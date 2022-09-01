@@ -51,8 +51,6 @@ such as Electrical, Mechanical, Chemical, Material Science and Engineering, Math
 programming as we expect from CSE students in the future. Therefore, without programming practice in the data structure course, I believe students of CSE tend to 
 develop code phobia. The theory is required, but a proper balance is needed.
 
-### List of Blogs
-
 ## Graphs
 
 - [C Implementation of Graph Data Structure](HTML/graphImplementation.md)
