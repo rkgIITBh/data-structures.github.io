@@ -34,10 +34,11 @@ We assume the graph is specified by edges (pair of end vertices) and the corresp
 The structure for the implementation of graphs must be able to store three things, pair of 
 end vertices and the edge label. The first end vertices are considered the source, and the 
 other is the destination. To represent the vertices, we require a data type <t>NODE</t>.
-It stores the destination of an edge from the current node. An array of node pointers defines the entire graph structure. More specifically, <t>head[i]</t> denotes the adjacency list of node
-<t>i</t> for <t>i = 0, 1, 2, ...</t>. Adjacency list of a vertex <t>i</t> is created by linking all
-destination vertices of edges with source <t>i</t>. So, the data type <t>NODE</t> and <t>GRAPH</t>
-as specified as follows.
+It stores the destination of an edge from the current node. An array of node pointers defines the 
+entire graph structure. More specifically, <t>head[i]</t> denotes the adjacency list of node
+<t>i</t> for <t>i</t> = 0, 1, 2, .... The adjacency list of a vertex <t>i</t> is created by 
+linking alldestination vertices of edges with source <t>i</t>. So, the data type <t>NODE</t> and 
+<t>GRAPH</t> as specified as follows.
 
 ```
 typedef struct node {
