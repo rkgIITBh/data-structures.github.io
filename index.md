@@ -59,7 +59,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Introduction to graphs](HTML/graphIntro.md)
 
 
-## Search Trees and Height Balanced Search Trees
+## Search Trees and Height Balanced Trees
 
 - [Search, Insert, Delete and Splay on Splay Trees](HTML/InsertDeleteSplay.md)
 - [Amortized Time Complexity of Splay Trees](HTML/AmortizedTimeSplaying.md)
