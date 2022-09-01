@@ -118,6 +118,33 @@ straight forward. We wrote two different print functions:
 The print function is given below.
 
 ```
+// Prints adjacency list representation of a graph
+void printGraph(GRAPH* graph) {
+	for (int i = 0; i < N; i++) {
+		// Prints the current vertex its neighbors
+		NODE* ptr = graph->head[i];
+		while (ptr != NULL) {
+			printf("(%d —> %d)\t", i, ptr->dest);
+			ptr = ptr->next;
+		}
+
+		printf("\n");
+	}
+}
+
+// Print weighted graph
+void printWeightedGraph(GRAPH* graph) {
+    for (int i = 0; i < N; i++) {
+        // print current vertex and all its neighbors
+        NODE* ptr = graph->head[i];
+        while (ptr != NULL) {
+            printf("%d —> %d (%d)\t", i, ptr->dest, ptr->weight);
+            ptr = ptr->next;
+        }
+ 
+        printf("\n");
+    }
+}
 ```
 
 [Link to source code](../CODES/Graphs/index.md)
