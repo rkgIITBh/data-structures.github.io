@@ -29,16 +29,26 @@ When a graph is specified as a list of edges, we should first convert the graph 
 list or adjacency matrix representation. Because in most application, we process the graph from its
 adjacency list representation.
 
-We define the graph by associating nodes, edges and edge labels. So the structure for implementation
-of graphs must have ability to store the three things mentioned above. The first thing is a vertex
-or a node. The node representation requires a structure of type NODE. The C structure corresponding
-to it is given below:
+We assume that the graph is specificed by edges (pair of end vertices) and the corresponding labels. 
+The structure for implementation of graphs must have ability to store the three things, pair of 
+end vertices and the edge label. The first end vertices is the considered as the source and the 
+other is the destination. To represent the vertices, we require a data type <t>NODE</t>.
+It stores the destination of an edge from the current node. The entire graph structure is defined 
+by an array of node pointers. More specifically, <t>head[i]</t> denotes the adjacency list of node
+<t>i</t> for <t>i = 0, 1, 2, ...</t>. Adjacency list of a vertex <t>i</i> is created by linking all
+destination vertices of edges with source <t>i</t>. So, the data type <t>NODE</t> and <t>GRAPH</t>
+as specified as follows.
 
 ```
 typedef struct node {
-	int dest; // Denotes the end vertex with which current node is connected
-  int weight;
+	int dest; // Denotes the end vertex with which current vertex is connected
+        int weight;
 	struct node* next;
 } NODE;
+
+typedef struct graph {
+	// An array of pointers to represent adjacency lists
+	NODE* head[N];
+} GRAPH;
 
 ```
