@@ -110,40 +110,31 @@ GRAPH* createGraph(EDGE edges[], int n, int flag) {
 ```
 
 The only other important function is to print the adjacency lists. The print function is quite 
-straightforward. We wrote two different print functions:
-
-- One for printing a directed or an undirected graph, and
-- The other is for printing a weight graph.
-
-The print function is given below.
+straightforward. We wrote one print functions for all three graphs. For weighted graphs,
+we also print edge weights along with adjacency list. We use an indicator flag <t>w</t> for 
+the same. The print function appears below.
 
 ```
-// Prints adjacency list representation of a graph
-void printGraph(GRAPH* graph) {
+// Prints adjacency lists of a graph
+void printGraph(GRAPH* graph, int w) {
 	for (int i = 0; i < N; i++) {
 		// Prints the current vertex its neighbors
 		NODE* ptr = graph->head[i];
-		while (ptr != NULL) {
-			printf("(%d —> %d)\t", i, ptr->dest);
-			ptr = ptr->next;
-		}
-
-		printf("\n");
+		if (!w) {
+            		// Print unweighted graph
+            		while (ptr != NULL) {
+			    	printf("(%d —> %d)\t", i, ptr->dest);
+			    	ptr = ptr->next;
+		        }
+        	} else {
+            		// Print weighted graph
+            		while (ptr != NULL) {
+                		printf("%d —> %d (%d)\t", i, ptr->dest, ptr->weight);
+                		ptr = ptr->next;
+           	        }
+        	}
+      		printf("\n");
 	}
-}
-
-// Print weighted graph
-void printWeightedGraph(GRAPH* graph) {
-    for (int i = 0; i < N; i++) {
-        // print current vertex and all its neighbors
-        NODE* ptr = graph->head[i];
-        while (ptr != NULL) {
-            printf("%d —> %d (%d)\t", i, ptr->dest, ptr->weight);
-            ptr = ptr->next;
-        }
- 
-        printf("\n");
-    }
 }
 ```
 
