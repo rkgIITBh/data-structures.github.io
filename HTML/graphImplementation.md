@@ -55,7 +55,9 @@ typedef struct graph {
 
 After specifying <t>GRAPH</t> type, we have to create a graph from the input set of edges. 
 The function <t>createGraph</t> given below can create a directed, or an undirected or a 
-weighted graph. We specify the graph type by the user's input 'd', 'u', or 'w'. The function
+weighted graph. We specify the graph type by the user's input 'd', 'u', or 'w'. The input
+is accepted from the function <t>main()</t>. <t>createGraph()</t> takes a <t>flag</t> value
+for creating the type of graph that the user wants. The rest of the function
 is self-explanatory. 
 
 ```
