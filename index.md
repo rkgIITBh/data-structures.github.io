@@ -53,10 +53,16 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+## Graphs
+
 - [C Implementation of Graph Data Structure](HTML/graphImplementation.md)
 - [Graph Properties & Representation](HTML/graphRepresentation.md)
 - [Graph Terminology](HTML/graphTerminology.md)
 - [Introduction to graphs](HTML/graphIntro.md)
+
+
+## Search Trees and Height Balanced Search Trees
+
 - [Search, Insert, Delete and Splay on Splay Trees](HTML/InsertDeleteSplay.md)
 - [Amortized Time Complexity of Splay Trees](HTML/AmortizedTimeSplaying.md)
 - [Splay Trees](HTML/splayTree.md)
@@ -71,9 +77,15 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Maintaining Balanced Binary Search Tree](HTML/avlTree.md)
 - [Average Case Analysis of BST](HTML/BSTanalysis.md)
 - [Introduction to Binary Search Tree](HTML/BSTintro.md)
+
+## Heaps and Priority Queues
+
 - [Binomial Heaps](HTML/binomialHeaps.md)
 - [Introduction to Binomial Trees](HTML/binomialTrees.md)
 - [Priority Queue Operation Using Binary Heaps](HTML/priorityQ.md) 
+
+## Binary Trees and Their Applications
+
 - [Converting an Infix Expression to its Equivalent Postfix](HTML/infixToPostfixExpression.md)
 - [Huffman Encoding Algorithm and its Implementation](HTML/huffmanCodeImpl.md)
 - [Prefix code and text compression](HTML/huffmanEncoding.md)
@@ -84,6 +96,9 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Traversal of Trees](HTML/treeTraversal.md)
 - [Introduction to Binary Trees](HTML/binaryTrees.md)
 - [Introduction to Trees](HTML/treesIntro.md)
+
+## Linked Lists, Stacks and Queues
+
 - [Circular Queue Implementation](HTML/queueCircular.md)
 - [Queues as ADT](HTML/queuesADT.md)
 - [Infix Expression Evaluation Using Stacks](HTML/inFixExpressionEvaluation.md)
@@ -92,6 +107,9 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Stacks as ADT](HTML/stacksADT.md)
 - [Sparse Matrix Using Linked List](HTML/sparseMatrix.md)
 - [Implementation of List in C](HTML/listImplementation.md)
+
+## Introduction to Abstract Datatypes
+
 - [ADT List](HTML/adtList.md)
 - [Data Structures](HTML/dataStructures.md)
 - [Structures](HTML/structures.md)
