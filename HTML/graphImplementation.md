@@ -2,27 +2,29 @@
 
 The next thing we address is that of graph implementation in C. For a graph, we have three items
 vertices, edges, and weights associated with edges. We have not discussed weighted graphs.
-Weighted graphs represent transportation networks, computer networks, and other purposes where edge weight quantifies the efforts needed for
-going from one vertex to another. Weighted graphs may be directed or undirected. An example 
-of a weighted graph is shown in the picture below.
+Weighted graphs represent transportation networks, computer networks, and other purposes where edge 
+weight quantifies the efforts needed for going from one vertex to another. Weighted graphs may be 
+directed or undirected. An example of a weighted graph is shown in the picture below.
+
 <p style="text-align:center">
   <img src="../images/exampleWeightedGraph.png">
 </p>
+
 The graph may be assumed to represent the distances between cities, where nodes are cities, and 
 edge labels are distances between cities it connects. The same graph may also represent a computer
 network. The nodes are for computers, and edges are for links between the pair of computers it
 connects. An edge label denoting the RTT in milliseconds between the computers at the end vertices.
 One can think of such weighted graphs as a pipeline network representing quantities of the flow of
-oil or water or gas flow between end vertices of edges. So, weighted graphs have a lot of applications. 
-The most important problem one would like to solve in weighted graphs is the shortest path. We will
-return to the shortest path problem sometime later in the blog.
+oil or water or gas flow between end vertices of edges. So, weighted graphs have a lot of 
+applications. The most important problem one would like to solve in weighted graphs is the shortest 
+path. We will return to the shortest path problem sometime later in the blog.
 
 Having discussed weighted graphs, let us examine the implementation issues. We assume graphs
 as static structures unless specified otherwise. So, a graph can be specified by 
 
-- adjacency lists
-- a list of edges
-- adjacency matrix
+- Adjacency lists
+- A list of edges
+- Adjacency matrix
 
 When a graph is specified as a list of edges, we should first convert the graph to its adjacency
 list or adjacency matrix representation. Because in most applications, we process the graph from its
