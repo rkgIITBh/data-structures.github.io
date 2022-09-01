@@ -61,20 +61,19 @@ GRAPH* createGraph(EDGE edges[], int n, int flag) {
 		graph->head[src] = newNode;
 
 		// Allocate a new node of adjacency list from `dest` to `src`
-        if (flag==0) {
+        	if (flag==0) {
 		    newNode = (NODE*)malloc(sizeof(NODE));
-	    	newNode->dest = src;
+	    	    newNode->dest = src;
 		    newNode->weight = weight;
 
-	    	// Point new node to the current head
-	    	newNode->next = graph->head[dest];
+	    	    // Point new node to the current head
+	    	    newNode->next = graph->head[dest];
 
-	    	// Change head to point to the new node
-	    	graph->head[dest] = newNode;
-        } 
+	    	    // Change head to point to the new node
+	    	    graph->head[dest] = newNode;
+               } 
 
 	}
-
 	return graph;
 }
 
