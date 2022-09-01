@@ -53,6 +53,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ### List of Blogs
 
+- [Graph Properties & Representation](HTML/graphImplementation.md)
 - [Graph Properties & Representation](HTML/graphRepresentation.md)
 - [Graph Terminology](HTML/graphTerminology.md)
 - [Introduction to graphs](HTML/graphIntro.md)
