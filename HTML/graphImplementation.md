@@ -33,12 +33,12 @@ adjacency list representation.
 We assume the graph is specified by edges (pair of end vertices) and the corresponding labels. 
 The structure for the implementation of graphs must be able to store three things, pair of 
 end vertices and the edge label. The first end vertices are considered the source, and the 
-other is the destination. To represent the vertices, we require a data type <t>NODE</t>.
+other is the destination. To represent the vertices, we require a data type <i>NODE</i>.
 It stores the destination of an edge from the current node. An array of node pointers defines the 
-entire graph structure. More specifically, <t>head[i]</t> denotes the adjacency list of node
-<t>i</t> for <t>i</t> = 0, 1, 2, .... The adjacency list of a vertex <t>i</t> is created by 
-linking alldestination vertices of edges with source <t>i</t>. So, the data type <t>NODE</t> and 
-<t>GRAPH</t> as specified as follows.
+entire graph structure. More specifically, <i>head[i]</i> denotes the adjacency list of node
+<i>i</i> for <i>i</i> = 0, 1, 2, .... The adjacency list of a vertex <i>i</i> is created by 
+linking alldestination vertices of edges with source <i>i</i>. So, the data type <i>NODE</i> and 
+<i>GRAPH</i> as specified as follows.
 
 ```
 typedef struct node {
@@ -54,10 +54,10 @@ typedef struct graph {
 
 ```
 
-After specifying the <t>GRAPH</t> type, we have to create a graph from the input set of edges. 
-The function <t>createGraph</t> given below can create a directed, or an undirected or a 
+After specifying the <i>GRAPH</i> type, we have to create a graph from the input set of edges. 
+The function <i>createGraph</i> given below can create a directed, or an undirected or a 
 weighted graph. We specify the graph type by the user's input 'd', 'u,' or 'w.' The input
-is accepted from the function <t>main()</t>. <t>createGraph()</t> takes a <t>flag</t> value
+is accepted from the function <i>main()</i>. <i>createGraph()</i> takes a <i>flag</i> value
 for creating the type of graph that the user wants. We store edge labels in a separate field
 within the node structure. However, it may not be used for graph processing unless needed for
 an application. The rest of the function is self-explanatory. 
@@ -114,7 +114,7 @@ GRAPH* createGraph(EDGE edges[], int n, int flag) {
 
 The only other important function is to print the adjacency lists. The print function is quite 
 straightforward. We wrote one print functions for all three graphs. For weighted graphs,
-we also print edge weights along with adjacency list. We use an indicator flag <t>w</t> for 
+we also print edge weights along with adjacency list. We use an indicator flag <i>w</i> for 
 the same. The print function appears below.
 
 ```
