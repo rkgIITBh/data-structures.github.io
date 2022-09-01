@@ -6,7 +6,7 @@ Weighted graphs represent transportation networks, computer networks, and other 
 going from one vertex to another. Weighted graphs may be directed or undirected. An example 
 of a weighted graph is shown in the picture below.
 <p style="text-align:center">
-  <img src="../images/weightedGraph.png">
+  <img src="../images/exampleWeightedGraph.png">
 </p>
 The graph may be assumed to represent the distances between cities, where nodes are cities, and 
 edge labels are distances between cities it connects. The same graph may also represent a computer
