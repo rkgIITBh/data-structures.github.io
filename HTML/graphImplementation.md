@@ -52,3 +52,59 @@ typedef struct graph {
 } GRAPH;
 
 ```
+
+After specifying <t>GRAPH</t> type, we have to create a graph from the input set of edges. 
+The function <t>createGraph</t> given below can create a directed, or an undirected or a 
+weighted graph. We specify the graph type by the user's input 'd', 'u', or 'w'. The function
+is self-explanatory. 
+
+```
+GRAPH* createGraph(EDGE edges[], int n, int flag) {
+	// Allocate storage for the graph data structure
+	GRAPH* graph = (GRAPH*)malloc(sizeof(GRAPH));
+
+	// Initialize head for all vertices
+	for (int i = 0; i < N; i++) {
+		graph->head[i] = NULL;
+	}
+
+	// Add edges to the directed graph one by one
+	for (int i = 0; i < n; i++) {
+		// Get the source and destination 
+		int src = edges[i].src;
+		int dest = edges[i].dest;
+		int weight = edges[i].weight;
+
+		// Allocate a new node of adjacency list from src to dest
+
+		NODE* newNode = (NODE*)malloc(sizeof(NODE));
+		newNode->dest = dest;
+		newNode->weight = weight; // Save the edge weight
+
+		// Point new node to the current head
+		newNode->next = graph->head[src];
+
+		// Point head to the new node
+		graph->head[src] = newNode;
+
+		// Allocate a new node of adjacency list from `dest` to `src`
+		// for undirected graph
+                if (flag==0) {
+		    newNode = (NODE*)malloc(sizeof(NODE));
+	            newNode->dest = src;
+		    newNode->weight = weight;
+
+	    	    // Point new node to the current head
+	    	   newNode->next = graph->head[dest];
+
+	    	   // Change head to point to the new node
+	           graph->head[dest] = newNode;
+               } 
+
+	}
+
+	return graph;
+}
+
+
+```
