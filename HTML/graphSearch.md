@@ -15,7 +15,7 @@ if their corresponding intersections are directly reachable. An example of a maz
 equivalent graph is given below. The picture is taken from Chapter 4 of Rober Sedgewick and 
 Kevin Wayne's text on algorithms. 
 <p style="text-align:center">
-    <img src="../images/mazeGraph.png">
+    <img src="../images/tremaux.png">
 </p>
 
 Tremaux's graph exploration method was simplified later by 
