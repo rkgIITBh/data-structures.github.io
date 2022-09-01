@@ -30,4 +30,15 @@ list or adjacency matrix representation. Because in most application, we process
 adjacency list representation.
 
 We define the graph by associating nodes, edges and edge labels. So the structure for implementation
-of graphs must have ability to store the three things mentioned above. 
+of graphs must have ability to store the three things mentioned above. The first thing is a vertex
+or a node. The node representation requires a structure of type NODE. The C structure corresponding
+to it is given below:
+
+```
+typedef struct node {
+	int dest; // Denotes the end vertex with which current node is connected
+  int weight;
+	struct node* next;
+} NODE;
+
+```
