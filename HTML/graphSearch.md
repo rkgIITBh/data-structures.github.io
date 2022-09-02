@@ -1,18 +1,18 @@
 ## Graph Search
 
-Graph seach is a fundamental step in processing a graph. The search is systematic traversal of the
-edges and visit of vertices. The search should try to ensure that no vertex is visited more than its
-degree times. However, each edge should be traversed at least once in the graph search. The two
+Graph search is a fundamental step in processing a graph. The search is a systematic traversal of the
+edges and visits of vertices. The search should ensure that no vertex is visited more than its
+degree times. However, the search should traverse each edge at least once. The two
 requirement leads to the conclusion that a graph search is a systematic way to ensure an edge is 
-traversed at least once and at most a constant number  of times (preferably &le; 2). 
+traversed at least once and at most a constant number of times (preferably &le; 2). 
 
-Tremaux believed it is possible to trace out a path in a maze by a systematic exporation of the 
-available routes. His solution is to unroll a ball of thread from entrance to exit. The method
-he employed is to avoid every threaded route that led to a deadend. It helped him to avoid
+Tremaux believed it is possible to systematically trace out a path in a maze from the 
+available routes. His solution is to unroll a ball of thread from the entrance to the exit. He employed 
+to avoid every threaded route that led to a dead-end. It helped him to avoid
 all explored paths. So, he was able to find the exit. We construct an equivalent graph of a 
 maze by associating a vertex with each intersection and joining every pair of vertices by an edge
 if their corresponding intersections are directly reachable. An example of a maze and its 
-equivalent graph is given below. The picture is taken from Chapter 4 of Rober Sedgewick and 
+equivalent graph is given below. The diagram is from Chapter 4 of Rober Sedgewick and 
 Kevin Wayne's text on algorithms. 
 <p style="text-align:center">
     <img src="../images/tremaux.png"><br>
@@ -20,13 +20,13 @@ Kevin Wayne's text on algorithms.
 </p>
 
 Tremaux's graph exploration method was simplified later by Robert Tarjan. Tarjan noticed that 
-the fundamental idea is go as much deep as possible using unexplored edges. After reachin a point
-where no new vertex could be reached backtrack and repeat exploration of remaining 
-graph via the first unexplored edge. Continue the graph exploration until all edges are 
+the fundamental idea is to go as much deep as possible using unexplored edges. After reaching a point
+where no new vertex could be reached, backtrack and repeat the exploration of the remaining 
+graph via the first unexplored edge. Continue the graph exploration until all edges have been
 traversed and all vertices are visited at least once. Tarjan named it as Depth-First Search (DFS).
-DFS traverses each edge exactly twice and visits each vertex at most twice the degree times.
+DFS traverses each edge twice and visits each vertex at most twice the degree times.
 
-Tarjan's DFS algorithm appear below.
+Tarjan's DFS algorithm appears below.
 
 ```
 // Initializations
@@ -53,16 +53,19 @@ DFS(v) {
 }
 
 ```
-The DFS number is sometimes referred to as preorder, because the number is assigned to a vertex 
-when is marked "old". We may choose to assign the numbering at time DFS finally withdraws or 
-backtracks from a vertex. That is when no unexplored edges exists at the vertex. The numbering
-is known as postorder number or the reverse DFS number. There are some interesting properties 
-involving DFS and reverse DFS numbers which we will discuss later.
+The DFS number is sometimes referred to as pre-order because it is assigned to a vertex 
+when it is marked "old." We may choose to assign the numbering when DFS finally withdraws or 
+backtracks from a vertex. That is when no unexplored edges exist at the vertex. The numbering
+is known as the postorder number or the reverse DFS number. We will discuss some interesting properties 
+involving DFS and reverse DFS numbers later.
 
-Before moving further, let us look at a example which appears in Figure 2.
+Before moving further, let us look at an example appearing in Figure 2.
 <p style="text-align:center">
     <img src="../images/dfs_numbers.png"><br>
     Figure 2: DFS and reverse DFS numbering (Source: unnamed Internet document).
 </p>
-The tree edges are color coded by red. The non-tree edges are color coded blue. Every vertex has a 
-pair of numbers. The first number is DFS number and second is reverse DFS number of the vertex.
+The tree edges are color-coded by red, and the non-tree edges are color-coded by blue. Every vertex
+has a pair of numbers. The first number is the DFS number, and the second is the reverse DFS number of 
+the vertex.
+
+[Back to Index](../index.md)
