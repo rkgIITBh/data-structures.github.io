@@ -64,5 +64,5 @@ Before moving further, let us look at a example which appears in Figure 2.
     <img src="../images/dfs_numbers.png"><br>
     Figure 2: DFS and reverse DFS numbering (Source: unnamed Internet document).
 </p>
-
-
+The tree edges are color coded by red. The non-tree edges are color coded blue. Every vertex has a 
+pair of numbers. The first number is DFS number and second is reverse DFS number of the vertex.
