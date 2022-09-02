@@ -1,4 +1,4 @@
-## Graph Search
+## Depth-First Search of a Graph
 
 Graph search is a fundamental step in processing a graph. The search is a systematic traversal of the
 edges and visits of vertices. The search should ensure that no vertex is visited more than its
