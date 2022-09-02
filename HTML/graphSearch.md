@@ -77,7 +77,7 @@ at v. The difference between the two numbers is equal to the number of descendan
 For example, the vertex with a start time of 4 has its finish time of 15. It implies that vertex 4 has 
 11 descendants in the DFS tree, i.e., the subtree rooted at vertex 4 has 12 vertices, including itself.
 
-<strong>DFS start and finish times</strong: The difference between DFS finish and the DFS start time of 
-a vertex v gives the number of descendants of v in the DFS spanning tree.
+<strong>DFS start and finish times</strong>: The difference between DFS finish and the DFS start 
+time of a vertex v gives the number of descendants of v in the DFS spanning tree.
 
 [Back to Index](../index.md)
