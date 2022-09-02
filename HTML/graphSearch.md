@@ -18,9 +18,37 @@ Kevin Wayne's text on algorithms.
     <img src="../images/tremaux.png">
 </p>
 
-Tremaux's graph exploration method was simplified later by 
-Robert Tarjan. Tarjan noticed that the fundamental idea is to search the depth of graph until
-it is not possible to go further, then retrace back and repeat exploration of the remaining 
-graph via the first unexplored edge. Continue doing it until all edges are traversed and all
-vertices are visited. Tarjan named it as depth first search. It traverses each edge exactly
-twice and visits each vertex at most twice the degree times. 
+Tremaux's graph exploration method was simplified later by Robert Tarjan. Tarjan noticed that 
+the fundamental idea is go as much deep as possible using unexplored edges. After reachin a point
+where no new vertex could be reached backtrack and repeat exploration of remaining 
+graph via the first unexplored edge. Continue the graph exploration until all edges are 
+traversed and all vertices are visited at least once. Tarjan named it as Depth-First Search (DFS).
+DFS traverses each edge exactly twice and visits each vertex at most twice the degree times.
+
+Tarjan's DFS algorithm appear below.
+
+```
+// Initializations
+initialization() {
+    index = 0;
+    for all ( v &isin; V ) {
+         mark v "new"
+    T = &#8709; // Initialize tree edges
+    
+    while (&exist; a "new" vertex v &isin; V) {
+         DFS(v); // Perform DFS
+    }
+}
+
+DFS(v) {
+    mark v "old";
+    dfn[v] = ++index; // DFS numbers
+    for all (w &isin; Adj(v)) {
+        if (w is "new") {
+            T = T &cup; {(v,w)}; // Update T
+            DFS(w); // Recursive call
+        }
+    }
+}
+
+```
