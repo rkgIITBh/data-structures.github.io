@@ -31,11 +31,11 @@ Tarjan's DFS algorithm appear below.
 // Initializations
 initialization() {
     index = 0;
-    for all ( v &isin; V ) {
+    for all ( v in V ) {
          mark v "new"
-    T = &#8709; // Initialize tree edges
+    T = {} // Initialize tree edges to empty set
     
-    while (&exist; a "new" vertex v &isin; V) {
+    while (there exists a "new" vertex v in V) {
          DFS(v); // Perform DFS
     }
 }
@@ -43,9 +43,9 @@ initialization() {
 DFS(v) {
     mark v "old";
     dfn[v] = ++index; // DFS numbers
-    for all (w &isin; Adj(v)) {
+    for all (w in Adj(v)) {
         if (w is "new") {
-            T = T &cup; {(v,w)}; // Update T
+            T = T + {(v,w)}; // Update T to include edge (v,w)
             DFS(w); // Recursive call
         }
     }
