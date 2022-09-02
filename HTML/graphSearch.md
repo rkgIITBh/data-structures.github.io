@@ -15,7 +15,8 @@ if their corresponding intersections are directly reachable. An example of a maz
 equivalent graph is given below. The picture is taken from Chapter 4 of Rober Sedgewick and 
 Kevin Wayne's text on algorithms. 
 <p style="text-align:center">
-    <img src="../images/tremaux.png">
+    <img src="../images/tremaux.png"><br>
+    Figure 1: Maze as a graph. (Source: Robert Sedgewick and Kevin Wayne, Chapter 4).
 </p>
 
 Tremaux's graph exploration method was simplified later by Robert Tarjan. Tarjan noticed that 
@@ -52,3 +53,16 @@ DFS(v) {
 }
 
 ```
+The DFS number is sometimes referred to as preorder, because the number is assigned to a vertex 
+when is marked "old". We may choose to assign the numbering at time DFS finally withdraws or 
+backtracks from a vertex. That is when no unexplored edges exists at the vertex. The numbering
+is known as postorder number or the reverse DFS number. There are some interesting properties 
+involving DFS and reverse DFS numbers which we will discuss later.
+
+Before moving further, let us look at a example which appears in Figure 2.
+<p style="text-align:center">
+    <img src="../images/dfs_numbers.png"><br>
+    Figure 2: DFS and reverse DFS numbering (Source: unnamed Internet document).
+</p>
+
+
