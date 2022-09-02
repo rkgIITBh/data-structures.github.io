@@ -66,6 +66,6 @@ Before moving further, let us look at an example appearing in Figure 2.
 </p>
 The tree edges are color-coded by red, and the non-tree edges are color-coded by blue. Every vertex
 has a pair of numbers. The first number is the DFS number, and the second is the reverse DFS number of 
-the vertex.
+the vertex. The graph has 20 vertices and the numbering of the vertices starts from 0.
 
 [Back to Index](../index.md)
