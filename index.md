@@ -53,6 +53,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ## Graphs
 
+- [Depth-First Search of a Graph](HTML/graphSearch.md)
 - [C Implementation of Graph Data Structure](HTML/graphImplementation.md)
 - [Graph Properties & Representation](HTML/graphRepresentation.md)
 - [Graph Terminology](HTML/graphTerminology.md)
