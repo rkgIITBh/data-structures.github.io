@@ -66,6 +66,19 @@ Before moving further, let us look at an example appearing in Figure 2.
 </p>
 The tree edges are color-coded by red, and the non-tree edges are color-coded by blue. Every vertex
 has a pair of numbers. The first number is the DFS number, and the second is the reverse DFS number of 
-the vertex. The graph has 20 vertices and the numbering of the vertices starts from 0.
+the vertex. The graph has 20 vertices and the numbering of the vertices starts from 0. For a connected
+graph like the given example, DFS generates a spanning tree. The tree is called DFS spanning tree or
+simply DFS tree. The tree edges are those edges that lead to a new vertex during DFS. A non-tree edge
+lead to previously a discovered vertex (old vertex). In other words, a non-tree edge joins a pair
+of vertices not related by ancestor descendant relations in the DFS tree.
+
+The DFS and the reverse DFS numbers of a vertex <i>v</i> also represents the start
+and the finish time of DFS at </i>v</i>. The difference between the two number is equal to the 
+number of descendant <i>v</i> in the DFS tree. For example, the vertes with start time 4 has its
+finish time 15. It implies that vertex 4 has 11 descendants in the DFS tree, i.e., the subtree rooted
+at vertex 4 has 12 vertices including itself.
+
+<strong>DFS start and finish times</strong>: The difference between DFS finish and the DFS start 
+time of a vertex <i>v</i> gives the number of descendant of <i>v</i> in the DFS spanning tree.
 
 [Back to Index](../index.md)
