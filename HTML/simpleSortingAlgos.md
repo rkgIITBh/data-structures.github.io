@@ -67,7 +67,7 @@ identical results on releative ordering. So, we just need one comparison and cho
 
 Figure 1 illustrates a decision tree model for sorting three elements:
 <p style="text-align:center">
-  <img src="../images/decisionTree.png">
+  <img src="../images/decisionTree.png"  >
 </p>
 Every node of the decision tree model represent a comparison. The left subtree represents all
 subsequent comparisons when <i>a<sub>i</sub></i> &le; <i>a<sub>j</sub></i>. Similarly, the 
@@ -79,10 +79,10 @@ sorting a list of <i>n</i> elements. There are <i>n!</i> permutations of <i>n</i
 decision tree model with <i>n</i> has <i>n!</i> leaves. The height of the tree is <i>log (n!)</i>.
 Simplifying the expression <i>log (n!)</i> we get:
 <p style="text-align:center">
-  <img src="../images/sortingLowerBound.png">
+  <img src="../images/sortingLowerBound.png" width="200" height="200">
 </p>
 
-Now let us deal with actual algorithms. We start with a set of easy algorithms. It consists of
+Now let us deal with three simple algorithms:
 
 - Bubble sort
 - Insertion sort
@@ -121,6 +121,14 @@ is given below.
   } while(swapped)
 }
 ```
+
+Next we deal with selection sort. It chooses the minimum of the remaining input sequence and places
+the element as the next element in sorted order. If we repeatedly execute the method starting with
+the input sequence of <i>n</i> elements, then a selection step reduces the input sequence by
+one each time. Therefore by <i>n-1</> selection steps we complete sorting of the input sequence. 
+Since each selection step requires <i>k</i>, for <i>k=n, n-1,..., 1</i> comparisons, the total
+number of comparisons is O(<i>n<sup>2</sup></i>).
+
 
 
 
