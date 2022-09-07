@@ -1,11 +1,12 @@
 ## Sorting Algorithms
 
-We have used sorting in various contexts in some of the previous blogs. Some operations on linked
+We have used sorting in numerous contexts in the previous blogs.  Some operations on linked
 lists become efficient if the lists are maintained in sorted order. Searching for an element in a list
-becomes efficient if the list is sorted. However, we have not considered the problem of sorting
-itself. A list may be presented as a collection of elements in any order, not necessarily in 
-sorted order. So, the question is: how do we get a sorted list in the first place? There are many
-sorting algorithms. We can classify them according to several characteristics. 
+becomes efficient if the list is sorted. Binary search is applicable to a sorted list.
+However, we have not considered the problem of sorting in isolation. A list may be presented as
+a collection of elements in any order, not necessarily in sorted order. So, the question is: 
+how do we get a sorted list in the first place? There are many sorting algorithms. We can classify
+them according to several characteristics. 
 
 - Based on the complexity  
 - Based on the number of comparisons 
@@ -14,11 +15,13 @@ sorting algorithms. We can classify them according to several characteristics.
 - Based on stability
 - Based on adaptability
 
-The three measures of computational complexity are best case, the average case, and worst case. Since 
-the lower bound of sorting is O(<i>n log n</i>) for input size of <i>n</i>, the best case of
-computational complexity is O(<i>n log n</i>). The worst case of sorting <i>n</i> is 
+The three measures of computational complexity are the best case, the average case, and the worst
+case. Since the lower bound of sorting is O(<i>n log n</i>) for input size of <i>n</i>, the best 
+case computational complexity for sorting is O(<i>n log n</i>). The worst case of sorting <i>n</i> is 
 O(<i>n<sup>2</sup></i>). The average case is equal to the computational efforts by the sorting 
-algorithm averaged over all possible input distributions. Typically, we consider all possible inputs equally likely and define probability measures. We determine the computational complexity for placing the elements in sorted order using the probability measure. 
+algorithm averaged over all possible input distributions. Typically, we consider all possible inputs 
+equally likely and define a probability measure. We determine the computational complexity for 
+placing the elements in sorted order using the probability measure. 
 
 Sorting is defined only as a collection of elements on which a total order is possible. A comparison
 between a pair of elements is the fundamental operation for finding the relative position of an 
@@ -29,21 +32,23 @@ the computation complexity. However, as we will see later, algorithms such as ra
 sort or counting sort do not use comparisons. So, the running time of these algorithms is not 
 defined based on the number of comparisons.
 
-Most comparison-based algorithms use swaps or data exchanges. However, there is no movement of
-data as it happens in the case of bubble sort or radix sort. In bubble sort, we move the elements
+Most comparison-based algorithms use swaps or data exchanges. In bubble sort, we move the elements
 to the right of the sorted section to create a vacant slot for the next element
 from the unsorted selection of the list. As we find, bubble sort progressively builds the
-sorted list from a single element to including all the elements in the input list.
+sorted list from a single element to including all the elements in the input list. In radix sort
+the elements is placed in <i>k</i> bins if the radix is <i>k</i> in each pass. 
 
-Memory usage tells whether the algorithm requires extra (auxiliary) space for  
+Memory usage tells whether the algorithm requires extra (auxiliary) space for carrying out 
 sorting operations or whether the operations are possible without any extra space. If a sorting 
 algorithm does not require additional space, we call it an "in place" sorting algorithm.
 
 A stable sort does not disturb the relative position of the equal elements. So equal keys maintain
 their relative order in the sorted list. If elements are distinct, then stability distinction
-is meaningless. However, some algorithms fail to maintain stability in the presence of equal elements in the input.
+is meaningless. However, some algorithms fail to maintain stability in the presence of equal elements 
+in the input.
 
-Adaptability influences the sorting time for some sorting algorithms. Some sorting algorithms take presortedness of the elements to reduce running time. Such algorithms are classified
+Adaptability influences the sorting time for some sorting algorithms. Some sorting algorithms take 
+presortedness of the elements to reduce running time. Such algorithms are classified
 as adaptable. 
 
 Now let us deal with actual algorithms. We start with a set of easy algorithms. It consists of
@@ -73,7 +78,7 @@ is given below.
 ```
  procedure bubbleSort(A) {
   n = A.length();
-  do while
+  do { 
     swapped = FALSE; // Flag used to indicate swaps
     for(i = 0; i < n; i++) {
       if (A[i] > A[i + 1]) { 
@@ -82,7 +87,7 @@ is given below.
       }
     }
     n--; // Size of unsorted part decreases
-  until (swapped)
+  } while(swapped)
 }
 ```
 
