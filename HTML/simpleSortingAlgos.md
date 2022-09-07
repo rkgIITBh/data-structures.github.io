@@ -75,7 +75,12 @@ right subtree represents all subsequent comparisons when <i>a<sub>i</sub></i> &g
 Each leaf denotes a sorting order. So, by tracing a path from the root of the decision tree down
 to a leaf node we get minimum number of comparisons to reach a sorting sequence from a given
 input sequence. Tracing a path in decision tree amounts to finding correct permutation for 
-sorting a list of <i>n</i> elements.
+sorting a list of <i>n</i> elements. There are <i>n!</i> permutations of <i>n</i>. So, the 
+decision tree model with <i>n</i> has <i>n!</i> leaves. The height of the tree is <i>log (n!)</i>.
+Simplifying the expression <i>log (n!)</i> we get:
+<p style="text-align:center">
+  <img src="../images/sortingLowerBound.png">
+</p>
 
 Now let us deal with actual algorithms. We start with a set of easy algorithms. It consists of
 
