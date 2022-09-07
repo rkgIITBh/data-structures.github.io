@@ -51,6 +51,32 @@ Adaptability influences the sorting time for some sorting algorithms. Some sorti
 presortedness of the elements to reduce running time. Such algorithms are classified
 as adaptable. 
 
+<strong>Lower bound</strong>: 
+
+In a comparison-based sorting algorithm, for every pair of elements <i>a<sub>i</sub></i> and
+<i>a<sub>j</sub></i> we carry out five tests:
+
+- <i>a<sub>i</sub></i> &lt; <i>a<sub>j</sub></i>
+- <i>a<sub>i</sub></i> &le; <i>a<sub>j</sub></i>
+- <i>a<sub>i</sub></i> == <i>a<sub>j</sub></i>
+- <i>a<sub>i</sub></i> &ge; <i>a<sub>j</sub></i>
+- <i>a<sub>i</sub></i> &gt; <i>a<sub>j</sub></i>
+
+Assuming elements are distinct, we can dispose the equality test. The remaining four test produce
+identical results on releative ordering. So, we just need one comparison and choose "&le;" test.
+
+Figure 1 illustrates a decision tree model for sorting three elements:
+<p style="text-align:center">
+  <img src="../images/decisionTree.png">
+</p>
+Every node of the decision tree model represent a comparison. The left subtree represents all
+subsequent comparisons when <i>a<sub>i</sub></i> &le; <i>a<sub>j</sub></i>. Similarly, the 
+right subtree represents all subsequent comparisons when <i>a<sub>i</sub></i> &gt; <i>a<sub>j</sub></i>.
+Each leaf denotes a sorting order. So, by tracing a path from the root of the decision tree down
+to a leaf node we get minimum number of comparisons to reach a sorting sequence from a given
+input sequence. Tracing a path in decision tree amounts to finding correct permutation for 
+sorting a list of <i>n</i> elements.
+
 Now let us deal with actual algorithms. We start with a set of easy algorithms. It consists of
 
 - Bubble sort
