@@ -91,19 +91,20 @@ Now let us deal with three simple algorithms:
 <strong>Bubble Sort</strong>
 
 Bubble sort works on the principle of floating the lightest element to the top. We view the input 
-as consisting of two sets of elements: lighter and heavier. Heavier elements sink to the bottom, and 
-lighter elements float to the top as it happens in water or any liquid with buoyancy. Figure
-below illustrates bubble sort algorithm.
+as consisting of elements from a totally order set. An element is heavier (lighter) than another 
+if the former greater (smaller) than the latter. Bubble sort makes the heavier elements sink to
+the bottom, and lighter elements float to the top. Figure below illustrates bubble sort algorithm.
 <p style="text-align:center">
-  <img src="../images/bubbleSort.png">
+  <img src="../images/bubbleSortExample.png">
 </p>
-It is basically a swap-based algorithm. Starting with leftmost end of the input list, it compares
-adjacent pair of the elements. The heavier element is placed to right. After the first pass of 
-<i>n</i> compare-swap operations, the heaviest element occupies the <i>n</i> th position of the
-list. Now the list consist of unsorted part of <i>n-1</i> elements and sorted part of 1 element.
-The sorted part is excluded from the next pass of comparison which considers a list of <i>n-1</i>
-elements to the left. With every pass of compare-swap the size of the sorted part increase by one.
-Therefore, with <i>n</i> passes the size of the sorted part becomes <i>n</i>. The algorithm
+It is a swap-based algorithm. Starting with leftmost end of the input list, it compares
+adjacent pair of the elements. If heavier element is on top then the two elements are
+swapped. After the first pass of <i>n-1</i> compare-swap operations, the heaviest element
+occupies the bottom-most (<i>n</i>th) position of the list. Now the list consist of a 
+unsorted part of <i>n-1</i> elements and a sorted part of one element. The sorted part is 
+excluded from the next pass of comparison. So, the unsorted list size is reduced to <i>n-1</i>.
+With every pass of compare-swap the size of the sorted part increase by one.
+Therefore, with <i>n-1</i> passes the size of the sorted part becomes <i>n</i>. The algorithm
 is given below.
 
 ```
