@@ -95,7 +95,7 @@ as consisting of elements from a totally order set. An element is heavier (light
 if the former greater (smaller) than the latter. Bubble sort makes the heavier elements sink to
 the bottom, and lighter elements float to the top. Figure below illustrates bubble sort algorithm.
 <p style="text-align:center">
-  <img src="../images/bubbleSortExample.png">
+  <img src="../images/bubbleSortExampl.png">
 </p>
 It is a swap-based algorithm. Starting with leftmost end of the input list, it compares
 adjacent pair of the elements. If heavier element is on top then the two elements are
