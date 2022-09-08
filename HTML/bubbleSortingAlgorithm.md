@@ -7,7 +7,7 @@ the bottom, and lighter elements float to the top. Figure below illustrates the 
 bubble sort algorithm.
 <p style="text-align:center">
   <img src="../images/bubbleSortExample.png"><br>
-  Figure 3
+  Figure 1
 </p>
 It is a swap-based algorithm. Starting with leftmost end of the input list, it compares
 adjacent pair of the elements. If heavier element is on top then the two elements are
