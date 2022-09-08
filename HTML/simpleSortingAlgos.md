@@ -98,7 +98,7 @@ if the former greater (smaller) than the latter. Bubble sort makes the heavier e
 the bottom, and lighter elements float to the top. Figure below illustrates the first pass of
 bubble sort algorithm.
 <p style="text-align:center">
-  <img src="../images/bubbleSortExampl.png"><br>
+  <img src="../images/bubbleSortExample.png"><br>
   Figure 3
 </p>
 It is a swap-based algorithm. Starting with leftmost end of the input list, it compares
