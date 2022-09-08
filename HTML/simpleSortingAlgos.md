@@ -67,7 +67,8 @@ identical results on releative ordering. So, we just need one comparison and cho
 
 Figure 1 illustrates a decision tree model for sorting three elements:
 <p style="text-align:center">
-  <img src="../images/decisionTree.png"  >
+  <img src="../images/decisionTree.png"  ><br>
+  Figure 1
 </p>
 Every node of the decision tree model represent a comparison. The left subtree represents all
 subsequent comparisons when <i>a<sub>i</sub></i> &le; <i>a<sub>j</sub></i>. Similarly, the 
@@ -79,7 +80,8 @@ sorting a list of <i>n</i> elements. There are <i>n!</i> permutations of <i>n</i
 decision tree model with <i>n</i> has <i>n!</i> leaves. The height of the tree is <i>log (n!)</i>.
 Simplifying the expression <i>log (n!)</i> we get:
 <p style="text-align:center">
-  <img src="../images/sortingLowerBound.png" width="200" height="200">
+  <img src="../images/sortingLowerBound.png" width="200" height="200"><br>
+  Figure 2
 </p>
 
 Now let us deal with three simple algorithms:
@@ -93,9 +95,11 @@ Now let us deal with three simple algorithms:
 Bubble sort works on the principle of floating the lightest element to the top. We view the input 
 as consisting of elements from a totally order set. An element is heavier (lighter) than another 
 if the former greater (smaller) than the latter. Bubble sort makes the heavier elements sink to
-the bottom, and lighter elements float to the top. Figure below illustrates bubble sort algorithm.
+the bottom, and lighter elements float to the top. Figure below illustrates the first pass of
+bubble sort algorithm.
 <p style="text-align:center">
-  <img src="../images/bubbleSortExampl.png">
+  <img src="../images/bubbleSortExampl.png"><br>
+  Figure 3
 </p>
 It is a swap-based algorithm. Starting with leftmost end of the input list, it compares
 adjacent pair of the elements. If heavier element is on top then the two elements are
