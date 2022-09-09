@@ -77,4 +77,4 @@ int main() {
 }
 ```
 
-[Back to Insertion Sort](../../HTML/insertionSortAlgorithm.md)
+[Back to Insertion Sort](../../HTML/insertionSort.md)
