@@ -79,4 +79,4 @@ int main() {
 
 ```
 
-[Back to Bubble Sort Page](../../HTML/BubbleSort.md)
+[Back to Bubble Sort Algorithm Page](../../HTML/bubbleSortingAlgorithm.md)
