@@ -38,8 +38,10 @@ is given below.
 Next we deal with selection sort. It chooses the minimum of the remaining input sequence and places
 the element as the next element in sorted order. If we repeatedly execute the method starting with
 the input sequence of <i>n</i> elements, then a selection step reduces the input sequence by
-one each time. Therefore by <i>n-1</> selection steps we complete sorting of the input sequence. 
+one each time. Therefore, with <i>n-1</i> selection steps, we complete sorting of the input sequence. 
 Since each selection step requires <i>k</i>, for <i>k=n, n-1,..., 1</i> comparisons, the total
 number of comparisons is O(<i>n<sup>2</sup></i>).
 
+[C Program for Bubble Sort](../CODE/BubbleSort/index.md)
 
+[Back to Index](../index.md)
