@@ -42,6 +42,6 @@ one each time. Therefore, with <i>n-1</i> selection steps, we complete sorting o
 Since each selection step requires <i>k</i>, for <i>k=n, n-1,..., 1</i> comparisons, the total
 number of comparisons is O(<i>n<sup>2</sup></i>).
 
-[C Program for Bubble Sort](../CODE/BubbleSort/index.md)
+[C Program for Bubble Sort](../CODES/BubbleSort/index.md)
 
 [Back to Index](../index.md)
