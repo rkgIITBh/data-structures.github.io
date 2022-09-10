@@ -2,7 +2,7 @@
 
 The program uses a random number generator function to generate MAX number of integers within a 
 range specified by <i>start</i> and <i>end</i>. The random number generator uses <i>time.h</i> for
-random seed. The rest of the code is easy to follow. We have provided a print function and a 
+random seed. The rest of the code is easy to follow. We have provided a print function and the 
 main function. Therefore, the program can be copied as is and executed.
 
 ```
