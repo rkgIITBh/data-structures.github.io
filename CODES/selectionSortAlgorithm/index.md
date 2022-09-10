@@ -1,4 +1,14 @@
+## C Program for Selection Sort
 
+The program requires three helper functions:
+
+- swap() function for swapping the postions of a pair of elements
+- printArray() function for printing an array
+- randomGen() function for generation of random numbers within a given range
+
+As explained in the description of insertion sorting algorithm, we locate the index of minimum element
+and swap it with the rightmost unsorted element in the array. The function selectionSort() implements
+the same.
 
 ```
 #include <stdio.h>
