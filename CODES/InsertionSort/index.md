@@ -1,11 +1,11 @@
 ## C Program for Insertion Sort
 
-The program requires two helper functions
+The program requires two helper functions.
 
-- One for generating random set of input elements
-- The second one for printing the elements
+- One for generating a random set of input elements
+- The second one is for printing the elements
 
-As in the case of bubble sort, the input array is generated using random number generator. It uses
+As in the case of bubble sort, the input array is generated using a random number generator. It uses
 rand() and srand() functions. We have used time.h to seed the random number generator. The printArray()
 function was discussed earlier in the program for bubble sort. The code otherwise is easy to 
 follow.
