@@ -84,11 +84,14 @@ Simplifying the expression <i>log (n!)</i> we get:
   Figure 2
 </p>
 
-In the next blog we will deal with three simple algorithms:
+We will first deal with three simple algorithms:
 
 - Bubble sort
 - Insertion sort
 - Selection sort
+
+In subsequent blogs we plant to discuss a few interesting sorting algorithms such as merge sort,
+quick sort, and bitonic sort.  
 
 [Back to Index](../index.md)
 
