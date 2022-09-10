@@ -35,3 +35,7 @@ procedure selectionSort(int a[], int n) {
     return;
 }
 ```
+
+[C Program for Selection Sort](../CODES/selectionSort/index.md)
+
+[Back to Index](../index.md)
