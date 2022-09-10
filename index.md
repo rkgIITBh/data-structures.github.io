@@ -59,6 +59,12 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Graph Terminology](HTML/graphTerminology.md)
 - [Introduction to graphs](HTML/graphIntro.md)
 
+## Sorting Algorithm
+
+- [Introduction to Sorting Algorithms](HTML/introToSortingAlgos.md)
+- [Selection Sorting Algorithm](HTML/selectionSort.md)
+- [Bubble Sorting Algorithm](HTML/bubbleSort.md)
+- [Insertion Sorting Algorithm](HTML/insertionSort.md)
 
 ## Search Trees and Height Balanced Trees
 
