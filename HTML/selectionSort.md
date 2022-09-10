@@ -11,7 +11,7 @@ The unsorted part then reduced to <i>n-k-1</i> elements. We repeat the above two
 part is left with one element which is the maximum element. So, the sorting is complete. The figure
 below illustrates the selection sorting:
 <p style="text-aling:center">
-  <img src="../images/selectionSortingExample.png">
+  <img src="../images/selectionSortExample.png">
 </p>
 The algorithm appears below.
 
