@@ -85,4 +85,4 @@ int main() {
 
 ```
 
-[Back to Insertion Sort Algorithm](../../HTML/insertionSort.md)
+[Back to Selection Sort Algorithm](../../HTML/selectionSort.md)
