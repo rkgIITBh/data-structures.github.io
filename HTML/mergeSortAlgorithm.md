@@ -79,27 +79,6 @@ proedure merge(A[], B[], C[]) {
 
 ```
 
-The interesting part of merging problem is to merge in place, without using a third array for output.
-Since there no additional array, we must rearranging the positions of elements in the input arrays.
-Merging step works by swapping positions of the element pairs when first array has larger element
-compared to that in the second array. The element which goes into the second array is rearranged to
-keep the second array always in sorted order. When comparing elements we always begin with the 
-first element of the second array. However, the curser for the first array advances after each merge
-step. The figure below depicts the merging procedure.  
-<p style="text-align:center">
-  <img src="../images/mergingWOthirdArray.png"><br>
-  Figure 2
-</p>  
-The rearranging elements in the second array is similar to insertion sort procedure.
-
-The time complexity of the method is O(<i>m * n</i>). The worst-case time for comparing
-every element of the first array with elements of the second array is O(<i>n</i>). 
-Since there are <i>m</i> elements in the first array, total time for comparison is
-O(<i>m * n</i>). The rearrangement of second array is done swapping. It may take a
-worst case time of <i>n</i>. So, overall worst-case time including rearrangment
-is O(<i>m * n</i>). Since we are not using extra space, the running time increase.
-In other words, there is tradeoff between time and space.
-
 The recursive version of merge sort is simple. It first divides the input 
 array into two subarrays topdown and recursively calls merge sort on two
 subarrays. The division continues recursively till subarray sizes are one 
@@ -128,6 +107,34 @@ Figure 3 illustrates the merge sort procedure.
   <img src="../images/mergeSortExample.png"><br>
   Figure 3
 </p>
+
+There are many variation of merging. The interesting part of these variations is to merge in place.
+That is merging sorted arrays without using a third array for output. We discuss these variations
+below.
+
+Since there no additional array, we must rearranging the positions of elements in the input arrays.
+Merging step works by swapping positions of the element pairs when first array has larger element
+compared to that in the second array. The element which goes into the second array is rearranged to
+keep the second array always in sorted order. When comparing elements we always begin with the 
+first element of the second array. However, the curser for the first array advances after each merge
+step. The figure below depicts the merging procedure.  
+<p style="text-align:center">
+  <img src="../images/mergingWOthirdArray.png"><br>
+  Figure 2
+</p>  
+The rearranging elements in the second array is similar to insertion sort procedure. In Figure 2
+third column depicts the subarray A2 after rearrangement. The second column shows A2 after 
+swapping of elements between A1 and A2. The first column is for subarray A1.
+
+
+
+The time complexity of the method is O(<i>m * n</i>). The worst-case time for comparing
+every element of the first array with elements of the second array is O(<i>n</i>). 
+Since there are <i>m</i> elements in the first array, total time for comparison is
+O(<i>m * n</i>). The rearrangement of second array is done swapping. It may take a
+worst case time of <i>n</i>. So, overall worst-case time including rearrangment
+is O(<i>m * n</i>). Since we are not using extra space, the running time increase.
+In other words, there is tradeoff between time and space.
 
 [C Program for Merge Sort](../CODES/mergeSort/index.md)
 
