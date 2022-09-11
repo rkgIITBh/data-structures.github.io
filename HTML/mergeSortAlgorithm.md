@@ -15,7 +15,25 @@ illustrates the operation of merging two sorted sequences of equal length.
   <img src="../images/mergeTwoArrays.png"><br>
   Figure 1
 </p>
-If the initial sequences are not of equal length then we can pad the shorter sequence with sentinels
-to define two equal length arrays. 
+As the figure shows we maintain three cursers, one each for the two given input arrays and one for 
+the output array. 
+
+- At each step we take one element from each array under the respective cursers.
+- Compare the elements, the smaller is placed in the output array.
+- Advance the curser for the input array from which element was sent to output.
+- Advence the curser for the output array
+- Repeat the step until all elements of one of the input arrays has been considered
+
+After completing the above steps, one of the arrays will be left with the elements are not processed
+in merging. These elements will be greater than the output elements. So we can transfer these
+elements in same relative order in subsequent positions of output array. In the example showm in
+the figure, after transfering 40 and 55 the first input array is exhausted. However, the input
+array to the right will be still left with elements 72 and 89. Since the left input array will be
+empty, the remaining elements 72 and 89 will get appended to the output in subsequent positions.
+Therefore, the final merged sequence will be: 19, 25, 29, 38, 40, 55, 72, 89. The time complexity
+of merging procedure is O(<i>m + n</i>), where <i>m</i> and <i>n</i> are respective sizes of the
+two arrays.
+
+
   
  
