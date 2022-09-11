@@ -47,3 +47,11 @@ step. The figure below depicts the merging procedure.
 </p>  
 The rearranging elements in the second array is similar to insertion sort procedure.
 
+The time complexity of the method is O(<i>m*n</i>). The worst-case time for comparing
+every element of the first array with elements of the second array is O(<i>n</i>). 
+Since there are <i>m</i> elements in the first array, total time for comparison is
+O(<i>m*n</i>). The rearrangement of second array is done swapping. It may take a
+worst case time of <i>n</i>. So, overall worst-case time including rearrangment
+is O(<i>m*n</i>). Since we are not using extra space, the running time increase.
+In other words, there is tradeoff between time and space.
+
