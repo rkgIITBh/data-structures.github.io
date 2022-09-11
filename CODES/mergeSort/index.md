@@ -120,4 +120,4 @@ int main() {
 }
 ```
 
-[Back to Merge Sort Algorithm](../../mergeSortAlgorithm.md)
+[Back to Merge Sort Algorithm](../../HTML/mergeSortAlgorithm.md)
