@@ -12,7 +12,7 @@ arrays of length <i>k</i> each and produces a single sorted array of length <i>2
 repeated merging, we finally get a sorted arrays of input sequence. The figures below
 illustrates the operation of merging two sorted sequences of equal length.
 <p style="text-align:center">
-  <img src="../images/mergeSortExample.png"><br>
+  <img src="../images/mergeTwoArrays.png"><br>
   Figure 1
 </p>
 If the initial sequences are not of equal length then we can pad the shorter sequence with sentinels
