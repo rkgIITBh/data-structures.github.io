@@ -99,7 +99,7 @@ void mergeSort(int *C, int left, int right) {
     mergeSort(C, left, mid);
     mergeSort(C, mid + 1, right);
 
-    // Merge the sorted subarrays bottom pass
+    // Merge the sorted subarrays during the bottom up pass
     merge(C, left, mid, right);
   }
 }
@@ -115,7 +115,7 @@ int main() {
 
   mergeSort(arr, 0, MAX - 1);
 
-  printf("Sorted array: \n");
+  printf("Sorted array\n");
   printArray(arr);
 }
 ```
