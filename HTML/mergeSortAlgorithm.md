@@ -34,8 +34,16 @@ Therefore, the final merged sequence will be: 19, 25, 29, 38, 40, 55, 72, 89. Th
 of merging procedure is O(<i>m + n</i>), where <i>m</i> and <i>n</i> are respective sizes of the
 two arrays.
 
-The interesting part of merging problem is carry out merging without using a separate output array.
-Since we do not have a third array, we must rearranging the positions of elements in the input 
-arrays. 
-  
- 
+The interesting part of merging problem is to merge in place, without using a third array for output.
+Since there no additional array, we must rearranging the positions of elements in the input arrays.
+Merging step works by swapping positions of the element pairs when first array has larger element
+compared to that in the second array. The element which goes into the second array is rearranged to
+keep the second array always in sorted order. When comparing elements we always begin with the 
+first element of the second array. However, the curser for the first array advances after each merge
+step. The figure below depicts the merging procedure.  
+<p style="text-align:center">
+  <img src="../images/mergeTwoArrays.png"><br>
+  Figure 2
+</p>  
+The rearranging elements in the second array is similar to insertion sort procedure.
+
