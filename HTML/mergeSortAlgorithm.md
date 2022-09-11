@@ -34,6 +34,8 @@ Therefore, the final merged sequence will be: 19, 25, 29, 38, 40, 55, 72, 89. Th
 of merging procedure is O(<i>m + n</i>), where <i>m</i> and <i>n</i> are respective sizes of the
 two arrays.
 
-
+The interesting part of merging problem is carry out merging without using a separate output array.
+Since we do not have a third array, we must rearranging the positions of elements in the input 
+arrays. 
   
  
