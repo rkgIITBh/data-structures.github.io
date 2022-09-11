@@ -32,7 +32,60 @@ array to the right will be still left with elements 72 and 89. Since the left in
 empty, the remaining elements 72 and 89 will get appended to the output in subsequent positions.
 Therefore, the final merged sequence will be: 19, 25, 29, 38, 40, 55, 72, 89. The time complexity
 of merging procedure is O(<i>m + n</i>), where <i>m</i> and <i>n</i> are respective sizes of the
-two arrays.
+two arrays. 
+
+The merging algorithm appears below.
+
+```
+// Merge two subarrays A and B into C 
+proedure merge(int *C, int p, int q, int r) {
+
+  // Create L ← A[p..q] and M ← A[q+1..r]
+  int m = q - p + 1;
+  int n = r - q;
+
+  int A[m], B[n];
+
+  for (int i = 0; i < m; i++)
+    A[i] = C[p + i];
+  for (int j = 0; j < n; j++)
+    B[j] = C[q + 1 + j];
+
+  // Maintain current index of sub-arrays and main array
+  int i, j, k;
+  i = 0;
+  j = 0;
+  k = p;
+
+  // Until we reach either end of either L or M, pick larger among
+  // elements L and M and place them in the correct position at A[p..r]
+  while (i < m && j < n) {
+    if (A[i] <= B[j]) {
+      C[k] = A[i];
+      i++;
+    } else {
+      C[k] = B[j];
+      j++;
+    }
+    k++;
+  }
+
+  // When we run out of elements in either L or M,
+  // pick up the remaining elements and put in A[p..r]
+  while (i < m) {
+    C[k] = B[i];
+    i++;
+    k++;
+  }
+
+  while (j < n) {
+    C[k] = B[j];
+    j++;
+    k++;
+  }
+}
+
+```
 
 The interesting part of merging problem is to merge in place, without using a third array for output.
 Since there no additional array, we must rearranging the positions of elements in the input arrays.
