@@ -37,28 +37,20 @@ two arrays.
 The merging algorithm appears below.
 
 ```
-// Merge two subarrays A and B into C 
-proedure merge(int *C, int p, int q, int r) {
+// Merge two sorted arrays A and B into C 
+proedure merge(A[], B[], C[]) {
+  
+   m = A.length;
+   n = B.length;
+   C.length = m + n;
 
-  // Create L ← A[p..q] and M ← A[q+1..r]
-  int m = q - p + 1;
-  int n = r - q;
-
-  int A[m], B[n];
-
-  for (int i = 0; i < m; i++)
-    A[i] = C[p + i];
-  for (int j = 0; j < n; j++)
-    B[j] = C[q + 1 + j];
-
-  // Maintain current index of sub-arrays and main array
-  int i, j, k;
+  // Maintain current index of input arrays and output array
   i = 0;
   j = 0;
-  k = p;
+  k = 0;
 
-  // Until we reach either end of either L or M, pick larger among
-  // elements L and M and place them in the correct position at A[p..r]
+  // Until we reach either end of either A or B, pick larger among
+  // elements A and B and place them in the correct position of array C
   while (i < m && j < n) {
     if (A[i] <= B[j]) {
       C[k] = A[i];
@@ -70,8 +62,8 @@ proedure merge(int *C, int p, int q, int r) {
     k++;
   }
 
-  // When we run out of elements in either L or M,
-  // pick up the remaining elements and put in A[p..r]
+  // When we run out of elements in either A or B,
+  // pick up the remaining elements and put in C[k..m+n]
   while (i < m) {
     C[k] = B[i];
     i++;
@@ -108,3 +100,30 @@ worst case time of <i>n</i>. So, overall worst-case time including rearrangment
 is O(<i>m * n</i>). Since we are not using extra space, the running time increase.
 In other words, there is tradeoff between time and space.
 
+The recursive version of merge sort is simple. It first divides the input 
+array into two subarrays topdown and recursively calls merge sort on two
+subarrays. The division continues recursively till subarray sizes are one 
+each. Then merge combines the sorted subarrays bottom up. The algorithm
+for merge sort is given below
+
+```
+void mergeSort(C[],  left, right) {
+  if (left < right) {
+
+    // m is the point where the array is divided into two subarrays
+    mid = left + (right - left) / 2;
+
+    mergeSort(C, left, mid);
+    mergeSort(C, mid + 1, right);
+
+    // Merge the sorted subarrays
+    merge(C, left, mid, right);
+  }
+}
+
+```
+Figure 3 illustrates the merge sort procedure. 
+<p style="text-align:center">
+  <img src="../images/mergeSortExample.png"><br>
+  Figure 3
+</p>
