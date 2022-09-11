@@ -109,14 +109,15 @@ for merge sort is given below
 ```
 void mergeSort(C[],  left, right) {
   if (left < right) {
-
+    
+    // Recursive topdown division of input array into subarrays
     // m is the point where the array is divided into two subarrays
     mid = left + (right - left) / 2;
 
     mergeSort(C, left, mid);
     mergeSort(C, mid + 1, right);
 
-    // Merge the sorted subarrays
+    // Merge the sorted subarrays bottom up
     merge(C, left, mid, right);
   }
 }
