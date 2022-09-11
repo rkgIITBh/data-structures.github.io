@@ -128,3 +128,7 @@ Figure 3 illustrates the merge sort procedure.
   <img src="../images/mergeSortExample.png"><br>
   Figure 3
 </p>
+
+[C Program for Merge Sort](../CODES/mergeSort/index.md)
+
+[Back to Index](../index.md)
