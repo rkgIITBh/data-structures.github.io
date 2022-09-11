@@ -42,7 +42,7 @@ keep the second array always in sorted order. When comparing elements we always 
 first element of the second array. However, the curser for the first array advances after each merge
 step. The figure below depicts the merging procedure.  
 <p style="text-align:center">
-  <img src="../images/mergeTwoArrays.png"><br>
+  <img src="../images/mergingWOthirdArray.png"><br>
   Figure 2
 </p>  
 The rearranging elements in the second array is similar to insertion sort procedure.
