@@ -104,11 +104,12 @@ void mergeSort(C[],  left, right) {
 ```
 Figure 3 illustrates the merge sort procedure. 
 <p style="text-align:center">
-  <img src="../images/mergeTopdownDivision.png" width=200 height=300>
-  <img src="../images/mergeCombineBottomUp.png" width=200 height=300>
+  <img src="../images/mergeTopdownDivision.png" width=300 height=250 style="border:15px;margin:15px">         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../images/mergeCombineBottomUp.png" width=300 height=250 style="border:15px;margin:15px">
   <br>
   Figure 3
 </p>
+The left half of the image shows recursive topdown division of the array into smaller subarrays while
+the right half of the image depicts recursive merging of the subarrays bottom up. 
 
 <strong>In place merging techniques</strong>
 
