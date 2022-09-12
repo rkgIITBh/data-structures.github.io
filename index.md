@@ -63,7 +63,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 
 
-- [Merge Sort Algorithm](HTML/mergeSort.md)
+- [Merge Sort Algorithm](HTML/mergeSortAlgorithm.md)
 - [Insertion Sort Algorithm](HTML/insertionSort.md)
 - [Bubble Sort Algorithm](HTML/bubbleSortingAlgorithm.md)
 - [Selection Sort Algorithm](HTML/selectionSort.md)
