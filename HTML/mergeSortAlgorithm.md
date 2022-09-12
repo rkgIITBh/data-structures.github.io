@@ -144,7 +144,7 @@ elements of A1 to one position to the right without loss of any data. We set
 - i = last-1 index of A2 subarray
 - j = last-2 index of A1 subarray
 - Iterate over i and j comparing the elements if A1[j] > A2[i] then
-    - shift all elements of A1 from A1[j] to A1[last-2] one position to the right
+    - Shift all elements of A1 from A1[j] to A1[last-2] one position to the right
 - Let s be the index of the smallest element of the subarray A1  greater than A2[i]
    - Place A2[i] at A1[s] 
    - Place the saved A1[last-1] at A2[i]
