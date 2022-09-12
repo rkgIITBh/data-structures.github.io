@@ -34,31 +34,31 @@ The figure gives an insight of top-down recursive partitioning. However, it does
 how the partitioning method actually works. 
 
 Let us now discuss the partitioning method. The pivot is swapped with last element of the input
-array. After removing the pivot from the rest of element, we create two cursors:
+array. It shifts the pivot to position away from the rest of element. Then we create two cursors:
 
-- The first cursor <i>i</i> set to the position before the first element, and 
-- The second cursor <i>j</i> set to the first element. 
+- The first cursor <i>i</i> set to one position behnid the leftmost index. 
+- The second cursor <i>j</i> set to the leftmost index of the array. 
 
-We have to partition <i>n-1</i> elements such that
+We now have partition the elements between the leftmost index and the index position before the
+pivot into two parts sucht that.
 
-- All elements less than pivot are to left and
-- All elements greater than or equal to pivot are to right
+- All elements less than or equal to pivot occur before the elements greater than pivot 
 
-Then drop the pivot between the two sequences of elements. In an actual sorting all element smaller
-than the pivot should occur before it. Similarly all elements equal and greater should occur before
-the pivot. Hence, by placing the pivot between the two sequence as described, we place it in
-its sorted position. But the question is: how are the elements moved to create the partition?
+Then drop the pivot at the position where leftmost element greater than the pivot occurs. 
+But the question is: 
 
-We advance cursor <i>j</i> as long as elements under it is smaller than pivot. So, <i>j</i>
-the element under it is greater than or equal to the pivot. On encountering
-an element equal or greater than pivot we do not advance <i>i</i>. 
+- How are the elements moved to create the partition?
+
+We advance cursor <i>j</i> as long as elements under it is smaller than pivot. So, we eventually
+encounter a situation where
 
 - The element under <i>j</i> is equal to or smaller than the pivot and 
-- The element under <i>i</i> is greater than the pivot
+- The element under <i>i + 1</i> is greater than the pivot
 
-So, swapping the elements we bring the two elements in proper positions with respect to the
-pivot. After swapping <i>i</i> advances, because it points to the rightmost element smaller or
-equal to the pivot. But when do the partition process terminate?  Analyzing the situation
+Now we swapping the elements at index <i>i + 1</i> with the element, the length of subarray
+having element smaller than or equal to the pivot increases. After swapping <i>i</i> advances, 
+because it points to the rightmost element smaller or equal to the pivot. But when do the 
+partition process terminate?  Analyzing the situation
 as shown in Figure 1, the partitioning process should terminate when <i>j</i> has run through 
 the array and points to the pivot's position. 
 <p style="text-align:center">
