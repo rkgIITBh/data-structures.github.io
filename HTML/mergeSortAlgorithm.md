@@ -104,9 +104,13 @@ void mergeSort(C[],  left, right) {
 ```
 Figure 3 illustrates the merge sort procedure. 
 <p style="text-align:center">
-  <img src="../images/mergeSortExample.png"><br>
+  <img src="../images/mergeTopdownDivision.png">
+  <img src="../images/mergeCombineBottomUp.png">
+  <br>
   Figure 3
 </p>
+
+<strong>In place merging techniques</strong>
 
 There are many variation of merging. The interesting part of these variations is to merge in place.
 That is merging sorted arrays without using a third array for output. We discuss these variations
@@ -120,13 +124,11 @@ first element of the second array. However, the curser for the first array advan
 step. The figure below depicts the merging procedure.  
 <p style="text-align:center">
   <img src="../images/mergingWOthirdArray.png"><br>
-  Figure 2
+  Figure 4
 </p>  
 The rearranging elements in the second array is similar to insertion sort procedure. In Figure 2
 third column depicts the subarray A2 after rearrangement. The second column shows A2 after 
 swapping of elements between A1 and A2. The first column is for subarray A1.
-
-
 
 The time complexity of the method is O(<i>m * n</i>). The worst-case time for comparing
 every element of the first array with elements of the second array is O(<i>n</i>). 
@@ -135,6 +137,14 @@ O(<i>m * n</i>). The rearrangement of second array is done swapping. It may take
 worst case time of <i>n</i>. So, overall worst-case time including rearrangment
 is O(<i>m * n</i>). Since we are not using extra space, the running time increase.
 In other words, there is tradeoff between time and space.
+
+The next merging technique uses insertion sort technique to place elements from 
+one subarray into correct position in the other. The procedure is depicted in 
+Figure 4.
+<p style="text-align:center">
+  <img src="../images/mergingFromEnd.png"><br>
+  Figure 5
+</p>
 
 [C Program for Merge Sort](../CODES/mergeSort/index.md)
 
