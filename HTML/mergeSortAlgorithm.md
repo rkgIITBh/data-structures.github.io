@@ -104,8 +104,8 @@ void mergeSort(C[],  left, right) {
 ```
 Figure 3 illustrates the merge sort procedure. 
 <p style="text-align:center">
-  <img src="../images/mergeTopdownDivision.png">
-  <img src="../images/mergeCombineBottomUp.png">
+  <img src="../images/mergeTopdownDivision.png" width=200 height=300>
+  <img src="../images/mergeCombineBottomUp.png" width=200 height=300>
   <br>
   Figure 3
 </p>
