@@ -23,5 +23,10 @@ middle element of the input and find the median of three. Then use the median of
 The median of three captures more randomness than using the first element as pivot. Since the 
 median of three takes constant time, the performance of quick sort is not affected.
 
+Since partitioning is the critical step, we begin with description of partitioning method.
+The idea of partition is shown below assuming first element as pivot.
+<p style="text-align:center">
+  <img src="../images/quicksortPartitionEx.png">
+</p>
 
 
