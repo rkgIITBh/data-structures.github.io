@@ -147,7 +147,7 @@ elements of A1 to one position to the right without loss of any data. We set
     - shift all elements of A1 from A1[j] to A1[last-2] one position to the right
 - Let s be the index of the smallest element of the subarray A1  greater than A2[i]
    - Place A2[i] at A1[s] 
-   - Placed saved A1[last-1] at A2[i]
+   - Place the saved A1[last-1] at A2[i]
 - Now update the last index of A1, decrementing it.   
 
 Let us check the first row of Figure 4. A1[last-1] = 89, first we save it. Then compare
