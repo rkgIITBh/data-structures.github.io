@@ -61,10 +61,13 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ## Sorting Algorithm
 
+
+
+- [Merge Sort Algorithm](HTML/mergeSort.md)
+- [Insertion Sort Algorithm](HTML/insertionSort.md)
+- [Bubble Sort Algorithm](HTML/bubbleSortingAlgorithm.md)
+- [Selection Sort Algorithm](HTML/selectionSort.md)
 - [Introduction to Sorting Algorithms](HTML/introToSortingAlgos.md)
-- [Selection Sorting Algorithm](HTML/selectionSort.md)
-- [Bubble Sorting Algorithm](HTML/bubbleSortingAlgorithm.md)
-- [Insertion Sorting Algorithm](HTML/insertionSort.md)
 
 ## Search Trees and Height Balanced Trees
 
