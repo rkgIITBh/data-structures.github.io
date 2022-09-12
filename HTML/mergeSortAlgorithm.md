@@ -106,7 +106,7 @@ Figure 3 illustrates the merge sort procedure.
 <p style="text-align:center">
   <img src="../images/mergeTopdownDivision.png" width=300 height=250 style="border:15px;margin:15px">         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../images/mergeCombineBottomUp.png" width=300 height=250 style="border:15px;margin:15px">
   <br>
-  Figure 3
+  Figure 2
 </p>
 The left half of the image shows recursive topdown division of the array into smaller subarrays while
 the right half of the image depicts recursive merging of the subarrays bottom up. 
@@ -125,7 +125,7 @@ first element of the second array. However, the curser for the first array advan
 step. The figure below depicts the merging procedure.  
 <p style="text-align:center">
   <img src="../images/mergingWOthirdArray.png"><br>
-  Figure 4
+  Figure 3
 </p>  
 The rearranging elements in the second array is similar to insertion sort procedure. In Figure 2
 third column depicts the subarray A2 after rearrangement. The second column shows A2 after 
@@ -144,7 +144,7 @@ one subarray into correct position in the other. The procedure is depicted in
 Figure 4.
 <p style="text-align:center">
   <img src="../images/mergingFromEnd.png"><br>
-  Figure 5
+  Figure 4
 </p>
 
 [C Program for Merge Sort](../CODES/mergeSort/index.md)
