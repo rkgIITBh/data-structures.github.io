@@ -13,40 +13,6 @@ partitioning in this case is &Theta;(<i>n</i>). The recurrence relation for runn
   <img src="../images/quickSortWorstcase2.png" width="380" height="80">
 </p>
 
-<strong>Best case analysis</strong>
-
-The best-case occurs if the partition produces two equal subarrays, i.e., if the pivot is
-the median element. In this case, the partition sizes are:
-
-- one of size &lfloor;<i>n/2</i>&rfloor; and 
-- another of size &lceil;<i>n/2</i>&rceil;
-
-The recurrence equation for time complexity is given by
-
-<p style="text-align:center">
-  <img src="../images/quickSortBestcase1.png" width="380" height="100">
-</p>
-Using <i>T(1) = 0</i>, 2<sup>k</sup> = <i>n</i>, we get <i>k = log n</i>. Simplifying the above
-recurrence equation:
-<p style="text-align:center">
-  <img src="../images/quickSortBestcase2.png" width="320" height="30">
-</p>
-
-<strong>Balanced partitioning</strong>
-
-The average case of quick sort is more close to the best case than worst case. It is because balance
-of partitioning is reflected in recurrence for running time. Suppose the partitioning always produces
-9-to-1 proportional split, then the recurrence relation will then be:
-<p style="text-align:center">
-  <img src="../images/quickSortBalancedcase1.png" width="320" height="30">
-</p>
-
-
-<p style="text-align:center">
-  <img src="../images/quickSortRecursionTree.png">
-</p>
-
-
 
 <strong>Average case analysis</strong>
 
@@ -88,3 +54,44 @@ we get:
 <p style="text-align:center">
   <img src="../images/quickSortFormula6.png" width="350" height="60">
 </p>
+
+<strong>Best case analysis</strong>
+
+The best-case occurs if the partition produces two equal subarrays, i.e., if the pivot is
+the median element. In this case, the partition sizes are:
+
+- one of size &lfloor;<i>n/2</i>&rfloor; and 
+- another of size &lceil;<i>n/2</i>&rceil;
+
+The recurrence equation for time complexity is given by
+
+<p style="text-align:center">
+  <img src="../images/quickSortBestcase1.png" width="380" height="100">
+</p>
+Using <i>T(1) = 0</i>, 2<sup>k</sup> = <i>n</i>, we get <i>k = log n</i>. Simplifying the above
+recurrence equation:
+<p style="text-align:center">
+  <img src="../images/quickSortBestcase2.png" width="320" height="30">
+</p>
+
+
+<strong>Balanced partitioning</strong>
+
+The average case of quick sort is more close to the best case than worst case. It is because balance
+of partitioning is reflected in recurrence for running time. Suppose the partitioning always produces
+9-to-1 proportional split, then the recurrence relation will then be:
+<p style="text-align:center">
+  <img src="../images/quickSortBalancedcase1.png" width="320" height="30">
+</p>
+
+
+<p style="text-align:center">
+  <img src="../images/quickSortRecursionTree.png">
+  <br>
+  Figure 1: Cost of every level is <i>cn</i> up to depth log<sub>10</sub> <i>n</i>. 
+</p>
+
+After depth log<sub>10</sub> <i>n</i> the cost becoems less than <i>cn</i>. So the 
+expression <i>cn</i> log<sub>10</sub><i>n</i> dominates the cost. It implies that the balanced-case is
+closer to average case than worst-case. 
+
