@@ -23,55 +23,65 @@ middle elements and find the median of three. Then use the median of three as a 
 The median of three captures more randomness than using the first element as a pivot. Since the 
 median of three takes constant time, the performance of quick sort is not affected.
 
-Since partitioning is the critical step, we begin with a description of the partitioning method.
-The idea of partition is shown below, assuming the first element as a pivot.
+Since partitioning is the critical step, let us understand the partitioning method.  We begin
+with a sketch assuming the first element as a pivot. As partitioning progresses, we should have
+the elements in sorted order. 
 <p style="text-align:center">
   <img src="../images/quickSortPartitioning.png"><br>
   Figure 1: Partitioning example
 </p>
+The figure only serves to give an insight of top-down recursive partitioning. However, it does
+not indicate how the partitioning method will actually work. 
 
-The figure gives an insight of top-down recursive partitioning. However, it does not indicate
-how the partitioning method actually works. 
+If we swap the pivot with last element of the input array then it shifts the pivot to position
+away from consideration of the partitioning the rest of elements. We need to divide those 
+element into two parts: 
 
-Let us now discuss the partitioning method. The pivot is swapped with last element of the input
-array. It shifts the pivot to position away from the rest of element. Then we create two cursors:
+- One set of elements <i>S</i> which are smaller than or equal to the pivot,
+- Another set of elements <i>G</i> which are greater than the pivot, and
+- The elements of <i>S</i> should occur before those of <i>G</i> in the array positions.
 
-- The first cursor <i>i</i> set to one position behnid the leftmost index. 
+To accomplish it, we should scan over all the elements except the pivot, and rearrange them in
+place. We create two cursors:
+
+- The first cursor <i>i</i> set to one position behind the leftmost index. 
 - The second cursor <i>j</i> set to the leftmost index of the array. 
 
-We now have partition the elements between the leftmost index and the index position before the
-pivot into two parts sucht that.
-
-- All elements less than or equal to pivot occur before the elements greater than pivot 
-
-Then drop the pivot at the position where leftmost element greater than the pivot occurs. 
-But the question is: 
+Now the question is:
 
 - How are the elements moved to create the partition?
 
-We advance cursor <i>j</i> as long as elements under it is smaller than pivot. So, we eventually
-encounter a situation where
-
-- The element under <i>j</i> is equal to or smaller than the pivot and 
-- The element under <i>i + 1</i> is greater than the pivot
-
-Now we swapping the elements at index <i>i + 1</i> with the element, the length of subarray
-having element smaller than or equal to the pivot increases. After swapping <i>i</i> advances, 
-because it points to the rightmost element smaller or equal to the pivot. But when do the 
-partition process terminate?  Analyzing the situation
-as shown in Figure 1, the partitioning process should terminate when <i>j</i> has run through 
-the array and points to the pivot's position. 
+We advance both the cursors <i>i</i> and <i>j</i> as long as elements under them are smaller 
+than pivot. By doing so, we ensure that none of the smaller elements are shifted unnecessarily.
+If the element under <i>i + 1</i> becomes greater than the pivot then we stop incrementing 
+<i>i</i>. At this point we have a hit the boundary for first partition, now we must try to
+expand the boundary. So, we advance <i>j</i> until finding an element smaller than or equal
+to the pivot. The two situations are depicted in Figure 2. 
 <p style="text-align:center">
   <img src="../images/quickSortIndexLoc1.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/quickSortIndexLoc2.png"><br>
-  Figure 1: Partitioning process and its termination
+  Figure 2: Partitioning process and its termination
 </p>
+The left part of the figure refers to the case when <i>i</i> is set at the boundary of the
+array with elements smaller or equal to the pivot. The cursor <i>j</i> continues to advance
+expanding the segment of the array between <i>i + 1</i> and <i>j</i> for the elements greater
+than the pivot. Once we get an element smaller or equal to pivot under <i>j</i>, we can 
+swap it with the element at <i>i + 1</i>. The swapping expands the array segments of both
+types of element as indicated by the right part of Figure 2. After the swapping we have to
+advance both <i>i</i> and <i>j</i>. The partitioning process should terminate when <i>j</i> 
+has run through the array and points to the pivot's position. 
+
 Since <i>i</i> points to the rightmost element smaller or equal to the pivot, all elements at 
-index position <i>i+1</i> and beyond should be greater than the pivot. So, by swapping
+index position <i>i + 1</i> and beyond should be greater than the pivot. So, by swapping
 the pivot with the element at the index <i>i + 1</i>, we place the pivot at its correct position. 
-Hence the partitioning should terminate. Figure 2 gives an example of the partitioning.
+Hence the partitioning should terminate. 
+
+Figure 3 gives an example of the partitioning. As we can find 
+
+- All elements less than or equal to pivot occur before the elements greater than pivot 
+
 <p style="text-align:center">
   <img src="../images/quickSortPartitionExample.png"><br>
-  Figure 1: Partitioning example
+  Figure 3: Partitioning example
 </p>
 
 <strong>Average case analysis</strong>
