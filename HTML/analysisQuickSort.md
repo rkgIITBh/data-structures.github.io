@@ -53,7 +53,7 @@ To simplify the summation in above equation, from Figure 2, we observe that the 
 </p>
 Therefore,
 <p style="text-align:center">
-  <img src="../images/quickSortSumSimplify.png" width="350" height="80">
+  <img src="../images/quickSortSumSimplify.png" width="300" height="60">
 </p> 
 So, the overall expression for <i>T(n)</i> is now simplified as:
 <p style="text-align:center">
@@ -61,9 +61,12 @@ So, the overall expression for <i>T(n)</i> is now simplified as:
 </p> 
 For <i>n</i> &ge; 2 and <i>k = 2b + 2c</i>,
 <p style="text-align:center">
-  <img src="../images/quickSortSimplify1.png" width="300" height="70">
+  <img src="../images/quickSortSimplify2.png" width="200" height="35">
 </p>
-
+Therefore, (A) &lt; (B), i.e., (B) - (A) &gt; 0 which implies:
+<p style="text-align:center">
+  <img src="../images/quickSortSimplify3.png" width="120" height="30">
+</p>
 
 <strong>Best case analysis</strong>
 
