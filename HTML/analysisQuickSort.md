@@ -44,7 +44,7 @@ Now we let <i>n</i> &ge; 2. The reformulate the inequality (I) as:
 <p style="text-align:center">
   <img src="../images/quickSortRecEq1.png" width="300" height="150">
 </p>
-To simplify the summation in above equation, from Figure 2, we observe that the function 
+To simplify the summation in the above equation, from Figure 2, we observe that the function 
 <i>i</i>log<sub>e</sub><i> i</i> is concave upwards. 
 <p style="text-align:center">
   <img src="../images/xlogxpic.png">
@@ -70,7 +70,7 @@ Therefore, (A) &lt; (B), i.e., (B) - (A) &gt; 0 which implies:
 
 <strong>Best case analysis</strong>
 
-The best-case occurs if the partition produces two equal subarrays, i.e., if the pivot is
+The best case occurs if the partition produces two equal subarrays, i.e., if the pivot is
 the median element. In this case, the partition sizes are:
 
 - one of size &lfloor;<i>n/2</i>&rfloor; and 
@@ -90,7 +90,7 @@ recurrence equation:
 
 <strong>Balanced partitioning</strong>
 
-The average case of quick sort is more close to the best case than worst case. It is because balance
+The average case of quick sort is closer to the best case than the worst case. It is because balance
 of partitioning is reflected in recurrence for running time. Suppose the partitioning always produces
 9-to-1 proportional split, then the recurrence relation will then be:
 <p style="text-align:center">
@@ -104,7 +104,7 @@ of partitioning is reflected in recurrence for running time. Suppose the partiti
   Figure 2: Cost of every level is <i>cn</i> up to depth log<sub>10</sub> <i>n</i>. 
 </p>
 
-After depth log<sub>10</sub> <i>n</i> the cost becoems less than <i>cn</i>. So the 
-expression <i>cn</i> log<sub>10</sub><i>n</i> dominates the cost. It implies that the balanced-case is
-closer to average case than worst-case. 
+After depth log<sub>10</sub> <i>n</i> the cost becomes less than <i>cn</i>. So the 
+expression <i>cn</i> log<sub>10</sub><i>n</i> dominates the cost. It implies that the balanced case is
+closer to the average case than the worst-case. 
 
