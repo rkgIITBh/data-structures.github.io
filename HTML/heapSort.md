@@ -26,3 +26,12 @@ highest level of the binary tree. It ensure the structural property of the heap 
 After creating a new node for an incoming element, we apply a heapify operation along the tree
 path from the new node bottom up which is sometimes known as shiftup. It takes time of 
 O(log <i>n</i>) to restore the heap property along the path. 
+
+The reader may come to a quick conclusion that build heap has worst-case running time of 
+O(<i>n</i>log <i>n</i>). However the bound is not tight. We can compute a tight bound by observing
+that shiftup operation requires time of O(<i>h</i>) where <i>h</i> is the height of the tree.
+The height increase gradually from 0 to log <i>n</i>. Since heap is stored as a complete
+binary tree, we add nodes level-wise. All nodes of a height <i>h</i> require O(<i>h</i>) time
+for heapify. In a level <i>h</i> there can be atmost &lceil;<i>n</i>/2<sup>h+1</sup>&rceil; nodes.
+Hence, the building heap requires time 
+
