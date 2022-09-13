@@ -108,3 +108,4 @@ After depth log<sub>10</sub> <i>n</i> the cost becomes less than <i>cn</i>. So t
 expression <i>cn</i> log<sub>10</sub><i>n</i> dominates the cost. It implies that the balanced case is
 closer to the average case than the worst-case. 
 
+[Back to Index](../index.md)
