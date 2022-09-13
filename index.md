@@ -69,7 +69,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Selection Sort Algorithm](HTML/selectionSort.md)
 - [Introduction to Sorting Algorithms](HTML/introToSortingAlgos.md)
 
-<div style="margin: 30px 20mm 10% 20em">
+<div style="margin: 30px 20px 10px 20px">
   There is an excellent visualization of various sorting algorithms on <a href="https://www.toptal.com/">Topal website</a>. 
 Visualization of sorting algorithms using animation could be a mini project for CS 
 undergraduates in the Data Structure course. However, you can now view it for fun from 
