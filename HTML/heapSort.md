@@ -33,5 +33,12 @@ that shiftup operation requires time of O(<i>h</i>) where <i>h</i> is the height
 The height increase gradually from 0 to log <i>n</i>. Since heap is stored as a complete
 binary tree, we add nodes level-wise. All nodes of a height <i>h</i> require O(<i>h</i>) time
 for heapify. In a level <i>h</i> there can be atmost &lceil;<i>n</i>/2<sup>h+1</sup>&rceil; nodes.
+For example, a complete binary tree of 15 nodes has 
+
+- The number of node at height 3 is &lceil;<i>15</i>/2<sup>3+1</sup>&rceil; = 1
+- The number of node at height 2 is &lceil;<i>15</i>/2<sup>2+1</sup>&rceil; = 2
+- The number of node at height 1 is &lceil;<i>15</i>/2<sup>1+1</sup>&rceil; = 4
+- The number of node at height 0 is &lceil;<i>15</i>/2<sup>2+1</sup>&rceil; = 8 
+
 Hence, the building heap requires time 
 
