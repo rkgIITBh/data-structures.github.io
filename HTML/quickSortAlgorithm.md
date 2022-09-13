@@ -95,8 +95,8 @@ partition(A, low, high) {
           swap(A[i], A[j]);
        }
    }
-   // Elements A[i+1:high] >= pivot
-   // Elements A[low:i] < pivot
+   // Elements A[i+1:high] > pivot
+   // Elements A[low:i] <= pivot
    swap(A[i+1], A[r]);
    return ++i;
 }
