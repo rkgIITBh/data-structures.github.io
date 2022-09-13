@@ -18,42 +18,52 @@ partitioning in this case is &Theta;(<i>n</i>). The recurrence relation for runn
 
 Quick sort average case analysis is based on the following assumptions:
 
-- All permutation of the input sequence is equally likely so that we can choose the first element as the pivot
-- The pivots used at all-recursive levels are random 
+- All permutation of the input sequence is equally likely, 
+- The pivots used at all-recursive levels are random.
+
+It implies some splits may be bad and others are good. So, by recursive partitioning, the bad 
+splits are compensated by good splits. Let <i>T(n)</i> be the expected running time. For the 
+boundary condition we have <i>T(0) = T(1) = b</i>, where <i>b</i> is some constant. Assume that
+the pivot is the <i>i</i>th element of the array. So, the split produces one partition of size
+<i>i - 1</i> and the other of size <i>n - i</i>
 
 Therefore, the recurrence formula for time complexity is:
 <p style="text-align:center">
-  <img src="../images/quickSortRecurrenceFormula.png" width="380" height="50">
+  <img src="../images/quickSortRecurrenceEqn1.png" width="400" height="120">
 </p>
-Since we move the pivot out of the way during partitioning, one comparison takes place for
-each of <i>n-1</i> elements. The remaining part of the recurrence relation is explained as 
-follows. If <i>i</i> elements are in one partition then <i>n-i-1</i> elements are in the other
-partition. Now by the symmetry of expression within the summation sign, we simplify the recurrence
-relation as:
+We want to prove that for <i>n</i> &ge;2, <i>T(n) &le; k</i> log<sub>e</sub><i>n</i>, where 
+<i> k = 2c + 2b</i>. Let us check the validity for <i>n = 2</i>. 
+
+- <i>T(2) = c.2 + T(01) + T(1)</i>. So, <i>T(2) = 2b + 2c</i>.
+
+If we substitute <i>n = 2</i> in the expression <i>k</i> log<sub>e</sub><i>n</i>, then we get
 <p style="text-align:center">
-  <img src="../images/quickSortFormula1.png" width="260" height="40">
-</p>                                                                
-We multiply both sides of the above equation by <i>n</i> and substract <i>T(n-1)</i>
-from <i>T(n)</i> and get:                                                              
-<p style="text-align:center">
-  <img src="../images/quickSortFormula2.png" width="400" height="35">
+   <i>k</i>.2 log<sub>e</sub>2 = 2<i>k</i> * 0.69173 .. > <i>k = 2b + 2c</i>.
 </p>
-Rearranging terms and simplifying, we have:
+Now we let <i>n</i> &ge; 2. The reformulate the inequality (I) as:
 <p style="text-align:center">
-  <img src="../images/quickSortFormula3.png" width="250" height="30">
+  <img src="../images/quickSortRecEq1.png" width="300" height="150">
 </p>
-Now the recurrence is in a form we can solve by unfolding the recurrence.
+To simplify the summation in above equation, from Figure 2, we observe that the function 
+<i>i</i>log<sub>e</sub><i> i</i> is concave upwards. 
 <p style="text-align:center">
-  <img src="../images/quickSortFormula4.png" width="400" height="250">
+  <img src="../images/xlogxpic.png">
+  <br>
+  Figure 1: The function <i>i</i>log<sub>e</sub><i> i</i> is concave upwards. 
 </p>
-Approximating summation by integral 
+Therefore,
 <p style="text-align:center">
-  <img src="../images/quickSortFormula5.png" height="30" width="60">
-</p>
-we get:
+  <img src="../images/quickSortSumSimplify.png" width="350" height="80">
+</p> 
+So, the overall expression for <i>T(n)</i> is now simplified as:
 <p style="text-align:center">
-  <img src="../images/quickSortFormula6.png" width="350" height="60">
+  <img src="../images/quickSortRecEq2.png" width="350" height="140">
+</p> 
+For <i>n</i> &ge; 2 and <i>k = 2b + 2c</i>,
+<p style="text-align:center">
+  <img src="../images/quickSortSimplify1.png" width="300" height="70">
 </p>
+
 
 <strong>Best case analysis</strong>
 
@@ -66,7 +76,7 @@ the median element. In this case, the partition sizes are:
 The recurrence equation for time complexity is given by
 
 <p style="text-align:center">
-  <img src="../images/quickSortBestcase1.png" width="380" height="100">
+  <img src="../images/quickSortBestcase1.png" width="400" height="100">
 </p>
 Using <i>T(1) = 0</i>, 2<sup>k</sup> = <i>n</i>, we get <i>k = log n</i>. Simplifying the above
 recurrence equation:
@@ -88,7 +98,7 @@ of partitioning is reflected in recurrence for running time. Suppose the partiti
 <p style="text-align:center">
   <img src="../images/quickSortRecursionTree.png">
   <br>
-  Figure 1: Cost of every level is <i>cn</i> up to depth log<sub>10</sub> <i>n</i>. 
+  Figure 2: Cost of every level is <i>cn</i> up to depth log<sub>10</sub> <i>n</i>. 
 </p>
 
 After depth log<sub>10</sub> <i>n</i> the cost becoems less than <i>cn</i>. So the 
