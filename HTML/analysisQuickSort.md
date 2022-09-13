@@ -6,11 +6,11 @@ Worst-case behaviour occurs if excluding the partitioning elements, partition re
 of size <i>n - 1</i>. The worst-case materializes when we have a sorted input. The cost of 
 partitioning in this case is &Theta;(<i>n</i>). The recurrence relation for running time is:
 <p style="text-align:center">
-  <img src="../images/quickSortWorstcase.png" width="380" height="50">
+  <img src="../images/quickSortWorstcase.png" width="250" height="30">
 </p>
 
 <p style="text-align:center">
-  <img src="../images/quickSortWorstcase2.png" width="380" height="50">
+  <img src="../images/quickSortWorstcase2.png" width="380" height="80">
 </p>
 
 <strong>Best case analysis</strong>
@@ -24,12 +24,12 @@ the median element. In this case, the partition sizes are:
 The recurrence equation for time complexity is given by
 
 <p style="text-align:center">
-  <img src="../images/quickSortBestcase1.png" width="380" height="50">
+  <img src="../images/quickSortBestcase1.png" width="380" height="100">
 </p>
 Using <i>T(1) = 0</i>, 2<sup>k</sup> = <i>n</i>, we get <i>k = log n</i>. Simplifying the above
 recurrence equation:
 <p style="text-align:center">
-  <img src="../images/quickSortBestcase2.png" width="380" height="50">
+  <img src="../images/quickSortBestcase2.png" width="320" height="30">
 </p>
 
 <strong>Balanced partitioning</strong>
@@ -38,7 +38,12 @@ The average case of quick sort is more close to the best case than worst case. I
 of partitioning is reflected in recurrence for running time. Suppose the partitioning always produces
 9-to-1 proportional split, then the recurrence relation will then be:
 <p style="text-align:center">
-  <img src="../images/quickSortRecursionTree.png" width="380" height="50">
+  <img src="../images/quickSortBalancedcase1.png" width="320" height="30">
+</p>
+
+
+<p style="text-align:center">
+  <img src="../images/quickSortRecursionTree.png">
 </p>
 
 
