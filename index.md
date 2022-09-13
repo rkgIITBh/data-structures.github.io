@@ -74,7 +74,8 @@ develop code phobia. The theory is required, but a proper balance is needed.
 Visualization of sorting algorithms using animation could be a mini project for CS 
 undergraduates in the Data Structure course. However, you can now view it for fun from 
 the following link.
-
+<br>
+<br>
 <a href="https://www.toptal.com/developers/sorting-algorithms" target="_blank">Animation of Sorting Algorithms</a>
 </div>
 
