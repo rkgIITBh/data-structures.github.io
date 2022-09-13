@@ -69,6 +69,16 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Selection Sort Algorithm](HTML/selectionSort.md)
 - [Introduction to Sorting Algorithms](HTML/introToSortingAlgos.md)
 
+<div style="margin: 30px 20mm 10% 20em">
+  There is an excellent visualization of various sorting algorithms on <a href="https://www.toptal.com/">Topal website</a>. 
+Visualization of sorting algorithms using animation could be a mini project for CS 
+undergraduates in the Data Structure course. However, you can now view it for fun from 
+the following link.
+</div>
+<p style="text-align:center">
+  <a href="https://www.toptal.com/developers/sorting-algorithms">Animation of Sorting Algorithms</a>
+</p>
+
 ## Search Trees and Height Balanced Trees
 
 - [Search, Insert, Delete and Splay on Splay Trees](HTML/InsertDeleteSplay.md)
