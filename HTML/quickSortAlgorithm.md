@@ -83,6 +83,37 @@ Figure 3 gives an example of the partitioning. As we can find
   <img src="../images/quickSortPartitionExample.png"><br>
   Figure 3: Partitioning example
 </p>
+The algorithm for partitioning appears below.
+
+```
+partition(A, low, high) {
+   pivot = A[high];  // Pivot 
+   i = low - 1 // index for smaller element 
+   for (j=low; j<high; j++) {
+       if (A[j] < pivot) { 
+          i++; 
+          swap(A[i], A[j]);
+       }
+   }
+   // Elements A[i+1:high] >= pivot
+   // Elements A[low:i] < pivot
+   swap(A[i+1], A[r]);
+   return ++i;
+}
+```
+The partitioning process places the pivot in correct position. So quick sort is a straightforward
+recursive call to partitioning algorithm on partitions after the pivot is in correct postion. The
+algorithm is give below.
+
+```
+quickSort(A, p, r) {
+    if (p < r) {
+        q = partition(A, p, r);
+        quickSort(A, p, q-1);
+        quickSort(A, q+1, r);
+    }
+}
+```
 
 <strong>Average case analysis</strong>
 
