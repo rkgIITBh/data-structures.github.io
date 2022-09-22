@@ -50,6 +50,8 @@ Hence, the building heap requires time 15 units, which is same as the number of 
 Let us check if the heap can indeed be built in time of O(<i>n</i>). Since we add nodes level-wise,
 and there are &lceil;<i>n</i>/2<sup>h+1</sup>&rceil; nodes per level, the time for building heap
 is:
-
+<p style="text-align:center">
+  <img src="../images/heapEqn1.png">
+</p>
 
 
