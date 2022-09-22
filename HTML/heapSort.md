@@ -19,6 +19,8 @@ The following tree represents a binary heap.
 </p>
 The parent of a node at position <i>i</i> is available in the index postion &lceil;<i>i</i>&rceil;-1.
 
+<strong>Building heap</strong>
+
 Building heap is simple. We take one element at a time and build the heap by applying bottom up
 heapify operation. The first element defines a heap of one element. Suppose a heap of a few elements 
 is already available. The new element joins the heap at the leftmost vacant position in the 
@@ -26,6 +28,8 @@ highest level of the binary tree. It ensure the structural property of the heap 
 After creating a new node for an incoming element, we apply a bottom-up heapify operation along
 the tree path from the new node bottom up which is sometimes known as shiftup. It takes time of 
 O(log <i>n</i>) to restore the heap property along the path. 
+
+<strong>Time complexity</strong>
 
 The reader may come to a quick conclusion that build heap has worst-case running time of 
 O(<i>n</i>log <i>n</i>). However the bound is not tight. We can compute a tight bound by observing
