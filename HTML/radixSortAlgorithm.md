@@ -13,4 +13,15 @@ the input sequence, then prepend:
 So, the input sequence becomes {170, 067, 039, 212, 098, 010, 005}. In first pass the distribution
 of numbers to buckets is as follows:
 
-
+| Bucket  |  Number    |
+|---------|------------|
+|0        | 170        |
+|1        | -          |
+| 2       | 212        |
+| 3       | -          |
+| 4       | -          |
+|5        | 095,005    |
+| 6       |     -      |
+| 7       | 067        |
+| 8       | 098        |
+| 9       | 039        |
