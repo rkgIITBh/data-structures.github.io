@@ -62,3 +62,10 @@ Differentiation of both sides of the above equation gives us
   <img src="../images/heapEqn3.png" width=170 height=auto>
 </p>
 Substitue <i>x = 1/2</i> to obtain the final expression for the time complexity. 
+
+<strong>Sorting using heaps</strong>
+
+Once the heap is available, we can repeatedly use deleteMin operations to select the minimum and
+append the deleted element in the sorted list. It produces a sorted list in time of O(<i>n</i> log <i>n</i>).
+Therefore, the time complexity for the heap sort is  O(<i>n</i> + <i>n</i> log <i>n</i>) or 
+O(<i>n</i> log <i>n</i>).
