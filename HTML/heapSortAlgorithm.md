@@ -74,4 +74,6 @@ append the deleted element to the sorted list. It produces a sorted list in time
 Therefore, the time complexity for the heap sort is  O(<i>n</i> + <i>n</i> log <i>n</i>) or 
 O(<i>n</i> log <i>n</i>).
 
+[C Program for Heap Sort](../CODES/heapSort/index.md)
+
 [Back to Index](../index.md)
