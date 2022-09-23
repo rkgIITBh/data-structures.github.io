@@ -51,7 +51,7 @@ Let us check if the heap can indeed be built in time of O(<i>n</i>). Since we ad
 and there are &lceil;<i>n</i>/2<sup>h+1</sup>&rceil; nodes per level, the time for building heap
 is:
 <p style="text-align:center">
-  <img src="../images/heapEqn1.png">
+  <img src="../images/heapEqn1.png" width=300 height=auto>
 </p>
 
 
