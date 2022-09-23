@@ -55,9 +55,9 @@ is:
 </p>
 The final step of simplification in the above expression is explained as follow. We know 
 <p style="text-align:center">
-  <img src="../images/heapEqn2.png" width=150 height=auto>
+  <img src="../images/heapEqn2.png" width=120 height=auto>
 </p>
 Differentiation of both sides of the above equation gives us
 <p style="text-align:center">
-  <img src="../images/heapEqn3.png" width=150 height=auto>
+  <img src="../images/heapEqn3.png" width=170 height=auto>
 </p>
