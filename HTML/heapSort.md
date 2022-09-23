@@ -61,3 +61,4 @@ Differentiation of both sides of the above equation gives us
 <p style="text-align:center">
   <img src="../images/heapEqn3.png" width=170 height=auto>
 </p>
+Substitue <i>x = 1/2</i> to obtain the final expression for the time complexity. 
