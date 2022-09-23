@@ -51,9 +51,9 @@ Let us check if the heap can indeed be built in time of O(<i>n</i>). Since we ad
 and there are &lceil;<i>n</i>/2<sup>h+1</sup>&rceil; nodes per level, the time for building heap
 is:
 <p style="text-align:center">
-  <img src="../images/heapEqn1.png" width=400 height=auto>
+  <img src="../images/heapEqn1a.png" width=400 height=auto>
 </p>
-The final step of simplification in the above expression is explained as follow. We know 
+The final step of simplification RHS of the above equation is explained as follow. We know 
 <p style="text-align:center">
   <img src="../images/heapEqn2.png" width=120 height=auto>
 </p>
@@ -61,7 +61,10 @@ Differentiation of both sides of the above equation gives us
 <p style="text-align:center">
   <img src="../images/heapEqn3.png" width=170 height=auto>
 </p>
-Substitue <i>x = 1/2</i> to obtain the final expression for the time complexity. 
+We substitue <i>x = 1/2</i> to obtain: 
+<p style="text-align:center">
+  <img src="../images/heapEqn2a.png" width=120 height=auto>
+</p>
 
 <strong>Sorting using heaps</strong>
 
