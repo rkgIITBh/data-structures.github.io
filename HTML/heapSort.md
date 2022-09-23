@@ -69,3 +69,5 @@ Once the heap is available, we can repeatedly use deleteMin operations to select
 append the deleted element in the sorted list. It produces a sorted list in time of O(<i>n</i> log <i>n</i>).
 Therefore, the time complexity for the heap sort is  O(<i>n</i> + <i>n</i> log <i>n</i>) or 
 O(<i>n</i> log <i>n</i>).
+
+[Back to Index](../index.md)
