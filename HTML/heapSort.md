@@ -53,5 +53,11 @@ is:
 <p style="text-align:center">
   <img src="../images/heapEqn1.png" width=400 height=auto>
 </p>
-
-
+The simplification of the geometric progression in above expression is as follow. We know 
+<p style="text-align:center">
+  <img src="../images/heapEqn2.png" width=200 height=auto>
+</p>
+Differentiation of both sides of the above equation gives us
+<p style="text-align:center">
+  <img src="../images/heapEqn3.png" width=200 height=auto>
+</p>
