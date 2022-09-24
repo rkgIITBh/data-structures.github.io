@@ -114,4 +114,6 @@ quickSort(A, p, r) {
 }
 ```
 
+[C Program for Quick Sort](../CODES/quickSort/index.md)
+
 [Back to Index](../index.md)
