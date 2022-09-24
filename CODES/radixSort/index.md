@@ -1,7 +1,7 @@
 ## C Program for Radix Sort
 
-The program below consists of five functions and a main function as driver program. We first
-create a structure which stores an array of numbers and the size of the array. We use a global
+The program below consists of five functions, and main() is the driver program. We first
+create a structure that stores an array of numbers and the size of the array. We use a global
 constant MAXSIZE for the capacity of the array. The function createArray() is used to create
 the array of MAXSIZE for storing the input. 
 
@@ -12,16 +12,16 @@ The helper functions are as follows:
 
 The purpose of extracting the maximum is to get the number of buckets we will require to 
 distribute the elements. We divide the maximum by the base of the number system. The number
-digits in the maximum is equal to the number divisions till the residue becomes zero. 
+of digits in the maximum equals the number of divisions until the residue becomes zero. 
 
 The other three functions are:
 
-- createArray(): creates storage for the array and also store its length.
+- createArray(): creates storage for the array and also stores its length.
 - bucketDistribution(): distributes the elements into buckets using counting sort
 - radixSort(): it calls bucketDistribution() repeatedly to perform the passes. The number of passes
 is equal to the maximum number of digit positions.
 
-We generate the input randomly using a random number generator taking time as seed. 
+We generate the input randomly using a random number generator, taking time as a seed. 
 
 ```
 #include <stdio.h>
