@@ -1,3 +1,5 @@
+## C Program for Quick Sort
+
 The main function in program for quck sort is partition(). We have assumed the last element as
 the pivot element. It returns the index position where we should place the pivot. The partitioning
 also places 
