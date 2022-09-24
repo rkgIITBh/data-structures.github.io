@@ -11,7 +11,7 @@ For example, if {170, 67, 39, 212, 98, 10, 5} is the input sequence, then prepen
 - Two zeros to all single digit numbers.
 
 The input sequence, thus, becomes {170, 067, 039, 212, 098, 010, 005}. In first and second passes
-the distribution of numbers to buckets are as shown in the two tables below.
+the distribution of numbers to buckets are as shown in the first rows of the figure below.
 
 <p style="text-align:center">
   <img src="../images/radixSortExample.png">
@@ -19,8 +19,9 @@ the distribution of numbers to buckets are as shown in the two tables below.
   
 At each pass, we distribute the numbers into the buckets in the sequence starting with bucket zero.
 On third pass, when we distribute the numbers to buckets, 005, 039, 067, 095, 098 are placed in
-bucket 0. The numbers 170 and 212 are placed in buckets 1 and 2. For sorted sequence, we empty
-the buckets starting from bucket number 0 in sequence as shown in the figure above. 
+bucket 0. The numbers 170 and 212 are placed in buckets 1 and 2. It is shown in the third row of
+the figure. For sorted sequence, we empty the buckets in sequence starting from bucket number zero. 
+
 
 [C Program for Radix Sort](../CODES/radixSort/index.md)
 
