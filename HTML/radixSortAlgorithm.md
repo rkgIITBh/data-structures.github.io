@@ -22,7 +22,7 @@ On third pass, when we distribute the numbers to buckets, 005, 039, 067, 095, 09
 bucket 0. The numbers 170 and 212 are placed in buckets 1 and 2. It is shown in the third row of
 the figure. For sorted sequence, we empty the buckets in sequence.
 
-- bkt-0 elements followed by bkt-1 and then bkt-2 elements
+- bkt-0 elements followed by bkt-1 and then bkt-2 elements as indicated.
 
 
 [C Program for Radix Sort](../CODES/radixSort/index.md)
