@@ -27,8 +27,8 @@ ARRAY * createArray(int n) {
 // A helper function to print an array
 void printArray(ARRAY *a) {
     int n = a->length;
-	for (int i = 0; i < n; i++)
-		printf("%d  ", a->arr[i]);
+    for (int i = 0; i < n; i++)
+	printf("%d  ", a->arr[i]);
     printf("\n");
 }
 
