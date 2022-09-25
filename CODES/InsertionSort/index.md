@@ -1,78 +1,76 @@
 ## C Program for Insertion Sort
 
-The program requires two helper functions.
-
-- One for generating a random set of input elements
-- The second one is for printing the elements
+The program requires one helper function for printing the elements of the array. The printArray()
+function was discussed earlier in the program for bubble sort. 
 
 As in the case of bubble sort, the input array is generated using a random number generator. It uses
-rand() and srand() functions. We have used time.h to seed the random number generator. The printArray()
-function was discussed earlier in the program for bubble sort. The code otherwise is easy to 
+rand() and srand() functions. We have used time.h to seed the random number generator. The code otherwise is easy to 
 follow.
 
 ```
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <ncurses.h>
 #define MAX 15
 
-void randomGen(int *a) {
-    int i, rnum, start, end;
-    int n = MAX;
-    printf("Enter Interval: ");
-    scanf("%d%d", &start, &end);
-    //printf("\n%d Random Numbers between %d and %d:\n", n, start, end);
-    srand(time(0));
-    for(i=0; i<n; i++) {
-        rnum = rand()%(end+1-start)+start;
-        a[i] = rnum;
-        //printf("%d\n", rnum);
-    }
-    getch();
-    return;
+typedef struct array {
+    int * arr;
+    int length;
+} ARRAY;
+
+// Create array of a given length
+ARRAY * createArray(int n) {
+    ARRAY * a;
+    a = (ARRAY *)malloc(sizeof(ARRAY));
+    a->length = n;
+    a->arr = (int *)malloc(sizeof(int)*n);
+    return a;
 }
 
-void printArray(int *a) {
-    int i, j = 0;
-    while (j < MAX) {
-        for (i = 0; i < 5; i++) {
-            if (i+j < MAX-1) 
-                printf("%3d  ", a[i+j]);
-            else 
-                printf("%3d  ", a[i+j]);
-        }
-        printf("\n"); // Print 5 elements in a row
-        j = j+5;
-    }
-    return;
+// Function to print elements in the array 
+void printArray(ARRAY *a) {
+    int n = a->length;
+	for (int i = 0; i < n; i++)
+		printf("%d  ", a->arr[i]);
+    printf("\n");
 }
 
-
-void insertionSort(int *a) {
-  int  i, j, n = MAX, gap, moved;
+void insertionSort(ARRAY *a) {
+  int  i, j, n = a->length, gap;
 
   for(i = 1; i < n; i++) {
-        gap = a[i];
+        gap = a->arr[i];
         j = i-1;
-        while(j >= 0 && a[j] > gap) {
-            a[j+1] = a[j];
+        while(j >= 0 && a->arr[j] > gap) {
+            a->arr[j+1] = a->arr[j];
             j--;
         }
-        a[j+1] = gap;
+        a->arr[j+1] = gap;
   } 
  
   return;
 }
 
+// Driver function for insertion sort
 int main() {
-    int A[MAX];
-    randomGen(A);
+    ARRAY * A;
+    A = createArray(MAX);
+    int n = A->length;
+    
+    // Generate and store random values
+    srand(time(0));
+    for(int i = 0; i < n; i++) {
+        int x = rand()%100;
+        A->arr[i] = x; 
+    }
+
     printf("\nUnsorted array\n");
     printArray(A);
+
     insertionSort(A);
     printf("\nSorted array\n");
     printArray(A);
+
     return 0;
 }
 ```
