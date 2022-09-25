@@ -8,116 +8,107 @@ merge as discussed.
 // Merge sort in C
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <ncurses.h>
-#define MAX 15
+#include <time.h>  // Required for random seed
+#define MAX 25
 
-void randomGen(int *a) {
-    int i, rnum, start, end;
-    int n = MAX;
-    printf("Enter Interval: ");
-    scanf("%d%d", &start, &end);
-    srand(time(0));
-    for(i=0; i<n; i++) {
-        rnum = rand()%(end+1-start)+start;
-        a[i] = rnum;
-    }
-    getch();
-    return;
+typedef struct array {
+    int * arr;
+    int length;
+} ARRAY;
+
+ARRAY * createArray(int n) {
+    ARRAY * a;
+    a = (ARRAY *)malloc(sizeof(ARRAY));
+    a->length = n;
+    a->arr = (int *)malloc(sizeof(int)*n);
+    return a;
 }
 
-void printArray(int *a) {
-    int i, j = 0;
-    while (j < MAX) {
-        for (i = 0; i < 5; i++) {
-            if (i+j < MAX-1) 
-                printf("%3d  ", a[i+j]);
-            else 
-                printf("%3d  ", a[i+j]);
+// A helper function to print an array
+void printArray(ARRAY *a) {
+    int n = a->length;
+	for (int i = 0; i < n; i++)
+		printf("%d  ", a->arr[i]);
+    printf("\n");
+}
+
+// In place merging of elements in an array
+void merge(ARRAY * a, int start, int mid, int end) {
+    int start2 = mid + 1;
+  
+    // If the direct merge is already sorted
+    if (a->arr[mid] <= a->arr[start2]) {
+        return;
+    }
+  
+    // Two pointers to maintain start
+    // of both arrays to merge
+    while (start <= mid && start2 <= end) {
+  
+        // If element 1 is in right place
+        if (a->arr[start] <= a->arr[start2]) {
+            start++;
         }
-        printf("\n"); // Print 5 elements in each line 
-        j = j+5;
+        else {
+            int value = a->arr[start2];
+            int index = start2;
+  
+            // Shift all the elements between element 1
+            // element 2, right by 1.
+            while (index != start) {
+                a->arr[index] = a->arr[index - 1];
+                index--;
+            }
+            a->arr[start] = value;
+  
+            // Update all the pointers
+            start++;
+            mid++;
+            start2++;
+        }
     }
 }
 
-// Merge two subarrays A and B into C 
-void merge(int *C, int p, int q, int r) {
-
-  // Create L ← A[p..q] and M ← A[q+1..r]
-  int m = q - p + 1;
-  int n = r - q;
-
-  int A[m], B[n];
-
-  for (int i = 0; i < m; i++)
-    A[i] = C[p + i];
-  for (int j = 0; j < n; j++)
-    B[j] = C[q + 1 + j];
-
-  // Maintain current index of sub-arrays and main array
-  int i, j, k;
-  i = 0;
-  j = 0;
-  k = p;
-
-  // Until we reach either end of either L or M, pick larger among
-  // elements A and B and place them in the correct position at C[p..r]
-  while (i < m && j < n) {
-    if (A[i] <= B[j]) {
-      C[k] = A[i];
-      i++;
-    } else {
-      C[k] = B[j];
-      j++;
+// Divide the array into two subarrays,
+// sort and merge them.
+void mergeSort(ARRAY * a, int l, int r) {
+    if (l < r) {
+        // Same as (l + r) / 2, but avoids overflow
+        // for large l and r
+        int m = l + (r - l) / 2;
+  
+        // Sort first and second halves
+        mergeSort(a, l, m);
+        mergeSort(a, m + 1, r);
+  
+        merge(a, l, m, r);
     }
-    k++;
-  }
-
-  // When we run out of elements in either A or B,
-  // pick up the remaining elements and put in C[p..r]
-  while (i < m) {
-    C[k] = B[i];
-    i++;
-    k++;
-  }
-
-  while (j < n) {
-    C[k] = B[j];
-    j++;
-    k++;
-  }
 }
 
-// Divide the array into two subarrays, sort them and merge them
-void mergeSort(int *C, int left, int right) {
-  if (left < right) {
-
-    // Recursive topdown division of input array into subarrays
-    // m is the point where the array is divided into two subarrays
-    int mid = left + (right - left) / 2;
-
-    mergeSort(C, left, mid);
-    mergeSort(C, mid + 1, right);
-
-    // Merge the sorted subarrays during the bottom up pass
-    merge(C, left, mid, right);
-  }
-}
-
-
+// Driver program 
 int main() {
-  int arr[MAX];
+    ARRAY * A; 
 
-  randomGen(arr);
+    A = createArray(MAX);
+    int n = A->length;
 
-  printf("\nUnsorted Array\n");
-  printArray(arr);
+    srand(time(0));
+    for(int i = 0; i < n; i++) {
+        int x = rand()%100;
+        A->arr[i] = x; // Get  random values in heap
+    }
 
-  mergeSort(arr, 0, MAX - 1);
+    printf("\nUnsorted Array\n");
+    printArray(A);
 
-  printf("Sorted array\n");
-  printArray(arr);
+    mergeSort(A, 0, MAX-1);
+
+    printf("Sorted array: \n");
+    printArray(A);
+    
+    return 0;
 }
+
 ```
 
 [Back to Merge Sort Algorithm](../../HTML/mergeSortAlgorithm.md)
