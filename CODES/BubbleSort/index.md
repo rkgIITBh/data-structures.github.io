@@ -9,54 +9,45 @@ main function. Therefore, the program can be copied as is and executed.
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <ncurses.h>
 #define MAX 15
 
-void randomGen(int *a) {
-    int i, rnum, start, end;
-    int n = MAX;
-    printf("Enter Interval: ");
-    scanf("%d%d", &start, &end);
-    //printf("\n%d Random Numbers between %d and %d:\n", n, start, end);
-    srand(time(0));
-    for(i=0; i<n; i++) {
-        rnum = rand()%(end+1-start)+start;
-        a[i] = rnum;
-        //printf("%d\n", rnum);
-    }
-    getch();
-    return;
+typedef struct array {
+    int * arr;
+    int length;
+} ARRAY;
+
+ARRAY * createArray(int n) {
+    ARRAY * a;
+    a = (ARRAY *)malloc(sizeof(ARRAY));
+    a->length = n;
+    a->arr = (int *)malloc(sizeof(int)*n);
+    return a;
 }
 
-void printArray(int *a) {
-    int i, j = 0;
-    while (j < MAX) {
-        for (i = 0; i < 5; i++) {
-            if (i+j < MAX-1) 
-                printf("%3d  ", a[i+j]);
-            else 
-                printf("%3d  ", a[i+j]);
-        }
-        printf("\n"); // Print 5 elements in a row
-        j = j+5;
-    }
+
+// A utility function to print an array
+void printArray(ARRAY *a) {
+    int n = a->length;
+	for (int i = 0; i < n; i++)
+		printf("%d  ", a->arr[i]);
+    printf("\n");
 }
 
-void swap(int *i, int *j) {
-    int tmp = *i;
-    *i = *j;
-    *j = tmp;
-    return;
+// Function to swap a pair of elements
+void swap(ARRAY* a, int i, int j) {
+	int t = a->arr[i];
+	a->arr[i] = a->arr[j]; 
+	a->arr[j] = t;
 }
 
-void bubbleSort(int *a) {
-  int  i, n = MAX;
+void bubbleSort(ARRAY *a) {
+  int  i, n = a->length;
   int swapped;
   do { 
     swapped = 0; // Value 0 indicates no swap
     for(i = 0; i < n-1; i++) {
-      if (a[i] > a[i + 1]) { 
-        swap(&a[i], &a[i + 1]); // Exchange a[i] and a[i+1]
+      if (a->arr[i] > a->arr[i + 1]) { 
+        swap(a, i, i + 1); // Exchange a->arr[i] and a->arr[i+1]
         swapped = 1; // Value 1 indicate at least one swap
       }
     }
@@ -67,16 +58,27 @@ void bubbleSort(int *a) {
 }
 
 int main() {
-    int A[MAX];
-    randomGen(A);
+    ARRAY * A;
+
+    A = createArray(MAX);
+    int n = A->length;
+    
+    // Generate and store random values
+    srand(time(0));
+    for(int i = 0; i < n; i++) {
+        int x = rand()%100;
+        A->arr[i] = x; 
+    }
+ 
     printf("\nUnsorted array\n");
     printArray(A);
+
     bubbleSort(A);
     printf("\nSorted array\n");
     printArray(A);
+
     return 0;
 }
-
 ```
 
 [Back to Bubble Sort Algorithm Page](../../HTML/bubbleSortingAlgorithm.md)
