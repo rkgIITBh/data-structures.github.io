@@ -36,5 +36,5 @@ process.
   
   <img src="../images/shellSortExample1.png">
 </p>
-We use a reducing sequences {5, 3, 1, 0} for creating the sublists. When the gap is 0, each pair of adjacent elements
-are compared and swapped if necessary.
+We use a reducing sequences {5, 2, 1, 0} for creating the sublists. When the gap is 0, each pair of adjacent elements
+are compared and swapped if necessary. In last pass, we require only 2 swaps.
