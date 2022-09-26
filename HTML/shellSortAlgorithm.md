@@ -16,8 +16,8 @@ In the second pass <i>g = n/4</i>. So we have to carray independent sorting of t
 sub-sequences of the input 
 
 - The subsequence: {arr[0], arr[n/4], arr[n/2], arr[3n/4]}
-- The subsequence: {arr[1], arr[n/4+1], arr[n/2+1], arr[3n/4+1]}
-- The subsequence: {arr[2], arr[n/4+2], arr[n/2+2], arr[3n/4+2]}
+- The subsequence: {arr[1], arr[(n/4)+1], arr[(n/2)+1], arr[(3n/4)+1]}
+- The subsequence: {arr[2], arr[(n/4)+2], arr[(n/2)+2], arr[(3n/4)+2]}
 - and so on.
 
 In general, if we sort the subarrays consisting of elements at a gap of <i>g</i> then 
@@ -27,4 +27,10 @@ In general, if we sort the subarrays consisting of elements at a gap of <i>g</i>
 - The subsequence: {arr[2], arr[g+2], arr[2g+2], arr[3g+2]. arr[kg+2]}
 - and so on.
 
-For sorting the subsequences we use insertion sort. Assuming the current element to be arr[ is sorted 
+We use insertion sort to sort the subsequences. After sorting all subsequences, we say the original sequence to 
+be g-sorted, where g is the gap. So, the sequence is (n/2)-sorted, (n/4)-sorted, (n/8)-sorted and so on. When
+it is 0-sorted the sorting is complete. Let us consider the example given below to understand sorting
+process.
+<p style="text-align:center">
+  <img src="../images/shellSortExample.png">
+</p>
