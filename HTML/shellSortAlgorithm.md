@@ -22,7 +22,7 @@ sub-sequences of the input
 
 In general, if we sort the subarrays consisting of elements at a gap of <i>g</i> then 
 
-- The subsequence: {arr[0], arr[g], arr[2g], arr[3g], ..., arr[kg], where k = &lfloor;n/g&floor;
+- The subsequence: {arr[0], arr[g], arr[2g], arr[3g], ..., arr[kg]}, where k = &lfloor;n/g&rfloor;
 - The subsequence: {arr[1], arr[g+1], arr[2g+1], arr[3g+1]. arr[kg+1]}
 - The subsequence: {arr[2], arr[g+2], arr[2g+2], arr[3g+2]. arr[kg+2]}
 - and so on.
