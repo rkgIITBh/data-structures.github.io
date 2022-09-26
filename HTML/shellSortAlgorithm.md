@@ -32,7 +32,7 @@ be g-sorted, where g is the gap. So, the sequence is (n/2)-sorted, (n/4)-sorted,
 it is 0-sorted the sorting is complete. Let us consider the example given below to understand sorting
 process.
 <p style="text-align:center">
-  <img src="../images/shellSortExample.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/shellSortExample3.png">
+  <img src="../images/shellSortExample.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/shellSortExample2.png">
   
-  <img src="../images/shellSortExample2.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/shellSortExample4.png">
+  <img src="../images/shellSortExample3.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/shellSortExample4.png">
 </p>
