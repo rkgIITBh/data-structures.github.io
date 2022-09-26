@@ -36,3 +36,5 @@ process.
   
   <img src="../images/shellSortExample3.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/shellSortExample4.png">
 </p>
+We use a reducing sequences {5, 3, 1, 0} for creating the sublists. When the gap is 0, each pair of adjacent elements
+are compared and swapped if necessary.
