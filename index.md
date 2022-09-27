@@ -64,6 +64,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Quick Sort Analysis](HTML/analysisQuickSort.md)
 - [Quick Sort Algorithm](HTML/quickSortAlgorithm.md)
 - [Heap Sort Algorithm](HTML/heapSortAlgorithm.md)
+- [Shell Sort Algorithm](HTML/shellSortAlgorithm.md)
 - [Radix Sort Algorithm](HTML/radixSortAlgorithm.md)
 - [Merge Sort Algorithm](HTML/mergeSortAlgorithm.md)
 - [Insertion Sort Algorithm](HTML/insertionSort.md)
