@@ -66,5 +66,6 @@ The average case time for shell sort is the same as the best case. Experiments w
 gap sequences indicate that the worst-case time for shell sort can be brought down to 
 O(<i>n</i>log <i>n</i>). 
 
+[C Program for Shell Sort](../CODES/shellSort/index.md)
 
 [Back to Index](../index.md)
