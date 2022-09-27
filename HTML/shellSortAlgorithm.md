@@ -13,10 +13,9 @@ We refer the interval length between a pair of the elements as gap <i>g</i> in o
 For sorting the sublists we use insertion sort. Let  us represent the input sequence by
 arr[0], arr[1], ..., arr[n-1]. Shell sort method is as follows:
 
-- When <i>g</i> = n/2</i>, we gather the elements at a gap of n/2 starting with first element.
-- It generates <i>n/2</i> subsequences each consisting of a pair of elements 
-- We use insertion sort to sort the subsequences
-- Repeat partitioning and sorting reducing the interval by half until interval becomes 0.
+- Start with <i>g</i> = &lfloor;n/2&rfloor;</i> to defines sublists.
+- Use insertion sort to sort the resulting subsequences
+- Repeat partitioning and sorting with g = &lfloor;g/2&rfloor; until g &gt; 0.
 - Now we compare and swap adjacent pair of elements if necessary.  
 
 In particular, for the second pass <i>g = n/4</i>. So we have to carray independent sorting 
