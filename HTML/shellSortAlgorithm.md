@@ -22,7 +22,7 @@ arr[0], arr[1], ..., arr[n-1]. Shell sort method is as follows:
 In particular, for the second pass <i>g = n/4</i>. So we have to carray independent sorting 
 of the following sub-sequences of the input 
 
-- The subsequence: {arr[0], arr[n/4], arr[n/2], arr[3n/4]}
+- The subsequence: {arr[0], arr[n/4], arr[n/2], arr[3n/4], a[n]}
 - The subsequence: {arr[1], arr[(n/4)+1], arr[(n/2)+1], arr[(3n/4)+1]}
 - The subsequence: {arr[2], arr[(n/4)+2], arr[(n/2)+2], arr[(3n/4)+2]}
 - and so on.
@@ -49,6 +49,17 @@ Notice that we do not physically create or partition to define the sublists. The
 procedure for sorting maintains the gap logically while sorting. 
 
 As far as time complexity is concerned, the number of passes is O(log <i>n</i>). Insertion
-sort 
+sort takes worst-case time of O(<i>n<sup>2</sup></i>. So, the worst-case time is computed
+as follows:
+
+- Time for n/2 sublists, each of size 2-elements, is n/2 * 2<sup>2</sup>
+- Time for n/4 sublists, each of size 4-elements, is n/4 * 4<sup>2</sup>
+- Time for n/8 sublists, each of size 8-elements, is n/4 * 8<sup>2</sup>
+- and so on.
+
+Therefore, the expression for time worst-case complexity is: 
+<p style="text-align:center">
+  n<sup>2</sup>(1 + 1/2 + 1/2<sup>2</sup> + ...+ 1/2<sup>log (n-1)</sup>) = 2n<sup>2</sup>.
+</p>
 
 [Back to Index](../index.md)
