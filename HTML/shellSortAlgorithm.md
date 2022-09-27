@@ -61,6 +61,10 @@ Therefore, the expression for time worst-case complexity is:
   n<sup>2</sup>(1 + 1/2 + 1/2<sup>2</sup> + ...+ 1/2<sup>log (n-1)</sup>) = 2n<sup>2</sup>.
 </p>
 
-The best-case time occurs when the input is a sorted sequence.
+The best-case time occurs when the input is a sorted sequence. The best-case time is O(<i>n</i>log <i>n</i>).
+Average case time for shell sort is the same as the best-case. Experiments with different 
+gap sequences indicate that worst-case time for shell sort can be brought down to 
+O(<i>n</i>log <i>n</i>). 
+
 
 [Back to Index](../index.md)
