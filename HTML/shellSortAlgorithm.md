@@ -52,14 +52,16 @@ As far as time complexity is concerned, the number of passes is O(log <i>n</i>).
 sort takes worst-case time of O(<i>n<sup>2</sup></i>. So, the worst-case time is computed
 as follows:
 
-- Time for n/2 sublists, each of size 2-elements, is n/2 * 2<sup>2</sup>
-- Time for n/4 sublists, each of size 4-elements, is n/4 * 4<sup>2</sup>
-- Time for n/8 sublists, each of size 8-elements, is n/4 * 8<sup>2</sup>
+- Worst-case time for the last pass, i.e., sorting of elements 1-apart is n<sup>2</sup>
+- Worst-case time for the pass before last, i.e., sorting of elements 2-apart is 2 * (n/2)<sup>2</sup>
+- Worst-case time for sorting of elements 4-apart is 4 * (n/4)<sup>2</sup>
 - and so on.
 
 Therefore, the expression for time worst-case complexity is: 
 <p style="text-align:center">
   n<sup>2</sup>(1 + 1/2 + 1/2<sup>2</sup> + ...+ 1/2<sup>log (n-1)</sup>) = 2n<sup>2</sup>.
 </p>
+
+The best-case time occurs when the input is a sorted sequence.
 
 [Back to Index](../index.md)
