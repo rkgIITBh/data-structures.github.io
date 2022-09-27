@@ -1,19 +1,26 @@
 ## Shell Sort Algorithm
 
-Shell sort is a generalization of insertion sort. It creates logical subarrays of a given array
-by gathering elements at a fixed distance called interval. Initially, interval length is 
-<i>n/2</i>, where <i>n</i> is the number of elements to be sorted. We reduce the interval length
-in each pass by half. When interval length is 1, we use compare-and-swap to sort the array.
-Many researchers used different interval lengths to explore shell sort's efficiency. However,
-in our description we use conventional interval length starting with <i>n/2</i>. 
+Shell sort uses a simple partitioning method over the given input sequence to gather and create 
+logical subsequences. The mutual distance between adjacent elements in a sublist is a fixed
+interval. Initially, interval length is <i>n/2</i>, where <i>n</i> is the number of elements in
+the input. It requires log <i>n</i> passes of partitioning and sorting. We reduce the interval
+length of partition by half in each pass. When the interval length is 0, we use compare-and-swap
+between adjacent pair of elements to sort the array. Many researchers experimented with different
+sequence of reducing interval lengths to explore shell sort's efficiency. However, in our 
+description we use conventional interval length starting with <i>n/2</i>. 
 
-We consider the elements at a gap of <i>g</i> and use insertion sort process to sort the
-elements. For example, when <i>g</i> = n/2</i>, we compare elements at a gap of n/2 starting
-with first element. Assuming that input sequence is represented by arr[0], arr[1], ..., arr[n-1],
-we have to sort <i>n/2</i> subsequences, where each subsequence consists of one pair of elements.
+We refer the interval length between a pair of the elements as gap <i>g</i> in our description.
+For sorting the sublists we use insertion sort. Let  us represent the input sequence by
+arr[0], arr[1], ..., arr[n-1]. Shell sort method is as follows:
 
-In the second pass <i>g = n/4</i>. So we have to carray independent sorting of the following 
-sub-sequences of the input 
+- When <i>g</i> = n/2</i>, we gather the elements at a gap of n/2 starting with first element.
+- It generates <i>n/2</i> subsequences each consisting of a pair of elements 
+- We use insertion sort to sort the subsequences
+- Repeat partitioning and sorting reducing the interval by half until interval becomes 0.
+- Now we compare and swap adjacent pair of elements if necessary.  
+
+In particular, for the second pass <i>g = n/4</i>. So we have to carray independent sorting 
+of the following sub-sequences of the input 
 
 - The subsequence: {arr[0], arr[n/4], arr[n/2], arr[3n/4]}
 - The subsequence: {arr[1], arr[(n/4)+1], arr[(n/2)+1], arr[(3n/4)+1]}
@@ -27,14 +34,21 @@ In general, if we sort the subarrays consisting of elements at a gap of <i>g</i>
 - The subsequence: {arr[2], arr[g+2], arr[2g+2], arr[3g+2]. arr[kg+2]}
 - and so on.
 
-We use insertion sort to sort the subsequences. After sorting all subsequences, we say the original sequence to 
-be g-sorted, where g is the gap. So, the sequence is (n/2)-sorted, (n/4)-sorted, (n/8)-sorted and so on. When
-it is 0-sorted the sorting is complete. Let us consider the example given below to understand sorting
-process.
+After sorting all subsequences with gap <i>g</i>, we say the original sequence is g-sorted.
+In summary, the input is (n/2)-sorted, (n/4)-sorted, (n/8)-sorted and so on. When it gets
+0-sorted then the sorting is complete. Let us understand sorting process with an example.
+Figure below illustrates the process of defining subsequences and sorting them.
 <p style="text-align:center">
   <img src="../images/shellSortExample.png">
   
   <img src="../images/shellSortExample1.png">
 </p>
-We use a reducing sequences {5, 2, 1, 0} for creating the sublists. When the gap is 0, each pair of adjacent elements
-are compared and swapped if necessary. In last pass, we require only 2 swaps.
+The input consists of 10 elements. We use a reducing interval sequence {5, 2, 1, 0} for 
+creating the sublists. In last pass, we 0-sort the sequence which requires only 2 swaps.
+Notice that we do not physically create or partition to define the sublists. The 
+procedure for sorting maintains the gap logically while sorting. 
+
+As far as time complexity is concerned, the number of passes is O(log <i>n</i>). Insertion
+sort 
+
+[Back to Index](../index.md)
