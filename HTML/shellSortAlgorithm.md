@@ -4,21 +4,21 @@ Shell sort uses a simple partitioning method over the given input sequence to ga
 logical subsequences. The mutual distance between adjacent elements in a sublist is a fixed
 interval. Initially, interval length is <i>n/2</i>, where <i>n</i> is the number of elements in
 the input. It requires log <i>n</i> passes of partitioning and sorting. We reduce the interval
-length of partition by half in each pass. When the interval length is 0, we use compare-and-swap
-between adjacent pair of elements to sort the array. Many researchers experimented with different
+length of the partition by half in each pass. When the interval length is 0, we use compare-and-swap
+between adjacent pairs of elements to sort the array. Many researchers experimented with a different
 sequence of reducing interval lengths to explore shell sort's efficiency. However, in our 
 description we use conventional interval length starting with <i>n/2</i>. 
 
-We refer the interval length between a pair of the elements as gap <i>g</i> in our description.
-For sorting the sublists we use insertion sort. Let  us represent the input sequence by
+In our description, we refer to the interval length between a pair of elements as gap <i>g</i>.
+For sorting the sublists, we use insertion sort. Let  us represent the input sequence by
 arr[0], arr[1], ..., arr[n-1]. Shell sort method is as follows:
 
 - Start with <i>g</i> = &lfloor;<i>n/2</i>&rfloor;</i> to defines sublists.
 - Use insertion sort to sort the resulting subsequences
 - Repeat partitioning and sorting with <i>g</i> = &lfloor;<i>g/2</i>&rfloor; until <i>g</i> &gt; 0.
-- Now we compare and swap adjacent pair of elements if necessary.  
+- Now, we compare and swap adjacent pairs of elements if necessary.  
 
-In particular, for the second pass <i>g = n/4</i>. So we have to carray independent sorting 
+In particular, for the second pass <i>g = n/4</i>. So we have to carry out independent sorting 
 of the following sub-sequences of the input 
 
 - The subsequence: {arr[0], arr[n/4], arr[n/2], arr[3n/4], a[n]}
@@ -34,16 +34,16 @@ In general, if we sort the subarrays consisting of elements at a gap of <i>g</i>
 - and so on.
 
 After sorting all subsequences with gap <i>g</i>, we say the original sequence is g-sorted.
-In summary, the input is (n/2)-sorted, (n/4)-sorted, (n/8)-sorted and so on. When it gets
-0-sorted then the sorting is complete. Let us understand sorting process with an example.
-Figure below illustrates the process of defining subsequences and sorting them.
+In summary, the input is (n/2)-sorted, (n/4)-sorted, (n/8)-sorted, and so on. When it gets
+0-sorted, then the sorting is complete. Let us understand the sorting process with an example.
+The figure below illustrates the process of defining subsequences and sorting them.
 <p style="text-align:center">
   <img src="../images/shellSortExample.png">
   
   <img src="../images/shellSortExample1.png">
 </p>
 The input consists of 10 elements. We use a reducing interval sequence {5, 2, 1, 0} for 
-creating the sublists. In last pass, we 0-sort the sequence which requires only 2 swaps.
+creating the sublists. In the last pass, we 0-sort the sequence, which requires only two swaps.
 Notice that we do not physically create or partition to define the sublists. The 
 procedure for sorting maintains the gap logically while sorting. 
 
@@ -62,8 +62,8 @@ Therefore, the expression for time worst-case complexity is:
 </p>
 
 The best-case time occurs when the input is a sorted sequence. The best-case time is O(<i>n</i>log <i>n</i>).
-Average case time for shell sort is the same as the best-case. Experiments with different 
-gap sequences indicate that worst-case time for shell sort can be brought down to 
+The average case time for shell sort is the same as the best case. Experiments with different 
+gap sequences indicate that the worst-case time for shell sort can be brought down to 
 O(<i>n</i>log <i>n</i>). 
 
 
