@@ -39,3 +39,8 @@ collision resoultion techniques separately when describing closed hasing.
   <img src="../images/hashingWithOpenAddressing.png">
 </p>
  
+As explained above hash functions are critical to working of hash operation. We interchangeably use 
+hash operations to mean the dictionary operations insert, search and delete. In the next blog we discuss about hash
+functions. 
+
+[Back to Index](../index.md)
