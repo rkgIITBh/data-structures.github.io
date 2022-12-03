@@ -59,6 +59,10 @@ develop code phobia. The theory is required, but a proper balance is needed.
 - [Graph Terminology](HTML/graphTerminology.md)
 - [Introduction to graphs](HTML/graphIntro.md)
 
+## Hashing
+
+- [Introduction to Hashing](HTML/hashing_intro.md)
+
 ## Sorting Algorithm
 
 - [Quick Sort Analysis](HTML/analysisQuickSort.md)
