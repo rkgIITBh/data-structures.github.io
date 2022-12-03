@@ -30,5 +30,12 @@ is given below.
 <p style="text-align:center">
   <img src="../images/hashingWithChaining.png">
 </p>
- 
+Hashing with open addressing, also known as closed hashing, uses table slots directly to store elements. 
+The collisions, where the elements hash to same
+table slots are few. There is a set of collision resolution techniques for resolution of collisions. Some of the simple
+collision resolution techniques are known as linear probing, quadratic probing, or random probing. We will talk more about
+collision resoultion techniques separately when describing closed hasing.
+<p style="text-align:center">
+  <img src="../images/hashingWithOpenAddressing.png">
+</p>
  
