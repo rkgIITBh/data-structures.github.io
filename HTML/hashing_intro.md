@@ -11,7 +11,7 @@ most clever part of the suggested scheme is computing the index for an element. 
 time, the index should be computable in O(1) time. But the question is: how do we actually compute index in O(1) time?
 The answer is to define hash function. 
 
-A hash function function is a mapping <i>h:x &#8594; i<i>, where <i>x</i> is element of the table and <i>i &#8712; {0, 1, 2 ... }</i>.
+A hash function function is a mapping <i>h:x &#8594; i</i>, where <i>x</i> is element of the table and <i>i &#8712; {0, 1, 2 ... }</i>.
 The toughest part of hashing is to design a the hash function which spreads the elements or symbols evenly among the 
 available table slots. How does spreading evenly help? More precisely, if more than one symbols maps to the same index then 
 attempt to retrieve one specific value may actually produce some random value that we are not interested. To make sense of
