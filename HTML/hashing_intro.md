@@ -27,5 +27,8 @@ to same index are chained togther in linked list. The table index actully points
 desired element we have to traverse the linked list. The important aspect of this type of hashing is to ensure that only
 O(1) items may collide with same hash value when hash function is applied. The picture of hashing by separate chaining
 is given below.
+<p style="text-align:center">
+  <img src="../images/hashingWithChaining.png">
+</p>
  
  
