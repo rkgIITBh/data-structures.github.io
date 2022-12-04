@@ -8,3 +8,10 @@ $$j = 0, 1, \ldots, m-1$$ to be occupied equally likely. <br>
 <p style="text-align:center">
   $$\sum_{k|h(k) = j} P(k) = \frac{1}{m}$$
 </p>
+In hashing by separate chaining, the keys that map to the same table slot are chanined together in the form of a linked list. The
+hash table contains pointers to these linked list. In other words, the hash table is an array of ponters of size $$m$$.
+The expected length of each linked list is $$\frac{n}{m}$$ which is known as load factor and denoted by $$\alpha$.<br>
+Recall that the hashing by chaining can be viewed pictorially as follows:
+<p style="text-align:center">
+  <img src="../images/hashingByChaining.png>
+</p>  
