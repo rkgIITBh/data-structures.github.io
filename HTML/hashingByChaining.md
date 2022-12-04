@@ -13,5 +13,5 @@ hash table contains pointers to these linked list. In other words, the hash tabl
 The expected length of each linked list is $$\frac{n}{m}$$ which is known as load factor and denoted by $$\alpha$$.<br>
 Recall that the hashing by chaining can be viewed pictorially as follows:
 <p style="text-align:center">
-  <img src="../images/hashingBySeparateChaining.png">
+  <img src="../images/hashingBySeparateChaning.png">
 </p>  
