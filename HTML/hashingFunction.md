@@ -36,6 +36,7 @@ Let us try find out the conditions for which division function may work. We assu
 </p>
 
 $(".latex").latex();
+
 <div class="latex">  
     \int_{0}^{\pi}\frac{x^{4}\left(1-x\right)^{4}}{1+x^{2}}dx =\frac{22}{7}-\pi  
 </div>
