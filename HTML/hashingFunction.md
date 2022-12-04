@@ -76,9 +76,9 @@ table slot. <br>
 
 Let us examine some examples to find out how multiplication function spreads the hash values. Let $$m = 100$$ and $$a = 1/3$$ <br>
 
-- For $$k = 10, \lfloor 100*(10/3)\rfloor = 33$$
-- For $$k = 11, \lfloor 100*(11/33\rfloor = 66$$
-- For $$k = 12, \lfloor 100*(12/33\rfloor = 99$$
+- For $$k = 10, \lfloor 100*(10/3)\rfloor = 33$$<br>
+- For $$k = 11, \lfloor 100*(11/33\rfloor = 66$$<br>
+- For $$k = 12, \lfloor 100*(12/33\rfloor = 99$$<br>
 
 According to Knuth a good choice for $$a = \left(\sqrt{5}-1\right)/2$$.<br>
 
@@ -105,8 +105,8 @@ equal length. We add these parts and ignore the last carry. For example, assume 
 5678, 345 and 568901. Let us divide each key into parts of length 2 each. Then parts of 5678 are: 56 and 78. Adding the two
 parts we get 134. After ignoring last carry 1, we get the hash value 34. Similarly, hash of other two numbers are:<br>
 
-- $$h(345) = 34+5 = 39$$
-- $$h(568901) = 56+89+01 = 46$$ (ignoring the carry 1)
+- $$h(345) = 34+5 = 39$$<br>
+- $$h(568901) = 56+89+01 = 46$$ (ignoring the carry 1)<br>
 
 There are other possibilities of designing hash functions. We described only a few well known functions. We leave it to the
 readers to explore more functions. 
