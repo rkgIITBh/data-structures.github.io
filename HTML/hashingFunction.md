@@ -57,7 +57,8 @@ Since $$b \equiv 1\mod m$$, we can replace it by $$(qm+1)$$. So, the RHS express
 <p style="text-align:center">
   $$k \mod m = \left(\sum_0^{r-1} k_i (qm+1)\right) \mod m = \sum_0^{r-1} k_i \mod m$$ 
 </p>
-
+Hence, base value $$b = 2$$ or $$b = 10$$ are not good for division hash function are not good. Overall analysis points to the
+fact that division algorithm is bad.<br>
 
 The next function is known as multiplication function. It relies on finding product of <i>x</i> by a randomly chosen fraction
 between 0 and 1 and extracting the middle bits of 
