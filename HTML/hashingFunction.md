@@ -1,3 +1,22 @@
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
 ## Hash Functions
 
 Hashing uses a hash function to map a key (element) to an index position in hash table. The function should have the following
@@ -35,10 +54,7 @@ Let us try find out the conditions for which division function may work. We assu
   <i>x</i> mod <i>m</i> = &#40; &#8721;<sup>r</sup><sub>0</sub> <i>x<sub>i</sub> b<sup>i</sup></i> &#41; mod <i>m</i>
 </p>
 
-<script
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-  type="text/javascript">
-</script>
+
 $$V_{sphere} = \frac{4}{3}\pi r^3$$
 
 
