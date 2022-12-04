@@ -66,4 +66,8 @@ fraction in binary. The figure below depicts the long hand process of multiplica
 <p style="text-align:center">
   <img src="../images/hashMultiplicationFunction.png">
 </p>
-
+So, if we take $$r$$ MSBs from the LSB of the product, the extracted value depends on the product. Mathematical expression of the 
+multiplication function is:<br>
+<p style="text-align:center">
+  $$\lfloor m.(k.a \mod 1)\rfloor$$ 
+</p>
