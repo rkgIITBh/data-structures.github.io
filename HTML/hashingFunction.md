@@ -96,6 +96,8 @@ function distributes the keys more evenly. Division function leads to more colli
 | 193456   | 383           | 456 |
 | 923456   | 195           | 456 |
   
-  
+Midsquare and folding hash functions are quite simple. Midsquare function first squares the given key value and extracts a 
+squence of $$r$$ middle digits from the result and treats it the hash value. Then extracted value depends on all digits
+as it is extracted from middle of the product $$k*k$$. <br>   
 
 
