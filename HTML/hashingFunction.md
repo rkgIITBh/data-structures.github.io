@@ -64,6 +64,6 @@ The next function is known as multiplication function. It relies on finding prod
 between 0 and 1 and extracting the middle bits of the product. Let us view the process of multiplication of a value by a 
 fraction in binary. The figure below depicts the long hand process of multiplication. 
 <p style="text-align:center">
-  <img src="../imgages/hashMultiplicationFunction.png">
+  <img src="../images/hashMultiplicationFunction.png">
 </p>
 
