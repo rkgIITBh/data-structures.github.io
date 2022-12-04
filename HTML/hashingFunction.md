@@ -81,3 +81,6 @@ Let us examine some examples to find out how multiplication function spreads the
 - For $$k = 12, \lfloor 100*(12/33\rfloor = 99$$
 
 According to Knuth a good choice for $$a = \left(\sqrt{5}-1\right)/2$$.<br>
+
+|----------|---------------|------------|
+| 123456 | 4              | 456 |
