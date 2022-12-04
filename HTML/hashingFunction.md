@@ -71,3 +71,8 @@ multiplication function is:<br>
 <p style="text-align:center">
   $$\lfloor m.(k.a \mod 1)\rfloor$$ 
 </p>
+The value $$ k.a \mod 1$$ gives the fractional part of the $$w$$ LSBs of the product. This value multiplied by $$m$$ gives the 
+table slot. <br>
+
+Let us examine some examples to find out how multiplication function spreads the hash values. Let $$m = 100$$ and $$a = 1/3$$ <br>
+
