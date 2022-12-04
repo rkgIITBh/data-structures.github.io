@@ -55,7 +55,7 @@ Let us try find out the conditions for which division function may work. We assu
 </p>
 Since $$b \equiv 1\mod m$$, we can replace it by $$(qm+1)$$. So, the RHS expression of the above equation becomes<br>
 <p style="text-align:center">
-  $$k \mod m = \left(\sum_0^{r-1} k_i (qm+1)\right) \mod m $$
+  $$k \mod m = \left(\sum_0^{r-1} k_i (qm+1)\right) \mod m = \sum_0^{r-1} k_i \mod m$$ 
 </p>
 
 
