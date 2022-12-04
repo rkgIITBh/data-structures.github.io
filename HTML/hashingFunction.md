@@ -35,7 +35,6 @@ Let us try find out the conditions for which division function may work. We assu
   <i>x</i> mod <i>m</i> = &#40; &#8721;<sup>r</sup><sub>0</sub> <i>x<sub>i</sub> b<sup>i</sup></i> &#41; mod <i>m</i>
 </p>
 
-$(".latex").latex();
 
 <div class="sourceCode" id="cb29"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1"></a>$$f(x) = x^2 - x^\frac{1}{\pi}$$</span></code></pre></div>
 
