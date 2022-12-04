@@ -15,3 +15,10 @@ Recall that the hashing by chaining can be viewed pictorially as follows:
 <p style="text-align:center">
   <img src="../images/hashingBySeparateChaning.png">
 </p>  
+The searching for an element in the hash table requires two steps:
+
+1. Compute the hash value of the element
+2. Index the table using the hash value to reach linked list and search it for the element.
+
+The first step requires a time of O(1), and searching linked list containing $$\alpha$$ elements requires time of $$\alpha$$. 
+Therefore, the searching for an element requires time of $$(1+\alpha)$$.
