@@ -34,6 +34,8 @@ Let us try find out the conditions for which division function may work. We assu
 <p style="text-align:center">
   <i>x</i> mod <i>m</i> = &#40; &#8721;<sup>r</sup><sub>0</sub> <i>x<sub>i</sub> b<sup>i</sup></i> &#41; mod <i>m</i>
 </p>
+
+$(".latex").latex();
 <div class="latex">  
     \int_{0}^{\pi}\frac{x^{4}\left(1-x\right)^{4}}{1+x^{2}}dx =\frac{22}{7}-\pi  
 </div>
