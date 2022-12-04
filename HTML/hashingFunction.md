@@ -82,6 +82,9 @@ Let us examine some examples to find out how multiplication function spreads the
 
 According to Knuth a good choice for $$a = \left(\sqrt{5}-1\right)/2$$.<br>
 
+A comparision of two hash functions: division and multiplication is provided in the table below. It shows that multiplicative
+function distributes the keys more evenly. Division function leads to more collisions. 
+
 <div style="text-align:center">
 
 | Key      | $$\lfloor m*(k*a\mod 1)\rfloor$$ | $$k\mod m$$|
