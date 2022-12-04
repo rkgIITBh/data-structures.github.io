@@ -62,6 +62,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 ## Hashing
 
 - [Introduction to Hashing](HTML/hashing_intro.md)
+- [Well-Known Hash Functions](HTML/hashing_intro.md)
 
 ## Sorting Algorithm
 
