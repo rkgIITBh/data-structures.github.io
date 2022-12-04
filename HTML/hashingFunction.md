@@ -32,7 +32,7 @@ for <i>m</i> may not work out.
 Let us try find out the conditions for which division function may work. We assume the base of the number system to be
 <i>b</i> such that <i>b</i> &#8801; 1 (mod <i>m</i>). Now consider a key value of the form
 <p style="text-align:center">
-  <i>x</i> mod <i>m</i> = &#40; &#8721;<sup>r</sup> <i>x<sub>i</sub> b<sup>i</sup></i> &#41; mod <i>m</i>
+  <i>x</i> mod <i>m</i> = &#40; &#8721;<sup>r</sup><sub>0</sub> <i>x<sub>i</sub> b<sup>i</sup></i> &#41; mod <i>m</i>
 </p>
 
 
