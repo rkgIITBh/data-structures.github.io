@@ -53,8 +53,10 @@ Let us try find out the conditions for which division function may work. We assu
 <p style="text-align:center">
   $$k \mod m = \left(\sum_0^{r-1} k_i b^i\right) \mod m $$
 </p>
-
-
+Since $$b \equiv 1\mod m$$, we can replace it by $$(qm+1)$$. So, the RHS expression of the above equation becomes
+<p style="text-align:center">
+  $$k \mod m = \left(\sum_0^{r-1} k_i (qm+1)\right) \mod m $$
+</p>
 
 
 The next function is known as multiplication function. It relies on finding product of <i>x</i> by a randomly chosen fraction
