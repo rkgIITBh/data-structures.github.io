@@ -82,6 +82,8 @@ Let us examine some examples to find out how multiplication function spreads the
 
 According to Knuth a good choice for $$a = \left(\sqrt{5}-1\right)/2$$.<br>
 
+<div style="text-align:center">
+
 | Key      | $$\lfloor m*(k*a\mod 1)\rfloor$$ | $$k\mod m$$|
 |----------|-------------: |----------: |
 | 123456   | 4             | 456 |
@@ -91,4 +93,7 @@ According to Knuth a good choice for $$a = \left(\sqrt{5}-1\right)/2$$.<br>
 | 129456   | 208           | 456 |
 | 193456   | 383           | 456 |
 | 923456   | 195           | 456 |
+  
+  
+  </div>
 
