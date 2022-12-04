@@ -76,3 +76,8 @@ table slot. <br>
 
 Let us examine some examples to find out how multiplication function spreads the hash values. Let $$m = 100$$ and $$a = 1/3$$ <br>
 
+- For $$k = 10, \lfloor 100*(10/3)\rfloor = 33$$
+- For $k = 11, \lfloor 100*(11/33\rfloor = 66$$
+- For $k = 12, \lfloor 100*(12/33\rfloor = 99$$
+
+According to Knuth a good choice for $$a = \left(\sqrt{5}-1\right)/2$$.<br>
