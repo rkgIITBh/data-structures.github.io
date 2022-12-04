@@ -51,7 +51,7 @@ for <i>m</i> may not work out.
 Let us try find out the conditions for which division function may work. We assume the base of the number system to be
 <i>b</i> such that <i>b</i> &#8801; 1 (mod <i>m</i>). Now consider a key value of the form
 <p style="text-align:center">
-  $$k \mod m = \left(\sum_0^{r-1} k_i b^i\right) \mod m 
+  $$k \mod m = \left(\sum_0^{r-1} k_i b^i\right) \mod m $$
 </p>
 
 
