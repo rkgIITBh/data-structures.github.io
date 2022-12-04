@@ -60,7 +60,7 @@ Since $$b \equiv 1\mod m$$, we can replace it by $$(qm+1)$$. So, the RHS express
 Hence, base value $$b = 2$$ or $$b = 10$$ are not good for division hash function are not good. Overall analysis points to the
 fact that division algorithm is bad.<br>
 
-The next function is known as multiplication function. It relies on finding product of <i>x</i> by a randomly chosen fraction
+The next function is known as multiplication function. It relies on finding product of key <i>k</i> by a randomly chosen fraction
 between 0 and 1 and extracting the middle bits of the product. Let us view the process of multiplication of a value by a 
 fraction in binary. The figure below depicts the long hand process of multiplication. 
 <p style="text-align:center">
@@ -97,7 +97,22 @@ function distributes the keys more evenly. Division function leads to more colli
 | 923456   | 195           | 456 |
   
 Midsquare and folding hash functions are quite simple. Midsquare function first squares the given key value and extracts a 
-squence of $$r$$ middle digits from the result and treats it the hash value. Then extracted value depends on all digits
+squence of $$r$$ middle digits from the result and treats it the hash value. Then extracted value depends on most digits
 as it is extracted from middle of the product $$k*k$$. <br>   
+
+Folding divides the digits of the key $$k$$ into $$p$$ parts $$k_1k_2k_3\ldots k_p$$ where each part except the last are of
+equal length. We add these parts and ignore the last carry. For example, assume that we have a table size = 100, and keys are
+5678, 345 and 568901. Let us divide each key into parts of length 2 each. Then parts of 5678 are: 56 and 78. Adding the two
+parts we get 134. After ignoring last carry 1, we get the hash value 34. Similarly, hash of other two numbers are:<br>
+
+- $$h(345) = 34+5 = 39$$
+- $$h(568901) = 56+89+01 = 46$$ (ignoring the carry 1)
+
+There are other possibilities of designing hash functions. We described only a few well known functions. We leave it to the
+readers to explore more functions. 
+
+In the next blog we plan to discuss on hashing methods.
+
+[Back to Index](../index.md)
 
 
