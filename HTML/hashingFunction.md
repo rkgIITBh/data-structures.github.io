@@ -61,4 +61,9 @@ Hence, base value $$b = 2$$ or $$b = 10$$ are not good for division hash functio
 fact that division algorithm is bad.<br>
 
 The next function is known as multiplication function. It relies on finding product of <i>x</i> by a randomly chosen fraction
-between 0 and 1 and extracting the middle bits of 
+between 0 and 1 and extracting the middle bits of the product. Let us view the process of multiplication of a value by a 
+fraction in binary. The figure below depicts the long hand process of multiplication. 
+<p style="text-align:center">
+  <img src="../imgages/hashMultiplicationFunction.png">
+</p>
+
