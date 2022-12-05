@@ -46,3 +46,4 @@ The expression for the above is:
   & = 1 + \alpha/2 - \frac{1}{2m}
   \end{split}$$
 </p>
+Therefore, the average time complexity of an unsuccessful search is $$(1+\alpha/2)$$. <br>
