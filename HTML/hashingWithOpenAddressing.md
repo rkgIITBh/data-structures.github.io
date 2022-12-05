@@ -11,6 +11,6 @@ probing is quadratice probing or random probing. The probing apply hash function
 collision occurs explained in the diagram below.
 
 <p style="text-align:center"}>
-    <img src="../images/hashingWithOpenAddr1.png">                                                       
+    <img src="../images/hashingOpenAddressing1.png">                                                       
 </p>
                                                  
