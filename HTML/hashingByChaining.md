@@ -29,7 +29,7 @@ Analysis of time complexity for unsuccessful search is easy with the assumption 
 Any element we look for may belong to in any of the $$m$$ chains and as explained earlier the length of any of the 
 chains or the linked list is $$n/m = \alpha$$. The time to search for an element in a linked list of length $$\alpha$$ is 
 $$\alpha$$. Since the searching also involves computing hash value for the table index before searching the corresponding 
-linked list, the time  for an unsuccessful search is $$(1+\alpha/2)$$.
+linked list, the time  for an unsuccessful search is $$(1+\alpha/2)$$.<br>
 
 The analysis for time complexity for successful search is a bit involved. We need to visualize the insertions as it happens into
 different chains. The first part of the analysis, of course, to assume that the hashing function is simple and uniform. So, 
