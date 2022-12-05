@@ -13,4 +13,13 @@ collision occurs explained in the diagram below.
 <p style="text-align:center"}>
     <img src="../images/hashingOpenAddressing1.png">                                                       
 </p>
-                                                 
+
+We can view the probing as a function of the type
+<p style="text-align:center"}>
+    $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\} $$                                          
+</p>
+The trials produce a vector 
+<p style="text-align:center"}>
+    $$h(k,1), h(k,2), \ldots, h(k,m-1) $$                                          
+</p>
+which is a permutation of $$\{0, 1, 2,\ldots, m-1}$$
