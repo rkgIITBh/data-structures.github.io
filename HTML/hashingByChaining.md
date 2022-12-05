@@ -39,11 +39,11 @@ to the corresponding list. The expected length of the list to which the elemeent
 For calculating the complexity of the unsuccessful search, we need to find the average of all insertions to the hash table.
 The expression for the above is:
 <p style="text-align:center">
-  $$\begin{split}
+  \begin{split}
   \frac{1}{n}\sum_{1}^{n} (1+\frac{i-1}{m}) & = 1 + \frac{1}{mn}\sum_{1}^n (i-1)\\
   & = 1 + \frac{n(n-1)}{2m.n}\\
   & = 1 + \frac{n-1}{2m}\\
   & = 1 + \alpha/2 - \frac{1}{2m}
-  \end{split}$$
+  \end{split}
 </p>
 Therefore, the average time complexity of an unsuccessful search is (1 + $$\alpha/2$$) <br>
