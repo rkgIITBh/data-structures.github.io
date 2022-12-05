@@ -44,5 +44,5 @@ The expression for the above is:
   & = 1 + \frac{n(n-1)}{2m.n}\\
   & = 1 + \frac{n-1}{2m}\\
   & = 1 + \alpha/2 - \frac{1}{2m}
-  $$
+  \end{split}$$
 </p>
