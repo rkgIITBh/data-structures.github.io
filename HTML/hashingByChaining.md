@@ -34,7 +34,7 @@ linked list, the time  for an unsuccessful search is $$(1+\alpha/2)$$.
 The analysis for time complexity for successful search is a bit involved. We need to visualize the insertions as it happens into
 different chains. The first part of the analysis, of course, to assume that the hashing function is simple and uniform. So, 
 while inserting any element, we may hit any table slot equally likely. However, after that we append the incoming element 
-to the corresponding list. The expected length of the list to which $$i$$th element is inserted is $$\frac{i-1}{m}$$. 
+to the corresponding list. The expected length of the list to which $$i$$th element is inserted is $$\frac{i-1}{m}$$. <br>
 
 For calculating the complexity of the unsuccessful search, we need to find the average of all insertions to the hash table.
 The expression for the above is:
