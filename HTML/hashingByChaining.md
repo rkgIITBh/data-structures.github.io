@@ -27,8 +27,8 @@ For the analysis of time complexity, we have to consider two cases:
 
 Analysis of time complexity for unsuccessful search is easy with the assumption that hash function is simple and uniformly. 
 Any element we look for may belong to in any of the $$m$$ chains and as explained earlier the length of any of the 
-chains or the linked list is $$n/m = \alpha$$. The time to search for an element in a linked list of length $$\alpha$$ is 
-$$\alpha$$. Since the searching also involves computing hash value for the table index before searching the corresponding 
+chains or the linked list is $$n/m = \alpha$$. The average time to search for an element in a linked list of length $$\alpha$$ is 
+$$\alpha/2$$. Since the searching also involves computing hash value for the table index before searching the corresponding 
 linked list, the time  for an unsuccessful search is $$(1+\alpha/2)$$.<br>
 
 The analysis for time complexity for successful search is a bit involved. We need to visualize the insertions as it happens into
@@ -47,3 +47,11 @@ The expression for the above is:
   \end{split}$$
 </p>
 Therefore, the average time complexity of an unsuccessful search is (1 + $$\alpha/2$$) <br>
+
+We did not address the issue of programming. However, hashing by separate chaining does not require much complex programming. We have already
+learned about programming with linked lists. Computations concerning hash functions are pretty simple. So we leave it to the readers to
+develop programs. 
+
+In the next blog, we will discuss about hashing with open addressing.
+
+[Back to Index](../index.md)
