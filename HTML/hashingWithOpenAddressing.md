@@ -14,12 +14,12 @@ collision occurs explained in the diagram below.
     <img src="../images/hashingOpenAddressing1.png">                                                       
 </p>
 
-We can view the probing as a function of the type
+We can view the probing function as mapping that can specify an ordering of probes for an empty slot in the table. It implies
 <p style="text-align:center"}>
     $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\} $$                                          
 </p>
-The trials produce a vector 
+The probling order essentially produces a vector 
 <p style="text-align:center"}>
     $$h(k,1), h(k,2), \ldots, h(k,m-1) $$                                          
 </p>
-which is a permutation of $$\{0, 1, 2,\ldots, m-1}$$
+that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$<br>
