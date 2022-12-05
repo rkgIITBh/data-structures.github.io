@@ -2,41 +2,41 @@
 
 ## Hashing by Chaining
 
-A simple, uniform hash function spreads a set of random keys so that each key is equally likely to be hashed in any of the table slots.
+A simple, uniform hash function spreads a set of random keys so that each key is equally likely to be hashed in any table slot.
 Let $$P(k)$$ be the probability of $$k$$ being hashed into a table slot. Distributiveness of the hash means each slot 
 $$j = 0, 1, \ldots, m-1$$ to be occupied equally likely. <br>
 <p style="text-align:center">
   $$\sum_{k|h(k) = j} P(k) = \frac{1}{m}$$
 </p>
-In hashing by separate chaining, collision resolution is simple. All keys that map to the same table slot are chanined together
-in a linked list. The hash table slots contains pointers to these linked lists. In other words, the hash table is an array of 
-ponters of size $$m$$. The expected length of each linked list is $$\frac{n}{m}$$ which is known as load factor and denoted by
-$$\alpha$$. The hashing by chaining can be viewed pictorially as follows:
+In hashing by separate chaining, collision resolution is simple. All keys that map to the same table slot are chained together
+in a linked list. The hash table slots contain pointers to these linked lists. In other words, the hash table is an array of 
+pointers of size $$m$$. The expected length of each linked list is $$\frac{n}{m}$$ which is known as load factor and denoted by
+$$\alpha$$. The hashing by chaining can be viewed as follows:
 <p style="text-align:center">
   <img src="../images/hashingBySeparateChaning.png">
 </p>  
 A lookup or search for an element in the hash table requires two steps:
 
 1. Compute the hash value of the element
-2. Index the table using the hash value to reach linked list and search it for the element.
+2. Index the table using the hash value to reach the linked list and search it for the element.
 
 For the analysis of time complexity, we have to consider two cases: 
 
 1. Time for a successful search
 2. Time for an unsuccessful search
 
-Analysis of time complexity for unsuccessful search is easy with the assumption that hash function is simple and uniformly. 
-Any element we look for may belong to in any of the $$m$$ chains and as explained earlier the length of any of the 
+Analysis of time complexity for unsuccessful search is easy with the assumption that the hash function is simple and uniform. 
+An element may belong to any of the $$m$$ chains. As explained earlier, the length of any  
 chains or the linked list is $$n/m = \alpha$$. The average time to search for an element in a linked list of length $$\alpha$$ is 
-$$\alpha/2$$. Since the searching also involves computing hash value for the table index before searching the corresponding 
+$$\alpha/2$$. Since the searching also involves computing the hash value for the table index before searching the corresponding 
 linked list, the time  for an unsuccessful search is $$(1+\alpha/2)$$.<br>
 
-The analysis for time complexity for successful search is a bit involved. We need to visualize the insertions as it happens into
-different chains. The first part of the analysis, of course, to assume that the hashing function is simple and uniform. So, 
-while inserting any element, we may hit any table slot equally likely. However, after that we append the incoming element 
-to the corresponding list. The expected length of the list to which the elemeent $$i$$ gets inserted is $$(i-1)/m$$. <br>
+The analysis for time complexity for a successful search is a bit involved. We need to visualize the insertions as it happens into
+different chains. The first part of the analysis, of course, is to assume that the hashing function is simple and uniform. So, 
+while inserting any element, we may hit any table slot equally likely. However, after that, we append the incoming element 
+to the corresponding list. The expected length of the list to which the element $$i$$ gets inserted is $$(i-1)/m$$. <br>
 
-For calculating the complexity of the unsuccessful search, we need to find the average of all insertions to the hash table.
+To calculate the complexity of the unsuccessful search, we need to find the average of all insertions to the hash table.
 The expression for the above is:
 <p style="text-align:center">
   \begin{split}
@@ -52,6 +52,6 @@ We did not address the issue of programming. However, hashing by separate chaini
 learned about programming with linked lists. Computations concerning hash functions are pretty simple. So we leave it to the readers to
 develop programs. 
 
-In the next blog, we will discuss about hashing with open addressing.
+In the next blog, we will discuss hashing with open addressing.
 
 [Back to Index](../index.md)
