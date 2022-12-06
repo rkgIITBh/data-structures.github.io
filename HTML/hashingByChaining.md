@@ -50,8 +50,44 @@ Therefore, the average time complexity of an unsuccessful search is (1 + $$\alph
 
 We did not address the issue of programming. However, hashing by separate chaining does not require much complex programming. We have already
 learned about programming with linked lists. Computations concerning hash functions are pretty simple. So we leave it to the readers to
-develop programs. 
+develop programs. However, to help users develop their own codes we provide pseudo codes of the important parts.
 
+We assume that the hash table only stores integers. So the node structure may be defined as follows:
+```
+typedef struct hTnode {
+int val ;
+struct node ∗ next ;
+} node ;
+
+void initializeHT ( node ∗ hashTable [], int m) {
+int i;
+for (i = 0; i < m; i ++)
+hashTable [i] = NULL;
+}
+
+node ∗ searchKey( node ∗ hashTable [ ] , int k ) {
+node ∗p ;
+p = hashTable [h(k)] ; 
+while ((p != NULL) && ( p−>val != k))
+    p = p−>next;
+if ( p−>val == k )
+    return p ;
+else
+    return NULL ;
+}
+
+void insertKey( node ∗ hashTable [] , int k ) {
+    node ∗ newNode ;
+    node ∗ ptr = searchKey ( hashTable , k) ;
+    if ( ptr == NULL ) {
+        newNode = ( node ∗ ) malloc ( sizeof(node) ) ;
+        newNode−>v a l = k ;
+        newNode−>n e x t = hashTable [ h ( k ) ]
+        hashTable [ h ( k ) ] = newNode ;
+    }
+}
+
+```
 In the next blog, we will discuss hashing with open addressing.
 
 [Back to Index](../index.md)
