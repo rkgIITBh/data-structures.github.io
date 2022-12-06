@@ -22,6 +22,7 @@ The probling order essentially produces a vector
 <p style="text-align:center"}>
     $$h(k,1), h(k,2), \ldots, h(k,m-1) $$                                          
 </p>
-that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$. The idea is that the probe sequence should examine all slots of the table for discovering 
-an empty slots to resolve a collision. Let us consider an example as shown in the figure below. <br>
-T
+that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$. <br>
+
+The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. Let us consider an 
+example as shown in the figure below. It shows the table configurations before and after insertion of 586. The 
