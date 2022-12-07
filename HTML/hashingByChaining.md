@@ -49,8 +49,54 @@ The expression for the above is:
 Therefore, the average time complexity of an unsuccessful search is (1 + $$\alpha/2$$) <br>
 
 We did not address the issue of programming. However, hashing by separate chaining does not require much complex programming. We have already
-learned about programming with linked lists. Computations concerning hash functions are pretty simple. So we leave it to the readers to
-develop programs. 
+learned about programming with linked lists. The computations concerning hash functions are pretty simple. we provide some coding hints below.
+
+```
+void insert(HTNODE ** head) {
+    int i,key;
+    HTNODE * c;
+
+    printf("Enter a value to insert into hash table: ");
+    scanf("%d",&key);
+
+    i = key%TABLE_SIZE;
+    HTNODE * newnode = (HTNODE *)malloc(sizeof(HTNODE));
+    newnode->data = key;
+    newnode->next = NULL;
+    if(head[i] == NULL)
+       head[i] = newnode;
+    else {
+       c = head[i];
+       while(c->next != NULL) {
+          c = c->next;
+       }
+       c->next = newnode;
+    }
+}
+
+void search(HTNODE ** head) {
+    int key,index;
+    HTNODE * c;
+
+    printf("Enter the element to be searched: ");
+    scanf("%d",&key);
+
+    index=key%TABLE_SIZE;
+    if(head[index] == NULL)
+         printf("Search element not found!");
+    else {
+         for(c=head[index];c!=NULL;c=c->next) {
+             if(c->data == key) {
+                 printf("Search element found!");
+                 break;
+             }
+         }
+         if(c==NULL)
+             printf("Search element not found!");
+     }
+}
+
+```
 
 
 In the next blog, we will discuss hashing with open addressing.
