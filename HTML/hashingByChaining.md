@@ -77,7 +77,7 @@ HTNODE ** createHT() {
 ```
 
 The next two functions are for insert and search. Both use division function to find hash values. So all numbers ending with digit $$d$$ get mapped
-to same table slot and form a linked list.
+to same table slot and form a linked list. For navigating chain we have used a local pointer variable $$c$$. <br>
 
 ```
 void insert(HTNODE ** head) {
