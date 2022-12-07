@@ -125,7 +125,7 @@ void search(HTNODE ** head) {
 }
 
 ```
-
+The readers need to develop the function for delete and use a driver function to create the complete code.
 
 In the next blog, we will discuss hashing with open addressing.
 
