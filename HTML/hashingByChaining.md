@@ -50,6 +50,34 @@ Therefore, the average time complexity of an unsuccessful search is (1 + $$\alph
 
 We did not address the issue of programming. However, hashing by separate chaining does not require much complex programming. We have already
 learned about programming with linked lists. The computations concerning hash functions are pretty simple. we provide some coding hints below.
+We create hash table as an array of linked nodes. Each node has two fields: data and next. So, we can store the elements mapping to same hash 
+value as a chain. 
+```
+// We define a hash table of size 10.
+// However, modifying TABLE_SIZE, one can create a bigger table.
+
+#define TABLE_SIZE 10
+typedef struct node {
+     int data;
+     struct node *next;
+} HTNODE;
+
+
+// Create function creates and initializes the table of pointers
+HTNODE ** createHT() {
+    HTNODE ** head;
+
+    head = (HTNODE **) malloc(sizeof(HTNODE *)*TABLE_SIZE);
+    for (int i = 0; i < TABLE_SIZE; i++) {
+        head[i] = NULL;
+    }
+    return head;
+}
+
+```
+
+The next two functions are for insert and search. Both use division function to find hash values. So all numbers ending with digit $$d$$ get mapped
+to same table slot and form a linked list.
 
 ```
 void insert(HTNODE ** head) {
