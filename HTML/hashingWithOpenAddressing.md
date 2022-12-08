@@ -24,5 +24,9 @@ The probling order essentially produces a vector
 </p>
 that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$. <br>
 
-The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. Let us consider an 
-example as shown in the figure below. It shows the table configurations before and after insertion of 586. The 
+The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. The picture below
+describes insert and search processes. The readers may notice that the flowcharts do not specify how many trials can be carried out. 
+<p style="text-align:center"}>
+    <img src="../images/hashingOpenAddressing2.png">                                                       
+</p>
+ 
