@@ -11,4 +11,5 @@ The internet has lot of resources on data structure. The links to some of the re
 - [Data Structures - Python Codes](https://opendatastructures.org/ods-python-screen.pdf)
 - [Problem Solving - Data Structures](https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf)
 - [Lecture Notes- DS - Briminghum University](https://www.cs.bham.ac.uk/~jxb/DSA/dsa.pdf)
+- [Goodrich and Tamassia](https://enos.itcollege.ee/~japoia/algorithms/GT/Data%20Structures%20and%20Algorithms%20in%20Java%20Fourth%20Edition.pdf)
 - [Cormen, Lieserson and Rivest](https://www.cs.bham.ac.uk/~jxb/DSA/dsa.pdf](https://sd.blackball.lv/librar/Introduction_to_Algorithms_Third_Edition_(2009).pdf)
