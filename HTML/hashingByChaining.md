@@ -48,10 +48,10 @@ The expression for the above is:
 </p>
 Therefore, the average time complexity of an unsuccessful search is (1 + $$\alpha/2$$) <br>
 
-We did not address the issue of programming. However, hashing by separate chaining does not require much complex programming. We have already
-learned about programming with linked lists. The computations concerning hash functions are pretty simple. we provide some coding hints below.
-We create hash table as an array of linked nodes. Each node has two fields: data and next. So, we can store the elements mapping to same hash 
-value as a chain. 
+Hashing by separate chaining does not require much complex programming. We have already learned about programming with linked lists. The computations 
+concerning hash functions are pretty simple. we provide some coding hints below. We create hash table as an array of linked nodes. Each node has two 
+fields: $$data$$ and $$next$$. So, we can store the elements mapping to same hash value as a chain. <br>
+
 ```
 // We define a hash table of size 10.
 // Modifying TABLE_SIZE, one can create a bigger table.
