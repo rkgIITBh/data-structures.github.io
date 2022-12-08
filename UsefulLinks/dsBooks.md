@@ -3,6 +3,7 @@
 The internet has lot of resources on data structure. The links to some of the recommended resources are provide below for further studies.
 
 - [A Collection of Data Structure E-Books](https://doc.lagout.org/Others/Data%20Structures/)
+- [DS - Shaffer - Virginia Tech](https://people.cs.vt.edu/shaffer/Book/JAVA3elatest.pdf)
 - [Algorithms: Dasgupta et al.](http://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf)
 - [Jefferson Data Structures](https://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf)
 - [Concise Notes on Data Structures](https://w3.cs.jmu.edu/spragunr/CS240_F12/ConciseNotes.pdf)
