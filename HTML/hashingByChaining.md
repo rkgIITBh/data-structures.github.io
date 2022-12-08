@@ -54,7 +54,7 @@ We create hash table as an array of linked nodes. Each node has two fields: data
 value as a chain. 
 ```
 // We define a hash table of size 10.
-// However, modifying TABLE_SIZE, one can create a bigger table.
+// Modifying TABLE_SIZE, one can create a bigger table.
 
 #define TABLE_SIZE 10
 typedef struct node {
@@ -74,20 +74,23 @@ HTNODE ** createHT() {
     return head;
 }
 
+// We have used division hash function which may be replaced
+int hashVal(int x) {
+    return x % TABLE_SIZE;
+}
+
 ```
 
 The next two functions are for insert and search. Both use division function to find hash values. So all numbers ending with digit $$d$$ get mapped
 to same table slot and form a linked list. For navigating chain we have used a local pointer variable $$c$$. <br>
 
 ```
-void insert(HTNODE ** head) {
-    int i,key;
+// Insert function needs key value to be inserted
+void insert(HTNODE ** head, int key) {
+    int i;
     HTNODE * c;
 
-    printf("Enter a value to insert into hash table: ");
-    scanf("%d",&key);
-
-    i = key%TABLE_SIZE;
+    i = hashVal(key);
     HTNODE * newnode = (HTNODE *)malloc(sizeof(HTNODE));
     newnode->data = key;
     newnode->next = NULL;
@@ -96,7 +99,7 @@ void insert(HTNODE ** head) {
     else {
        c = head[i];
        while(c->next != NULL) {
-          c = c->next;
+           c = c->next;
        }
        c->next = newnode;
     }
@@ -125,7 +128,42 @@ void search(HTNODE ** head) {
 }
 
 ```
-The readers need to develop the function for delete and use a driver function to create the complete code.
+Delete function is similar to search, because we need to locate the key to be deleted using search then apply deletion operation. However, to keep
+the program simple, delete written as a standalone function.
+
+```
+void delete(HTNODE **head) {
+    int key, index;
+    HTNODE *c;
+    HTNODE *prev;
+
+    printf("Enter the element to be deleted: ");
+    scanf("%d",&key);
+
+    index = hashVal(key);
+    if(head[index] == NULL)
+         printf("Element does not exist, deletion not possible!");
+    else {
+         if (head[index]->data == key) {
+             // Case 1: deletion of the first element in the list
+             head[index] = head[index]->next;
+             return;
+         } else {
+             // Case 2: deletion of other elements in the list 
+             prev = head[index];
+             for(c=head[index]->next;c!=NULL;c=c->next) {
+                  if(c->data == key) 
+                      prev->next = c->next; // Delete the located element
+                  else 
+                      prev = c; // Continue search
+             }
+         }
+         if(c==NULL)
+             printf("Search element not found!");
+     }
+}
+
+```
 
 In the next blog, we will discuss hashing with open addressing.
 
