@@ -128,8 +128,8 @@ void search(HTNODE ** head) {
 }
 
 ```
-Delete function is similar to search, because we need to locate the key to be deleted using search then apply deletion operation. However, to keep
-the program simple, delete written as a standalone function.
+Delete function is similar to search. First, we need to locate the key to be deleted then apply deletion operation. However, to keep
+the program simple, delete is provided as a separate standalone function.
 
 ```
 void delete(HTNODE **head) {
