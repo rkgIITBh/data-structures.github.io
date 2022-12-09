@@ -20,7 +20,8 @@ The probling order essentially produces a vector
 <p style="text-align:center">
     $$h(k,1), h(k,2), \ldots, h(k,m)$$                                     
 </p>
-that is a permutation of $$\{0, 1, 2,\ldots, m-1\}$$.<br>
+that is a permutation of $$\{0, 1, 2,\ldots, m-1\}$$. The idea is that the probe sequence should examine all slots of the table for discovering
+an empty slots to resolve a collision. <br>
 
 The simplest collision resolution technique is known as linear probing. If a collision occurs, it tries to finds sequentially next available empty 
 table slot. The method uses the hash function is given by 
@@ -37,8 +38,7 @@ An alternative to linear probing is quadratice probing. It spreads the colliding
 <p style="text-align:center">
 $$x_i = (x_0 + ic_1 + i^2c_2)$$, 
 </p>
-where $$c_1$$ and $$c_2$$ are nonzero constants. 
-The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. The picture below
-describes insert and search processes. The readers may notice that the flowcharts do not specify how many trials can be carried out. <br>
+where $$c_1$$ and $$c_2$$ are nonzero constants. The picture below describes insert and search processes. The readers may notice that the flowcharts
+do not specify how many trials can be carried out. <br>
 
  
