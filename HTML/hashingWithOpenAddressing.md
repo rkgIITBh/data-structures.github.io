@@ -21,20 +21,21 @@ The probling order essentially produces a vector
 </p>
 that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$. <br>
 
-The simplest collision resolution technique is known as linear probing. When a collision occurs it tries to find sequentially next available empty 
-table slot. The method uses the hash function is given by $$(h(k) + i)\mod m$$. Linear probing forms clusters of hashed elements in few block of 
-table slots. Starting with random table slot $$x_0\in \{0, 1, \ldots, m-1\}$$, it creates the probe sequence $$x_0, x_1, \ldots, x_{m-1}$$, where 
-$$x_i = (x_0 + i) \mod m$$. Therefore, the linear probing creates clustering of elements which hash to the same table slot. It is called 
-<i>primary clustering</i>. We can analyze the effect of primary clustering as follows. 
-If $$j$$ consecutive slots are occupied, then the next element mapping to any of them is $$j/m$$. With increase in length of cluster to $$j+1$$, 
-the probability increases to $$(j+1)/m$$ for another new element being hashed to the cluster. It means that large clusters have a tendency to 
-grow larger with more insertions.<br>
+The simplest collision resolution technique is known as linear probing. If a collision occurs, it tries to finds sequentially next available empty 
+table slot. The method uses the hash function is given by 
+<p style="text-align:center"}>
+$$(h(k) + i)\mod m$$.
+</p>
+It forms clusters of hashed elements in few block of table slots. Starting with a random table slot $$x_0\in \{0, 1, \ldots, m-1\}$$, linear probing
+generates the probe sequence $$x_0, x_1, \ldots, x_{m-1}$$, where $$x_i = (x_0 + i) \mod m$$. Therefore, it creates clustering of elements which hash
+to the same table slot.It is called <i>primary clustering</i>. We can analyze the effect of primary clustering as follows. If $$j$$ consecutive slots
+are occupied, then the next element mapping to any of them is $$j/m$$. With increase in length of cluster to $$j+1$$, the probability increases 
+to $$(j+1)/m$$ for another new element being hashed to the cluster. It means that large clusters have a tendency to grow larger with more insertions.<br>
 
-A simple alternative to linear probing is quadratice probing. It spreads the colliding elements by generating probing sequence where the $$i$$ th
-probe $$x_i = (x_0 + ik_1 + i^2k_2)$$, where $$k_1$$ and $$k_2$$ are nonzero constants.  
-
-
-
+An alternative to linear probing is quadratice probing. It spreads the colliding elements by generating probing sequence where the $$i$$th probe 
+<p style="text-align:center"}>
+$$x_i = (x_0 + ik_1 + i^2k_2)$$, where $$k_1$$ and $$k_2$$ are nonzero constants.  
+</p>
 The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. The picture below
 describes insert and search processes. The readers may notice that the flowcharts do not specify how many trials can be carried out. 
 <p style="text-align:center"}>
