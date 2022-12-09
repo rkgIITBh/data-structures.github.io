@@ -3,18 +3,15 @@
 
 ## Hashing with Open Addressing
 
-Hashing with open addressing uses table slots to store the elements. Since chaining is not used, the resolution of collisions has to be performed
-directly over the table slots. There are many ways to resolve collisions. We discuss some well-established collision resolution techniques along 
-with insertions and deletions. The simplest solution is linear probing. It uses next available empty table slot whenever a collision occurs. Collision
-resolution by linear probing clusters the elements with the same hash value together. These elements appear consecutively. An alternative to linear
-probing is quadratice probing or random probing. The probing apply hash functions repeatedly to locate an empty alternative slot to when a
-collision occurs explained in the diagram below.
-
+Hashing with open addressing uses table slots directly to store the elements as indicated in the picture shown below:
 <p style="text-align:center"}>
     <img src="../images/hashingOpenAddressing1.png">                                                       
 </p>
-
-We can view the probing function as mapping that can specify an ordering of probes for an empty slot in the table. It implies
+The elements hashed to the same slots should be distributed to some other table slot. However, it is most likely that the alternative slot may
+be occupied by another previously hashed element. Therefore, the hashing with open addressing requires a robust collision resolution technique 
+to distribute the elements that map to the same table slot. There are many ways to resolve collisions. We discuss some well-established collision
+resolution techniques along with insertions and deletions. We can view the probing function as mapping that can specify an ordering of probes 
+for an empty slot in the table. It implies
 <p style="text-align:center"}>
     $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\} $$                                          
 </p>
@@ -23,6 +20,19 @@ The probling order essentially produces a vector
     $$h(k,1), h(k,2), \ldots, h(k,m-1) $$                                          
 </p>
 that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$. <br>
+
+The simplest collision resolution technique is known as linear probing. It uses sequentially next available empty table slot whenever a collision 
+occurs. However, it forms clusters of hashed elements in few block of table slots. Starting with random table slot $$x_0\in \{0, 1, \ldots, m-1\}$$,
+it creates the probe sequence $$x_0, x_1, \ldots, x_{m-1}$$, where $x_i = (x_0 + i) \mod m$$. Therefore, the linear probing creates clustering of
+elements which hash to the same table slot. It is called <i>primary clustering</i>. We can analyze the effect of primary clustering as follows. 
+If $$j$$ consecutive slots are occupied, then the next element mapping to any of them is $$j/m$$. With increase in length of cluster to $$j+1$$, 
+the probability increases to $$(j+1)/m$$ for another new element being hashed to the cluster. It means that large clusters have a tendency to 
+grow larger with more insertions.<br>
+
+A simple alternative to linear probing is quadratice probing. It spreads the colliding elements by generating probing sequence where the $$i$$ th
+probe $$x_i = (x_0 + ik_1 + i^2k_2)$$, where $$k_1$$ and $$k_2$$ are nonzero constants.  
+
+
 
 The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. The picture below
 describes insert and search processes. The readers may notice that the flowcharts do not specify how many trials can be carried out. 
