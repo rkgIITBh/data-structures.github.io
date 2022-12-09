@@ -62,5 +62,6 @@ is to let $$m$$ to be prime number and design $$h_2$$ to produce a positive numb
     h_2(k) & = & 1+ (k\mod m')
 \end{array}
 </p>
-where $$m'$$ is slight less than $$m$$ (could be $$m-1$$). <br>
+where $$m'$$ is slight less than $$m$$ (could be $$m-1$$). Notice that double hashing generate $$m\time m'$$ slots. Since $$m'= m-1$$, it actually
+generates a probe sequence of O($$m^2$$). So, it is more random than either linear or quadratic hashing each of which generates $$m$$ probes.<br>
 
