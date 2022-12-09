@@ -41,7 +41,7 @@ to $$(j+1)/m$$ for another new element being hashed to the cluster. It means tha
 An alternative to linear probing is quadratice probing. It spreads the colliding elements by generating probing sequence where the $$i$$th probe 
 
 <p style="text-align:center">
-$$x_i = (x_0 + ik_1 + i^2k_2)$$, where $$k_1$$ and $$k_2$$ are nonzero constants.  
+$$x_i = (x_0 + ic_1 + i^2c_2)$$, where $$c_1$$ and $$c_2$$ are nonzero constants.  
 </p>
 
 The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. The picture below
