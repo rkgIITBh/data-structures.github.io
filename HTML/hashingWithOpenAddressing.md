@@ -16,13 +16,13 @@ resolution techniques along with insertions and deletions. We can view the probi
 for an empty slot in the table. It implies
 
 <p style="text-align:center">
-    $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\} $$                                          
+    $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\}$$                                          
 </p>
 
 The probling order essentially produces a vector 
 
 <p style="text-align:center">
-    $$h(k,1), h(k,2), \ldots, h(k,m-1) $$ that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$.                                    
+    $$h(k,1), h(k,2), \ldots, h(k,m-1)$$ that is a permutation of $$\{0, 1, 2,\ldots, m-1\}$$.                                    
 </p>
 
 The simplest collision resolution technique is known as linear probing. If a collision occurs, it tries to finds sequentially next available empty 
