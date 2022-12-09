@@ -46,4 +46,11 @@ $$x_i = (x_0 + ic_1 + i^2c_2)$$,
 where $$i\in \{0, 1, \ldots, m-1\}$ and $c_1$$, $$c_2 \ne 0$$ are constants. The picture below describes insert and search processes. 
 The readers may notice that the flowcharts do not specify how many trials can be carried out. <br>
 
+ <strong>Double Hashing</strong>
  
+ Double hashing uses two different hash functions $$h_1$$ and $$h_2$$ to generate a probe sequence as given below.
+ <p style="text-align:center">
+$$h(k, i) = (h_1(k) + ih_2(k))\mod m$$, 
+</p>
+If initial proble is at slot position $$x_0$$ then successive positions are at a mutual distance of $$h_2(k)\mod m$$. The value of $$h_2(k)$$ must be
+relatively prime to hash table size $$m$$ for probing all slots. <br>
