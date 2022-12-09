@@ -52,5 +52,15 @@ The readers may notice that the flowcharts do not specify how many trials can be
  <p style="text-align:center">
 $$h(k, i) = (h_1(k) + ih_2(k))\mod m$$, 
 </p>
-If initial proble is at slot position $$x_0$$ then successive positions are at a mutual distance of $$h_2(k)\mod m$$. The value of $$h_2(k)$$ must be
-relatively prime to hash table size $$m$$ for probing all slots. <br>
+If initial proble is at slot position $$x_0$$ then the distance between successive positions is $$h_2(k)\mod m$$. Let $$h_2(k) = x_1, $$i$$th probe
+generates slot $$x_i = (x_0 + ix_1)\mod m$$ for $$i\ge 0$$. The value of $$h_2(k)$$ must be relatively prime to hash table size $$m$$ for probing 
+all slots. The simplest way we can ensure it is to choose $$m$$ a power of 2 and $$h_2$$ to produce always an odd number. The other alternative 
+is to let $$m$$ to be prime number and design $$h_2$$ to produce a positive number less than $$m$$. So, we can let 
+<p style="text-align:center">
+\begin{array}{rcl}
+    h_1(k) & = & k \mod m\\
+    h_2(k) & = & 1+ (k\mod m')
+\end{array}
+</p>
+where $$m'$$ is slight less than $$m$$ (could be $$m-1$$). <br>
+
