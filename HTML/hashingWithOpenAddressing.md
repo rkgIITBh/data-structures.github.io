@@ -4,9 +4,11 @@
 ## Hashing with Open Addressing
 
 Hashing with open addressing uses table slots directly to store the elements as indicated in the picture shown below:
+
 <p style="text-align:center"}>
     <img src="../images/hashingOpenAddressing1.png">                                                       
 </p>
+
 The elements hashed to the same slots should be distributed to some other table slot. However, it is most likely that the alternative slot may
 be occupied by another previously hashed element. Therefore, the hashing with open addressing requires a robust collision resolution technique 
 to distribute the elements that map to the same table slot. There are many ways to resolve collisions. We discuss some well-established collision
