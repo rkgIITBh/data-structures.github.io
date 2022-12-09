@@ -5,7 +5,7 @@
 
 Hashing with open addressing uses table slots directly to store the elements as indicated in the picture shown below:
 
-<p style="text-align:center"}>
+<p style="text-align:center">
     <img src="../images/hashingOpenAddressing1.png">                                                       
 </p>
 
@@ -18,14 +18,14 @@ for an empty slot in the table. It implies
     $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\} $$                                          
 </p>
 The probling order essentially produces a vector 
-<p style="text-align:center"}>
+<p style="text-align:center">
     $$h(k,1), h(k,2), \ldots, h(k,m-1) $$                                     
 </p>
 that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$. <br>
 
 The simplest collision resolution technique is known as linear probing. If a collision occurs, it tries to finds sequentially next available empty 
 table slot. The method uses the hash function is given by 
-<p style="text-align:center"}>
+<p style="text-align:center">
 $$(h(k) + i)\mod m$$.
 </p>
 
@@ -41,7 +41,5 @@ $$x_i = (x_0 + ik_1 + i^2k_2)$$, where $$k_1$$ and $$k_2$$ are nonzero constants
 </p>
 The idea is that the probe sequence should examine all slots of the table for discovering an empty slots to resolve a collision. The picture below
 describes insert and search processes. The readers may notice that the flowcharts do not specify how many trials can be carried out. 
-<p style="text-align:center"}>
-    <img src="../images/hashingOpenAddressing2.png">                                                       
-</p>
+
  
