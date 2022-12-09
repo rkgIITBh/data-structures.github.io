@@ -18,7 +18,6 @@ for an empty slot in the table. It implies
 <p style="text-align:center">
     $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\}$$                                          
 </p>
-
 The probling order essentially produces a vector 
 
 <p style="text-align:center">
@@ -32,7 +31,6 @@ table slot. The method uses the hash function is given by
 <p style="text-align:center">
 $$(h(k) + i)\mod m$$.
 </p>
-
 It forms clusters of hashed elements in few block of table slots. Starting with a random table slot $$x_0\in \{0, 1, \ldots, m-1\}$$, linear probing
 generates the probe sequence $$x_0, x_1, \ldots, x_{m-1}$$, where $$x_i = (x_0 + i) \mod m$$. Therefore, it creates clustering of elements which hash
 to the same table slot.It is called <i>primary clustering</i>. We can analyze the effect of primary clustering as follows. If $$j$$ consecutive slots
