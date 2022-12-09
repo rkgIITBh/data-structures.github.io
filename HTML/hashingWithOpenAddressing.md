@@ -12,7 +12,7 @@ The elements hashed to the same slots should be distributed to some other table 
 be occupied by another previously hashed element. Therefore, the hashing with open addressing requires a robust collision resolution technique 
 to distribute the elements that map to the same table slot. There are many ways to resolve collisions. We discuss some well-established collision
 resolution techniques along with insertions and deletions. We can view the probing function as mapping that can specify an ordering of probes 
-for an empty slot in the table. It implies
+for an empty slot in the table. It implies $$h$$ maps a given universe of keys $$U$$ to $$m$$ table slots. <br>
 <p style="text-align:center">
     $$h:U\times \{0, 1, 2, \ldots, m-1\}_{trials} \longrightarrow  \{0, 1, 2, \ldots, m-1\}$$                                          
 </p>
