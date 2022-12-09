@@ -21,8 +21,8 @@ The probling order essentially produces a vector
 </p>
 that is a permutation of $$\{0, 1, 2,\ldots, m-1}$$. <br>
 
-The simplest collision resolution technique is known as linear probing. It uses sequentially next available empty table slot whenever a collision 
-occurs. The method uses the hash function is given by $$(h(k) + i)\mod m$$
+The simplest collision resolution technique is known as linear probing. When a collision occurs it tries to find sequentially next available empty 
+table slot. The method uses the hash function is given by $$(h(k) + i)\mod m$$
 Linear probing forms clusters of hashed elements in few block of table slots. Starting with random table slot $$x_0\in \{0, 1, \ldots, m-1\}$$,
 it creates the probe sequence $$x_0, x_1, \ldots, x_{m-1}$$, where $x_i = (x_0 + i) \mod m$$. Therefore, the linear probing creates clustering of
 elements which hash to the same table slot. It is called <i>primary clustering</i>. We can analyze the effect of primary clustering as follows. 
