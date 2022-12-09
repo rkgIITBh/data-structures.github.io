@@ -30,7 +30,7 @@ It forms clusters of hashed elements in few block of table slots. Starting with 
 generates the probe sequence $$x_0, x_1, \ldots, x_{m-1}$$, where $$x_i = (x_0 + i) \mod m$$. Therefore, it creates clustering of elements which hash
 to the same table slot.It is called <i>primary clustering</i>. We can analyze the effect of primary clustering as follows. If $$j$$ consecutive slots
 are occupied, then the next element mapping to any of them is $$j/m$$. With increase in length of cluster to $$j+1$$, the probability increases 
-to $$(j+1)/m$$ for another new element being hashed to the cluster. It means that large clusters have a tendency to grow larger with more insertions.
+to $$(j+1)/m$$ for another new element being hashed to the cluster. It means that large clusters have a tendency to grow larger with more insertions.<br>
 
 An alternative to linear probing is quadratice probing. It spreads the colliding elements by generating probing sequence where the $$i$$th probe 
 <p style="text-align:center"}>
