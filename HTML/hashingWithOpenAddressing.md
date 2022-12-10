@@ -7,8 +7,8 @@ Hashing with open addressing uses table slots directly to store the elements, as
 <p style="text-align:center">
     <img src="../images/hashingOpenAddressing1.png">                                                       
 </p>
-The elements hashed to the same slots should be distributed to some other table slot. However, a previously hashed element may occupy the selected alternative slot. Therefore, hashing with open addressing requires a robust collision resolution technique 
-to distribute the elements. 
+The elements hashed to the same slots should be distributed to different other table slots. However, a previously hashed element may occupy the selected 
+alternative slot. Therefore, hashing with open addressing requires a robust collision resolution technique to distribute the elements. 
 
 There are many ways to resolve collisions. We discuss some well-established collision
 resolution techniques. We can view the probing function as mapping that can specify a sequencing of probes 
@@ -63,5 +63,7 @@ is to let $$m$$ be a prime number and design $$h_2$$ to produce a positive numbe
 </p>
 where $$m'$$ is slight less than $$m$$ (it could be $$m-1$$). Each combination of the pair $$h_1$$ and $$h_2$$ provides $$m$$ sequences. Since $$m'= m-1$$, 
 double hashing uses probe sequences of size O($$m^2$$). Therefore, it is more random than either linear or quadratic hashing, each of which uses O($$m$$)
-probe sequences.<br>
-
+probe sequences. The figure below is an example of a double hashing technique to resolve collisions.
+<p style="text-align:center">
+    <img src="../images/doubleHash.png">
+</p>
