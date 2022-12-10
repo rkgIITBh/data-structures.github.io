@@ -67,3 +67,5 @@ probe sequences. The figure below is an example of a double hashing technique to
 <p style="text-align:center">
     <img src="../images/doubleHash.png">
 </p>
+In the example, we use $$h_1(x) = x \mod 10$$ and $$h_2(x) = x\mod 7$. The insertion sequence is 67, 27, 39 and 79. So, after 67 has been inserted,
+slot 7 is occupied. For inserting 27, we use double hash to find the slot $$(7 + 2\times (1+27\mod 7))\mod 10 = (7 + 2\times 7)\mod 10 = 1$$.
