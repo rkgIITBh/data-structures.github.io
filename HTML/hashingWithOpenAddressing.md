@@ -70,4 +70,5 @@ probe sequences. The figure below is an example of a double hashing technique to
 In the example, we use $$h_1(x) = x \mod 10$$ and $$h_2(x) = x\mod 9$$. The insertion sequence is 67, 27, 39 and 79. So, after 67 has been inserted,
 slot 7 is occupied. For inserting 27, we use double hash to find the slot $$(7 + 1\times (1+27\mod 9))\mod 10 = (7 + 1)\mod 10 = 8$$. Similarly,
 after hashing 39 in slot 9, we cannot store 79 in the same slot. So, we use double hash to calculate possible new poistion for 79 as
-$$(9 + (1+79\mod 9))\mod 10$$
+$$(9 + (1+79\mod 9))\mod 10 = 7$$. Since slot 7 is also occupied we have to use $$(9 + 2\times (1+79\mod 9))\mod 10 = 5$$ which is not occupied.
+So 79 goes to slot 5.
