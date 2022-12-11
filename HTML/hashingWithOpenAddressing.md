@@ -76,7 +76,7 @@ The first insertion 67 fills the slot 7. Now 27 cannot go to slot 7, we use doub
 $$(7 + 1\times (1+27\mod 7))\mod 10 = (7 + 7)\mod 10 = 4$$.
 The third insertion hashes 39 in slot 9. Therefor, 79 cannot go to slot 9. Using double hash to calculate possible new poistion as 
 $$(9 + (1+79\mod 7))\mod 10 = 2$$. Now for the final insertion 19, we have a clash at slot 9 and also at the next slot 2. But the
-next probe gives $$(9 + 2\times (1+79\mod 7))\mod 10 = 5$$ which is not occupied. So 79 goes to slot 5.
+next probe gives $$(9 + 2\times (1+19\mod 7))\mod 10 = 5$$ which is not occupied. So 19 goes to slot 5.
 The figure below shows final status of the hash table using double hashing technique to resolve collisions.
 <p style="text-align:center">
     <img src="../images/doubleHash.png">
