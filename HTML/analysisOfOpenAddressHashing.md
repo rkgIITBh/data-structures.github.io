@@ -51,3 +51,7 @@ successful search is
   \end{split}
 </p>  
 
+In the next blog, I will discuss about universal hash function.
+
+[Back to Index](../index.md)
+
