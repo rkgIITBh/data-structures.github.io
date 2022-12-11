@@ -81,3 +81,4 @@ The figure below shows final status of the hash table using double hashing techn
 <p style="text-align:center">
     <img src="../images/doubleHash.png">
 </p>
+The reader can check that the choice of prime number $$7 < 10$$ examines all the table slots. 
