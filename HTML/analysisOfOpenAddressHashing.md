@@ -8,11 +8,11 @@ We define a random variable $$X$$ which denotes the number of probes made for th
 probes and this probe gives an occupied slot. Then the probability of the event $$\{X \ge i\}$$ is the probability of 
 intersection of all events $$E_1, E_2, \ldots E_i$$, i.e., 
 <p style="text-align:center">
-  Pr\{X\ge i\} = Pr(E_1\cap E_2\cap\ldots\cap E_i)
+  $$Pr\{X\ge i\} = Pr(E_1\cap E_2\cap\ldots\cap E_i)$$
 </p>   
 The RHS of above expression is the same as:
 <p style="text-align:center">
-  Pr(E_1\cap E_2\cap\ldots\cap E_i) = Pr(E_1).Pr(E_2|E_1).Pr(E_3|E_1\cap E_2)\ldots Pr(E_i|E_1\cap E_2\ldots E_{i-1}) 
+  $$Pr(E_1\cap E_2\cap\ldots\cap E_i) = Pr(E_1).Pr(E_2|E_1).Pr(E_3|E_1\cap E_2)\ldots Pr(E_i|E_1\cap E_2\ldots E_{i-1})$$ 
 </p>   
 Our next task is to find the value of the RHS expression in above equation. For this we observer
 
