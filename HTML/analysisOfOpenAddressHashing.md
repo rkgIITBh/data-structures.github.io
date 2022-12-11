@@ -37,3 +37,17 @@ For unsuccessful search we also have to add the cost of hashing to above express
   & = \frac{1}{1-\alpha}
   \end{split}
 </p>
+For analysis of successful search, we observe that when an insertion operation becomes successful. Suppose it becomes successful at $$(i+1)$$ probe. 
+It implies all probes untill the $$i$$th probe must have failed. The expected value of probes is equal to  the average of the
+sum of all the probe values $$i$$ for $$i = 0, 1, \ldots, n-1$$. The probability of $$i$$th probe accessing an occupied slot is $$1-(i/m)$$. The
+number probes is equal to the inverse of the probability, i.e., $$1/(1-(i/m)) = m/(m-i)$$. Therefore, the expected number of probes for a 
+successful search is 
+<p style="text-align:center">
+  \begin{split}
+       \frac{1}{n}\left(\sum_{0}^{n-1}\frac{m}{m-i}\right) &= \frac{1}{n}\left(\sum_{i+m}^{n-m+1} \frac{1}{i}\right)\\
+         &\approx \frac{1}{n}\int_{x=m}^{n-m}\left(\frac{1}{x}dx\right)\\
+         &= \frac{m}{n}\ln\frac{m}{n-m}\\
+         &= \frac{\alpha}\ln{1-\alpha}
+  \end{split}
+</p>  
+
