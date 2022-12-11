@@ -17,7 +17,7 @@ The RHS of above expression is the same as:
 Our next task is to find the value of the RHS expression in above equation. For this we observer
 
 - The probability of hitting an occupied slot in $$i$$th probe is $$p_i$$
-- The probability of hitting an occupied slot in at least $$i$$ probes is $$q_i = \(\frac{m}{n}\)^i = \alpha^i$$
+- The probability of hitting an occupied slot in at least $$i$$ probes is $$q_i = \left(\frac{m}{n}\right)^i = \alpha^i$$
 
 Now let us determine the expected number of probes for an unsuccessful search. We compute it by calculating 
 
