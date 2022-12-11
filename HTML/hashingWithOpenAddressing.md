@@ -47,7 +47,7 @@ $$x_i = (x_0 + ic_1 + i^2c_2)$$,
 </p>
 where $$i\in \{0, 1, \ldots, m-1\}$$ and $$c_1$$, $$c_2 \ne 0$$ are constants. Quadratic probing improves performance. The distance between
 successive probes in quadratic probe is determined by the sequence $$c_1 + c_2, 2c_1+4c_2, 3c_1+9c_2, \ldots$$. 
-Let $$i$$th probe corresponding to $$k_1$$ be $$x_i$ and $$j$$th probe corresponding to $$k_2$$ be $$y_j$$. Even if $$x_i = y_j$$, with 
+Let $$i$$th probe corresponding to $$k_1$$ be $$x_i$$ and $$j$$th probe corresponding to $$k_2$$ be $$y_j$$. Even if $$x_i = y_j$$, with 
 quadratice probe $$x_{i+1}\ne y_{j+1}$$. Therefore, quadratic probe eliminates primary clustering. However, if the keys $$k_1\ne k_2$$ have
 the same initial hash value $$x_0$$ then quadratic probe generates identical probe sequence. This phenomenon is known as secondary clustering.<br>
 
