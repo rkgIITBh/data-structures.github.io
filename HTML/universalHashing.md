@@ -19,10 +19,10 @@ $${\cal H}$$ is universal if for all $$k_1\ne k_2$$ the cardinality of the set
 </p>
 If $$h$$ is randomly chosen from $${\cal H}$$ then the probability of $$h$$ mapping two different keys to the same table slot is given by
  <p style="align-text:center">
-   \begin{split}      
+   $$\begin{split}      
         \frac{card\{h: h(k_1) = h(k_2)\}}{|{\cal H}|} &= \frac{|{\cal H}|}{m}/|{\cal h}|}\\
          &= \frac{1}{m}
-  \end{split}
+  \end{split}$$
 </p>         
 Suppose $$n$$ keys to be hashed into a table of size $$m$$, then choose a hash function $$h$$ randomly from the set $${\cal H}$$, Under the
 stated conditions, the expected number of collisions with any key $$k$$ is given by:
