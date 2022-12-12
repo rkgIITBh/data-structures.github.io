@@ -40,10 +40,10 @@ $$c_{k_1k_2} = \begin{cases}
           0\mbox{, otherwise}
           \end{cases}$$
 </p>
-The expected value $$E(c_{k_1k_2}) = 1/m$$. But $$C_{k_1} = \sum_{k_2\in HT-\{k_1\}}c_{k_1k_2}$$. Therefore, we can derive $$E(C_{k_1}) as follows:
+The expected value $$E(c_{k_1k_2}) = 1/m$$. But $$C_{k_1} = \sum_{k_2\in HT-\{k_1\}}c_{k_1k_2}$$. Therefore, we can derive $$E(C_{k_1})$$ as follows:
 <p style="align-text:center">
 $$\begin{split}
-      E(C_{k_1}) &= E(\sum_{k_2\in HT-\{k_1\}}c_{k_1k_2})\\
+      E(C_{k_1}) &= E\left(\sum_{k_2\in HT-\{k_1\}}c_{k_1k_2}\right)\\
           &= \sum_{k_2\in HT-\{k_1\}}E(c_{k_1k_2})\\
           &= \sum_{k_2\in HT-\{k_1\}}\frac{1}{m}\\
           &= \frac{n-1}{m} \le \alpha
