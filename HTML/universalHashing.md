@@ -24,8 +24,28 @@ If $$h$$ is randomly chosen from $${\cal H}$$ then the probability of $$h$$ mapp
          &= \frac{1}{m}
   \end{split}$$
 </p>         
+<strong>Theorem for Universal Hash Function</strong>
+
 Suppose $$n$$ keys to be hashed into a table of size $$m$$, then choose a hash function $$h$$ randomly from the set $${\cal H}$$, Under the
 stated conditions, the expected number of collisions with any key $$k$$ is given by:
 <p style="align-text:center">
 $$E(\mbox{\# of collision with }k) =\frac{n}{m} = \alpha$$
+</p>
+
+To prove the theorem, we choose a random variable $$C_{k}$$ denoting the number of keys that collide in the hash table $$HT$$ with key $$k$$.
+Let us define
+<p style="align-text:center">
+$$c_{k_1k_2} = \begin{cases}
+          1\mbox{, if } h(k_1) = h(k_2)\\
+          0\mbox{, otherwise}
+          \end{cases}$$
+</p>
+The expected value $$E(c_{k_1k_2}) = 1/m$$. But $$C_{k_1} = \sum_{k_2\in HT-\{k_1\}}c_{k_1k_2}$$. Therefore, we can derive $$E(C_{k_1}) as follows:
+<p style="align-text:center">
+$$\begin{split}
+      E(C_{k_1}) &= E(\sum_{k_2\in HT-\{k_1\}}c_{k_1k_2})\\
+          &= \sum_{k_2\in HT-\{k_1\}E(c_{k_1k_2})\\
+          &= \sum_{k_2\in HT-\{k_1\}\frac{1}{m}\\
+          &= \frac{n-1}{m} \le \alpha
+          \end{split}$$
 </p>
