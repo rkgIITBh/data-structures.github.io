@@ -27,5 +27,5 @@ If $$h$$ is randomly chosen from $${\cal H}$$ then the probability of $$h$$ mapp
 Suppose $$n$$ keys to be hashed into a table of size $$m$$, then choose a hash function $$h$$ randomly from the set $${\cal H}$$, Under the
 stated conditions, the expected number of collisions with any key $$k$$ is given by:
 <p style="align-text:center">
-$$E(\# of collision with k) =\frac{n}{m} = \alpha$$
+$$E(\mbox{\# of collision with }k) =\frac{n}{m} = \alpha$$
 </p>
