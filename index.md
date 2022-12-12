@@ -61,6 +61,8 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ## Hashing
 
+- [Hashing By Chaining](HTML/analysisOfOpenAddresshashing.md)
+- [Hashing By Open Addressing](HTML/hashingWithOpenAddressing.md)
 - [Hashing By Chaining](HTML/hashingByChaining.md)
 - [Well-Known Hash Functions](HTML/hashingFunction.md)
 - [Introduction to Hashing](HTML/hashing_intro.md)
