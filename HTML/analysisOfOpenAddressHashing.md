@@ -46,7 +46,7 @@ successful search is
   \begin{split}
        \frac{1}{n}\left(\sum_{0}^{n-1}\frac{m}{m-i}\right) &= \frac{m}{n}\left(\sum_{m-n+1}^{m} \frac{1}{i}\right)\\
          &\approx \frac{1}{n}\int_{m-n}^{m}\left(\frac{1}{x}dx\right)\\
-         &= \frac{m}{n}\ln\frac{m}{n-m}\\
+         &= \frac{m}{n}\ln\frac{m}{m-n}\\
          &= \frac{1}{\alpha}\ln \frac{1}{(1-\alpha)}
   \end{split}
 </p>  
