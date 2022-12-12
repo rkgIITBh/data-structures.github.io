@@ -20,7 +20,7 @@ $${\cal H}$$ is universal if for all $$k_1\ne k_2$$ the cardinality of the set
 If $$h$$ is randomly chosen from $${\cal H}$$ then the probability of $$h$$ mapping two different keys to the same table slot is given by
  <p style="align-text:center">
    $$\begin{split}      
-        \frac{card\{h: h(k_1) = h(k_2)\}}{|{\cal H}|} &= \frac{|{\cal H}|}{m}/|{\cal h}|}\\
+        \frac{card\{h: h(k_1) = h(k_2)\}}{|{\cal H}|} &= \frac{|{\cal H}|}{m/|{\cal h}|}\\
          &= \frac{1}{m}
   \end{split}$$
 </p>         
