@@ -14,11 +14,11 @@ is the table size.
 
 Let the keys be drawn from a univers $$U$$, and let $${\cal H}$$ be a finite collection of hash functions which maps keys to $$\{0, 1, 2, \ldots, m-1\}$$.
 $${\cal H}$$ is universal if for all $$k_1\ne k_2$$ the cardinality of the set
-<p style="align-text:center>
+<p style="align-text:center">
           $$card\{h: h(k_1) = h(k_2)\} = \frac{|{\cal H}|}{m}$$
 </p>
 If $$h$$ is randomly chosen from $${\cal H}$$ then the probability of $$h$$ mapping two different keys to the same table slot is given by
- <p style="align-text:center>
+ <p style="align-text:center">
    \begin{split}      
         \frac{card\{h: h(k_1) = h(k_2)\}}{|{\cal H}|} &= \frac{|{\cal H}|}{m}/|{\cal h}|}\\
          &= \frac{1}{m}
@@ -26,6 +26,6 @@ If $$h$$ is randomly chosen from $${\cal H}$$ then the probability of $$h$$ mapp
 </p>         
 Suppose $$n$$ keys to be hashed into a table of size $$m$$, then choose a hash function $$h$$ randomly from the set $${\cal H}$$, Under the
 stated conditions, the expected number of collisions with any key $$k$$ is given by:
-<p style="align-text:center>
+<p style="align-text:center">
 $$E(# of collision with k) =\frac{n}{m} = \alpha$$
 </p>
