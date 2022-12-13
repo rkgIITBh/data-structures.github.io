@@ -66,5 +66,5 @@ $$m = 11$$ and we have a key $$k = 4789$$. The key $$k$$ represents an equivalen
 - Choose a vector $$[a_0 a_1 \ldots a_r]$$, where $$0\le a_i < m$$.
 - Compute $$h_a(k) = \left(\sum_{0}^{r} a_ik_i\right) \mod m$$, where $$k = k_{r}k_{r-1}\ldots k_0$$. 
 
-We can have $$m^{r+1}$$ vectors like $$a$$. In other words, we can construct $$m^{r+1}$$ hash functions by picking a random vector of the type $$a$$.  
-Only thing we have to prove now is that the family of hash functions represents a universal hash.
+We can have $$m^{r+1}$$ vectors like $$a$$. In other words, we can construct $$m^{r+1}$$ hash functions by picking a random vector of the type $$a$$. Only
+thing we have to prove now is that the family of hash functions represents a universal hash.
