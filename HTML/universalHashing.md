@@ -73,3 +73,11 @@ Consider a finite field
 <p style="align-text:center">
           $$\langle\mathcal{Z}_m, +_{\mod m}, \ast_{\mod m}\rangle\mbox{, where } \mathcal{Z} = \{0, 1, \ldots, m-1\}$$
 </p>
+In this field every non-zero element has a unique multiplicative inverse. For example, let $$\mathcal{Z}_7 = \{0,1,2,3, 4, 5, 6\}$$. The
+multiplicative inverse of nonzero elements are:
+
+
+|----|----|-----|----|----|-----|
+| $$z$$  | 1 | 2  | 3 | 4 | 5 | 6 |
+| $$z^{-1}$$ | 1 |4 |5 | 2 | 3 | 6 |
+
