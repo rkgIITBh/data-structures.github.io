@@ -81,3 +81,5 @@ multiplicative inverse of nonzero elements are:
 |--|---|---|---|---|---|--|
 | $$z^{-1}$$ | 1 |4 |5 | 2 | 3 | 6 |
 
+Notice that $$m$$ should be a prime number for every nonzero element to have a multiplicative inverse. For example if consider $$m=10$$, then
+2 does not have a multiplicative inverse.
