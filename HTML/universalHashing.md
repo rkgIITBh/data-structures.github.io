@@ -118,3 +118,5 @@ $$h_a(k_1) = h_a(k_2)$$ for $$k_1\ne k_2$$ is given by
           $$\frac{m^r}{m^{r+1}} = \frac{1}{m}$$
 </p>          
 Hence, the hash function construction, as explained above, gives a universal hash. 
+
+[Back to Index](../index.md)
