@@ -77,7 +77,7 @@ In this field every non-zero element has a unique multiplicative inverse. For ex
 multiplicative inverse of nonzero elements are:
 
 
-|----|----|-----|----|----|-----|
 | $$z$$  | 1 | 2  | 3 | 4 | 5 | 6 |
+|--|---|---|---|---|---|--|
 | $$z^{-1}$$ | 1 |4 |5 | 2 | 3 | 6 |
 
