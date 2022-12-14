@@ -92,3 +92,26 @@ Let us return back to the method we use for construction of a random hash functi
 <p style="align-text:center">
 $$h_a(k) = \sum_{0}^{r} a_i k_i$$
 </p>
+
+<strong>Theorem for Construction</strong>
+
+The construction of the family of hash functions using random choice of vector $$[a_0 a_1\ldots a_{m-1}]$$ belongs to univeral hash.
+
+<strong>Proof:</strong>
+
+We need to prove that for any two distinct keys $$k_1$$ and $$k_2$$ and a random choice of $$a$$ 
+<p style="align-text:center">
+          $$Pr[h_a(k) = h_a(k')] \le \frac{1}{m}$$
+</p>
+Given $$k$$ and $$k'$$, we decompose each into $$r+1$$ base $$m$$ digits. Since $$k\ne k'$$, we should have at least one of the digit positions
+$$i$$, where $$0\le i\le r$$, such that $$k_i\ne k'_i$$. Without the loss of generality, let $$k_0\ne k'_0$$. As the hash values of the keys
+are equal, we have
+<p style="align-text:center">
+          $$\begin{array}{rcl}
+            \sum_0^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod 0m)\\
+            a_0(k_0 - k'_1) + \sum_1^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod 0m)\\
+            a_0(k_0 - k'_1)   & \equiv 0 & - \sum_1^r a_i(k_i - k'_i)\mod m
+          \end{array}
+          $$
+</p>
+
