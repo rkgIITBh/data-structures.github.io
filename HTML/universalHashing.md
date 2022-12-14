@@ -83,3 +83,12 @@ multiplicative inverse of nonzero elements are:
 
 Notice that $$m$$ should be a prime number for every nonzero element to have a multiplicative inverse. For example if consider $$m=10$$, then
 2 does not have a multiplicative inverse.
+
+We now connect the concept of finite field to family of hash functions that constitute a universal hash. The idea is that a key $$k$$ is decomposed
+into $$r+1$$ base $$m$$ digits. Since $$m$$ is a prime, with addition and multiplication modulo $$m$$ operations the collection these base-$$m$$
+digits form a finite field. 
+
+Let us return back to the method we use for construction of a random hash function. The vector $$a$$ specifies the hash
+<p style="align-text:center">
+$$h_a(k) = \sum_{0}^{r} a_i k_i$$
+</p>
