@@ -110,9 +110,16 @@ are equal, we have
           $$\begin{array}{rcl}
             \sum_0^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod m)\\
             a_0(k_0 - k'_1) + \sum_1^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod m)\\
-            a_0(k_0 - k'_1)   & \equiv & - \sum_1^r a_i(k_i - k'_i)\mod m\\
-            a_0 & = & \left(- \sum_1^r a_i(k_i - k'_i)\mod m\right)(k_0 - k'_0)^{-1} \mbox{ because } k_0\mbox{ and } k'_0\mbox{ belong to a finite field}
+            a_0(k_0 - k'_1)   & = & - \sum_1^r a_i(k_i - k'_i)\mod m\\
+            a_0 & = & \left(- \sum_1^r a_i(k_i - k'_i)\mod m\right)(k_0 - k'_0)^{-1} 
           \end{array}
           $$
 </p>
-The analysis tells us that once $$a_i$$ for $$i\ge 1$$ have been fixed, only one unique $$a_0$$ is possible.  
+Since $$k_0$$ and $$k'_0$$ belong to a finite field with operations addition and multiplication modulo m, the above analysis tells us that 
+once $$a_i$$ for $$i\ge 1$$ have been fixed, only one unique $$a_0$$ is possible. The number of possible choices for combination of $$r$$ 
+$$a_i$$s, for $$1\le i\le r$$ is $$m^r$$. Each combination gives one unique value for $$a_0$$. Therefore, the probability of a clash of 
+$$h_a(k_1) = h_a(k_2)$$ for $$k_1\ne k_2$$ is given by
+<p style="align-text:center">
+          $$\frac{m^r}{m^{r+1}} = \frac{1}{m}$$
+</p>          
+Hence, the construction of hash function as explained above gives a universal hash. 
