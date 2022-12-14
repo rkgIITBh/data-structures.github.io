@@ -108,8 +108,8 @@ $$i$$, where $$0\le i\le r$$, such that $$k_i\ne k'_i$$. Without the loss of gen
 are equal, we have
 <p style="align-text:center">
           $$\begin{array}{rcl}
-            \sum_0^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod 0m)\\
-            a_0(k_0 - k'_1) + \sum_1^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod 0m)\\
+            \sum_0^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod m)\\
+            a_0(k_0 - k'_1) + \sum_1^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod m)\\
             a_0(k_0 - k'_1)   & \equiv 0 & - \sum_1^r a_i(k_i - k'_i)\mod m
           \end{array}
           $$
