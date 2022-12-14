@@ -110,8 +110,9 @@ are equal, we have
           $$\begin{array}{rcl}
             \sum_0^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod m)\\
             a_0(k_0 - k'_1) + \sum_1^r a_i(k_i - k'_i)\mod m & \equiv 0 & (\mod m)\\
-            a_0(k_0 - k'_1)   & \equiv 0 & - \sum_1^r a_i(k_i - k'_i)\mod m
+            a_0(k_0 - k'_1)   & \equiv & - \sum_1^r a_i(k_i - k'_i)\mod m\\
+            a_0 & = & \left(- \sum_1^r a_i(k_i - k'_i)\mod m\right)(k_0 - k'_0)^{-1} \mbox{ because } k_0\mbox{ and } k'_0\mbox{ belong to a finite field}
           \end{array}
           $$
 </p>
-
+The analysis tells us that once $$a_i$$ for $$i\ge 1$$ have been fixed, only one unique $$a_0$$ is possible.  
