@@ -29,7 +29,7 @@ If $$h$$ is randomly chosen from $${\cal H}$$ then the probability of $$h$$ mapp
 Suppose $$n$$ keys to be hashed into a table of size $$m$$, then choose a hash function $$h$$ randomly from the set $${\cal H}$$, Under the
 stated conditions, the expected number of collisions with any key $$k$$ is given by:
 <p style="align-text:center">
-$$E(\mbox{# of collision with }k) =\frac{n}{m} = \alpha$$
+$$E(\mbox{number of collisions with }k) =\frac{n}{m} = \alpha$$
 </p>
 <strong>Proof:</strong>
 
@@ -66,5 +66,10 @@ $$m = 11$$ and we have a key $$k = 4789$$. The key $$k$$ represents an equivalen
 - Choose a vector $$[a_0 a_1 \ldots a_r]$$, where $$0\le a_i < m$$.
 - Compute $$h_a(k) = \left(\sum_{0}^{r} a_ik_i\right) \mod m$$, where $$k = k_{r}k_{r-1}\ldots k_0$$. 
 
-We can have $$m^{r+1}$$ vectors like $$a$$. In other words, we can construct $$m^{r+1}$$ hash functions by picking a random vector of the type $$a$$. Only
-thing we have to prove now is that the family of hash functions represents a universal hash.
+We can have $$m^{r+1}$$ vectors like $$a$$. In other words, we can construct $$m^{r+1}$$ hash functions by picking 
+a random vector of the type $$a$$. The family of hash functions we obtain by the vectors $$a$$ represents a universal hash.
+
+Consider a finite field 
+<p style="align-text:center">
+          $$\langle\mathcal{Z}_m, +_{\mod m}, \ast_{\mod m}\rangle\mbox{, where } \mathcal{Z} = \{0, 1, \ldots, m-1\}$$
+</p>
