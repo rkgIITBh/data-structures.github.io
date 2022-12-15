@@ -88,8 +88,8 @@ Let us return to the method we used to construct a random hash function. The vec
 <p style="align-text:center">
 $$h_a(k) = \sum_{0}^{r} a_i k_i$$
 </p>
-Alternatively, we get the hash value $$h_a(k)$$ for the key $$k$$ as the inner product $$A.k$$, where $$A$$ is a random matrix of 
-dimension $$m\times (r+1)$$. 
+#Alternatively, we get the hash value $$h_a(k)$$ for the key $$k$$ as the inner product $$A.k$$, where $$A$$ is a random matrix of 
+#dimension $$m\times (r+1)$$. 
 
 
 <strong>Theorem for Construction</strong>
