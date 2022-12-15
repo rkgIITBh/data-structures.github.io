@@ -61,6 +61,7 @@ develop code phobia. The theory is required, but a proper balance is needed.
 
 ## Hashing
 
+- [Universal Hashing](HTML/universalHashing.md)
 - [Analysis of Open Address Hashing](HTML/analysisOfOpenAddressHashing.md)
 - [Hashing With Open Addressing](HTML/hashingWithOpenAddressing.md)
 - [Hashing By Chaining](HTML/hashingByChaining.md)
