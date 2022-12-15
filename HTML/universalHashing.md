@@ -84,10 +84,13 @@ Notice that $$m$$ should be a prime number for every nonzero element to have a m
 
 We now connect the concept of a finite field to a family of hash functions that constitute a universal hash. Since $$m$$ is a prime, with addition and multiplication modulo $$m$$ operations, the collection of these base-$$m$$ digits forms a finite field. 
 
-Let us return to the method we use to construct a random hash function. The vector $$a$$ specifies the hash
+Let us return to the method we used to construct a random hash function. The vector $$a$$ specifies the hash value
 <p style="align-text:center">
 $$h_a(k) = \sum_{0}^{r} a_i k_i$$
 </p>
+Alternatively, we get the hash value $$h_a(k)$$ for the key $$k$$ as the inner product $$A.k$$, where $$A$$ is a random matrix of 
+dimension $$m\times (r+1)$$. 
+
 
 <strong>Theorem for Construction</strong>
 
