@@ -12,10 +12,13 @@ possible to design a minimal perfect hashing. Designing a perfect hashing is ted
 Perfect hashing for static key sets applies to storing of keywords of a programming language. We use two hash functions $$h$$ and $$g$$
 for it. The formula for computation of the hash value is:
 <p style="text-align:center"> 
-  $$h(k) = k.len + g(k_0) + g(k_1\ldots k_{len-1})$$
+  $$h(k) = k.len + g(k_0) + g(k_1\ldots k_{k.len-1})$$
 </p>
 where $$k.len$$ is the length of the string $$k$$ and $$g(.)$$ is constructed using Cichelli's algorithm. Cichelli's method has three steps
 1. Computation of letter frequencies in words,
 2. Ordering the words,
 3. Searching.
+The algorithm may degenerate into exponential complexity if the symbol set is large. We use an example to explain the performance issue
+for large symbol set.
+
 
