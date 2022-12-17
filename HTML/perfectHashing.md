@@ -15,10 +15,18 @@ for it. The formula for computation of the hash value is:
   $$h(k) = k.len + g(k_0) + g(k_1\ldots k_{k.len-1})$$
 </p>
 where $$k.len$$ is the length of the string $$k$$ and $$g(.)$$ is constructed using Cichelli's algorithm. Cichelli's method has three steps
+
 1. Computation of letter frequencies in words,
 2. Ordering the words,
 3. Searching.
-The algorithm may degenerate into exponential complexity if the symbol set is large. We use an example to explain the performance issue
-for large symbol set.
+
+The algorithm may degenerate into exponential complexity if the symbol set is large. We use an example to explain the performance issues.
+Consider the set of words shown in the first table on the left part of the figure below. It has nine words (the names of states in India). 
+The letter frequencies of the first and last letters of the words appear in the table in gray shade. 
+<p style="text-align:center"> 
+  <img src="../images/Cichelli_Algo.png">
+</p>
+The scores of each word is computed by adding the frequencies of the first and the last letters. The unsorted list of words with scores
+appear in the table to the left bottom. The sorted list appears to right of unsorted table.
 
 
