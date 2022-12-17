@@ -24,7 +24,7 @@ The algorithm may degenerate into exponential complexity if the symbol set is la
 Consider the set of words shown in the first table on the left part of the figure below. It has nine words (the names of states in India). 
 The letter frequencies of the first and last letters of the words appear in the table in gray shade. 
 <p style="text-align:center"> 
-  <img src="../images/Cichelli_Algo.png">
+  <img src="../images/Cichell_Algo.png">
 </p>
 The scores of each word is computed by adding the frequencies of the first and the last letters. The unsorted list of words with scores
 appear in the table to the left bottom. The sorted list appears to right of unsorted table.
