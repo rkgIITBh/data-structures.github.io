@@ -22,12 +22,12 @@ for the two-level hashing scheme is still O($$n$$).
 If we store $$n$$ keys in a hash table of size $$m = n^2$$ using a hash function $$h$$ randomly from a family of universal hash functions
 then the probability of a collision is less than 1/2.
 
-<strong>Proof:</strong> There are at most $$\comb{n}{2}$$ pair of keys that may collide. The probability of collision of each pair is $$1/m$$ if
+<strong>Proof:</strong> There are at most $$\binom{n}{2}$$ pair of keys that may collide. The probability of collision of each pair is $$1/m$$ if
 we choose a random hash function from a family of universal hash functions $$\mathcal{H}$$. Since $$m = n^2$$, the expected number of 
 collisions is 
 <p style="text-align:center">
 $$\begin{split}
-    E(K) &= \comb{n}{2}\times \frac{1}{m}\\
+    E(K) &= \binom{n}{2}\times \frac{1}{m}\\
          &= \frac{n^2-n}{2}\times\frac{1}{n^2}\\
          &< \frac{1}{2}
   \end{split}
@@ -43,11 +43,19 @@ The key observation in solving birthday paradox is that the total probability is
   2. Probability of no other person sharing birthday with anyone else.
 
 The probability for the second part is simple. We know anyone may have 365 choices for a birthday. If someone has a birthday on one of
-365 days, the choice for the birthday of another persone can be one out of 364 days. So the no one sharing a birthday with anyone else
-in a group of $$n$$ persons is:
+365 days, the choice for the birthday of another persone can be one out of 364 days. So the probability that no one sharing a birthday 
+with anyone else in a group of $$n$$ persons is:
 <p style="text-align:center">
 $$\frac{365}{365}\frac{364}{365}\ldots\frac{365-n+1}{365}$$
-</p>  
+</p>
+If $$n = 30$$ then the above expression is:
+<p style="text-align:center">
+$$\frac{365\times 364\times 363\times\ldots\times 336}{365^{30}}$$
+</p>
+Replacing the numerator in terms of factorial, we have
+<p style="text-align:center">
+$$\frac{\frac{365!}{335!}}{365^{30}} \approx 29.37$$%
+</p>
 Perfect hashing for static key sets applies to storing of keywords of a programming language. We use two hash functions $$h$$ and $$g$$
 for it. The formula for computation of the hash value is:
 <p style="text-align:center"> 
