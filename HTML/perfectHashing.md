@@ -10,13 +10,44 @@ is a perfect hashing that uses table size that has equal number of slots and key
 possible to design a minimal perfect hashing. Designing a perfect hashing is tedious but possible.
 
 Creating a perfect hashing scheme is simple. It requires two-level approach with universal hashing at each level. The first level is 
-almost same as chaining. The keys are hashed using a hash function chosen from a family of universal hash functions. The keys which happen to
-hash into same chain are not stored in a linked list but stored in secondary hash table using an associated hash function. By  carefully
-choosing the secondary hash we can guarantee that no collisions occur at the secondary level. However, we can provide the no collision
-guarantee at the secondary level by using O($$n_j^2$$) table slots,  where $$n_j$$ is the number of keys hashing into the same slot in 
-primary hash level. However, the use of universal hashing in primary level guarantees that no more than $$n/m$$ element can hash into
-the same table slot in the primary hash level. 
+almost same as chaining. The keys are hashed using a function chosen from a family of universal hash functions. The keys that happen to
+hash into same table slot in the primary hash table are stored in a secondary table using an associated hash function. By  carefully
+choosing the secondary hash we can guarantee that no collisions occur at the secondary level. However, the guarantee comes with a cost.
+We need quadratic space for the secondary level table. For example, if $$n_j$$ is the number of keys hashing into the same primary
+table slot in the first level then we require $$n_j^2$$ slots in the secondary table. However, the expected size of space required 
+for the two-level hashing scheme is still O($$n$$).
 
+<strong>Theorem 1 (Quadratic Spce Requirement)</strong> 
+
+If we store $$n$$ keys in a hash table of size $$m = n^2$$ using a hash function $$h$$ randomly from a family of universal hash functions
+then the probability of a collision is less than 1/2.
+
+<strong>Proof:</strong> There are at most $$\comb{n}{2}$$ pair of keys that may collide. The probability of collision of each pair is $$1/m$$ if
+we choose a random hash function from a family of universal hash functions $$\mathcal{H}$$. Since $$m = n^2$$, the expected number of 
+collisions is 
+<p style="text-align:center">
+$$\begin{split}
+    E(K) &= \comb{n}{2}\times \frac{1}{m}\\
+         &= \frac{n^2-n}{2}\times\frac{1}{n^2}\\
+         &< \frac{1}{2}
+  \end{split}
+$$
+</p>
+The above analysis is similar to the well-known problem of <i>Birthday Paradox</i>.  is stated as follows.
+
+<strong>Birthday paradox:</strong> In a room of $$n$$ people, what’s the probability that at least one pair will have the same birthday?
+
+The key observation in solving birthday paradox is that the total probability is equal to the sum of:
+  
+  1. Probability of at least two persons sharing a birthday.
+  2. Probability of no other person sharing birthday with anyone else.
+
+The probability for the second part is simple. We know anyone may have 365 choices for a birthday. If someone has a birthday on one of
+365 days, the choice for the birthday of another persone can be one out of 364 days. So the no one sharing a birthday with anyone else
+in a group of $$n$$ persons is:
+<p style="text-align:center">
+$$\frac{365}{365}\frac{364}{365}\ldots\frac{365-n+1}{365}$$
+</p>  
 Perfect hashing for static key sets applies to storing of keywords of a programming language. We use two hash functions $$h$$ and $$g$$
 for it. The formula for computation of the hash value is:
 <p style="text-align:center"> 
