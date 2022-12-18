@@ -9,6 +9,14 @@ situation we look for a <i>perfect hashing</i> which maps elements to table slot
 is a perfect hashing that uses table size that has equal number of slots and keys. If the key set is known in advance (static) it is 
 possible to design a minimal perfect hashing. Designing a perfect hashing is tedious but possible.
 
+Creating a perfect hashing scheme is simple. It requires two-level approach with universal hashing at each level. The first level is 
+almost same as chaining. The keys are hashed using a hash function chosen from a family of universal hash functions. The keys which happen to
+hash into same chain are not stored in a linked list but stored in secondary hash table using an associated hash function. By  carefully
+choosing the secondary hash we can guarantee that no collisions occur at the secondary level. However, we can provide the no collision
+guarantee at the secondary level by using O($$n_j^2$$) table slots,  where $$n_j$$ is the number of keys hashing into the same slot in 
+primary hash level. However, the use of universal hashing in primary level guarantees that no more than $$n/m$$ element can hash into
+the same table slot in the primary hash level. 
+
 Perfect hashing for static key sets applies to storing of keywords of a programming language. We use two hash functions $$h$$ and $$g$$
 for it. The formula for computation of the hash value is:
 <p style="text-align:center"> 
@@ -40,6 +48,7 @@ We resolve the collision by assigning consecutive values to the letter as indica
 <p style="text-align:center"> 
   <img src="../images/CichelliSearchStep.png">
 </p>
-
+The placement of elements in table slot may require repeated search that may degenerate into exponential time. Therefore, Cichelli's method
+is applicable for hashing a small finite set of symbols. 
 
 
