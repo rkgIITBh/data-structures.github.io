@@ -44,29 +44,42 @@ is of O($$n$$)?
 If we store $$n$$ keys in a hash table of size $$m = n$$ using a hash function $$h$$ randomly chosen from a universal class of hash functions
 then 
 <p style="text-align:center">
-    $$E\left[\sum_{j=0}^{m-1} n_j^2 < 2n$$, 
+    $$E\left[\sum_{j=0}^{m-1} n_j^2\right] < 2n$$, 
 </p>    
-where $$n_j$$ is the number of keys hashing to the slot $$j$$ of the first level table. Now we use the identity
+where $$n_j$$ is the number of keys hashing to the slot $$j$$ of the first level table.
+    
+<strong>Proof:</strong>
+    
+We use the following identity in the simplification of the expression for expected memory requirement.
 <p style="text-align:center">
     $$a^2 = a + \binom{a}{2}$$. 
 </p>
-in the simplification of the expression for expected memory requirement.
+We have
 <p style="text-align:center">
     $$\begin{split}
-    E\left[\sum_{j=0}^{m-1} n_j^2 &= E\left[\sum_{j=0}^{m-1}(\left(n_j + 2\binom{n_j}{2}\right)\right]\mbox{ using the identity}\\
-    &= E\left[\sum_{j=0}^{m-1}n_j\right] + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\mbox{ by linearity of expectation}\\
+    E\left[\sum_{j=0}^{m-1} n_j^2\right] &= E\left[\sum_{j=0}^{m-1}(\left(n_j + 2\binom{n_j}{2}\right)\right]\mbox{ (using the identity)}\\
+    &= E\left[\sum_{j=0}^{m-1}n_j\right] + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\mbox{ (by linearity of expectation)}\\
     &= E(n) + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\\
-    &= n + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\mbox{ since }n\mbox{ is not a random variable}
+    &= n + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\mbox{ (since }n\mbox{ is not a random variable)}
     \end{split}
     $$
 </p>     
-Apply linearity of expectation to obtain:
+The expression $$\sum_{j=0}^{m-1} \binom{n_j}{2}$$ is equal to the number of total number of collisions. The properties of universal hashing
+tells us that the expected value of the total number of collisions is at most:
 <p style="text-align:center">
-    $$E\left[\sum_{j=0}^{m-1} n_j^2 = E\left[\sum(\left(n_j + 2\binom{n_j}{2}\right)\right]$$. 
-</p>  
-<strong>Proof:</strong> We can rewrite 
-    
-Consider the identity $$a^2 = a + \binom{a}{2}$$.     
+    $$\binom{n}{2}\times\frac{1}{m} = \frac{n(n-1)}{2m} = \frac{n-1}{2}\mbox{, since } m = n$$
+</p>   
+Therefore, 
+<p style="text-align:center">
+    $$
+     \begin{split}
+        n + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right] &\le n + 2\frac{n-1}{2}\\
+        &= 2n - 1 < 2n
+     \end{split}
+    $$
+</p>   
+
+
 [//]: <strong>Birthday paradox:</strong> In a room of $$n$$ people, what’s the probability that at least one pair will have the same birthday?
 
 [//]:The key observation in solving birthday paradox is that the total probability is equal to the sum of:
