@@ -33,29 +33,63 @@ $$\begin{split}
   \end{split}
 $$
 </p>
-The above analysis is similar to the well-known problem of <i>Birthday Paradox</i>.  is stated as follows.
+The above analysis is similar to the well-known problem of <i>Birthday Paradox</i>. The problem with above theorem is that the space 
+requirement is of O($$n^2$$). If $$n$$ is large then the space requirement is excessive. So, two level hashing is used to cut down the
+space requirement for collision free hashing. For the first level hashing the space requirement is $$m = n$$. For the second level the space
+requirement is $$n_j^2$$ for only those keys which collide for slot $$j$$ in the primary level. How do we prove that the space requirement
+is of O($$n$$)?
+    
+<strong>Theorem 2 (Linear Expected Space Requirement)</strong>
+ 
+If we store $$n$$ keys in a hash table of size $$m = n$$ using a hash function $$h$$ randomly chosen from a universal class of hash functions
+then 
+<p style="text-align:center">
+    $$E\left[\sum_{j=0}^{m-1} n_j^2 < 2n$$, 
+</p>    
+where $$n_j$$ is the number of keys hashing to the slot $$j$$ of the first level table. Now we use the identity
+<p style="text-align:center">
+    $$a^2 = a + \binom{a}{2}$$. 
+</p>
+in the simplification of the expression for expected memory requirement.
+<p style="text-align:center">
+    $$\begin{split}
+    E\left[\sum_{j=0}^{m-1} n_j^2 &= E\left[\sum_{j=0}^{m-1}(\left(n_j + 2\binom{n_j}{2}\right)\right]\mbox{ using the identity}\\
+    &= E\left[\sum_{j=0}^{m-1}n_j\right] + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\mbox{ by linearity of expectation}\\
+    &= E(n) + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\\
+    &= n + 2E\left[\sum_{j=0}^{m-1} \binom{n_j}{2}\right]\mbox{ since }n\mbox{ is not a random variable}
+    \end{split}
+    $$
+</p>     
+Apply linearity of expectation to obtain:
+<p style="text-align:center">
+    $$E\left[\sum_{j=0}^{m-1} n_j^2 = E\left[\sum(\left(n_j + 2\binom{n_j}{2}\right)\right]$$. 
+</p>  
+<strong>Proof:</strong> We can rewrite 
+    
+Consider the identity $$a^2 = a + \binom{a}{2}$$.     
+[//]: <strong>Birthday paradox:</strong> In a room of $$n$$ people, what’s the probability that at least one pair will have the same birthday?
 
-<strong>Birthday paradox:</strong> In a room of $$n$$ people, what’s the probability that at least one pair will have the same birthday?
-
-The key observation in solving birthday paradox is that the total probability is equal to the sum of:
+[//]:The key observation in solving birthday paradox is that the total probability is equal to the sum of:
   
-  1. Probability of at least two persons sharing a birthday.
-  2. Probability of no other person sharing birthday with anyone else.
+[//]:  1. Probability of at least two persons sharing a birthday.
+[//]: 2. Probability of no other person sharing birthday with anyone else.
 
-The probability for the second part is simple. We know anyone may have 365 choices for a birthday. If someone has a birthday on one of
-365 days, the choice for the birthday of another persone can be one out of 364 days. So the probability that no one sharing a birthday 
-with anyone else in a group of $$n$$ persons is:
-<p style="text-align:center">
-$$\frac{365}{365}\frac{364}{365}\ldots\frac{365-n+1}{365}$$
-</p>
-If $$n = 30$$ then the above expression is:
-<p style="text-align:center">
-$$\frac{365\times 364\times 363\times\ldots\times 336}{365^{30}}$$
-</p>
-Replacing the numerator in terms of factorial, we have
-<p style="text-align:center">
-$$\frac{\frac{365!}{335!}}{365^{30}} \approx 29.37$$%
-</p>
+[//]: The probability for the second part is simple. We know anyone may have 365 choices for a birthday. If someone has a birthday on one of
+[//]: 365 days, the choice for the birthday of another persone can be one out of 364 days. So the probability that no one sharing a birthday 
+[//]: with anyone else in a group of $$n$$ persons is:
+[//]: <p style="text-align:center">
+[//]: $$\frac{365}{365}\frac{364}{365}\ldots\frac{365-n+1}{365}$$
+[//]: </p>
+[//]: If $$n = 30$$ then the above expression is:
+[//]: <p style="text-align:center">
+[//]: $$\frac{365\times 364\times 363\times\ldots\times 336}{365^{30}}$$
+[//]: </p>
+[//]: Replacing the numerator in terms of factorial, we have
+[//]: <p style="text-align:center">
+[//]: $$\frac{\frac{365!}{335!}}{365^{30}} \approx 29.37$$%
+[//]: </p>
+
+
 Perfect hashing for static key sets applies to storing of keywords of a programming language. We use two hash functions $$h$$ and $$g$$
 for it. The formula for computation of the hash value is:
 <p style="text-align:center"> 
