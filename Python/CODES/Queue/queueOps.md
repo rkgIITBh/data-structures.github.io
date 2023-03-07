@@ -1,6 +1,9 @@
 # Source Code for Python Queue Class
 
-This code can be used either for plain Python script or linked to a web interface code through Python Flask app.
+We can execute the code either directly or attach it through Python Flask app and execute the queue operations using RESTful microservices.
+The latter approach will require understanding of CSS, Jinja Template Engine and fair amount of HTML. We plan to familiarize the reader to
+write real production like webprograming through RESTful APIs. So the current directory also include Python Flask code, CSS and Jinja 
+templates.
 
 ```
 from flask import Flask, render_template, request, redirect, url_for,request, jsonify
