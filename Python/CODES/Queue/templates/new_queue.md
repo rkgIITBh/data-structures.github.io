@@ -15,7 +15,7 @@ However, if we utilize the vacated positions then it is possible to insert new e
     of the array as indicated in the figure below.
     
 <p style="text-align:center">
-<img src="../images/circularQNew.png">
+<img src="../../../images/circularQNew.png">
 </p>
 
 The shifting operation should be carried out each time <samp>q._rear</samp> points the last position. This is expensive. A simpler way to 
