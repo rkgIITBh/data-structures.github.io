@@ -1,6 +1,15 @@
 # Flask Application for Exploring Queue Operations
 
-<strong>NOTE:</strong> 
+<strong>NOTE:</strong> REST web APIs for operations on queue using Python Flask framework is intended to achieve twin objectives:
+<ol>
+    <li>Understanding queue data structures and operations on queues.</li>
+    <li>Writing production like APIs for web interfaces with backend programs.</li>
+</ol>
+Each operation is handled by a decorator <samp> @app.route(<function name>)</samp>. The decorator is applied on a string that symbolically represents a distinct
+path or a route. Apart from standard operations such as enqueue, dequeue, makenull, we need a couple of helper functions to create complete
+set of web API for the reader to get a satisfaction and understanding of the framework of webprogramming along with data structures. For further
+details [check this link](./templates/qapps.md).
+    
 
 ```
 # Flask APIs for web rendering of the queue operations
