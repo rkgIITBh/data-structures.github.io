@@ -1,7 +1,11 @@
-# Displaying queue after insertion
+# Displaying a Queue After and Insertion
 
-We require a template file for displaying queue after adding a new element to the rear. It increases the number of elements if there is an available
-slot for new insertion. However, if the queue is full it returns saying that no insertion is possible as the queue is full.
+<strong>NOTE:</strong> We require a template file for displaying queue after each operations on a queue. After adding a new element to the rear, 
+the number of elements in a queue increases. An insertion succeeds if a vacant slot available in the queue. However, if the queue is full it 
+returns saying that no insertion is possible as the queue is full. The display is handled by a template file <samp>qapp.html</samp>. This file
+should be created in the template folder of the queue application. The major part of this code deals with navigation which is common to all
+template files for the application. The file inherits navigation interface from <samp>bast.html</samp> file. We just extend <samp>base.html</samp>
+and include only the part that deals with enqueue. It requires an input from user then call insertion function <samp>"/enqueue"</samp>
 
 ```
 {% extends 'base.html' %}
@@ -10,41 +14,7 @@ slot for new insertion. However, if the queue is full it returns saying that no 
 {% endblock %} 
 
 {% block body %}
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/dequeue">Dequeue</a></li>
-        <li><a href="/printq">Print Queue</a></li>
-        <li><a href="/makeempty">Makenull</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Description
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="about">Circular queue</a></li>
-            <li><a class="dropdown-item" href="qapps">Flask apps</a></li>
-            <li><a class="dropdown-item" href="qstyles">Templates</a></li>
-          </ul><li>
-                        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Source code
-          </a>
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="appcode">App code</a></li>
-            <li><a class="dropdown-item" href="clcode">Queue class</a></li>
-          </ul></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <br>
-
 <div class="method" style="text-align:center">
       <h2>{{ h }}</h2>
       <h3>Queue capacity: {{ cap }}</h3>
@@ -57,9 +27,7 @@ slot for new insertion. However, if the queue is full it returns saying that no 
 <div span="right" style="text-align:center">
     <form action="/enqueue" method="POST">
             <input type="text" name="element" placeholder="enter value">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-success"
-                    type="submit">Enqueue</button>&nbsp;&nbsp;&nbsp;&nbsp;
-<div span="right" style="text-align:center">
+            <button class="btn btn-success" type="submit">Enqueue</button>&nbsp;&nbsp;&nbsp;&nbsp;
     </form>
 </div>
 
