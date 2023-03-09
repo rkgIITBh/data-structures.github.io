@@ -1,8 +1,8 @@
 # Description of Template Files
 
 <strong>NOTE:</strong> The text describes all the template files for queue operations. This file would be accessible from the dropdown menu
-under link "Description" for Flask API pages when we execute the web application.  The basic structure of the template file is appears below with
-description. The description acquaints the reader with the organization of the template files used in the application.
+"Templates" under the link "Description" for Flask API pages when we execute the web application.  The basic structure of the template file 
+is appears below with description. The description acquaints the reader with the organization of the template files used in the application.
 
 It consists of HTML-Jinja code along with description. To create actual template file:
 <ul>
