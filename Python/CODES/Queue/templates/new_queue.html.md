@@ -4,7 +4,11 @@
 <strong>NOTE</strong>: We have created similar directory structure for the Python Flask programming for understanding and exploring operations on 
 Queue data strcuture. The template directory contains all the HTML files that will be needed for the web application to run. The files have .md 
 extensions and should be renamed using .html extensions. The content of the file appears below with required html code interpersed along with
-description. The each portions of text should be tagged by "&lt;p&gt;" and "&lt;/p&gt;".
+description. The flie consists of HTML-Jinja code interpersed with text descriptions. To create a template file:
+<ul>
+        <li>Copy the entire text below into a file named <samp>qapps.html</samp></li>
+        <li>Insert "&lt;p&gt;" and "&lt;/p&gt;" tags for paragraphs of text descripttion.</li>
+</ul>
 ```
 {% extends 'base.html' %}
 {% block head %}
