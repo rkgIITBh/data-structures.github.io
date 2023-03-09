@@ -1,6 +1,7 @@
 # Java scripts for rendering templates
 
-<strong>NOTE</strong>: This file contains the new script we need for templates. 
+<strong>NOTE</strong>: This file contains the new script we need for templates to render the copy button with the code. The script should be
+saved in a file named <samp>newScript.js</samp>. 
 
 
 
@@ -32,7 +33,4 @@ async function copyCode(block) {
   await navigator.clipboard.writeText(text);
 }
 </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" >
 ```
