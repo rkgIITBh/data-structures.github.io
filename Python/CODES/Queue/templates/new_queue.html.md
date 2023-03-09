@@ -7,6 +7,7 @@ extensions and should be renamed using .html extensions. The content of the file
 description. The flie consists of HTML-Jinja code interpersed with text descriptions. To create a template file:
 <ul>
         <li>Copy the entire text below into a file named <samp>qapps.html</samp></li>
+        <li>Remove the image of circular queue.</li>
         <li>Insert "&lt;p&gt;" and "&lt;/p&gt;" tags for paragraphs of text descripttion.</li>
 </ul>
 
