@@ -5,7 +5,9 @@ the number of elements in a queue increases. An insertion succeeds if a vacant s
 returns saying that no insertion is possible as the queue is full. The display is handled by a template file <samp>qapp.html</samp>. This file
 should be created in the template folder of the queue application. The major part of this code deals with navigation which is common to all
 template files for the application. The file inherits navigation interface from <samp>base.html</samp> file. We just extend <samp>base.html</samp>
-and include only the part that deals with enqueue. It requires an input from user then call insertion function <samp>"/enqueue"</samp>
+and include only the part that deals with enqueue. It requires an input from the user then call insertion function <samp>"/enqueue"</samp>.
+The file also serves to display queue when either "/printq" or "/dequeue" API is called. Calling the latter result in deletion of the 
+element at the front of queue. 
 
 ```
 {% extends 'base.html' %}
