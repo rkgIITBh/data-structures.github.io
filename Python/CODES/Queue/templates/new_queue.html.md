@@ -1,10 +1,24 @@
 # Circular Queue Description
 
 
-<strong>NOTE</strong>: We have created similar directory structure for the Python Flask programming for understanding and exploring operations on Queue data strcuture.
-Template directory contains all the HTML files that will be needed for the web application to run. The files have .md extensions and should be
-renamed using .html extensions.
+<strong>NOTE</strong>: We have created similar directory structure for the Python Flask programming for understanding and exploring operations on 
+Queue data strcuture. The template directory contains all the HTML files that will be needed for the web application to run. The files have .md 
+extensions and should be renamed using .html extensions. The content of the file appears below with required html code interpersed along with
+description. The each portions of text should be tagged by "&lt;p&gt;" and "&lt;/p&gt;".
+```
+{% extends 'base.html' %}
+{% block head %}
+        <title>{{t}}</title>    
+{% endblock %} 
 
+{% block body %}
+
+<center>
+<h2>Python App for Circular Queue Implementation</h2>
+</center>
+<br>
+<div class="container">
+```
 A queue is linear list where new elements are added to one end and the elements in queue are removed from the other end for 
     processing. The first end is called rear and the other is known as front. In the array implementation when 
     the elements are removed from the <samp>q.front</samp>, the positions to the beginning of the array are left vacant. So, the vacant 
@@ -13,9 +27,14 @@ A queue is linear list where new elements are added to one end and the elements 
 However, if we utilize the vacated positions then it is possible to insert new elements as long as all positions are not filled. It
     can be done as follows. We shift the existing elements between <samp>q._front</samp> to <samp>q._rear</samp> to the beginning
     of the array as indicated in the figure below.
-    
+```
+<div class="image-fluid" align="middle">
+    <img src="{{url_for('static', filename='circularQNew.png')}}", width="350", height=210" />
+</div>
+<br>
+```
 <p style="text-align:center">
-<img src="../../../images/circularQNew.png">
+    <img src="../../../images/circularQNew.png">
 </p>
 
 The shifting operation should be carried out each time <samp>q._rear</samp> points the last position. This is expensive. A simpler way to 
@@ -37,6 +56,7 @@ Insertion operation is known as enqueue. Enqueing is performed
     decremented by modulo addition <samp>MAXSIZE</samp>.
 
 Our implementation of Python App for queue operations is divided into four parts:</p>
+    
     <ul>
         <li>Queue operations</li>
         <li>App routes</li>
@@ -60,11 +80,17 @@ Since, Python array index starts with 0, when increment of <samp>q._rear</samp> 
 We define a field <samp>q._size</samp> for capacity of the queue. Therefore, the <samp>__init__()</samp> is as follows:
 
 ```
+<div class="container">
+   <pre class="language-python"><code class="language-python">
+
     def __init__(self):
         self._front = 0 # for empty queue.
         self._size = MAXSIZE - 1 # capacity of queue
         self._rear = self._size # initial value 
         self._data = [None] * QueueArray.SIZE  # data in an array of MAXSIZE
+    </code></pre>
+</div>
+
 ```
 
 The helper helper function <samp>addOne()</samp> that perform 
@@ -76,8 +102,13 @@ The helper helper function <samp>addOne()</samp> that perform
     <samp>MAXSIZE</samp>, we can redfine a bigger or smaller array.
 
 ```
+<div class="container">
+   <pre class="language-python"><code class="language-python">
+
     def addOne(i):
         return (i + 1) % MAXSIZE # returns add 1 modulo MAXSIZE
+    </code></pre>
+</div>        
 ```
 
 The first four functions are simple as described below
@@ -89,6 +120,8 @@ The first four functions are simple as described below
 </ul>
                                                                                                                                                                  
 ```
+<div class="container">
+   <pre class="language-python"><code class="language-python">
     def makenull(self):
         self._front = 0
         self._size = MAXSIZE - 1 
@@ -111,12 +144,16 @@ The first four functions are simple as described below
         if self._front == addOne(addOne(self._rear)):
             return 1
         return 0
+    </code></pre>
+</div>            
  ```
 The next two functions are non-mutating in nature. They access the queue ends and return the values. The first one returns 
 <samp>q._front</samp> if the queue is not empty. Similarly, the second one returns <samp>queue._rear</samp> if queue is not iempty.
 In both cases it return None if the queue is empty. 
                                                                                        
 ``` 
+<div class="container">
+   <pre class="language-python"><code class="language-python">
     def getFront(self):
         if (self.isEmpty()):
             print('Queue is empty') 
@@ -128,6 +165,8 @@ In both cases it return None if the queue is empty.
             print('Queue is empty') 
             return None 
         return self._data[self._rear] 
+    </code></pre>
+</div>            
 ```
 
 Insertion operation on a queue is called enqueue and deletion operation is known as dequeue. Enqueuing requires two parameters: a pointer to a queue 
@@ -150,7 +189,9 @@ returns the element at the front of a non-empty queue and requires just a pointe
         x = self._data[self._front] 
         self._front = addOne(self._front)
         return x
-
+        
+    </code></pre>
+</div>    
 ```
 Python Flask app expects each parameter to be provided in the form of a string. Therefore, we need to convert the collection elements in
 a queue in the form of a string. This requirement will become clear when discuss Flask app for queue operations. We format the queue string by
@@ -158,6 +199,8 @@ indicating its front and the rear part. Each element from <samp>q._front</samp> 
 and placed in the string.
                                                          
 ```
+<div class="container">
+   <pre class="language-python"><code class="language-python">
     def to_list(self):
         if self.isEmpty():
             return "front-> <-rear"
@@ -169,6 +212,10 @@ and placed in the string.
             prnt += " "+str(self._data[indx])
         prnt += " <-rear"
         return prnt
+    </code></pre>
+</div>  
+</div>
+{% endblock %} 
 ```
 
 
