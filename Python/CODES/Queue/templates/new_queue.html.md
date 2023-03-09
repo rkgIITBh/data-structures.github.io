@@ -9,7 +9,9 @@ description. The flie consists of HTML-Jinja code interpersed with text descript
         <li>Copy the entire text below into a file named <samp>qapps.html</samp></li>
         <li>Insert "&lt;p&gt;" and "&lt;/p&gt;" tags for paragraphs of text descripttion.</li>
 </ul>
+
 ```
+
 {% extends 'base.html' %}
 {% block head %}
         <title>{{t}}</title>    
