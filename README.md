@@ -31,27 +31,4 @@ IIT Bhilai is carrying out an exciting experiment. It has started to teach web p
 I believe data structure is taught to all computer science undergraduate students. Though there is much variation in the way, it is taught. Some view the course as a gentle introduction to algorithms, and theoretical underpinning is more important than implementation issues. Perhaps, the thinking behind it is that the introductory programming course has already been taught to the students. So, students know how to code. They can manage to write programs without being told to implement data structures. The theory is more important as knowing how to analyze code would make them realize efficient coding is more important than just coding. The argument seems to be very strong and elementary to understand. However, the important point it misses is that the introductory programming course emphasizes learning syntax and the meaning of the programming constructs. Though efficiency issues are touched, they are not discussed in depth. Building and learning clean programming skills are more important than understanding programmatic manipulation of complex data structures.
 
 Furthermore, an introductory programming course is a requirement across disciplines. Apart from Computer Science and Engineering students, it includes other streams such as Electrical, Mechanical, Chemical, Material Science and Engineering, Maths, Physics, Chemistry and Biological Sciences. So the course is not designed exclusively for programming as CSE students are expected in the future. Therefore, without programming practice in the data structure course, I believe students of CSE tend to develop code phobia. The theory is required, but a right balance is needed.
-
-Blog Links
-
-[Trees] (https://vikramshilla.blogspot.com/2021/12/trees.html) 
-
-[Circular implementation of queues]  (https://vikramshilla.blogspot.com/2021/12/circular-queue-implementation-in-c.html) 
-
-[Queues] (a href="https://vikramshilla.blogspot.com/2021/12/queues.html)
-
-[Implementation of Stacks] (https://vikramshilla.blogspot.com/2021/12/the-creation-of-stack-is-simple.html
-
-[Stacks as ADTs] (https://vikramshilla.blogspot.com/2021/11/importance-of-stacks.html)
-
-[Implementation of Lists] (https://vikramshilla.blogspot.com/2021/11/implementation-of-list-operations-in-c.html) 
-
-[Lists as ADTs]		(https://vikramshilla.blogspot.com/2021/11/abstract-concept-of-list.html)
-
-[Data Types and ADTs] (https://vikramshilla.blogspot.com/2021/11/data-types-and-adts.html)
-
-[Structures] (https://vikramshilla.blogspot.com/2021/11/meaning-of-structure.html)
-
-[Data Structures] (https://vikramshilla.blogspot.com/2021/11/data-structures.html)
-
-[Importance of Coding] (https://vikramshilla.blogspot.com/2021/11/why-coding-and-learning-data-structure.html) 
+ 
